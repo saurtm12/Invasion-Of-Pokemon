@@ -20,10 +20,9 @@ public:
 
     Interface::Location giveLocation() const;
     void move(Interface::Location loc);
-    void destroy();
-    bool isDestroyed() const;
+    void remove();
+    bool isRemoved() const;
 
-    // MatkustajaRP interface
     bool isInVehicle() const;
     std::shared_ptr<Interface::IVehicle> getVehicle() const;
     std::shared_ptr<Interface::IStop> getStop() const;
@@ -40,7 +39,7 @@ public:
     void enterStop(std::weak_ptr<Interface::IStop> stop);
 
 protected:
-    bool destoyed_;
+    bool removed_;
     std::weak_ptr< Interface::IStop > destination_;
 
 
@@ -50,7 +49,6 @@ private:
     std::weak_ptr< Nysse > nyssep_;
     // Current stop
     std::weak_ptr< Interface::IStop > stopp_;
-    // minne pyrkii
 
 
     };

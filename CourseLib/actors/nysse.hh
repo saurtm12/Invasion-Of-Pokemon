@@ -27,8 +27,8 @@ public:
 
     Interface::Location giveLocation() const;
     void move(Interface::Location loc);
-    void destroy();
-    bool isDestroyed() const;
+    void remove();
+    bool isRemoved() const;
 
     // VehicleIF
     std::vector<std::shared_ptr<Interface::IPassenger>> getPassengers() const;
@@ -68,7 +68,7 @@ private:
 
 
     std::weak_ptr<Stop> stop_;
-    bool destroyed_;
+    bool removed_;
     int SID_;
 };
 

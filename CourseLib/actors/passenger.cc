@@ -7,7 +7,7 @@ namespace CourseSide
 {
 
 Passenger::Passenger(std::weak_ptr< Interface::IStop > destination) :
-    destoyed_(false),
+    removed_(false),
     destination_(destination)
 {
 }
@@ -31,14 +31,14 @@ void Passenger::move(Interface::Location loc)
     }
 }
 
-void Passenger::destroy()
+void Passenger::remove()
 {
-    destoyed_ = true;
+    removed_ = true;
 }
 
-bool Passenger::isDestroyed() const
+bool Passenger::isRemoved() const
 {
-    return destoyed_;
+    return removed_;
 }
 
 bool Passenger::isInVehicle() const

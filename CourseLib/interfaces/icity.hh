@@ -91,12 +91,12 @@ public:
     virtual void removeActor(std::shared_ptr<IActor> actor) = 0;
 
     /**
-     * @brief actorDestroyed tells the city that actor is destroyed ingame.
-     * @param actor Actor that is set destroyed ingame.
-     * @pre City is in gamestate. Given actor is found in the city. Actor has `actor.isDestroyed() == true`.
+     * @brief actorRemoved tells the city that actor is removed ingame.
+     * @param actor Actor that is set removed ingame.
+     * @pre City is in gamestate. Given actor is found in the city. Actor has `actor.isRemoved() == true`.
      * @post Exception guarantee: strong.
      */
-    virtual void actorDestroyed(std::shared_ptr<IActor> actor) = 0;
+    virtual void actorRemoved(std::shared_ptr<IActor> actor) = 0;
 
     /**
      * @brief findActor checks if the given actor is in the city.

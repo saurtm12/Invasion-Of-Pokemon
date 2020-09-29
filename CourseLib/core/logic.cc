@@ -56,13 +56,12 @@ void Logic::advance()
         cityif_->setClock(time_);
     }
 
-    // Goes through current passengers and removes destroyed (from game) passengers from data structures
-    // Passenger is destoryed only if they were shot.
+    // Goes through current passengers and removes removed (from game) passengers from data structures
     for (std::list<std::shared_ptr<Passenger>>::iterator it = passengers_.begin();
          it != passengers_.end(); it++) {
 
-        // Check if shot
-        if (it->get()->isDestroyed()) {
+        // Check if removed
+        if (it->get()->isRemoved()) {
             // Remove passenger from buses or stops accounting
             if (it->get()->isInVehicle()) {
                 it->get()->getVehicle()->removePassenger(*it);
@@ -80,22 +79,22 @@ void Logic::advance()
         }
     }
 
-    // Goes through current buses and removes ones that are destroyed
+    // Goes through current buses and removes ones that are removed
     for (std::list<std::shared_ptr<Nysse>>::iterator it = buses_.begin(); it != buses_.end();) {
         std::shared_ptr<Nysse> bus = *it;
 
-        // Check if shot
-        if (bus->isDestroyed()) {
+        // Check if removed
+        if (bus->isRemoved()) {
 
-            // If bus is marked destroyed, go through its passengers and check that they are marked as destroyed too
-            // If not marked --> mark as restroyed and removed the bus and its passengers from data structures
+            // If bus is marked removed, go through its passengers and check that they are marked as removed too
+            // If not marked --> mark as removed and remove the bus and its passengers from data structures
             for (std::shared_ptr<Interface::IPassenger> passengerif : bus->getPassengers()) {
                 std::shared_ptr<Passenger> passenger = std::dynamic_pointer_cast<Passenger> (passengerif);
 
-                if (!passenger->isDestroyed()) {
-                    passenger->destroy();
+                if (!passenger->isRemoved()) {
+                    passenger->remove();
                 }
-                // if city keeps track of passengers in destroyed bus, remove passengers from city
+                // if city keeps track of passengers in removed bus, remove passengers from city
                 if (cityif_->findActor(passenger)) {
                     cityif_->removeActor(passenger);
                 }
@@ -148,15 +147,14 @@ void Logic::advance()
             ++it;
         }
     }
-    // ############################################################################################################
 
     // now:
-    // 1. removed destroyed passengers and buses
+    // 1. removed 'removed' passengers and buses
     // 2. removed buses that were in grey area
     // 3. moved buses to their new locations
     // 4. removed passengers from the buses in final stop
 
-    // ladd new buses
+    // add new buses
     if (time_.second() == 0) {
         addNewBuses();
     }
@@ -339,10 +337,6 @@ void Logic::createBus(std::shared_ptr<BusData> bus, QTime starttime)
     // Create new bus and add it to city
     std::shared_ptr<Nysse> newBus = std::make_shared<Nysse>(bus->routeNumber);
 
-    // TODO: mieti, onko tarvetta-----------------------------------------------------!!!
-    // lasketaan bussin pysakeille ajat ja asetetaan ne bussille
-    // uusibussi->asetaPysakit(laskePysakkiAjat(bussi->pysakit, lahtoaika));
-
     // Add data to buses
     newBus->setRoute(bus->timeRoute2, starttime);
     newBus->calcStartingPos(time_);
@@ -394,23 +388,21 @@ void Logic::addStopsAndPassengers()
     }
 }
 
-void Logic::addNewPassengers()
+void Logic::addNewPassengers(std::shared_ptr<Stop> stop, unsigned int no)
 {
 
-    // TODO: tämä pitää miettiä; lisätäänkö ylipäätään
+    for(unsigned int i = 0; i < no; i++) {
+        // new passenger
+        std::weak_ptr<Interface::IStop> destinationStop = offlinedata_->stops.at( rand() % offlinedata_->stops.size() );
+        std::shared_ptr<Passenger> newPassenger = nullptr;
+        newPassenger = std::make_shared<Passenger>( destinationStop );
 
-    //    std::shared_ptr<Pysakki> kohdePysakki = pysakit_.at(2);
-
-    //    for (int i = 0; i < rand() % 7 + 2; i++) {
-    //        std::shared_ptr<Matkustaja> uusiMatkustaja = std::make_shared<Matkustaja>();
-    //        matkustajat_.push_back(uusiMatkustaja);
-    //        kohdePysakki->lisaaMatkustaja(uusiMatkustaja);
-    //    }
-
-    //    qDebug() << " ";
-    //    qDebug() << "Lisätty matkustajia pysäkille: " << kohdePysakki->annaNimi();
-    //    qDebug() << "Matkustajia liikenteessä nyt: " << matkustajat_.size();
-
+        // add into data structure
+        newPassenger->enterStop(stop);
+        passengers_.push_back(newPassenger);
+        stop->addPassenger(newPassenger);
+        cityif_->addActor(newPassenger);
+    }
 }
 
 bool Logic::takeCity(std::shared_ptr<Interface::ICity> city) {

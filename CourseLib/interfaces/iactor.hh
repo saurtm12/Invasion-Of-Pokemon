@@ -24,7 +24,7 @@ public:
 
     /**
       * @brief Default constructor for the Interface (For documentation).
-      * @post Actor isn't in destroyed-state by default. (Toimija ei alussa ole tuhottu-tilassa.)
+      * @post Actor isn't in removed-state by default. (Toimija ei alussa ole tuhottu-tilassa.)
       */
     IActor() = default;
 
@@ -52,19 +52,19 @@ public:
     virtual void move(Location loc) = 0;
 
     /**
-     * @brief isDestroyed tells if the actor is destroyed ingame.
+     * @brief isRemoved tells if the actor is removed ingame.
      * @pre -
-     * @return `true`, if actor is destroyed ingame, otherwise `false`.
+     * @return `true`, if actor is removed ingame, otherwise `false`.
      * @post Exception guarantee: nothrow.
      */
-    virtual bool isDestroyed() const = 0;
+    virtual bool isRemoved() const = 0;
 
     /**
-     * @brief destroy marks the actor as destroyed.
-     * @pre Actor is not destroyed already.
-     * @post Actor is destroyed, after this onkoTuhottu() returns `true`. Exception guarantee: basic.
+     * @brief remove marks the actor as removed.
+     * @pre Actor is not removed already.
+     * @post Actor is removed, after this isRemoved() returns `true`. Exception guarantee: basic.
      */
-    virtual void destroy() = 0;
+    virtual void remove() = 0;
 
 };
 

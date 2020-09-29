@@ -12,7 +12,7 @@ Nysse::Nysse(unsigned int line) :
     line_(line),
     name_(QString::number(line).toStdString()),
     stop_(),
-    destroyed_(false)
+    removed_(false)
 
 {
 }
@@ -45,17 +45,17 @@ void Nysse::move(Interface::Location loc)
     location_ = loc;
 }
 
-void Nysse::destroy()
+void Nysse::remove()
 {
     for (std::shared_ptr<Interface::IPassenger> passenger: passengers_) {
-        passenger->destroy();
+        passenger->remove();
     }
-    destroyed_ = true;
+    removed_ = true;
 }
 
-bool Nysse::isDestroyed() const
+bool Nysse::isRemoved() const
 {
-    return destroyed_;
+    return removed_;
 }
 
 std::map<QTime, std::pair<Interface::Location, std::weak_ptr<Stop> > > Nysse::getTimeRoute() const

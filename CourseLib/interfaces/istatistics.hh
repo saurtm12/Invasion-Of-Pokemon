@@ -53,11 +53,11 @@ public:
     virtual void morePassengers(int num) = 0;
 
     /**
-     * @brief nysseDestroyed notifies, that the nysse is destroyed ingame.
+     * @brief nysseRemoved notifies, that the nysse is removed ingame.
      * @pre -
      * @post Exception guarantee: strong
      */
-    virtual void nysseDestroyed() = 0;
+    virtual void nysseRemoved() = 0;
 
     /**
      * @brief newNysse notifies, that a new nysse is added to the game.

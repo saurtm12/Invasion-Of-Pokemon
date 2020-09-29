@@ -39,7 +39,7 @@ public slots:
     void configChanged(QTime time, bool debug);
     void increaseTime();
     void addNewBuses();
-    void addNewPassengers();
+    void addNewPassengers(std::shared_ptr<Stop> stop, unsigned int no);
 
 private:
     // ratio between game time and real time
