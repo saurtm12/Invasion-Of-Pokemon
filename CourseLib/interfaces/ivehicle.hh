@@ -2,8 +2,8 @@
 #define IVEHICLE_HH
 
 #include "iactor.hh"
-//#include "matkustajarp.hh"
 
+#include <string>
 #include <vector>
 #include <memory>
 
