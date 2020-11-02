@@ -7,7 +7,7 @@
 namespace Interface
 {
 
-Location::Location() : northcoord_(6700000), eastcoord_(3500000)
+Location::Location() : northcoord_(6700000), eastcoord_(3500000), x_(0), y_(0)
 {
 
 }
