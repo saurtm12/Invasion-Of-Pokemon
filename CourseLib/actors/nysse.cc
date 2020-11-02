@@ -134,23 +134,34 @@ Interface::Location Nysse::moveToNextPosition(QTime time)
 
 void Nysse::calcStartingPos(QTime time)
 {
-    for (ar2Iterator_ = timeroute2_.begin(); ar2Iterator_ != timeroute2_.end(); ar2Iterator_++) {
-        if (time == ar2Iterator_->first) {
-            // found the point, when time is the same as inside the game just now
+    // Keep track of the next stop in the route
+    auto next = timeroute2_.begin();
+    next++;
 
-            // there is not necessarily a stop in this point
+    // Note that next is also being incremented
+    for (ar2Iterator_ = timeroute2_.begin(); next != timeroute2_.end(); ar2Iterator_++, next++) {
+        // If ar2Iterator_ is pointing to the last stop that has a smaller or equal time value
+        // compared to game time
+        if (time < next->first) {
+            // Set this stop as the current stop
             location_ = ar2Iterator_->second.first;
-
-            // check the existence of stop for this time
-            // Could be that we're currently in point 10.06 and stops are in 10.05 and 10.07
             stop_ = ar2Iterator_->second.second;
 
-            return;
+            // The bus might not be exactly at this stop. Move it so that it's at the appropriate
+            // position on its route
+            moveToNextPosition(time);
 
+            return;
         }
     }
-    qDebug() << "SHOULD NEVER GET HERE!!!!!!!";
+
+    // If the code got here, ar2Iterator_ is pointing at the last stop and the bus has already
+    // reached it
+    location_ = ar2Iterator_->second.first;
+    stop_ = ar2Iterator_->second.second;
+
 }
+
 
 void Nysse::setRoute(const std::map<QTime, std::pair<Interface::Location, std::shared_ptr<Stop> > > &timeroute,
                         QTime &departuretime)
