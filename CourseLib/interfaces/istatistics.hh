@@ -29,22 +29,6 @@ public:
     virtual ~IStatistics() = default;
 
     /**
-     * @brief givePoints returns current score in the game.
-     * @pre -
-     * @return score
-     * @post Exception guarantee: nothrow
-     */
-    virtual int givePoints() const = 0;
-
-    /**
-     * @brief passengerDied notifies, that the passanger is dead.
-     * @param num how many passangers eliminated.
-     * @pre num > 0
-     * @post Exception guarantee: strong
-     */
-    virtual void passengerDied(int num) = 0;
-
-    /**
      * @brief morePassengers notifies, that more passangers are added to the game.
      * @param num how many new passangers are added.
      * @pre num > 0
