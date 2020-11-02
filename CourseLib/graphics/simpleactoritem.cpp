@@ -4,7 +4,7 @@ namespace CourseSide {
 
 SimpleActorItem::SimpleActorItem(int x, int y, int type):x_(x), y_(y), type_(type)
 {
-    setPos(mapToParent(x_ % 100, y_ % 100));
+    setPos(mapToParent(x_, y_ ));
 }
 
 SimpleActorItem::~SimpleActorItem()
@@ -28,8 +28,8 @@ void SimpleActorItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 void SimpleActorItem::setCoord(int x, int y)
 {
-    setX( x % 100 );
-    setY( y % 100 );
+    setX( x );
+    setY( y );
 }
 
 }
