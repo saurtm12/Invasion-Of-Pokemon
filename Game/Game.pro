@@ -6,6 +6,7 @@ QT += core gui widgets network multimedia
 CONFIG += c++14
 
 SOURCES += \
+    creategame.cpp \
     main.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
