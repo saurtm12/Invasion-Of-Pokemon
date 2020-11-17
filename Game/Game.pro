@@ -42,6 +42,3 @@ FORMS += \
 HEADERS += \
     dialog.hh \
     mainwindow.hh
-
-RESOURCES += \
-    ../Course/CourseLib/offlinedata/offlinedata.qrc

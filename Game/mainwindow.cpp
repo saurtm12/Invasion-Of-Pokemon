@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
   map->setSceneRect(0,0,width_, height_);
   resize(minimumSizeHint());
 
-  QImage background = QImage(":/offlinedata/kartta_pieni_500x500.png");
+  QImage background = QImage(":/offlinedata/offlinedata/kartta_pieni_500x500.png");
   this->setPicture(background);
 
   timer = new QTimer(this);
