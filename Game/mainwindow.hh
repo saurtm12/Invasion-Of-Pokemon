@@ -1,5 +1,6 @@
 ﻿#ifndef MAINWINDOW_HH
 #define MAINWINDOW_HH
+#include <dialog.hh>
 
 #include <QMainWindow>
 #include <QMainWindow>

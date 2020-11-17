@@ -9,7 +9,7 @@ SOURCES += \
     creategame.cpp \
     dialog.cpp \
     main.cc \
-    mainwindow.cpp
+    mainwindow.cpp \
 
 win32:CONFIG(release, debug|release): LIBS += \
     -L$$OUT_PWD/../Course/CourseLib/release/ -lCourseLib
@@ -42,3 +42,6 @@ FORMS += \
 HEADERS += \
     dialog.hh \
     mainwindow.hh
+
+RESOURCES += \
+    ../Course/CourseLib/offlinedata/offlinedata.qrc

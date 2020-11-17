@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
 {
+  Dialog *dialog = new Dialog(this);
+  dialog->exec();
+
+
   ui->setupUi(this);
   ui->gameView->setFixedSize(width_, height_);
   ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
@@ -18,8 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
   map->setSceneRect(0,0,width_, height_);
   resize(minimumSizeHint());
 
-  timer = new QTimer(this);
+  QImage background = QImage(":/offlinedata/kartta_pieni_500x500.png");
+  this->setPicture(background);
 
+  timer = new QTimer(this);
 }
 
 MainWindow::~MainWindow()
