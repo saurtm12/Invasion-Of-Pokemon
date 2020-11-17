@@ -1,6 +1,7 @@
 #include "../Course/CourseLib/graphics/simplemainwindow.hh"
 #include "../Course/CourseLib/creategame.hh"
 #include <QApplication>
+#include <mainwindow.hh>
 
 int main(int argc, char *argv[])
 {
@@ -8,8 +9,7 @@ int main(int argc, char *argv[])
     Q_INIT_RESOURCE(offlinedata);
 
     Interface::createGame();
-    CourseSide::SimpleMainWindow w{};
-
+    MainWindow w;
     w.show();
 
     return a.exec();
