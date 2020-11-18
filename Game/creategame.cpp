@@ -1,4 +1,5 @@
 #include "../Course/CourseLib/creategame.hh"
+#include "../Course/CourseLib/graphics/simpleactoritem.hh"
 
 using namespace Interface;
 

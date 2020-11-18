@@ -2,14 +2,20 @@
 #define MAINWINDOW_HH
 #include <dialog.hh>
 
+#include "../Course/CourseLib/graphics/simpleactoritem.hh"
+#include "../Course/CourseLib/core/location.hh"
 #include <QMainWindow>
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTimer>
+#include <QDebug>
 #include <iostream>
 #include <memory>
 #include <QVector>
 #include <map>
+
+using namespace CourseSide;
+using namespace Interface;
 
 namespace Ui {
   class MainWindow;
@@ -41,9 +47,9 @@ private:
   QGraphicsScene *map;
   QTimer *timer;
   QVector<QGraphicsItem*> actors_;
-  // ActorItem last_;
+  SimpleActorItem* last_;
 
-  int width_ = 500;
+  int width_ = 950;
   int height_ = 500;
   int tick_ = 500;
 };
