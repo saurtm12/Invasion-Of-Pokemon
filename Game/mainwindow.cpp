@@ -1,6 +1,5 @@
 #include "mainwindow.hh"
 #include "ui_mainwindow.h"
-#include "character.hh"
 
 const qreal PADDING = 10;
 const qreal MAPWIDTH = 1095;
@@ -37,9 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
   try {
       Location loc(6825813, 3328734);
       Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
-      QGraphicsPixmapItem* pm = map->addPixmap(character.getPixmapItem());
-      pm->setPos(character.getX(), character.getY());
-      characters_.append(pm);
+      addCharacter(character);
   }  catch (...) {
       qDebug() << "Error during loading characters";
   }
@@ -69,10 +66,8 @@ void MainWindow::setTick(int t)
 
 }
 
-void MainWindow::addCharacter(int x, int y, QString path) {
-    QImage img(path);
-    QGraphicsPixmapItem* pm = map->addPixmap(QPixmap::fromImage(img));
-    pm->setPos(x, y);
+void MainWindow::addCharacter(Model::Character& character) {
+    QGraphicsPixmapItem* pm = character.setImage(map);
     characters_.append(pm);
 }
 

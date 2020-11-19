@@ -17,7 +17,7 @@ public:
     explicit Character(int x, int y, QString imgPath);
     virtual ~Character();
 
-    void setImage(QString imgPath);
+    QGraphicsPixmapItem* setImage(QGraphicsScene* map);
     QPixmap getPixmapItem();
 
     int getX();
@@ -28,6 +28,7 @@ signals:
 private:
     int x_;
     int y_;
+    QString imgPath_;
     QPixmap image_;
 };
 

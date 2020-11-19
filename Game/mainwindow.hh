@@ -4,6 +4,7 @@
 
 #include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include "../Course/CourseLib/core/location.hh"
+#include "character.hh"
 #include <QMainWindow>
 #include <QMainWindow>
 #include <QGraphicsScene>
@@ -32,7 +33,7 @@ public:
   void setSize(int w, int h);
   void setTick(int t);
 
-  void addCharacter(int x, int y, QString path);
+  void addCharacter(Model::Character& character);
   void addActor(int locX, int locY, int type=0);
   void updateCoords(int nX, int nY);
   void setPicture(QImage &img);
@@ -50,7 +51,7 @@ private:
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
 
-  QVector<QGraphicsPixmapItem*> characters_;
+  QVector<QGraphicsItem*> characters_;
 
   int width_ = 950;
   int height_ = 500;
