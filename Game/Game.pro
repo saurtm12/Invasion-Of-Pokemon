@@ -6,6 +6,7 @@ QT += core gui widgets network multimedia
 CONFIG += c++14
 
 SOURCES += \
+    character.cc \
     creategame.cpp \
     dialog.cpp \
     main.cc \
@@ -40,6 +41,7 @@ FORMS += \
     mainwindow.ui
 
 HEADERS += \
+    character.hh \
     dialog.hh \
     mainwindow.hh
 
