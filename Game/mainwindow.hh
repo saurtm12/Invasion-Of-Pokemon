@@ -34,7 +34,7 @@ public:
   void setSize(int w, int h);
   void setTick(int t);
 
-  void addCharacter(Model::Character& character);
+//  void addCharacter(Model::Character& character);
   void addActor(int locX, int locY, int type=0);
   void updateCoords(int nX, int nY);
   void readFiles();
@@ -51,9 +51,9 @@ private:
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
 
-  QVector<QGraphicsItem*> characters_;
+  //QVector<QGraphicsItem*> characters_;
 
-  const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
+
 
   int width_ = 950;
   int height_ = 500;

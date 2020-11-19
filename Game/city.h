@@ -6,6 +6,9 @@
 #include "../Course/CourseLib/errors/initerror.hh"
 #include "../Course/CourseLib/errors/gameerror.hh"
 #include "../Course/CourseLib/offlinereader.hh"
+#include "character.hh"
+#include "../Course/CourseLib/actors/stop.hh"
+#include "../Course/CourseLib/core/location.hh"
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -13,6 +16,8 @@
 #include <vector>
 #include <memory>
 #include <QString>
+#include <QGraphicsPixmapItem>
+
 using namespace Interface;
 using namespace CourseSide;
 
@@ -22,6 +27,7 @@ class City : public Interface::ICity, public QGraphicsScene
 {
 public:
     City(QWidget *parent = 0);
+    virtual ~City();
     void setBackground(QImage &basicbackground, QImage &bigbackground);
     void setClock(QTime clock);
     void addStop(std::shared_ptr<IStop> stop);
@@ -36,15 +42,19 @@ public:
 
 
 private:
-     const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
-     const QString STOPFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
+    const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
+    const QString STOPFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
+    const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
+    const QString BUSICON = QString(":/characters/characters/busStop.png");
 
     void readOfflineData(const QString& busFile, const QString& stopFile);
-
+    void addCharacter(Character& character);
     QTime *clock_;
     std::vector< std::shared_ptr<Stop> > stops_;
     std::vector< std::shared_ptr<BusData> > buses_;
 
+    std::vector< QGraphicsPixmapItem* > stopItems_;
+    void addBusStops();
 };
 }
 

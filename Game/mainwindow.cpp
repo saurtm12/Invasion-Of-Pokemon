@@ -23,8 +23,10 @@ MainWindow::MainWindow(QWidget *parent) :
     // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city = new City(this);
 
-    QImage backgroundImage = QImage(BACKGROUND);
-    city->setBackground(backgroundImage, backgroundImage);
+
+    city->startGame();
+//    QImage backgroundImage = QImage(BACKGROUND);
+//    city->setBackground(backgroundImage, backgroundImage);
 
     // setScene for Graphic view
     ui->gameView->setScene(city);
@@ -38,13 +40,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     timer = new QTimer(this);
 
-    try {
-      Location loc(6825813, 3328734);
-      Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
-      addCharacter(character);
-    }  catch (...) {
-        qDebug() << "Error during loading characters";
-    }
+//    try {
+//      Location loc(6825813, 3328734);
+//      Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
+//      addCharacter(character);
+//    }  catch (...) {
+//        qDebug() << "Error during loading characters";
+//    }
 }
 
 MainWindow::~MainWindow()
@@ -53,9 +55,9 @@ MainWindow::~MainWindow()
       delete item;
   }
 
-  for (auto item: characters_) {
-      delete item;
-  }
+//  for (auto item: characters_) {
+//      delete item;
+//  }
 
   delete ui;
 }
@@ -71,10 +73,10 @@ void MainWindow::setTick(int t)
 
 }
 
-void MainWindow::addCharacter(Model::Character& character) {
-    QGraphicsPixmapItem* pm = character.setImage(city);
-    characters_.append(pm);
-}
+//void MainWindow::addCharacter(Model::Character& character) {
+//    QGraphicsPixmapItem* pm = character.setImage(city);
+//    characters_.append(pm);
+//}
 
 void MainWindow::addActor(int locX, int locY, int type)
 {

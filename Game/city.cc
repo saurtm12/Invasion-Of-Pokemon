@@ -7,6 +7,14 @@ City::City(QWidget *parent):
 
 }
 
+City::~City()
+{
+    for (auto& element : stopItems_)
+    {
+        delete element;
+    }
+}
+
 void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 {
     //TODO: need to implement this
@@ -25,7 +33,11 @@ void City::addStop(std::shared_ptr<IStop> stop)
 
 void City::startGame()
 {
+    QImage backgroundImage = QImage(BACKGROUND);
+    // Fix this line
+    setBackground(backgroundImage,backgroundImage);
     readOfflineData(BUSFILE, STOPFILE);
+    addBusStops();
 }
 
 void City::addActor(std::shared_ptr<IActor> newactor)
@@ -72,6 +84,19 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
     for (auto iter = data->buses.begin(); iter != data->buses.end(); iter++)
     {
         buses_.push_back(*iter);
+    }
+}
+
+void City::addBusStops()
+{
+    stopItems_.reserve(stops_.size());
+    for (auto& stop : stops_)
+    {
+        Character newStop(stop->getLocation().giveX(),
+                                           stop->getLocation().giveY(),
+                                           BUSICON);
+        QGraphicsPixmapItem* newItem = newStop.setImage(this);
+        stopItems_.push_back(newItem);
     }
 }
 

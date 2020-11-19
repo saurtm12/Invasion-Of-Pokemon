@@ -2,5 +2,6 @@
     <qresource prefix="/characters">
         <file>characters/phineas.png</file>
         <file>characters/bird.png</file>
+        <file>characters/busStop.png</file>
     </qresource>
 </RCC>
