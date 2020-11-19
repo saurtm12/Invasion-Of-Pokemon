@@ -3,7 +3,6 @@
 
 #include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include <QGraphicsItem>
-#include <QGraphicsPixmapItem>
 #include <QImage>
 #include <QString>
 
@@ -19,14 +18,14 @@ public:
     virtual ~Character();
 
     void setImage(QString imgPath);
-    QGraphicsPixmapItem* getPixmapItem();
+    QPixmap getPixmapItem();
 
 signals:
 
 private:
     int x_;
     int y_;
-    QGraphicsPixmapItem* image_;
+    QPixmap image_;
 };
 
 };
