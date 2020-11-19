@@ -21,4 +21,12 @@ QPixmap Character::getPixmapItem() {
     return image_;
 }
 
+int Character::getX() {
+    return x_;
+}
+
+int Character::getY() {
+    return y_;
+}
+
 }

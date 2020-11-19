@@ -36,13 +36,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
   try {
       Location loc(6825813, 3328734);
-      addCharacter(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
-      addCharacter(300, 300, ":/characters/characters/bird.png");
-      addCharacter(150, 150, ":/characters/characters/bird.png");
-      addCharacter(200, 100, ":/characters/characters/bird.png");
-      Model::Character character(100, 100, ":/characters/characters/bird.png");
+      Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
       QGraphicsPixmapItem* pm = map->addPixmap(character.getPixmapItem());
-//      pm->setPos(character.getX(), character.getY());
+      pm->setPos(character.getX(), character.getY());
       characters_.append(pm);
   }  catch (...) {
       qDebug() << "Error during loading characters";

@@ -20,6 +20,9 @@ public:
     void setImage(QString imgPath);
     QPixmap getPixmapItem();
 
+    int getX();
+    int getY();
+
 signals:
 
 private:
