@@ -1,5 +1,6 @@
 #include "mainwindow.hh"
 #include "ui_mainwindow.h"
+#include "character.hh"
 
 const qreal PADDING = 10;
 const qreal MAPWIDTH = 1095;
@@ -28,17 +29,29 @@ MainWindow::MainWindow(QWidget *parent) :
 
   resize(minimumSizeHint());
 //  ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
-  Location loc(6825813, 3328734);
-  this->addActor(loc.giveX(), loc.giveY(), 0);
-  qDebug() << loc.giveX() << loc.giveY();
 
   connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
 
   timer = new QTimer(this);
+
+  try {
+      Location loc(6825813, 3328734);
+      addCharacter(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
+  }  catch (...) {
+      qDebug() << "Error during loading characters";
+  }
 }
 
 MainWindow::~MainWindow()
 {
+  for (auto item: actors_) {
+      delete item;
+  }
+
+  for (auto item: characters_) {
+      delete item;
+  }
+
   delete ui;
 }
 
@@ -51,6 +64,13 @@ void MainWindow::setSize(int w, int h)
 void MainWindow::setTick(int t)
 {
 
+}
+
+void MainWindow::addCharacter(int x, int y, QString path) {
+    QImage img(path);
+    QGraphicsPixmapItem* pm = map->addPixmap(QPixmap::fromImage(img));
+    pm->setPos(x, y);
+    characters_.append(pm);
 }
 
 void MainWindow::addActor(int locX, int locY, int type)
@@ -73,5 +93,8 @@ void MainWindow::setPicture(QImage &img)
 
 void MainWindow::onStartButtonClicked()
 {
+    if (!last_) {
+        return;
+    }
     this->updateCoords(566, 200);
 }

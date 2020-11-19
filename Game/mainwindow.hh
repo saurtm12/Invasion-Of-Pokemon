@@ -32,6 +32,7 @@ public:
   void setSize(int w, int h);
   void setTick(int t);
 
+  void addCharacter(int x, int y, QString path);
   void addActor(int locX, int locY, int type=0);
   void updateCoords(int nX, int nY);
   void setPicture(QImage &img);
@@ -48,6 +49,8 @@ private:
   QTimer *timer;
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
+
+  QVector<QGraphicsPixmapItem*> characters_;
 
   int width_ = 950;
   int height_ = 500;

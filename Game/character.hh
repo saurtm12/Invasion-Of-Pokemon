@@ -1,6 +1,7 @@
 #ifndef CHARACTER_HH
 #define CHARACTER_HH
 
+#include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
 #include <QImage>
@@ -11,20 +12,21 @@ namespace Model {
 const int WIDTH = 15;
 const int HEIGHT = 15;
 
-class Character : public QGraphicsItem
+class Character : public CourseSide::SimpleActorItem
 {
 public:
-    explicit Character(int x, int y);
+    explicit Character(int x, int y, QString imgPath);
     virtual ~Character();
 
     void setImage(QString imgPath);
+    QGraphicsPixmapItem* getPixmapItem();
 
 signals:
 
 private:
     int x_;
     int y_;
-    QGraphicsPixmapItem image_;
+    QGraphicsPixmapItem* image_;
 };
 
 };
