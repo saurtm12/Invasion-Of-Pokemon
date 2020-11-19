@@ -2,9 +2,9 @@
 #define CHARACTER_HH
 
 #include <QGraphicsItem>
-#include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
 #include <QImage>
-#include <QPainter>
+#include <QString>
 
 namespace Model {
 
@@ -17,14 +17,14 @@ public:
     explicit Character(int x, int y);
     virtual ~Character();
 
-    void setImage(QImage& img) const;
+    void setImage(QString imgPath);
 
 signals:
 
 private:
     int x_;
     int y_;
-    QImage image_;
+    QGraphicsPixmapItem image_;
 };
 
 };

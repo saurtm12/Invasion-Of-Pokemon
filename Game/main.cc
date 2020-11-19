@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Q_INIT_RESOURCE(offlinedata);
+    Q_INIT_RESOURCE(images);
 
     Interface::createGame();
     MainWindow w;

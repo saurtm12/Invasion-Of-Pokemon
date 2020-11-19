@@ -7,8 +7,9 @@ Character::Character(int x, int y) : x_(x), y_(y)
 
 }
 
-void Character::setImage(QImage& img) const {
-
+void Character::setImage(QString imgPath) {
+    const QImage img(imgPath);
+    image_.setPixmap(QPixmap::fromImage(img));
 }
 
 }
