@@ -14,6 +14,10 @@
 #include <memory>
 #include <QString>
 using namespace Interface;
+using namespace CourseSide;
+
+namespace Model {
+
 class City : public Interface::ICity, public QGraphicsScene
 {
 public:
@@ -30,10 +34,19 @@ public:
     std::vector<std::shared_ptr<IActor>> getNearbyActors(Location loc) const;
     bool isGameOver() const;
 
-    void readOfflineData(QString busFile, QString stopsFile);
-private:
 
+private:
+     const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
+     const QString STOPFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
+
+    void readOfflineData(const QString& busFile, const QString& stopFile);
+
+    QTime *clock_;
+    std::vector< std::shared_ptr<Stop> > stops_;
+    std::vector< std::shared_ptr<BusData> > buses_;
 
 };
+}
+
 
 #endif // CITY_H

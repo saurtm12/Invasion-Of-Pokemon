@@ -4,7 +4,6 @@
 const qreal PADDING = 10;
 const qreal MAPWIDTH = 1095;
 const qreal MAPHEIGHT = 592;
-using namespace CourseSide;
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -20,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
 
     ui->startButton->move(width_+ PADDING, PADDING);
+
+    // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city = new City(this);
 
     QImage backgroundImage = QImage(BACKGROUND);
@@ -29,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gameView->setScene(city);
     city->setSceneRect(0, 0, width_, height_);
     resize(minimumSizeHint());
+    city->startGame();
 //  ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
 
     // connect events
@@ -86,12 +88,6 @@ void MainWindow::updateCoords(int nX, int nY)
 {
     last_->setCoord(nX, nY);
 }
-
-//void MainWindow::readFiles()
-//{
-//    OfflineReader reader;
-//    auto data = reader.readFiles(BUSFILE, STOPSFILE);
-//}
 
 void MainWindow::onStartButtonClicked()
 {

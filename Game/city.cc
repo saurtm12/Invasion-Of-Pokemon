@@ -1,4 +1,5 @@
 #include "city.h"
+namespace Model {
 
 City::City(QWidget *parent):
     QGraphicsScene(parent)
@@ -24,7 +25,7 @@ void City::addStop(std::shared_ptr<IStop> stop)
 
 void City::startGame()
 {
-
+    readOfflineData(BUSFILE, STOPFILE);
 }
 
 void City::addActor(std::shared_ptr<IActor> newactor)
@@ -62,7 +63,16 @@ bool City::isGameOver() const
 
 }
 
-void City::readOfflineData(QString busFile, QString stopsFile)
+void City::readOfflineData(const QString &busFile, const QString &stopFile)
 {
+    auto offlineReader = CourseSide::OfflineReader();
+    auto data = offlineReader.readFiles(busFile, stopFile);
+    stops_ = data->stops;
+    buses_.reserve( data->buses.size() );
+    for (auto iter = data->buses.begin(); iter != data->buses.end(); iter++)
+    {
+        buses_.push_back(*iter);
+    }
+}
 
 }

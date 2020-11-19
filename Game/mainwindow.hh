@@ -18,7 +18,7 @@
 
 using namespace CourseSide;
 using namespace Interface;
-
+using namespace Model;
 namespace Ui {
   class MainWindow;
 }
@@ -54,8 +54,7 @@ private:
   QVector<QGraphicsItem*> characters_;
 
   const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
-  const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
-  const QString STOPSFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
+
   int width_ = 950;
   int height_ = 500;
   int tick_ = 500;
