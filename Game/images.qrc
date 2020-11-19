@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/characters">
+        <file>characters/phineas.png</file>
+    </qresource>
+</RCC>

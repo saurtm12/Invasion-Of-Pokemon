@@ -42,3 +42,6 @@ FORMS += \
 HEADERS += \
     dialog.hh \
     mainwindow.hh
+
+RESOURCES += \
+    images.qrc

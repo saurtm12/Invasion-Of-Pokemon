@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
   QImage background = QImage(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
   this->setPicture(background);
   ui->gameView->setScene(map);
-  map->setSceneRect(0,0,width_, height_);
+  map->setSceneRect(0, 0, width_, height_);
 
 
   resize(minimumSizeHint());
@@ -71,8 +71,7 @@ void MainWindow::setPicture(QImage &img)
   map->setBackgroundBrush(img);
 }
 
-
 void MainWindow::onStartButtonClicked()
 {
-//    this->updateCoords(500, 500);
+    this->updateCoords(566, 200);
 }
