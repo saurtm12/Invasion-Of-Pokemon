@@ -4,42 +4,45 @@
 const qreal PADDING = 10;
 const qreal MAPWIDTH = 1095;
 const qreal MAPHEIGHT = 592;
+using namespace CourseSide;
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
 {
-  Dialog *dialog = new Dialog(this);
-  dialog->exec();
+    // add first dialog
+    Dialog *dialog = new Dialog(this);
+    dialog->exec();
 
+    // setup window
+    ui->setupUi(this);
+    ui->gameView->setFixedSize(width_, height_);
+    ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
 
-  ui->setupUi(this);
-  ui->gameView->setFixedSize(width_, height_);
-  ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
+    ui->startButton->move(width_+ PADDING, PADDING);
+    city = new City(this);
 
-  ui->startButton->move(width_+ PADDING, PADDING);
+    QImage backgroundImage = QImage(BACKGROUND);
+    city->setBackground(backgroundImage, backgroundImage);
 
-  map = new QGraphicsScene(this);
-  QImage background = QImage(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
-  this->setPicture(background);
-  ui->gameView->setScene(map);
-  map->setSceneRect(0, 0, width_, height_);
-
-
-  resize(minimumSizeHint());
+    // setScene for Graphic view
+    ui->gameView->setScene(city);
+    city->setSceneRect(0, 0, width_, height_);
+    resize(minimumSizeHint());
 //  ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
 
-  connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
+    // connect events
+    connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
 
-  timer = new QTimer(this);
+    timer = new QTimer(this);
 
-  try {
+    try {
       Location loc(6825813, 3328734);
       Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
       addCharacter(character);
-  }  catch (...) {
-      qDebug() << "Error during loading characters";
-  }
+    }  catch (...) {
+        qDebug() << "Error during loading characters";
+    }
 }
 
 MainWindow::~MainWindow()
@@ -57,8 +60,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::setSize(int w, int h)
 {
-  width_ = w;
-  height_ = h;
+    width_ = w;
+    height_ = h;
 }
 
 void MainWindow::setTick(int t)
@@ -67,7 +70,7 @@ void MainWindow::setTick(int t)
 }
 
 void MainWindow::addCharacter(Model::Character& character) {
-    QGraphicsPixmapItem* pm = character.setImage(map);
+    QGraphicsPixmapItem* pm = character.setImage(city);
     characters_.append(pm);
 }
 
@@ -75,7 +78,7 @@ void MainWindow::addActor(int locX, int locY, int type)
 {
     SimpleActorItem* nActor = new SimpleActorItem(locX, locY, type);
     actors_.push_back(nActor);
-    map->addItem(nActor);
+    city->addItem(nActor);
     last_ = nActor;
 }
 
@@ -84,10 +87,11 @@ void MainWindow::updateCoords(int nX, int nY)
     last_->setCoord(nX, nY);
 }
 
-void MainWindow::setPicture(QImage &img)
-{
-  map->setBackgroundBrush(img);
-}
+//void MainWindow::readFiles()
+//{
+//    OfflineReader reader;
+//    auto data = reader.readFiles(BUSFILE, STOPSFILE);
+//}
 
 void MainWindow::onStartButtonClicked()
 {

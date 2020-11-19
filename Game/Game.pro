@@ -7,6 +7,7 @@ CONFIG += c++14
 
 SOURCES += \
     character.cc \
+    city.cc \
     creategame.cpp \
     dialog.cpp \
     main.cc \
@@ -42,6 +43,7 @@ FORMS += \
 
 HEADERS += \
     character.hh \
+    city.h \
     dialog.hh \
     mainwindow.hh
 

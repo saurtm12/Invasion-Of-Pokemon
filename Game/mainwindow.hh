@@ -5,7 +5,7 @@
 #include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
-#include <QMainWindow>
+#include "city.h"
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTimer>
@@ -14,6 +14,7 @@
 #include <memory>
 #include <QVector>
 #include <map>
+#include <QString>
 
 using namespace CourseSide;
 using namespace Interface;
@@ -36,8 +37,7 @@ public:
   void addCharacter(Model::Character& character);
   void addActor(int locX, int locY, int type=0);
   void updateCoords(int nX, int nY);
-  void setPicture(QImage &img);
-
+  void readFiles();
 signals:
   void gameStarted();
 
@@ -46,16 +46,20 @@ private slots:
 
 private:
   Ui::MainWindow *ui;
-  QGraphicsScene *map;
+  City *city;
   QTimer *timer;
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
 
   QVector<QGraphicsItem*> characters_;
 
+  const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
+  const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
+  const QString STOPSFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
   int width_ = 950;
   int height_ = 500;
   int tick_ = 500;
+
 };
 
 #endif // MAINWINDOW_HH
