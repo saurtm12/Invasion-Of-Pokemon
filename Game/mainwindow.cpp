@@ -23,30 +23,17 @@ MainWindow::MainWindow(QWidget *parent) :
     // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city = new City(this);
 
-
-    city->startGame();
-//    QImage backgroundImage = QImage(BACKGROUND);
-//    city->setBackground(backgroundImage, backgroundImage);
-
     // setScene for Graphic view
-    ui->gameView->setScene(city);
     city->setSceneRect(0, 0, width_, height_);
+    ui->gameView->setScene(city);
     resize(minimumSizeHint());
     city->startGame();
-//  ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
+//    ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
 
     timer = new QTimer(this);
-
-//    try {
-//      Location loc(6825813, 3328734);
-//      Model::Character character(loc.giveX(), loc.giveY(), ":/characters/characters/bird.png");
-//      addCharacter(character);
-//    }  catch (...) {
-//        qDebug() << "Error during loading characters";
-//    }
 }
 
 MainWindow::~MainWindow()

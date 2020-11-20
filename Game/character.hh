@@ -17,7 +17,7 @@ public:
     explicit Character(int x, int y, QString imgPath);
     virtual ~Character();
 
-    QGraphicsPixmapItem* setImage(QGraphicsScene* map);
+    QGraphicsPixmapItem* setImage(QGraphicsScene* map, int offX = 0, int offY = 0);
     QPixmap getPixmapItem();
 
     int getX();

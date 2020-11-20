@@ -55,8 +55,8 @@ private:
 
 
 
-  int width_ = 950;
-  int height_ = 500;
+  int width_ = 1095;
+  int height_ = 592;
   int tick_ = 500;
 
 };

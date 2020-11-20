@@ -80,7 +80,7 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
     auto offlineReader = CourseSide::OfflineReader();
     auto data = offlineReader.readFiles(busFile, stopFile);
     stops_ = data->stops;
-    buses_.reserve( data->buses.size() );
+    buses_.reserve(data->buses.size());
     for (auto iter = data->buses.begin(); iter != data->buses.end(); iter++)
     {
         buses_.push_back(*iter);
@@ -93,9 +93,10 @@ void City::addBusStops()
     for (auto& stop : stops_)
     {
         Character newStop(stop->getLocation().giveX(),
-                                           stop->getLocation().giveY(),
-                                           BUSICON);
-        QGraphicsPixmapItem* newItem = newStop.setImage(this);
+                          stop->getLocation().giveY(),
+                          BUSICON);
+        // (-7, -11) is the offset for bus stop icon
+        QGraphicsPixmapItem* newItem = newStop.setImage(this, -8, -10);
         stopItems_.push_back(newItem);
     }
 }

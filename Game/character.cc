@@ -12,10 +12,11 @@ Character::~Character() {
 
 }
 
-QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map) {
+QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, int offX, int offY) {
     const QImage img(imgPath_);
     image_ = QPixmap::fromImage(img);
     QGraphicsPixmapItem* pm = map->addPixmap(image_);
+    pm->setOffset(offX, offY);
     pm->setPos(x_, y_);
     return pm;
 }
