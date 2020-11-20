@@ -24,11 +24,13 @@ MainWindow::MainWindow(QWidget *parent) :
     city = new City(this);
 
     // setScene for Graphic view
-    city->setSceneRect(0, 0, width_, height_);
-    ui->gameView->setScene(city);
-    resize(minimumSizeHint());
+    city->getMap()->setSceneRect(0, 0, width_, height_);
+    ui->gameView->setSceneRect(0, 0, 1092, 590);
+    ui->gameView->setScene(city->getMap());
     city->startGame();
-//    ui->gameView->fitInView(0, 0, MAPWIDTH, MAPHEIGHT, Qt::KeepAspectRatio);
+    qDebug() << ui->gameView->sceneRect();
+//    resize(minimumSizeHint());
+//    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
@@ -45,7 +47,7 @@ MainWindow::~MainWindow()
 //  for (auto item: characters_) {
 //      delete item;
 //  }
-
+  delete city;
   delete ui;
 }
 

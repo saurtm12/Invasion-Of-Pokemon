@@ -32,6 +32,7 @@ public:
     void setClock(QTime clock);
     void addStop(std::shared_ptr<IStop> stop);
     void startGame();
+    QGraphicsScene* getMap();
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
     void actorRemoved(std::shared_ptr<IActor> actor);
@@ -55,6 +56,8 @@ private:
 
     std::vector< QGraphicsPixmapItem* > stopItems_;
     void addBusStops();
+
+    QGraphicsScene* map_;
 };
 }
 

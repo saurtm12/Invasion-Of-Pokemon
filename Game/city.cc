@@ -2,7 +2,7 @@
 namespace Model {
 
 City::City(QWidget *parent):
-    QGraphicsScene(parent)
+    map_(new QGraphicsScene(parent))
 {
 
 }
@@ -13,12 +13,14 @@ City::~City()
     {
         delete element;
     }
+
+    delete map_;
 }
 
 void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 {
     //TODO: need to implement this
-    this->setBackgroundBrush(basicbackground);
+    map_->setBackgroundBrush(basicbackground);
 }
 
 void City::setClock(QTime clock)
@@ -38,6 +40,10 @@ void City::startGame()
     setBackground(backgroundImage,backgroundImage);
     readOfflineData(BUSFILE, STOPFILE);
     addBusStops();
+}
+
+QGraphicsScene* City::getMap() {
+    return map_;
 }
 
 void City::addActor(std::shared_ptr<IActor> newactor)
@@ -96,7 +102,7 @@ void City::addBusStops()
                           stop->getLocation().giveY(),
                           BUSICON);
         // (-7, -11) is the offset for bus stop icon
-        QGraphicsPixmapItem* newItem = newStop.setImage(this, -8, -10);
+        QGraphicsPixmapItem* newItem = newStop.setImage(map_, -6, -24);
         stopItems_.push_back(newItem);
     }
 }
