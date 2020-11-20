@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gameView->setSceneRect(0, 0, 1092, 590);
     ui->gameView->setScene(city->getMap());
     city->startGame();
-    qDebug() << ui->gameView->sceneRect();
+    qDebug() << city->getMap()->sceneRect();
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
