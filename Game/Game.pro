@@ -6,12 +6,13 @@ QT += core gui widgets network multimedia
 CONFIG += c++14
 
 SOURCES += \
+    Utils/helpers.cc \
     character.cc \
     city.cc \
     creategame.cpp \
     dialog.cpp \
     main.cc \
-    mainwindow.cpp \
+    mainwindow.cpp
 
 win32:CONFIG(release, debug|release): LIBS += \
     -L$$OUT_PWD/../Course/CourseLib/release/ -lCourseLib
@@ -42,6 +43,7 @@ FORMS += \
     mainwindow.ui
 
 HEADERS += \
+    Utils/helpers.hh \
     character.hh \
     city.h \
     dialog.hh \

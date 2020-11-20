@@ -23,9 +23,6 @@ using namespace CourseSide;
 
 namespace Model {
 
-const int X_OFFSET_MAP = 350;
-const int Y_OFFSET_MAP = 558;
-
 class City : public Interface::ICity, public QGraphicsScene
 {
 public:

@@ -98,10 +98,8 @@ void City::addBusStops()
     stopItems_.reserve(stops_.size());
     for (auto& stop : stops_)
     {
-        Character newStop(stop->getLocation().giveX() + X_OFFSET_MAP,
-                          Y_OFFSET_MAP - stop->getLocation().giveY(),
-                          BUSICON);
-        // (-7, -11) is the offset for bus stop icon
+        Character newStop(stop->getLocation(), BUSICON);
+        // (-8, -24) is the offset for bus stop icon
         QGraphicsPixmapItem* newItem = newStop.setImage(map_, -6, -24);
         stopItems_.push_back(newItem);
     }
