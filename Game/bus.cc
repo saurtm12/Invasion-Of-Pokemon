@@ -8,7 +8,7 @@ Bus::Bus(std::shared_ptr<CourseSide::BusData> busData) :
 {
     setRoute(busData->timeRoute2, busData->schedule.front());
     calcStartingPos(busData->schedule.front());
-    setCoord(Utils::convertLocation(giveLocation()));
+    setCoord(giveLocation());
 }
 
 }

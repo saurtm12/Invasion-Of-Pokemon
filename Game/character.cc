@@ -11,7 +11,7 @@ Character::Character() : loc_(Interface::Location())
 }
 
 Character::Character(Interface::Location loc, QString imgPath) :
-    loc_(Utils::convertLocation(loc)), imgPath_(imgPath)
+    loc_(loc), imgPath_(imgPath)
 {
 
 }

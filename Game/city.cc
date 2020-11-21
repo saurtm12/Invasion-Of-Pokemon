@@ -54,6 +54,10 @@ void City::addStop(std::shared_ptr<IStop> stop)
 
 void City::addBus(std::shared_ptr<BusData> busData)
 {
+    // transform bus' location to fit large map
+    for (auto iter = busData->timeRoute2.begin(); iter != busData->timeRoute2.end(); ++iter) {
+        iter->second.first = Utils::convertLocation(iter->second.first);
+    }
     std::shared_ptr<Bus> bus = std::make_shared<Bus>(busData);
     buses_.push_back(bus);
 }
@@ -131,6 +135,11 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
     for (auto iter = data->buses.begin(); iter != data->buses.end(); iter++)
     {
         addBus(*iter);
+    }
+
+    // Let's transform all the locations for the large map
+    for (auto& stop: stops_) {
+        stop->setLocation(Utils::convertLocation(stop->getLocation()));
     }
 }
 
