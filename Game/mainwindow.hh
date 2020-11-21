@@ -38,13 +38,16 @@ public:
   void addActor(int locX, int locY, int type=0);
   void updateCoords(int nX, int nY);
   void readFiles();
+  void startGame();
 signals:
   void gameStarted();
-
+  void keyPressed(int key);
 private slots:
   void onStartButtonClicked();
 
 private:
+  void keyPressEvent(QKeyEvent *event) override;
+
   Ui::MainWindow *ui;
   City *city;
   QTimer *timer;
@@ -52,6 +55,7 @@ private:
   SimpleActorItem* last_;
 
   //QVector<QGraphicsItem*> characters_;
+
 
 
 

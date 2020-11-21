@@ -9,6 +9,7 @@
 #include "character.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
+#include <Utils/helpers.hh>
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -17,7 +18,7 @@
 #include <memory>
 #include <QString>
 #include <QGraphicsPixmapItem>
-
+#include <vector>
 using namespace Interface;
 using namespace CourseSide;
 
@@ -40,8 +41,8 @@ public:
     void actorMoved(std::shared_ptr<IActor> actor);
     std::vector<std::shared_ptr<IActor>> getNearbyActors(Location loc) const;
     bool isGameOver() const;
-
-
+public slots:
+    void keyPress(int command);
 private:
     const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
     const QString STOPFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
@@ -59,6 +60,8 @@ private:
 
     QGraphicsScene* map_;
 };
+
+const auto HANDLEFUNCT = &City::keyPress;
 }
 
 

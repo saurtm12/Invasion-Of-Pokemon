@@ -2,7 +2,8 @@
 namespace Model {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent))
+    map_(new QGraphicsScene(parent)),
+    QGraphicsScene(parent)
 {
 
 }
@@ -79,6 +80,35 @@ std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
 bool City::isGameOver() const
 {
 
+}
+
+void City::keyPress(int command)
+{
+  if (command == Qt::Key_W)
+  {
+    qDebug()<< "W pressed";
+    return;
+  }
+  if (command == Qt::Key_S)
+  {
+    qDebug()<< "S pressed";
+    return;
+  }
+  if (command == Qt::Key_A)
+  {
+    qDebug()<< "A pressed";
+    return;
+  }
+  if (command == Qt::Key_D)
+  {
+    qDebug()<< "D pressed";
+    return;
+  }
+  if (command == Qt::Key_Space)
+  {
+    qDebug()<< "Space pressed";
+    return;
+  }
 }
 
 void City::readOfflineData(const QString &busFile, const QString &stopFile)

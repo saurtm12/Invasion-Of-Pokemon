@@ -20,15 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->startButton->move(width_+ PADDING, PADDING);
 
-    // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
-    city = new City(this);
-
-    // setScene for Graphic view
-    city->getMap()->setSceneRect(0, 0, width_, height_);
-    ui->gameView->setSceneRect(0, 0, 1092, 590);
-    ui->gameView->setScene(city->getMap());
-    city->startGame();
-    qDebug() << city->getMap()->sceneRect();
+    startGame();
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
@@ -77,7 +69,26 @@ void MainWindow::addActor(int locX, int locY, int type)
 
 void MainWindow::updateCoords(int nX, int nY)
 {
-    last_->setCoord(nX, nY);
+  last_->setCoord(nX, nY);
+}
+
+void MainWindow::startGame()
+{
+  // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
+  city = new City(this);
+
+  // setScene for Graphic view
+  city->getMap()->setSceneRect(0, 0, width_, height_);
+  ui->gameView->setSceneRect(0, 0, 1092, 590);
+  ui->gameView->setScene(city->getMap());
+
+
+  city->startGame();
+  qDebug() << city->getMap()->sceneRect();
+  //connect keys
+  connect(this, &MainWindow::keyPressed,
+          city, Model::HANDLEFUNCT);
+
 }
 
 void MainWindow::onStartButtonClicked()
@@ -85,5 +96,10 @@ void MainWindow::onStartButtonClicked()
     if (!last_) {
         return;
     }
-    this->updateCoords(566, 200);
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+  // LOOK BACK IF THE GAME NEED TO BE STARTED OR NOT.
+  emit keyPressed( static_cast<int>(event->key()));
 }
