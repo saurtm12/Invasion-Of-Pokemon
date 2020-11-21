@@ -15,7 +15,6 @@ const int HEIGHT = 15;
 class Character : public QGraphicsItem
 {
 public:
-    explicit Character(int x, int y, QString imgPath);
     explicit Character(Interface::Location loc, QString imgPath);
     virtual ~Character();
 
@@ -25,7 +24,6 @@ public:
     int getX();
     int getY();
 
-    void setCoord(int x, int y);
     void setCoord(Interface::Location loc);
 
     QRectF boundingRect() const;
@@ -35,8 +33,7 @@ public:
 signals:
 
 private:
-    int x_;
-    int y_;
+    Interface::Location loc_;
     QString imgPath_;
     QPixmap image_;
 };

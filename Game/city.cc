@@ -2,8 +2,7 @@
 namespace Model {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)),
-    QGraphicsScene(parent)
+    QGraphicsScene(parent), map_(new QGraphicsScene(parent))
 {
 
 }

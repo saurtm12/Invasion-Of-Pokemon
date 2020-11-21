@@ -5,17 +5,10 @@
 
 namespace Model {
 
-Character::Character(int x, int y, QString imgPath) :
-    x_(x), y_(y), imgPath_(imgPath)
-{
-
-}
-
 Character::Character(Interface::Location loc, QString imgPath) :
-    imgPath_(imgPath)
+    loc_(Utils::convertLocation(loc)), imgPath_(imgPath)
 {
-    Interface::Location newLoc = Utils::convertLocation(loc);
-    setCoord(newLoc);
+
 }
 
 Character::~Character()
@@ -29,7 +22,7 @@ QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, int offX, int offY
     image_ = QPixmap::fromImage(img);
     QGraphicsPixmapItem* pm = map->addPixmap(image_);
     pm->setOffset(offX, offY);
-    pm->setPos(x_, y_);
+    pm->setPos(loc_.giveX(), loc_.giveY());
     return pm;
 }
 
@@ -40,24 +33,17 @@ QPixmap Character::getPixmapItem()
 
 int Character::getX()
 {
-    return x_;
+    return loc_.giveX();
 }
 
 int Character::getY()
 {
-    return y_;
-}
-
-void Character::setCoord(int x, int y)
-{
-    x_ = x;
-    y_ = y;
+    return loc_.giveY();
 }
 
 void Character::setCoord(Interface::Location loc)
 {
-    x_ = loc.giveX();
-    y_ = loc.giveY();
+    loc_ = loc;
 }
 
 QRectF Character::boundingRect() const
