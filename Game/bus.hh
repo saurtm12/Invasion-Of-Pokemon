@@ -2,13 +2,14 @@
 #define BUS_HH
 
 #include "../Course/CourseLib/actors/nysse.hh"
+#include "../Course/CourseLib/offlinereader.hh"
 #include "character.hh"
 
 
 class Bus : public CourseSide::Nysse, public Model::Character
 {
 public:
-    Bus();
+    Bus(std::shared_ptr<CourseSide::BusData> busData);
 };
 
 #endif // BUS_HH

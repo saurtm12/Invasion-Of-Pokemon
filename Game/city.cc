@@ -46,6 +46,12 @@ void City::addStop(std::shared_ptr<IStop> stop)
 
 }
 
+void City::addBus(std::shared_ptr<BusData> busData)
+{
+    std::shared_ptr<Bus> bus = std::make_shared<Bus>(busData);
+    buses_.push_back(bus);
+}
+
 void City::addActor(std::shared_ptr<IActor> newactor)
 {
 
@@ -118,7 +124,7 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
     buses_.reserve(data->buses.size());
     for (auto iter = data->buses.begin(); iter != data->buses.end(); iter++)
     {
-        buses_.push_back(*iter);
+        addBus(*iter);
     }
 }
 

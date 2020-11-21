@@ -9,6 +9,7 @@
 #include "character.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
+#include "bus.hh"
 #include <Utils/helpers.hh>
 
 #include <QGraphicsScene>
@@ -35,6 +36,7 @@ public:
     QGraphicsScene* getMap();
 
     void addStop(std::shared_ptr<IStop> stop);
+    void addBus(std::shared_ptr<BusData> busData);
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
 
@@ -56,7 +58,7 @@ private:
     void addCharacter(Character& character);
     QTime *clock_;
     std::vector< std::shared_ptr<Stop> > stops_;
-    std::vector< std::shared_ptr<BusData> > buses_;
+    std::vector< std::shared_ptr<Bus> > buses_;
 
     std::vector< QGraphicsPixmapItem* > stopItems_;
     void addBusStops();

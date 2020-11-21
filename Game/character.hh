@@ -15,6 +15,7 @@ const int HEIGHT = 15;
 class Character : public QGraphicsItem
 {
 public:
+    Character();
     explicit Character(Interface::Location loc, QString imgPath);
     virtual ~Character();
 
