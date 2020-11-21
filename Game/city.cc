@@ -28,11 +28,6 @@ void City::setClock(QTime clock)
 
 }
 
-void City::addStop(std::shared_ptr<IStop> stop)
-{
-
-}
-
 void City::startGame()
 {
     QImage backgroundImage = QImage(BACKGROUND);
@@ -44,6 +39,11 @@ void City::startGame()
 
 QGraphicsScene* City::getMap() {
     return map_;
+}
+
+void City::addStop(std::shared_ptr<IStop> stop)
+{
+
 }
 
 void City::addActor(std::shared_ptr<IActor> newactor)

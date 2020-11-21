@@ -7,6 +7,7 @@ CONFIG += c++14
 
 SOURCES += \
     Utils/helpers.cc \
+    bus.cc \
     character.cc \
     city.cc \
     creategame.cpp \
@@ -45,6 +46,7 @@ FORMS += \
 
 HEADERS += \
     Utils/helpers.hh \
+    bus.hh \
     character.hh \
     city.h \
     dialog.hh \

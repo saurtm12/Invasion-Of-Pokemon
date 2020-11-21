@@ -31,15 +31,18 @@ public:
     virtual ~City();
     void setBackground(QImage &basicbackground, QImage &bigbackground);
     void setClock(QTime clock);
-    void addStop(std::shared_ptr<IStop> stop);
     void startGame();
     QGraphicsScene* getMap();
+
+    void addStop(std::shared_ptr<IStop> stop);
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
+
     void actorRemoved(std::shared_ptr<IActor> actor);
     bool findActor(std::shared_ptr<IActor> actor) const;
     void actorMoved(std::shared_ptr<IActor> actor);
     std::vector<std::shared_ptr<IActor>> getNearbyActors(Location loc) const;
+
     bool isGameOver() const;
 public slots:
     void keyPress(int command);
@@ -57,6 +60,7 @@ private:
 
     std::vector< QGraphicsPixmapItem* > stopItems_;
     void addBusStops();
+    void addBuses();
 
     QGraphicsScene* map_;
 };
