@@ -12,7 +12,8 @@ SOURCES += \
     creategame.cpp \
     dialog.cpp \
     main.cc \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pokemon.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
     -L$$OUT_PWD/../Course/CourseLib/release/ -lCourseLib
@@ -47,7 +48,8 @@ HEADERS += \
     character.hh \
     city.h \
     dialog.hh \
-    mainwindow.hh
+    mainwindow.hh \
+    pokemon.h
 
 RESOURCES += \
     images.qrc
