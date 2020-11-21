@@ -31,6 +31,16 @@ QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, int offX, int offY
     return pm;
 }
 
+QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, QString imgPath, int offX, int offY)
+{
+    const QImage img(imgPath);
+    image_ = QPixmap::fromImage(img);
+    QGraphicsPixmapItem* pm = map->addPixmap(image_);
+    pm->setOffset(offX, offY);
+    pm->setPos(loc_.giveX(), loc_.giveY());
+    return pm;
+}
+
 QPixmap Character::getPixmapItem()
 {
     return image_;

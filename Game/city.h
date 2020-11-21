@@ -5,12 +5,9 @@
 #include "../Course/CourseLib/interfaces/iactor.hh"
 #include "../Course/CourseLib/errors/initerror.hh"
 #include "../Course/CourseLib/errors/gameerror.hh"
-#include "../Course/CourseLib/offlinereader.hh"
-#include "character.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
 #include "bus.hh"
-#include <Utils/helpers.hh>
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -49,10 +46,11 @@ public:
 public slots:
     void keyPress(int command);
 private:
-    const QString BUSFILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
-    const QString STOPFILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
+    const QString BUS_FILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
+    const QString STOP_FILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
-    const QString BUSICON = QString(":/characters/characters/busStop.png");
+    const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
+    const QString BUS_ICON = QString(":/characters/characters/bus.png");
 
     void readOfflineData(const QString& busFile, const QString& stopFile);
     void addCharacter(Character& character);
@@ -61,8 +59,9 @@ private:
     std::vector< std::shared_ptr<Bus> > buses_;
 
     std::vector< QGraphicsPixmapItem* > stopItems_;
-    void addBusStops();
-    void addBuses();
+    std::vector< QGraphicsPixmapItem* > busItems_;
+    void initBusStops();
+    void initBuses();
 
     QGraphicsScene* map_;
 };

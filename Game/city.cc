@@ -14,6 +14,11 @@ City::~City()
         delete element;
     }
 
+    for (auto& element : busItems_)
+    {
+        delete element;
+    }
+
     delete map_;
 }
 
@@ -33,8 +38,9 @@ void City::startGame()
     QImage backgroundImage = QImage(BACKGROUND);
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
-    readOfflineData(BUSFILE, STOPFILE);
-    addBusStops();
+    readOfflineData(BUS_FILE, STOP_FILE);
+    initBusStops();
+    initBuses();
 }
 
 QGraphicsScene* City::getMap() {
@@ -128,15 +134,25 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
     }
 }
 
-void City::addBusStops()
+void City::initBusStops()
 {
     stopItems_.reserve(stops_.size());
     for (auto& stop : stops_)
     {
-        Character newStop(stop->getLocation(), BUSICON);
+        Character newStop(stop->getLocation(), BUS_STOP_ICON);
         // (-8, -24) is the offset for bus stop icon
-        QGraphicsPixmapItem* newItem = newStop.setImage(map_, -6, -24);
+        QGraphicsPixmapItem* newItem = newStop.setImage(map_, -8, -24);
         stopItems_.push_back(newItem);
+    }
+}
+
+void City::initBuses()
+{
+    for (auto& bus : buses_)
+    {
+        // bus icon size is 15 x 15, so offset is (-7, -7)
+        QGraphicsPixmapItem* busImg = bus->setImage(map_, BUS_ICON, -7, -7);
+        busItems_.push_back(busImg);
     }
 }
 

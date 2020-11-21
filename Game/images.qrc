@@ -3,5 +3,6 @@
         <file>characters/phineas.png</file>
         <file>characters/bird.png</file>
         <file>characters/busStop.png</file>
+        <file>characters/bus.png</file>
     </qresource>
 </RCC>

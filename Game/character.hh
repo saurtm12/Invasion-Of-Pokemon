@@ -20,6 +20,7 @@ public:
     virtual ~Character();
 
     QGraphicsPixmapItem* setImage(QGraphicsScene* map, int offX = 0, int offY = 0);
+    QGraphicsPixmapItem* setImage(QGraphicsScene* map, QString imgPath, int offX = 0, int offY = 0);
     QPixmap getPixmapItem();
 
     int getX();
