@@ -9,16 +9,6 @@ City::City(QWidget *parent):
 
 City::~City()
 {
-    for (auto& element : stopItems_)
-    {
-        delete element;
-    }
-
-    for (auto& element : busItems_)
-    {
-        delete element;
-    }
-
     delete map_;
 }
 
@@ -145,13 +135,11 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
 
 void City::initBusStops()
 {
-    stopItems_.reserve(stops_.size());
     for (auto& stop : stops_)
     {
         Character newStop(stop->getLocation(), BUS_STOP_ICON);
         // (-8, -24) is the offset for bus stop icon
-        QGraphicsPixmapItem* newItem = newStop.setImage(map_, -8, -24);
-        stopItems_.push_back(newItem);
+        newStop.setImage(map_, -8, -24);
     }
 }
 
@@ -160,8 +148,7 @@ void City::initBuses()
     for (auto& bus : buses_)
     {
         // bus icon size is 15 x 15, so offset is (-7, -7)
-        QGraphicsPixmapItem* busImg = bus->setImage(map_, BUS_ICON, -7, -7);
-        busItems_.push_back(busImg);
+        bus->setImage(map_, BUS_ICON, -7, -7);
         bus->moveToNextPosition(bus->advanceTime());
         bus->moveToNextPosition(bus->advanceTime());
         bus->moveToNextPosition(bus->advanceTime());

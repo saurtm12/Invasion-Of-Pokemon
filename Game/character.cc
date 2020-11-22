@@ -5,13 +5,13 @@
 
 namespace Model {
 
-Character::Character() : loc_(Interface::Location())
+Character::Character() : loc_(Interface::Location()), image_(nullptr)
 {
 
 }
 
 Character::Character(Interface::Location loc, QString imgPath) :
-    loc_(loc), imgPath_(imgPath)
+    loc_(loc), imgPath_(imgPath), image_(nullptr)
 {
 
 }
@@ -21,29 +21,22 @@ Character::~Character()
 
 }
 
-QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, int offX, int offY)
+void Character::setImage(QGraphicsScene* map, int offX, int offY)
 {
     const QImage img(imgPath_);
-    image_ = QPixmap::fromImage(img);
-    QGraphicsPixmapItem* pm = map->addPixmap(image_);
-    pm->setOffset(offX, offY);
-    pm->setPos(loc_.giveX(), loc_.giveY());
-    return pm;
+    auto image = QPixmap::fromImage(img);
+    image_ = map->addPixmap(image);
+    image_->setOffset(offX, offY);
+    image_->setPos(loc_.giveX(), loc_.giveY());
 }
 
-QGraphicsPixmapItem* Character::setImage(QGraphicsScene* map, QString imgPath, int offX, int offY)
+void Character::setImage(QGraphicsScene* map, QString imgPath, int offX, int offY)
 {
     const QImage img(imgPath);
-    image_ = QPixmap::fromImage(img);
-    QGraphicsPixmapItem* pm = map->addPixmap(image_);
-    pm->setOffset(offX, offY);
-    pm->setPos(loc_.giveX(), loc_.giveY());
-    return pm;
-}
-
-QPixmap Character::getPixmapItem()
-{
-    return image_;
+    auto image = QPixmap::fromImage(img);
+    image_ = map->addPixmap(image);
+    image_->setOffset(offX, offY);
+    image_->setPos(loc_.giveX(), loc_.giveY());
 }
 
 int Character::getX()

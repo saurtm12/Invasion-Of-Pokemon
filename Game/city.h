@@ -58,8 +58,6 @@ private:
     std::vector< std::shared_ptr<Stop> > stops_;
     std::vector< std::shared_ptr<Bus> > buses_;
 
-    std::vector< QGraphicsPixmapItem* > stopItems_;
-    std::vector< QGraphicsPixmapItem* > busItems_;
     void initBusStops();
     void initBuses();
 

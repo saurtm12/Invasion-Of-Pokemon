@@ -19,9 +19,8 @@ public:
     explicit Character(Interface::Location loc, QString imgPath);
     virtual ~Character();
 
-    QGraphicsPixmapItem* setImage(QGraphicsScene* map, int offX = 0, int offY = 0);
-    QGraphicsPixmapItem* setImage(QGraphicsScene* map, QString imgPath, int offX = 0, int offY = 0);
-    QPixmap getPixmapItem();
+    void setImage(QGraphicsScene* map, int offX = 0, int offY = 0);
+    void setImage(QGraphicsScene* map, QString imgPath, int offX = 0, int offY = 0);
 
     int getX();
     int getY();
@@ -37,7 +36,7 @@ signals:
 private:
     Interface::Location loc_;
     QString imgPath_;
-    QPixmap image_;
+    QGraphicsPixmapItem* image_;
 };
 
 };
