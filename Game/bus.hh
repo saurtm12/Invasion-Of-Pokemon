@@ -17,6 +17,8 @@ public:
     QTime getNextSchedule();
     QTime advanceTime();
 
+    void setCoord(Interface::Location loc);
+
 private:
     std::list<QTime> schedule_;
     // start time iterator
