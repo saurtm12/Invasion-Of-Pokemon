@@ -49,14 +49,10 @@ int Character::getY()
     return loc_.giveY();
 }
 
-void Character::move(Interface::Location loc)
-{
-    image_->setPos(loc.giveX(), loc.giveY());
-}
-
 void Character::setCoord(Interface::Location loc)
 {
     loc_ = loc;
+    image_->setPos(loc.giveX(), loc.giveY());
 }
 
 QRectF Character::boundingRect() const

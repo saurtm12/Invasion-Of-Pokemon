@@ -25,8 +25,7 @@ public:
     int getX();
     int getY();
 
-    void move(Interface::Location loc);
-    virtual void setCoord(Interface::Location loc) = 0;
+    void setCoord(Interface::Location loc);
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);

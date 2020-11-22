@@ -28,10 +28,10 @@ QTime Bus::advanceTime()
     return time_.addSecs(15);
 }
 
-void Bus::setCoord(Interface::Location loc)
+void Bus::move(Interface::Location loc)
 {
     Nysse::move(loc);
-    Character::move(loc);
+    Character::setCoord(loc);
 }
 
 }
