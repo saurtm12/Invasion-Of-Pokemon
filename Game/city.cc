@@ -56,7 +56,7 @@ void City::addBus(std::shared_ptr<BusData> busData)
 {
     // transform bus' location to fit large map
     for (auto iter = busData->timeRoute2.begin(); iter != busData->timeRoute2.end(); ++iter) {
-        iter->second.first = Utils::convertLocation(iter->second.first);
+        iter->second = std::make_pair(Utils::convertLocation(iter->second.first), iter->second.second);
     }
     std::shared_ptr<Bus> bus = std::make_shared<Bus>(busData);
     buses_.push_back(bus);
@@ -162,6 +162,12 @@ void City::initBuses()
         // bus icon size is 15 x 15, so offset is (-7, -7)
         QGraphicsPixmapItem* busImg = bus->setImage(map_, BUS_ICON, -7, -7);
         busItems_.push_back(busImg);
+        bus->moveToNextPosition(bus->advanceTime());
+        bus->moveToNextPosition(bus->advanceTime());
+        bus->moveToNextPosition(bus->advanceTime());
+        Location newLoc = bus->moveToNextPosition(bus->advanceTime());
+        qDebug() << newLoc.giveX();
+        bus->move(newLoc);
     }
 }
 

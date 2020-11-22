@@ -8,7 +8,7 @@ using namespace Interface;
 
 namespace Utils {
 
-const int X_OFFSET_MAP = 350;
+const int X_OFFSET_MAP = 352;
 const int Y_OFFSET_MAP = 558;
 
 Location convertLocation(Location loc);
