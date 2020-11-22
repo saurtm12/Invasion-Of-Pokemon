@@ -55,11 +55,10 @@ private:
     void readOfflineData(const QString& busFile, const QString& stopFile);
     void addCharacter(Character& character);
     QTime *clock_;
-    std::vector< std::shared_ptr<Stop> > stops_;
+    std::vector< std::shared_ptr<IStop> > stops_;
     std::vector< std::shared_ptr<Bus> > buses_;
 
     void initBusStops();
-    void initBuses();
 
     QGraphicsScene* map_;
 };

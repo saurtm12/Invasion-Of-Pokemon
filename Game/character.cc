@@ -18,7 +18,7 @@ Character::Character(Interface::Location loc, QString imgPath) :
 
 Character::~Character()
 {
-
+    delete image_;
 }
 
 void Character::setImage(QGraphicsScene* map, int offX, int offY)
