@@ -8,7 +8,6 @@ Bus::Bus(std::shared_ptr<CourseSide::BusData> busData) :
 {
     setRoute(busData->timeRoute2, busData->schedule.front());
     calcStartingPos(busData->schedule.front());
-    setCoord(giveLocation());
 }
 
 QTime Bus::getNextSchedule()
@@ -25,10 +24,11 @@ QTime Bus::getNextSchedule()
 
 QTime Bus::advanceTime()
 {
-    return time_.addSecs(15);
+    time_ = time_.addSecs(15);
+    return time_;
 }
 
-void Bus::move(Interface::Location loc)
+void Bus::moveToLocation(Interface::Location loc)
 {
     Nysse::move(loc);
     Character::setCoord(loc);

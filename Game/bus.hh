@@ -17,7 +17,7 @@ public:
     QTime getNextSchedule();
     QTime advanceTime();
 
-    void move(Interface::Location loc);
+    void moveToLocation(Interface::Location loc);
 
 private:
     std::list<QTime> schedule_;

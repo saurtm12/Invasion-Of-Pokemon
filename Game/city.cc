@@ -147,14 +147,9 @@ void City::initBuses()
 {
     for (auto& bus : buses_)
     {
-        // bus icon size is 15 x 15, so offset is (-7, -7)
-        bus->setImage(map_, BUS_ICON, -7, -7);
-        bus->moveToNextPosition(bus->advanceTime());
-        bus->moveToNextPosition(bus->advanceTime());
-        bus->moveToNextPosition(bus->advanceTime());
-        Location newLoc = bus->moveToNextPosition(bus->advanceTime());
-        qDebug() << newLoc.giveX();
-        bus->move(newLoc);
+        // bus icon size is 20 x 20, so offset is (-10, -10)
+        bus->setImage(map_, BUS_ICON, -10, -10);
+        bus->setCoord(bus->giveLocation());
     }
 }
 
