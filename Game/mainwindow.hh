@@ -49,15 +49,12 @@ private:
   void keyPressEvent(QKeyEvent *event) override;
 
   Ui::MainWindow *ui;
-  City *city;
-  QTimer *timer;
+  City* city;
+  QTimer* timer;
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
 
   //QVector<QGraphicsItem*> characters_;
-
-
-
 
   int width_ = 1095;
   int height_ = 592;

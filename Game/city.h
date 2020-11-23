@@ -33,6 +33,7 @@ public:
     QGraphicsScene* getMap();
 
     void addStop(std::shared_ptr<IStop> stop);
+    void addStop(std::shared_ptr<Stop> stop);
     void addBus(std::shared_ptr<BusData> busData);
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
@@ -43,8 +44,11 @@ public:
     std::vector<std::shared_ptr<IActor>> getNearbyActors(Location loc) const;
 
     bool isGameOver() const;
+
 public slots:
     void keyPress(int command);
+    void changeTime();
+
 private:
     const QString BUS_FILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
     const QString STOP_FILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
@@ -54,13 +58,13 @@ private:
 
     void readOfflineData(const QString& busFile, const QString& stopFile);
     void addCharacter(Character& character);
-    QTime *clock_;
-    std::vector< std::shared_ptr<IStop> > stops_;
-    std::vector< std::shared_ptr<Bus> > buses_;
-
     void initBusStops();
 
+    std::vector< std::shared_ptr<Stop> > stops_;
+    std::vector< std::shared_ptr<Bus> > buses_;
+
     QGraphicsScene* map_;
+    QTime time_;
 };
 
 const auto HANDLEFUNCT = &City::keyPress;

@@ -20,14 +20,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->startButton->move(width_+ PADDING, PADDING);
 
+    timer = new QTimer(this);
+    city = new City(this);
+
+    timer->setInterval(1000);
+    connect(timer, &QTimer::timeout, city, &City::changeTime);
+
     startGame();
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
-
-    timer = new QTimer(this);
 }
 
 MainWindow::~MainWindow()
@@ -39,6 +43,7 @@ MainWindow::~MainWindow()
 //  for (auto item: characters_) {
 //      delete item;
 //  }
+  delete timer;
   delete city;
   delete ui;
 }
@@ -63,7 +68,7 @@ void MainWindow::addActor(int locX, int locY, int type)
 {
     SimpleActorItem* nActor = new SimpleActorItem(locX, locY, type);
     actors_.push_back(nActor);
-    city->addItem(nActor);
+    city->getMap()->addItem(nActor);
     last_ = nActor;
 }
 
@@ -75,7 +80,6 @@ void MainWindow::updateCoords(int nX, int nY)
 void MainWindow::startGame()
 {
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
-  city = new City(this);
 
   // setScene for Graphic view
   city->getMap()->setSceneRect(0, 0, width_, height_);
@@ -88,7 +92,7 @@ void MainWindow::startGame()
   //connect keys
   connect(this, &MainWindow::keyPressed,
           city, Model::HANDLEFUNCT);
-
+  timer->start();
 }
 
 void MainWindow::onStartButtonClicked()
