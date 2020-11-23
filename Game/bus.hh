@@ -15,7 +15,6 @@ public:
     Bus(std::shared_ptr<CourseSide::BusData> busData);
 
     QTime getNextSchedule();
-    QTime advanceTime();
 
     void moveToLocation(Interface::Location loc);
 
@@ -23,7 +22,6 @@ private:
     std::list<QTime> schedule_;
     // start time iterator
     std::list<QTime>::iterator timeIter_;
-    QTime time_;
 };
 
 }

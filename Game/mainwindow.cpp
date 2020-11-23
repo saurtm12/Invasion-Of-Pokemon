@@ -76,7 +76,7 @@ void MainWindow::startGame()
 {
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     timer = new QTimer(this);
-//    timer->setInterval(1000);
+    timer->setInterval(1000);
     city = new City(this);
 
   // setScene for Graphic view
@@ -89,8 +89,8 @@ void MainWindow::startGame()
     qDebug() << city->getMap()->sceneRect();
     //connect keys
     connect(this, &MainWindow::keyPressed, city, Model::HANDLEFUNCT);
-//    connect(timer, &QTimer::timeout, city, &City::changeTime);
-//    timer->start();
+    connect(timer, &QTimer::timeout, city, &City::changeTime);
+    timer->start();
 }
 
 void MainWindow::onStartButtonClicked()

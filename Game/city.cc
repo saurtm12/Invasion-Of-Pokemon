@@ -13,7 +13,6 @@ City::~City()
     {
         delete element;
     }
-    delete map_;
 }
 
 void City::setBackground(QImage &basicbackground, QImage &bigbackground)
@@ -134,8 +133,13 @@ void City::keyPress(int command)
 
 void City::changeTime()
 {
-    time_ = time_.addMSecs(5000);
+    time_ = time_.addSecs(5);
     qDebug() << time_;
+    for (auto bus: buses_)
+    {
+        Location newLoc = bus->moveToNextPosition(time_);
+        bus->moveToLocation(newLoc);
+    }
 }
 
 void City::readOfflineData(const QString &busFile, const QString &stopFile)
