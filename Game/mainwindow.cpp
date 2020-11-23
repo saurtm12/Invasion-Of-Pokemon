@@ -20,18 +20,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->startButton->move(width_+ PADDING, PADDING);
 
-    timer = new QTimer(this);
-    city = new City(this);
-
-    timer->setInterval(1000);
-    connect(timer, &QTimer::timeout, city, &City::changeTime);
-
-    startGame();
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
+
+    startGame();
 }
 
 MainWindow::~MainWindow()
@@ -80,19 +75,22 @@ void MainWindow::updateCoords(int nX, int nY)
 void MainWindow::startGame()
 {
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
+    timer = new QTimer(this);
+//    timer->setInterval(1000);
+    city = new City(this);
 
   // setScene for Graphic view
-  city->getMap()->setSceneRect(0, 0, width_, height_);
-  ui->gameView->setSceneRect(0, 0, 1092, 590);
-  ui->gameView->setScene(city->getMap());
+    city->getMap()->setSceneRect(0, 0, width_, height_);
+    ui->gameView->setSceneRect(0, 0, 1092, 590);
+    ui->gameView->setScene(city->getMap());
 
 
-  city->startGame();
-  qDebug() << city->getMap()->sceneRect();
-  //connect keys
-  connect(this, &MainWindow::keyPressed,
-          city, Model::HANDLEFUNCT);
-  timer->start();
+    city->startGame();
+    qDebug() << city->getMap()->sceneRect();
+    //connect keys
+    connect(this, &MainWindow::keyPressed, city, Model::HANDLEFUNCT);
+//    connect(timer, &QTimer::timeout, city, &City::changeTime);
+//    timer->start();
 }
 
 void MainWindow::onStartButtonClicked()

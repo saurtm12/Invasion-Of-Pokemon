@@ -2,13 +2,17 @@
 namespace Model {
 
 City::City(QWidget *parent):
-    QGraphicsScene(parent), map_(new QGraphicsScene(parent)), time_(QTime(5, 19, 55))
+    map_(new QGraphicsScene(parent)), time_(QTime(5, 19, 55))
 {
 
 }
 
 City::~City()
 {
+    for (auto element: stopImgs_)
+    {
+        delete element;
+    }
     delete map_;
 }
 
@@ -29,6 +33,7 @@ void City::startGame()
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
     readOfflineData(BUS_FILE, STOP_FILE);
+        qDebug() << stops_.size();
 }
 
 QGraphicsScene* City::getMap() {
@@ -43,11 +48,11 @@ void City::addStop(std::shared_ptr<IStop> stop)
 void City::addStop(std::shared_ptr<Stop> stop)
 {
     stop->setLocation(Utils::convertLocation(stop->getLocation()));
-    // Bus stops do not move, so we don't need to deal with their graphics much
-    Character newStop(stop->getLocation(), BUS_STOP_ICON);
+    Character* newStop = new Character(stop->getLocation(), BUS_STOP_ICON);
     // (-8, -24) is the offset for bus stop icon
-    newStop.setImage(map_, -8, -24);
+    newStop->setImage(map_, -8, -24);
     stops_.push_back(stop);
+    stopImgs_.push_back(newStop);
 }
 
 void City::addBus(std::shared_ptr<BusData> busData)
@@ -140,7 +145,7 @@ void City::readOfflineData(const QString &busFile, const QString &stopFile)
 
     stops_.reserve(data->stops.size());
     // Let's transform all the locations for the large map
-    for (auto& stop: data->stops) {
+    for (auto stop: data->stops) {
         addStop(stop);
     }
 

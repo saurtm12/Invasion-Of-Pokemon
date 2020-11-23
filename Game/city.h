@@ -57,10 +57,10 @@ private:
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
 
     void readOfflineData(const QString& busFile, const QString& stopFile);
-    void addCharacter(Character& character);
     void initBusStops();
 
     std::vector< std::shared_ptr<Stop> > stops_;
+    std::vector<Character*> stopImgs_;
     std::vector< std::shared_ptr<Bus> > buses_;
 
     QGraphicsScene* map_;
