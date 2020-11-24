@@ -22,7 +22,7 @@ using namespace CourseSide;
 
 namespace Model {
 
-class City : public Interface::ICity, public QGraphicsScene
+class City : public Interface::ICity, public QObject
 {
 public:
     City(QWidget *parent = 0);

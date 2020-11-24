@@ -10,5 +10,6 @@
         <file>007.png</file>
         <file>006.png</file>
         <file>004.png</file>
+        <file>pokemons.json</file>
     </qresource>
 </RCC>

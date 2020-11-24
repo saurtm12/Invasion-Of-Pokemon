@@ -54,4 +54,5 @@ HEADERS += \
     pokemon.h
 
 RESOURCES += \
+    Pokemon/pokemon.qrc \
     images.qrc
