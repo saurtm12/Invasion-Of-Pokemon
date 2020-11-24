@@ -33,10 +33,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pauseBtn, &QPushButton::clicked, this, &MainWindow::pauseGame);
 
     startGame();
-    //test
-    qDebug()<< pokemons_.size();
-    QDialog* dia = pokemons_.at(0).dialogInfo(this);
-    dia->exec();
 }
 
 MainWindow::~MainWindow()
