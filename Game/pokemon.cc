@@ -35,15 +35,18 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
 
 std::vector<Pokemon> readPokemonData(std::string resource)
 {
-  QString path;
+  QString path = QString::fromStdString(resource);
+
   QString filecontent;
   QString pokemonFile = path + QString("pokemons.json");
+
   QFile file;
   file.setFileName(pokemonFile);
   file.open(QIODevice::ReadOnly | QIODevice::Text);
   filecontent = file.readAll();
   file.close();
 
+  qDebug() << pokemonFile;
   QJsonParseError parse_error;
   QJsonDocument document = QJsonDocument::fromJson( filecontent.toUtf8()  , &parse_error);
   if (parse_error.error != QJsonParseError::NoError) {

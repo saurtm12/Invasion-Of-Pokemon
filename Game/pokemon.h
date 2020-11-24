@@ -40,7 +40,7 @@ private:
 
 std::vector<Pokemon> readPokemonData(std::string resource);
 
-const std::vector<Pokemon> POKEMONS = readPokemonData(":/pokemonImg/");
+const std::vector<Pokemon> POKEMONS = readPokemonData(":/pokemonImg/Pokemon/");
 }
 
 

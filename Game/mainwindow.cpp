@@ -13,6 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
     Dialog *dialog = new Dialog(this);
     dialog->exec();
 
+//    //test
+//    QDialog* dia = POKEMONS.at(0).dialogInfo(this);
+//    dia->exec();
+
     // setup window
     ui->setupUi(this);
     ui->gameView->setFixedSize(width_, height_);
