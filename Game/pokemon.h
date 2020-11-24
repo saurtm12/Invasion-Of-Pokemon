@@ -22,6 +22,7 @@
 #include <QProgressBar>
 #include <QPalette>
 #include <QColor>
+#include <QPushButton>
 
 namespace Model {
 

@@ -4,7 +4,6 @@ namespace Model {
 auto getIntensity(const int &value, const int &maxvalue)
 {
   double rate = value*1.0/maxvalue;
-  qDebug() << rate;
   if (rate <= 0.21)
   {
     return Qt::cyan;
@@ -47,7 +46,7 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
     return nullptr;
   }
   QDialog* nDialog = new QDialog(parent);
-  nDialog->setFixedSize(750,500);
+  nDialog->setFixedSize(750,530);
 
   QGraphicsView* view = new QGraphicsView(nDialog);
   QGraphicsScene* scene = new QGraphicsScene(view);
@@ -131,7 +130,11 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
   p.setColor(QPalette::Highlight, getIntensity(speed_,10));
   speedValue->setPalette(p);
 
-
+  QPushButton* confirm = new QPushButton(nDialog);
+  confirm->move(630,490);
+  confirm->setText("OK");
+  QObject::connect(confirm, &QPushButton::clicked,
+                   nDialog, &QDialog::accept);
   return nDialog;
 }
 
@@ -181,8 +184,5 @@ std::vector<Pokemon> readPokemonData(std::string resource)
     }
   return pokemons;
 }
-
-
-
 
 }
