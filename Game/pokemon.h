@@ -3,13 +3,27 @@
 
 #include <QString>
 #include <QImage>
+#include <QDialog>
+#include <QGraphicsView>
+#include <QImage>
+#include <vector>
+#include <string>
+#include <iostream>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QDebug>
+#include <QJsonArray>
+#include <QString>
+
 namespace Model {
 
 class Pokemon
 {
 public:
   Pokemon(int id, QString category, QString name, QString description,
-          QString path, int score, int attack, int defense, int speed, int total);
+          QString path, int score, int hp, int attack, int defense, int speed, int total);
+  QDialog* dialogInfo(QWidget* parent=0) const;
 private:
   int id_;
   QString category_;
@@ -24,6 +38,9 @@ private:
   int total_;
 };
 
+std::vector<Pokemon> readPokemonData(std::string resource);
+
+const std::vector<Pokemon> POKEMONS = readPokemonData(":/pokemonImg/");
 }
 
 

@@ -15,6 +15,7 @@
 #include <QVector>
 #include <map>
 #include <QString>
+#include <pokemon.h>
 
 using namespace CourseSide;
 using namespace Interface;
