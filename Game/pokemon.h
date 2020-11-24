@@ -5,6 +5,8 @@
 #include <QImage>
 #include <QDialog>
 #include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
 #include <QImage>
 #include <vector>
 #include <string>
@@ -15,6 +17,10 @@
 #include <QDebug>
 #include <QJsonArray>
 #include <QString>
+#include <QLabel>
+#include <QTextBrowser>
+#include <QProgressBar>
+#include <QPalette>
 
 namespace Model {
 

@@ -24,6 +24,47 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
     return nullptr;
   }
   QDialog* nDialog = new QDialog(parent);
+  nDialog->setFixedSize(750,500);
+
+  QGraphicsView* view = new QGraphicsView(nDialog);
+  QGraphicsScene* scene = new QGraphicsScene(view);
+  QGraphicsPixmapItem* imgItem = new QGraphicsPixmapItem(QPixmap::fromImage(img_));
+  view->setSceneRect(10,10,485,485);
+  view->setScene(scene);
+  view->show();
+  scene->addItem(imgItem);
+
+  QLabel* name = new QLabel(QString("Name: ")+name_,nDialog);
+  name->move(510,10);
+
+  QLabel* category = new QLabel(QString("Category: ") + category_,nDialog);
+  category->move(510,50);
+
+  QLabel* description = new QLabel("Description: ", nDialog);
+  description->move(510, 90);
+
+  QTextBrowser* descriptionValue = new QTextBrowser(nDialog);
+  descriptionValue->setText(description_);
+  descriptionValue->move(510,110);
+  descriptionValue->setFixedSize(230,120);
+
+  QLabel* score = new QLabel("Score: ", nDialog);
+  score->move(510, 240);
+  QProgressBar* scoreValue = new QProgressBar(nDialog);
+  scoreValue->setFormat(QString("%v"));
+  scoreValue->move(510,260);
+  scoreValue->setMaximum(5);
+  scoreValue->setValue(score_);
+
+//  QLabel* score = new QLabel("Score: ", nDialog);
+//  score->move(510, 240);
+//  QProgressBar* scoreValue = new QProgressBar(nDialog);
+//  scoreValue->setFormat(QString("%v"));
+//  scoreValue->move(510,260);
+//  scoreValue->setMaximum(5);
+//  scoreValue->setValue(score_);
+
+  qDebug() << Qt::darkRed;
   return nDialog;
 }
 
