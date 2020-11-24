@@ -60,7 +60,7 @@ private:
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
-
+  std::vector<Pokemon> pokemons_;
 };
 
 #endif // MAINWINDOW_HH

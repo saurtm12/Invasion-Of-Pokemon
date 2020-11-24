@@ -24,12 +24,6 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
     return nullptr;
   }
   QDialog* nDialog = new QDialog(parent);
-
-  QGraphicsView* infoView = new QGraphicsView(nDialog);
-
-  //test
-  QImage image = QImage(":/pokemonImg/001.png");
-  infoView->setBackgroundBrush(image);
   return nDialog;
 }
 

@@ -13,9 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Dialog *dialog = new Dialog(this);
     dialog->exec();
 
-//    //test
-//    QDialog* dia = POKEMONS.at(0).dialogInfo(this);
-//    dia->exec();
+
 
     // setup window
     ui->setupUi(this);
@@ -31,6 +29,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
 
     startGame();
+    //test
+    qDebug()<< pokemons_.size();
+    QDialog* dia = pokemons_.at(0).dialogInfo(this);
+    dia->exec();
 }
 
 MainWindow::~MainWindow()
@@ -88,7 +90,7 @@ void MainWindow::startGame()
     ui->gameView->setSceneRect(0, 0, 1092, 590);
     ui->gameView->setScene(city->getMap());
 
-
+    pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
     city->startGame();
     qDebug() << city->getMap()->sceneRect();
     //connect keys

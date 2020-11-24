@@ -23,6 +23,7 @@ class Pokemon
 public:
   Pokemon(int id, QString category, QString name, QString description,
           QString path, int score, int hp, int attack, int defense, int speed, int total);
+
   QDialog* dialogInfo(QWidget* parent=0) const;
 private:
   int id_;
@@ -40,7 +41,6 @@ private:
 
 std::vector<Pokemon> readPokemonData(std::string resource);
 
-const std::vector<Pokemon> POKEMONS = readPokemonData(":/pokemonImg/Pokemon/");
 }
 
 
