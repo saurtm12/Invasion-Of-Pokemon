@@ -45,6 +45,8 @@ signals:
   void keyPressed(int key);
 private slots:
   void onStartButtonClicked();
+  void pauseGame();
+  void resumeGame();
 
 private:
   void keyPressEvent(QKeyEvent *event) override;

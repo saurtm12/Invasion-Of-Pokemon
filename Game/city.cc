@@ -2,7 +2,7 @@
 namespace Model {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)), time_(QTime(5, 19, 55))
+    map_(new QGraphicsScene(parent)), time_(QTime(5, 20, 0)), pause_(false)
 {
 
 }
@@ -133,7 +133,7 @@ void City::keyPress(int command)
 
 void City::changeTime()
 {
-    time_ = time_.addSecs(5);
+    time_ = time_.addSecs(3);
     qDebug() << time_;
     for (auto bus: buses_)
     {

@@ -65,6 +65,8 @@ private:
 
     QGraphicsScene* map_;
     QTime time_;
+
+    bool pause_;
 };
 
 const auto HANDLEFUNCT = &City::keyPress;

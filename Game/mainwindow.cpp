@@ -21,12 +21,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
 
     ui->startButton->move(width_+ PADDING, PADDING);
+    ui->resumeBtn->move(width_+ PADDING, 300);
+    ui->pauseBtn->move(width_+ PADDING, 380);
 
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
+    connect(ui->resumeBtn, &QPushButton::clicked, this, &MainWindow::resumeGame);
+    connect(ui->pauseBtn, &QPushButton::clicked, this, &MainWindow::pauseGame);
 
     startGame();
     //test
@@ -92,18 +96,28 @@ void MainWindow::startGame()
 
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
     city->startGame();
-    qDebug() << city->getMap()->sceneRect();
+
     //connect keys
     connect(this, &MainWindow::keyPressed, city, Model::HANDLEFUNCT);
     connect(timer, &QTimer::timeout, city, &City::changeTime);
-    timer->start();
 }
 
 void MainWindow::onStartButtonClicked()
 {
+    timer->start();
     if (!last_) {
         return;
     }
+}
+
+void MainWindow::pauseGame()
+{
+    timer->stop();
+}
+
+void MainWindow::resumeGame()
+{
+    timer->start();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
