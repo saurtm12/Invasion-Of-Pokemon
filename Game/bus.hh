@@ -12,7 +12,7 @@ namespace Model
 class Bus : public CourseSide::Nysse, public Model::Character
 {
 public:
-    Bus(std::shared_ptr<CourseSide::BusData> busData);
+    Bus(std::shared_ptr<CourseSide::BusData> busData, QTime time);
 
     QTime getNextSchedule();
 

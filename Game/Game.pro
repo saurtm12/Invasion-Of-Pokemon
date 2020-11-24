@@ -7,6 +7,7 @@ CONFIG += c++14
 
 SOURCES += \
     Utils/helpers.cc \
+    advancedlogic.cc \
     bus.cc \
     character.cc \
     city.cc \
@@ -46,6 +47,7 @@ FORMS += \
 
 HEADERS += \
     Utils/helpers.hh \
+    advancedlogic.hh \
     bus.hh \
     character.hh \
     city.h \

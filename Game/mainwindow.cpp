@@ -13,8 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :
     Dialog *dialog = new Dialog(this);
     dialog->exec();
 
-
-
     // setup window
     ui->setupUi(this);
     ui->gameView->setFixedSize(width_, height_);

@@ -60,7 +60,7 @@ void City::addBus(std::shared_ptr<BusData> busData)
     for (auto iter = busData->timeRoute2.begin(); iter != busData->timeRoute2.end(); ++iter) {
         iter->second = std::make_pair(Utils::convertLocation(iter->second.first), iter->second.second);
     }
-    std::shared_ptr<Bus> bus = std::make_shared<Bus>(busData);
+    std::shared_ptr<Bus> bus = std::make_shared<Bus>(busData, time_);
     // bus icon size is 20 x 20, so offset is (-10, -10)
     bus->setImage(map_, BUS_ICON, -10, -10);
     bus->setCoord(bus->giveLocation());

@@ -3,11 +3,11 @@
 namespace Model
 {
 
-Bus::Bus(std::shared_ptr<CourseSide::BusData> busData) :
+Bus::Bus(std::shared_ptr<CourseSide::BusData> busData, QTime time) :
     CourseSide::Nysse(busData->routeNumber), schedule_(busData->schedule), timeIter_(schedule_.begin())
 {
     setRoute(busData->timeRoute2, busData->schedule.front());
-    calcStartingPos(busData->schedule.front());
+    calcStartingPos(time);
 }
 
 QTime Bus::getNextSchedule()
