@@ -1,6 +1,29 @@
 #include "pokemon.h"
 namespace Model {
 
+auto getIntensity(const int &value, const int &maxvalue)
+{
+  double rate = value*1.0/maxvalue;
+  qDebug() << rate;
+  if (rate <= 0.21)
+  {
+    return Qt::cyan;
+  }
+  if (rate <= 0.41)
+  {
+    return Qt::blue;
+  }
+  if (rate <= 0.61)
+  {
+    return Qt::darkYellow;
+  }
+  if (rate <= 0.81)
+  {
+    return Qt::red;
+  }
+  return Qt::darkRed;
+}
+
 Pokemon::Pokemon(int id, QString category, QString name, QString description,
                  QString path, int score, int hp,
                  int attack, int defense, int speed, int total):
@@ -53,18 +76,62 @@ QDialog *Pokemon::dialogInfo(QWidget *parent) const
   QProgressBar* scoreValue = new QProgressBar(nDialog);
   scoreValue->setFormat(QString("%v"));
   scoreValue->move(510,260);
+  scoreValue->setFixedWidth(200);
   scoreValue->setMaximum(5);
   scoreValue->setValue(score_);
+  QPalette p = scoreValue->palette();
+  p.setColor(QPalette::Highlight, getIntensity(score_,5));
+  scoreValue->setPalette(p);
 
-//  QLabel* score = new QLabel("Score: ", nDialog);
-//  score->move(510, 240);
-//  QProgressBar* scoreValue = new QProgressBar(nDialog);
-//  scoreValue->setFormat(QString("%v"));
-//  scoreValue->move(510,260);
-//  scoreValue->setMaximum(5);
-//  scoreValue->setValue(score_);
+  QLabel* hp = new QLabel("HP: ", nDialog);
+  hp->move(510, 290);
+  QProgressBar* hpValue = new QProgressBar(nDialog);
+  hpValue->setFormat(QString("%v"));
+  hpValue->move(510,310);
+  hpValue->setFixedWidth(200);
+  hpValue->setMaximum(10);
+  hpValue->setValue(hp_);
+  p = hpValue->palette();
+  p.setColor(QPalette::Highlight, getIntensity(hp_,10));
+  hpValue->setPalette(p);
 
-  qDebug() << Qt::darkRed;
+  QLabel* attack = new QLabel("Attack: ", nDialog);
+  attack->move(510, 340);
+  QProgressBar* attackValue = new QProgressBar(nDialog);
+  attackValue->setFormat(QString("%v"));
+  attackValue->move(510,360);
+  attackValue->setFixedWidth(200);
+  attackValue->setMaximum(10);
+  attackValue->setValue(attack_);
+  p = attackValue->palette();
+  p.setColor(QPalette::Highlight, getIntensity(attack_,10));
+  attackValue->setPalette(p);
+
+  QLabel* defense = new QLabel("Defense: ", nDialog);
+  defense->move(510, 390);
+  QProgressBar* defenseValue = new QProgressBar(nDialog);
+  defenseValue->setFormat(QString("%v"));
+  defenseValue->move(510,410);
+  defenseValue->setFixedWidth(200);
+  defenseValue->setMaximum(10);
+  defenseValue->setValue(defense_);
+  p = defenseValue->palette();
+  p.setColor(QPalette::Highlight, getIntensity(defense_,10));
+  defenseValue->setPalette(p);
+
+  QLabel* speed = new QLabel("Speed: ", nDialog);
+  speed->move(510, 440);
+  QProgressBar* speedValue = new QProgressBar(nDialog);
+  speedValue->setFormat(QString("%v"));
+  speedValue->move(510,460);
+  speedValue->setFixedWidth(200);
+  speedValue->setMaximum(10);
+  speedValue->setValue(speed_);
+  p = speedValue->palette();
+  p.setColor(QPalette::Highlight, getIntensity(speed_,10));
+  speedValue->setPalette(p);
+
+
   return nDialog;
 }
 
@@ -114,6 +181,8 @@ std::vector<Pokemon> readPokemonData(std::string resource)
     }
   return pokemons;
 }
+
+
 
 
 }

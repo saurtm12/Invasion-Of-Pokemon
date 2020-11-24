@@ -21,6 +21,7 @@
 #include <QTextBrowser>
 #include <QProgressBar>
 #include <QPalette>
+#include <QColor>
 
 namespace Model {
 
@@ -46,6 +47,7 @@ private:
 };
 
 std::vector<Pokemon> readPokemonData(std::string resource);
+auto getIntensity(const int& value,const int& maxvalue);
 
 }
 
