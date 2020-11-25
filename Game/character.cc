@@ -5,9 +5,10 @@
 
 namespace Model {
 
-Character::Character(QString imgPath) : loc_(Location())
+Character::Character(QGraphicsPixmapItem* item, Interface::Location loc) :
+    item_(item)
 {
-    setPixmap(QPixmap::fromImage(QImage(imgPath)));
+    setCoord(loc);
 }
 
 Character::~Character()

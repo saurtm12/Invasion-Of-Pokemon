@@ -78,7 +78,7 @@ void MainWindow::startGame()
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
     logic_->takeCity(city_);
-    logic_->setTime(6, 20);
+    logic_->setTime(9, 20);
     logic_->fileConfig();
 
     // setScene for Graphic view

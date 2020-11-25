@@ -11,10 +11,10 @@ namespace Model {
 const int WIDTH = 15;
 const int HEIGHT = 15;
 
-class Character : public QGraphicsPixmapItem
+class Character
 {
 public:
-    Character(QString imgPath);
+    Character(QGraphicsPixmapItem* item, Interface::Location loc);
     ~Character();
 
     int getX();
