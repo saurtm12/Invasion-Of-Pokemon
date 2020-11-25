@@ -4,7 +4,7 @@ namespace Model {
 City::City(QWidget *parent):
     map_(new QGraphicsScene(parent)), pause_(false)
 {
-
+  pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
 
 City::~City()

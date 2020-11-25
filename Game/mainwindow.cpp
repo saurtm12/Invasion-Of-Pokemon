@@ -34,43 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-  for (auto item: actors_) {
-      delete item;
-  }
-
-//  for (auto item: characters_) {
-//      delete item;
-//  }
   delete ui;
-}
-
-void MainWindow::setSize(int w, int h)
-{
-    width_ = w;
-    height_ = h;
-}
-
-void MainWindow::setTick(int t)
-{
-
-}
-
-//void MainWindow::addCharacter(Model::Character& character) {
-//    QGraphicsPixmapItem* pm = character.setImage(city);
-//    characters_.append(pm);
-//}
-
-void MainWindow::addActor(int locX, int locY, int type)
-{
-    SimpleActorItem* nActor = new SimpleActorItem(locX, locY, type);
-    actors_.push_back(nActor);
-    city_->getMap()->addItem(nActor);
-    last_ = nActor;
-}
-
-void MainWindow::updateCoords(int nX, int nY)
-{
-  last_->setCoord(nX, nY);
 }
 
 void MainWindow::startGame()
@@ -86,8 +50,6 @@ void MainWindow::startGame()
     ui->gameView->setSceneRect(0, 0, 1092, 590);
     ui->gameView->setScene(city_->getMap());
 
-    pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
-
     //connect keys
     connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
 
@@ -97,9 +59,6 @@ void MainWindow::startGame()
 void MainWindow::onStartButtonClicked()
 {
 
-    if (!last_) {
-        return;
-    }
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

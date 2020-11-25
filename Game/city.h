@@ -9,6 +9,7 @@
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
 #include "Utils/helpers.hh"
+#include "./pokemon.h"
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -69,7 +70,7 @@ private:
     std::vector< std::shared_ptr<Character> > ballsMap_;
 
     QGraphicsScene* map_;
-
+    std::vector<Pokemon> pokemons_;
     bool pause_;
 };
 
