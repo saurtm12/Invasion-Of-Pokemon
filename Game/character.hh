@@ -1,7 +1,6 @@
 #ifndef CHARACTER_HH
 #define CHARACTER_HH
 
-#include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include "../Course/CourseLib/core/location.hh"
 #include <QGraphicsItem>
 #include <QImage>

@@ -76,7 +76,10 @@ bool City::findActor(std::shared_ptr<IActor> actor) const
 
 void City::actorMoved(std::shared_ptr<IActor> actor)
 {
-
+    std::string type = typeid(*actor).name();
+    if (type == "N10CourseSide5NysseE") {
+        actorsMap_.at(actor)->setCoord(actor->giveLocation());
+    }
 }
 
 std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
