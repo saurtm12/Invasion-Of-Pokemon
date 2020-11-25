@@ -4,5 +4,7 @@
         <file>characters/bird.png</file>
         <file>characters/busStop.png</file>
         <file>characters/bus.png</file>
+        <file>characters/ballIcon.png</file>
+        <file>characters/passengerIcon.png</file>
     </qresource>
 </RCC>

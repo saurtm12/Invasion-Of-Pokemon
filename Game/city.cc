@@ -28,6 +28,7 @@ void City::startGame()
     QImage backgroundImage = QImage(BACKGROUND);
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
+    generateBalls();
 }
 
 QGraphicsScene* City::getMap() {
@@ -45,9 +46,13 @@ void City::addStop(std::shared_ptr<IStop> stop)
 void City::addActor(std::shared_ptr<IActor> newactor)
 {
     QString imgPath = BUS_ICON;
-    std::string type = typeid(*newactor).name();
-    if (type == "N10CourseSide5NysseE") {
-        imgPath = BUS_ICON;
+    if (typeid(*newactor).name() == Utils::NYSSE_TYPE)
+    {
+      imgPath = BUS_ICON;
+    }
+    if (typeid(*newactor).name() == Utils::PASSENGER_TYPE)
+    {
+      imgPath = PASSENGER_ICON;
     }
 
     QGraphicsPixmapItem* actorPixmap = map_->addPixmap(QPixmap::fromImage(QImage(imgPath)));
@@ -59,6 +64,26 @@ void City::addActor(std::shared_ptr<IActor> newactor)
 void City::removeActor(std::shared_ptr<IActor> actor)
 {
 
+}
+
+void City::addBall()
+{
+  int x = rand()%WITDH-380;
+  int y = 558 - rand()%HEIGHT;
+  Location newLoc;
+  newLoc.setXY(x,y);
+  QGraphicsPixmapItem* ballPixmap = map_->addPixmap(QPixmap::fromImage(QImage(BALL_ICON)));
+  std::shared_ptr<Character> newBall = std::make_shared<Character>(ballPixmap, newLoc);
+  newBall->setOffset(-8, -24);
+  ballsMap_.push_back(newBall);
+}
+
+void City::generateBalls()
+{
+  ballsMap_.clear();
+  for (int i = 0; i < BALLS_PER_TURN; i++){
+    addBall();
+  }
 }
 
 void City::actorRemoved(std::shared_ptr<IActor> actor)

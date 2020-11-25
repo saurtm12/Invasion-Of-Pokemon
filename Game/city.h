@@ -8,6 +8,7 @@
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
+#include "Utils/helpers.hh"
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -37,6 +38,9 @@ public:
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
 
+    void addBall();
+    void generateBalls();
+
     void actorRemoved(std::shared_ptr<IActor> actor);
     bool findActor(std::shared_ptr<IActor> actor) const;
     void actorMoved(std::shared_ptr<IActor> actor);
@@ -52,9 +56,17 @@ private:
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
+    const QString BALL_ICON = QString(":/characters/characters/ballIcon.png");
+    const int BALLS_PER_TURN = 5;
+
+    // FIX THIS
+    const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
+    int WITDH = 1095;
+    int HEIGHT = 592;
 
     std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
     std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
+    std::vector< std::shared_ptr<Character> > ballsMap_;
 
     QGraphicsScene* map_;
 
