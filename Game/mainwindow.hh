@@ -6,6 +6,7 @@
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
 #include "city.h"
+#include "advancedlogic.hh"
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTimer>
@@ -20,6 +21,7 @@
 using namespace CourseSide;
 using namespace Interface;
 using namespace Model;
+
 namespace Ui {
   class MainWindow;
 }
@@ -45,15 +47,13 @@ signals:
   void keyPressed(int key);
 private slots:
   void onStartButtonClicked();
-  void pauseGame();
-  void resumeGame();
 
 private:
   void keyPressEvent(QKeyEvent *event) override;
 
   Ui::MainWindow *ui;
-  City* city;
-  QTimer* timer;
+  AdvancedLogic* logic_;
+  std::shared_ptr<City> city_;
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;
 

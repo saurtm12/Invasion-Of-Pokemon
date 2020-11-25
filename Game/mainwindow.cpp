@@ -2,12 +2,11 @@
 #include "ui_mainwindow.h"
 
 const qreal PADDING = 10;
-const qreal MAPWIDTH = 1095;
-const qreal MAPHEIGHT = 592;
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
-  ui(new Ui::MainWindow)
+  ui(new Ui::MainWindow),
+  logic_(new AdvancedLogic(this))
 {
     // add first dialog
     Dialog *dialog = new Dialog(this);
@@ -27,8 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
-    connect(ui->resumeBtn, &QPushButton::clicked, this, &MainWindow::resumeGame);
-    connect(ui->pauseBtn, &QPushButton::clicked, this, &MainWindow::pauseGame);
+    connect(ui->resumeBtn, &QPushButton::clicked, logic_, &AdvancedLogic::resumeGame);
+    connect(ui->pauseBtn, &QPushButton::clicked, logic_, &AdvancedLogic::pauseGame);
 
     startGame();
 }
@@ -42,8 +41,6 @@ MainWindow::~MainWindow()
 //  for (auto item: characters_) {
 //      delete item;
 //  }
-  delete timer;
-  delete city;
   delete ui;
 }
 
@@ -67,7 +64,7 @@ void MainWindow::addActor(int locX, int locY, int type)
 {
     SimpleActorItem* nActor = new SimpleActorItem(locX, locY, type);
     actors_.push_back(nActor);
-    city->getMap()->addItem(nActor);
+    city_->getMap()->addItem(nActor);
     last_ = nActor;
 }
 
@@ -79,39 +76,30 @@ void MainWindow::updateCoords(int nX, int nY)
 void MainWindow::startGame()
 {
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
-    timer = new QTimer(this);
-    timer->setInterval(1000);
-    city = new City(this);
+    city_ = std::make_shared<City>(this);
+    logic_->takeCity(city_);
+    logic_->setTime(6, 20, 0);
+    logic_->fileConfig();
 
-  // setScene for Graphic view
-    city->getMap()->setSceneRect(0, 0, width_, height_);
+    // setScene for Graphic view
+    city_->getMap()->setSceneRect(0, 0, width_, height_);
     ui->gameView->setSceneRect(0, 0, 1092, 590);
-    ui->gameView->setScene(city->getMap());
+    ui->gameView->setScene(city_->getMap());
 
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
-    city->startGame();
 
     //connect keys
-    connect(this, &MainWindow::keyPressed, city, Model::HANDLEFUNCT);
-    connect(timer, &QTimer::timeout, city, &City::changeTime);
+    connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
+
+    logic_->finalizeGameStart();
 }
 
 void MainWindow::onStartButtonClicked()
 {
-    timer->start();
+
     if (!last_) {
         return;
     }
-}
-
-void MainWindow::pauseGame()
-{
-    timer->stop();
-}
-
-void MainWindow::resumeGame()
-{
-    timer->start();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

@@ -2,9 +2,11 @@
 #define ADVANCEDLOGIC_HH
 
 #include "../Course/CourseLib/actors/passenger.hh"
-#include "../Course/CourseLib/actors/nysse.hh"
 #include "../Course/CourseLib/offlinereader.hh"
 #include "../Course/CourseLib/interfaces/icity.hh"
+#include "Utils/helpers.hh"
+#include "bus.hh"
+#include "city.h"
 
 #include <list>
 #include <QTime>
@@ -18,7 +20,7 @@ using namespace CourseSide;
  */
 
 
-namespace StudentSide
+namespace Model
 {
 
 // default files
@@ -67,14 +69,14 @@ public:
      * @param hr time in hours
      * @param min time in minutes
      */
-    void setTime(unsigned short hr, unsigned short min);
+    void setTime(unsigned short hr, unsigned short min, unsigned short sec);
 
     /**
      * @brief takeCity sets given parameter as cityif_
      * @param city pointer of a class that is derived from ICity interface in StudentSide
      * @return true
      */
-    bool takeCity(std::shared_ptr<Interface::ICity> city);
+    bool takeCity(std::shared_ptr<City> city);
 
 public slots:
 
@@ -109,15 +111,18 @@ public slots:
      */
     void addNewPassengers(std::shared_ptr<Stop> stop, unsigned int no);
 
+    void pauseGame();
+    void resumeGame();
+
 private:
     // ratio between game time and real time
     static const int TIME_SPEED;
     // time between updates in milliseconds
     static const int UPDATE_INTERVAL_MS;
 
-    std::shared_ptr<Interface::ICity> cityif_;
+    std::shared_ptr<City> cityif_;
     std::list< std::shared_ptr<Passenger> > passengers_;
-    std::list< std::shared_ptr<Nysse> > buses_;
+    std::list< std::shared_ptr<Bus> > buses_;
     std::vector< std::shared_ptr<Stop> > stops_;
     std::shared_ptr<OfflineData> offlinedata_;
     QString busfile_;
@@ -139,7 +144,7 @@ private:
 
     // Returns true if new location was succesfully calculated
     // False if bus arrived to the final stop or it shouldn't be in traffic
-    bool calculateNewLocationForBus(std::shared_ptr<Nysse> bussi);
+    bool calculateNewLocationForBus(std::shared_ptr<Bus> bussi);
 
     // Adds buses to the traffic depending on the time_, called by finalizeGameStart
     void addBuses();

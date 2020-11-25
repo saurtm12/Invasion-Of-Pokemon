@@ -34,7 +34,7 @@ public:
 
     void addStop(std::shared_ptr<IStop> stop);
     void addStop(std::shared_ptr<Stop> stop);
-    void addBus(std::shared_ptr<BusData> busData);
+    void addBus(std::shared_ptr<Bus> bus);
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
 
@@ -50,21 +50,15 @@ public slots:
     void changeTime();
 
 private:
-    const QString BUS_FILE = QString(":/offlinedata/offlinedata/final_bus_liteN.json");
-    const QString STOP_FILE = QString(":/offlinedata/offlinedata/full_stations_kkj3.json");
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
 
-    void readOfflineData(const QString& busFile, const QString& stopFile);
     void initBusStops();
 
-    std::vector< std::shared_ptr<Stop> > stops_;
-    std::vector<Character*> stopImgs_;
-    std::vector< std::shared_ptr<Bus> > buses_;
+    std::vector<std::shared_ptr<Character>> stopImgs_;
 
     QGraphicsScene* map_;
-    QTime time_;
 
     bool pause_;
 };

@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QDir>
 
-namespace StudentSide
+namespace Model
 {
 
 AdvancedLogic::AdvancedLogic(QObject *parent)
@@ -21,11 +21,25 @@ AdvancedLogic::AdvancedLogic(QObject *parent)
 bool AdvancedLogic::readOfflineData(const QString &buses, const QString &stops)
 {
     OfflineReader offlinereader;
-    if((offlinedata_ = offlinereader.readFiles(buses, stops)) == NULL) {
+    if ((offlinedata_ = offlinereader.readFiles(buses, stops)) == NULL) {
         return false;
     }
-    return true;
 
+    // transform stops' location to fit large map
+    for (auto stop: offlinedata_->stops)
+    {
+        stop->setLocation(Utils::convertLocation(stop->getLocation()));
+    }
+
+    // transform bus' location to fit large map
+    for (auto iter = offlinedata_->buses.begin(); iter != offlinedata_->buses.end(); ++iter)
+    {
+        for (auto iter2 = (*iter)->timeRoute2.begin(); iter2 != (*iter)->timeRoute2.end(); ++iter2) {
+            iter2->second = std::make_pair(Utils::convertLocation(iter2->second.first), iter2->second.second);
+        }
+    }
+
+    return true;
 }
 
 void AdvancedLogic::finalizeGameStart()
@@ -44,9 +58,9 @@ void AdvancedLogic::finalizeGameStart()
 
 }
 
-void AdvancedLogic::setTime(unsigned short hr, unsigned short min)
+void AdvancedLogic::setTime(unsigned short hr, unsigned short min, unsigned short sec)
 {
-    time_.setHMS(hr, min, 0);
+    time_.setHMS(hr, min, sec);
 }
 
 void AdvancedLogic::advance()
@@ -80,8 +94,8 @@ void AdvancedLogic::advance()
     }
 
     // Goes through current buses and removes ones that are removed
-    for (std::list<std::shared_ptr<Nysse>>::iterator it = buses_.begin(); it != buses_.end();) {
-        std::shared_ptr<Nysse> bus = *it;
+    for (std::list<std::shared_ptr<Bus>>::iterator it = buses_.begin(); it != buses_.end();) {
+        std::shared_ptr<Bus> bus = *it;
 
         // Check if removed
         if (bus->isRemoved()) {
@@ -160,7 +174,7 @@ void AdvancedLogic::advance()
     }
 
     // go through all stops that have buses
-    for (std::shared_ptr <Nysse> bus : buses_) {
+    for (std::shared_ptr <Bus> bus : buses_) {
         std::shared_ptr <Stop> stop = bus->getStop().lock();
 
         if (stop != nullptr) {
@@ -181,7 +195,7 @@ void AdvancedLogic::advance()
     }
 
     // 2. let every passenger in this stop about the buses in this stop at this time
-    for (std::shared_ptr <Nysse> stopbus : buses_) {
+    for (std::shared_ptr <Bus> stopbus : buses_) {
         std::shared_ptr <Stop> stop = stopbus->getStop().lock();
 
         // stopbus is bus that is currently at the same stop
@@ -245,7 +259,7 @@ void AdvancedLogic::increaseTime()
 
 }
 
-bool AdvancedLogic::calculateNewLocationForBus(std::shared_ptr<Nysse> bus)
+bool AdvancedLogic::calculateNewLocationForBus(std::shared_ptr<Bus> bus)
 {
     // Check if bus is at traffic
     // Deals with removing the buses at final stop
@@ -279,7 +293,6 @@ void AdvancedLogic::addBuses()
     // Find buses that are on route from offlinedata
     for (std::shared_ptr<BusData> bus: offlinedata_->buses) {
         for (QTime starttime : bus->schedule) {
-
             // relative time from first route point to last route point
             // added to game time just now
             // --> if starttime is smaller and this recieved time is larger than time now, bus is currently driving
@@ -335,7 +348,7 @@ void AdvancedLogic::createBus(std::shared_ptr<BusData> bus, QTime starttime)
     }
 
     // Create new bus and add it to city
-    std::shared_ptr<Nysse> newBus = std::make_shared<Nysse>(bus->routeNumber);
+    std::shared_ptr<Bus> newBus = std::make_shared<Bus>(bus->routeNumber);
 
     // Add data to buses
     newBus->setRoute(bus->timeRoute2, starttime);
@@ -343,9 +356,8 @@ void AdvancedLogic::createBus(std::shared_ptr<BusData> bus, QTime starttime)
     buses_.push_back(newBus);
     newBus->setCity(cityif_);
     newBus->setSID(busSID_);
-
     busSID_ += 1;
-    cityif_->addActor(newBus);
+    cityif_->addBus(newBus);
 
     // Buses at transport
     qDebug() << "Bus added! Route nro: " << bus->routeNumber;
@@ -405,7 +417,17 @@ void AdvancedLogic::addNewPassengers(std::shared_ptr<Stop> stop, unsigned int no
     }
 }
 
-bool AdvancedLogic::takeCity(std::shared_ptr<Interface::ICity> city) {
+void AdvancedLogic::pauseGame()
+{
+    timer_.stop();
+}
+
+void AdvancedLogic::resumeGame()
+{
+    timer_.start(UPDATE_INTERVAL_MS);
+}
+
+bool AdvancedLogic::takeCity(std::shared_ptr<City> city) {
 
     cityif_ = city;
     return true;

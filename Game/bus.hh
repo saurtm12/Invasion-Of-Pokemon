@@ -12,16 +12,12 @@ namespace Model
 class Bus : public CourseSide::Nysse, public Model::Character
 {
 public:
-    Bus(std::shared_ptr<CourseSide::BusData> busData, QTime time);
-
-    QTime getNextSchedule();
+    Bus(unsigned int line);
 
     void moveToLocation(Interface::Location loc);
 
 private:
-    std::list<QTime> schedule_;
-    // start time iterator
-    std::list<QTime>::iterator timeIter_;
+
 };
 
 }
