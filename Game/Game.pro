@@ -13,6 +13,7 @@ SOURCES += \
     dialog.cpp \
     main.cc \
     mainwindow.cpp \
+    player.cc \
     pokemon.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
@@ -49,6 +50,7 @@ HEADERS += \
     city.h \
     dialog.hh \
     mainwindow.hh \
+    player.h \
     pokemon.h
 
 RESOURCES += \
