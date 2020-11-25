@@ -5,10 +5,14 @@
 
 namespace Model {
 
-Character::Character(Interface::Location loc, QString imgPath) :
-    QGraphicsPixmapItem(), loc_(Utils::convertLocation(loc))
+Character::Character(QString imgPath) : loc_(Location())
 {
     setPixmap(QPixmap::fromImage(QImage(imgPath)));
+}
+
+Character::~Character()
+{
+    delete item_;
 }
 
 int Character::getX()
@@ -24,7 +28,17 @@ int Character::getY()
 void Character::setCoord(Interface::Location loc)
 {
     loc_ = Utils::convertLocation(loc);
-    this->setPos(loc_.giveX(), loc_.giveY());
+    item_->setPos(loc_.giveX(), loc_.giveY());
+}
+
+void Character::setOffset(int offX, int offY)
+{
+    item_->setOffset(offX, offY);
+}
+
+void Character::setItem(QGraphicsPixmapItem *item)
+{
+    item_ = item;
 }
 
 }

@@ -15,17 +15,21 @@ const int HEIGHT = 15;
 class Character : public QGraphicsPixmapItem
 {
 public:
-    Character(Interface::Location loc, QString imgPath);
+    Character(QString imgPath);
+    ~Character();
 
     int getX();
     int getY();
 
     void setCoord(Interface::Location loc);
+    void setOffset(int offX, int offY);
+    void setItem(QGraphicsPixmapItem* item);
 
 signals:
 
 private:
     Interface::Location loc_;
+    QGraphicsPixmapItem* item_;
 };
 
 };
