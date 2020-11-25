@@ -357,7 +357,7 @@ void AdvancedLogic::createBus(std::shared_ptr<BusData> bus, QTime starttime)
     newBus->setCity(cityif_);
     newBus->setSID(busSID_);
     busSID_ += 1;
-    cityif_->addBus(newBus);
+    cityif_->addActor(newBus);
 
     // Buses at transport
     qDebug() << "Bus added! Route nro: " << bus->routeNumber;
