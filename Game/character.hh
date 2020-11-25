@@ -15,7 +15,7 @@ const int HEIGHT = 15;
 class Character : public QGraphicsPixmapItem
 {
 public:
-    Character(Interface::Location loc, QString imgPath, QGraphicsItem* parent);
+    Character(Interface::Location loc, QString imgPath);
 
     int getX();
     int getY();

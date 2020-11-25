@@ -36,27 +36,25 @@ QGraphicsScene* City::getMap() {
 
 void City::addStop(std::shared_ptr<IStop> stop)
 {
-
-}
-
-void City::addStop(std::shared_ptr<Stop> stop)
-{
     std::shared_ptr<Character> newStop = std::make_shared<Character>(stop->getLocation(), BUS_STOP_ICON);
-    // (-8, -24) is the offset for bus stop icon
-    newStop->setImage(map_, -8, -24);
-    stopImgs_.push_back(newStop);
-}
-
-void City::addBus(std::shared_ptr<Bus> bus)
-{
-    // bus icon size is 20 x 20, so offset is (-10, -10)
-    bus->setImage(map_, BUS_ICON, -10, -10);
-    bus->setCoord(bus->giveLocation());
+    newStop->setOffset(-8, -24);
+    map_->addItem(newStop.get());
+    stopsMap_.insert({ stop, newStop });
 }
 
 void City::addActor(std::shared_ptr<IActor> newactor)
 {
+    QString imgPath = BUS_ICON;
+    std::string type = typeid(*newactor).name();
+    qDebug() << type.data();
+    if (type == "N10CourseSide5NysseE") {
+        imgPath = BUS_ICON;
+    }
 
+    std::shared_ptr<Character> actorGraphic = std::make_shared<Character>(newactor->giveLocation(), imgPath);
+    actorGraphic->setOffset(-10, -10);
+    map_->addItem(actorGraphic.get());
+    actorsMap_.insert({ newactor, actorGraphic });
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)

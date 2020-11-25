@@ -4,9 +4,9 @@
 
 #include "../Course/CourseLib/graphics/simpleactoritem.hh"
 #include "../Course/CourseLib/core/location.hh"
+#include "../Course/CourseLib/core/logic.hh"
 #include "character.hh"
 #include "city.h"
-#include "advancedlogic.hh"
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QTimer>
@@ -52,7 +52,7 @@ private:
   void keyPressEvent(QKeyEvent *event) override;
 
   Ui::MainWindow *ui;
-  AdvancedLogic* logic_;
+  Logic* logic_;
   std::shared_ptr<City> city_;
   QVector<QGraphicsItem*> actors_;
   SimpleActorItem* last_;

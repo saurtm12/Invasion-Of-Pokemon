@@ -378,7 +378,7 @@ std::map<QTime, std::weak_ptr<Stop> > AdvancedLogic::calculateStopTimes(std::map
 void AdvancedLogic::addStopsAndPassengers()
 {
     // give city all stops before creating passengers
-    for ( std::shared_ptr<Stop> stop: offlinedata_->stops) {
+    for ( std::shared_ptr<IStop> stop: offlinedata_->stops) {
         cityif_->addStop(stop);
     }
 

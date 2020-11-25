@@ -6,7 +6,7 @@ const qreal PADDING = 10;
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow),
-  logic_(new AdvancedLogic(this))
+  logic_(new Logic(this))
 {
     // add first dialog
     Dialog *dialog = new Dialog(this);
@@ -26,8 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
-    connect(ui->resumeBtn, &QPushButton::clicked, logic_, &AdvancedLogic::resumeGame);
-    connect(ui->pauseBtn, &QPushButton::clicked, logic_, &AdvancedLogic::pauseGame);
+//    connect(ui->resumeBtn, &QPushButton::clicked, logic_, &AdvancedLogic::resumeGame);
+//    connect(ui->pauseBtn, &QPushButton::clicked, logic_, &AdvancedLogic::pauseGame);
 
     startGame();
 }
@@ -78,7 +78,7 @@ void MainWindow::startGame()
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
     logic_->takeCity(city_);
-    logic_->setTime(6, 20, 0);
+    logic_->setTime(6, 20);
     logic_->fileConfig();
 
     // setScene for Graphic view

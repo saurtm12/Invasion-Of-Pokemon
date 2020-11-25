@@ -7,7 +7,7 @@
 #include "../Course/CourseLib/errors/gameerror.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
-#include "bus.hh"
+#include "character.hh"
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -17,6 +17,7 @@
 #include <QString>
 #include <QGraphicsPixmapItem>
 #include <vector>
+#include <unordered_map>
 using namespace Interface;
 using namespace CourseSide;
 
@@ -33,8 +34,6 @@ public:
     QGraphicsScene* getMap();
 
     void addStop(std::shared_ptr<IStop> stop);
-    void addStop(std::shared_ptr<Stop> stop);
-    void addBus(std::shared_ptr<Bus> bus);
     void addActor(std::shared_ptr<IActor> newactor);
     void removeActor(std::shared_ptr<IActor> actor);
 
@@ -54,9 +53,8 @@ private:
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
 
-    void initBusStops();
-
-    std::vector<std::shared_ptr<Character>> stopImgs_;
+    std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
+    std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
 
     QGraphicsScene* map_;
 

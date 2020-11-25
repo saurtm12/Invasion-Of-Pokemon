@@ -5,8 +5,8 @@
 
 namespace Model {
 
-Character::Character(Interface::Location loc, QString imgPath, QGraphicsItem* parent) :
-    QGraphicsPixmapItem(parent), loc_(loc)
+Character::Character(Interface::Location loc, QString imgPath) :
+    QGraphicsPixmapItem(), loc_(Utils::convertLocation(loc))
 {
     setPixmap(QPixmap::fromImage(QImage(imgPath)));
 }
