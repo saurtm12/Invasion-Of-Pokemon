@@ -6,7 +6,8 @@ const qreal PADDING = 10;
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow),
-  logic_(new Logic(this))
+  logic_(new Logic(this)),
+  isStarted(false)
 {
     // add first dialog
     Dialog *dialog = new Dialog(this);
@@ -39,6 +40,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::startGame()
 {
+    if (isStarted)
+    {
+        return;
+    }
+    isStarted = true;
   // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
     logic_->takeCity(city_);

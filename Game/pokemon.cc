@@ -37,7 +37,12 @@ Pokemon::Pokemon(int id, QString category, QString name, QString description,
   speed_(speed),
   total_(total)
 {
-  img_ = QImage(path);
+    img_ = QImage(path);
+}
+
+Pokemon::~Pokemon()
+{
+
 }
 
 QDialog *Pokemon::dialogInfo(QWidget *parent) const

@@ -6,7 +6,6 @@
 #include "../Course/CourseLib/actors/passenger.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include <QObject>
-
 using namespace Interface;
 
 namespace Utils {
@@ -19,7 +18,6 @@ const std::string PASSENGER_TYPE = typeid(CourseSide::Passenger).name();
 const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 
 Location convertLocation(Location loc);
-
 }
 
 #endif // HELPERS_HH

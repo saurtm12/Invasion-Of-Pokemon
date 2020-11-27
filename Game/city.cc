@@ -116,7 +116,14 @@ void City::actorMoved(std::shared_ptr<IActor> actor)
 
 std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
 {
+    std::vector< std::shared_ptr<IActor> > result;
+    for (auto actor: actorsMap_) {
+        if (actor.first->giveLocation().isClose(loc)) {
+            result.push_back(actor.first);
+        }
+    }
 
+    return result;
 }
 
 bool City::isGameOver() const

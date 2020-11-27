@@ -39,7 +39,6 @@ signals:
   void keyPressed(int key);
 private slots:
   void onStartButtonClicked();
-
 private:
   void keyPressEvent(QKeyEvent *event) override;
 
@@ -51,6 +50,7 @@ private:
   int height_ = 592;
   int tick_ = 500;
   const int MAXIMUM_FUEL = 5000;
+  bool isStarted;
 };
 
 #endif // MAINWINDOW_HH

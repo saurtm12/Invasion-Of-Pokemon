@@ -31,7 +31,7 @@ class Pokemon
 public:
   Pokemon(int id, QString category, QString name, QString description,
           QString path, int score, int hp, int attack, int defense, int speed, int total);
-
+  ~Pokemon();
   QDialog* dialogInfo(QWidget* parent=0) const;
 private:
   int id_;
