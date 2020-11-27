@@ -5,7 +5,6 @@
 #include "character.hh"
 #include "pokemon.h"
 #include <vector>
-#include <QProgressBar>
 
 namespace Model
 {
@@ -13,7 +12,7 @@ namespace Model
 class Player: public Interface::IActor, Character
 {
 public:
-  Player(QGraphicsPixmapItem* item, Interface::Location loc, QProgressBar* bar);
+  Player(QGraphicsPixmapItem* item, Interface::Location loc);
   ~Player();
 
   Interface::Location giveLocation() const;
@@ -27,7 +26,6 @@ private:
   const int MAX_FUEL = 5000;
   int fuel_;
   std::vector<Pokemon> bag_;
-  QProgressBar* fuelBar_;
 };
 
 }

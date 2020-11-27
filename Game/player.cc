@@ -3,9 +3,9 @@
 namespace Model
 {
 
-Player::Player(QGraphicsPixmapItem* item, Interface::Location loc, QProgressBar* bar):
+Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
     Character(item, loc),
-    fuelBar_(bar)
+    fuel_(MAX_FUEL)
 {
 
 }

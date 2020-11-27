@@ -4,7 +4,8 @@ namespace Model
 {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)), pause_(false)
+    map_(new QGraphicsScene(parent)), pause_(false),
+    QObject(parent)
 {
   pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -70,10 +71,6 @@ void City::addMainActor()
     Location mainLoc;
     mainLoc.setXY(200, 200);
     player_ = std::make_shared<Player>(mainPixmap, mainLoc);
-//    QProgressBar* fuelBar = new QProgressBar();
-
-//    fuelBar->move(WITDH,HEIGHT);
-//    player_ = std::make_shared<Player>(mainPixmap, mainLoc, fuelBar);
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)

@@ -22,7 +22,6 @@
 #include <QGraphicsPixmapItem>
 #include <vector>
 #include <unordered_map>
-#include <QProgressBar>
 
 using namespace Interface;
 using namespace CourseSide;

@@ -16,6 +16,7 @@
 #include <QVector>
 #include <map>
 #include <QString>
+#include <QProgressBar>
 
 using namespace CourseSide;
 using namespace Interface;
@@ -45,10 +46,11 @@ private:
   Ui::MainWindow *ui;
   Logic* logic_;
   std::shared_ptr<City> city_;
-
+  QProgressBar* fuelBar_;
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
+  const int MAXIMUM_FUEL = 5000;
 };
 
 #endif // MAINWINDOW_HH

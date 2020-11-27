@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //    connect(ui->resumeBtn, &QPushButton::clicked, logic_, &AdvancedLogic::resumeGame);
 //    connect(ui->pauseBtn, &QPushButton::clicked, logic_, &AdvancedLogic::pauseGame);
 
-    startGame();
+
 }
 
 MainWindow::~MainWindow()
@@ -52,13 +52,24 @@ void MainWindow::startGame()
 
     //connect keys
     connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
+    fuelBar_ = new QProgressBar(this);
+    fuelBar_->move(PADDING,600);
+    fuelBar_->setMaximum(MAXIMUM_FUEL);
+    fuelBar_->setFixedHeight(20);
+    fuelBar_->setFixedWidth(width_-PADDING);
+    fuelBar_->setFormat("Fuel: %p%");
+    fuelBar_->setValue(MAXIMUM_FUEL);
+    QPalette p = fuelBar_->palette();
+    p.setColor(QPalette::Highlight, QColor(0,128,0));
+    fuelBar_->setPalette(p);
+    fuelBar_->show();
 
     logic_->finalizeGameStart();
 }
 
 void MainWindow::onStartButtonClicked()
 {
-
+    startGame();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
