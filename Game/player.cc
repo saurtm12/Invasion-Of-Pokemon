@@ -21,7 +21,14 @@ Interface::Location Player::giveLocation() const
 
 void Player::move(Interface::Location loc)
 {
+    setTrueCoord(loc);
+}
 
+void Player::move(int horizontalMultiplier, int verticalMultipler)
+{
+    Interface::Location loc = getLocation();
+    loc.setXY(loc.giveX() + horizontalMultiplier * STEP, loc.giveY() + verticalMultipler * STEP);
+    setTrueCoord(loc);
 }
 
 bool Player::isRemoved() const

@@ -125,31 +125,28 @@ bool City::isGameOver() const
 
 void City::keyPress(int command)
 {
-  if (command == Qt::Key_W)
-  {
-    qDebug()<< "W pressed";
-    return;
-  }
-  if (command == Qt::Key_S)
-  {
-    qDebug()<< "S pressed";
-    return;
-  }
-  if (command == Qt::Key_A)
-  {
-    qDebug()<< "A pressed";
-    return;
-  }
-  if (command == Qt::Key_D)
-  {
-    qDebug()<< "D pressed";
-    return;
-  }
-  if (command == Qt::Key_Space)
-  {
-    qDebug()<< "Space pressed";
-    return;
-  }
+    switch (command) {
+    case Qt::Key_W:
+        qDebug()<< "W pressed";
+        player_->move(0, -1);
+        break;
+    case Qt::Key_S:
+        qDebug()<< "S pressed";
+        player_->move(0, 1);
+        break;
+    case Qt::Key_A:
+        qDebug()<< "A pressed";
+        player_->move(-1, 0);
+        break;
+    case Qt::Key_D:
+        qDebug()<< "D pressed";
+        player_->move(1, 0);
+        break;
+    case Qt::Key_Space:
+        qDebug()<< "Space pressed";
+        break;
+
+    }
 }
 
 }
