@@ -7,7 +7,7 @@ namespace Model {
 
 Character::Character(QGraphicsPixmapItem* item, Interface::Location loc) :
     item_(item),
-    isRemoved(false)
+    step_(4)
 {
     setCoord(loc);
 }
@@ -63,8 +63,8 @@ void Character::setItem(QGraphicsPixmapItem *item)
 
 void Character::move(int horizontalMultiplier, int verticalMultiplier)
 {
-    int x = getX() + horizontalMultiplier * STEP;
-    int y = getY() + verticalMultiplier * STEP;
+    int x = getX() + horizontalMultiplier * step_;
+    int y = getY() + verticalMultiplier * step_;
     int offX = -item_->offset().x();
     int offY = -item_->offset().y();
     if (x < offX || x >= WITDH - offX || y < offY || y >= HEIGHT - offY)
@@ -73,6 +73,16 @@ void Character::move(int horizontalMultiplier, int verticalMultiplier)
     }
     loc_.setXY(x, y);
     item_->setPos(x, y);
+}
+
+void Character::giveStep(int step)
+{
+    step_ = step;
+}
+
+int Character::getStep() const
+{
+    return step_;
 }
 
 }
