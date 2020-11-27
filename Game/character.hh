@@ -19,8 +19,10 @@ public:
 
     int getX();
     int getY();
+    Interface::Location getLocation() const;
 
     void setCoord(Interface::Location loc);
+    void setTrueCoord(Interface::Location trueLoc);
     void setOffset(int offX, int offY);
     void setItem(QGraphicsPixmapItem* item);
 

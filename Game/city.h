@@ -8,6 +8,7 @@
 #include "../Course/CourseLib/actors/stop.hh"
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
+#include "player.h"
 #include "Utils/helpers.hh"
 #include "./pokemon.h"
 
@@ -37,6 +38,7 @@ public:
 
     void addStop(std::shared_ptr<IStop> stop);
     void addActor(std::shared_ptr<IActor> newactor);
+    void addMainActor();
     void removeActor(std::shared_ptr<IActor> actor);
 
     void addBall();
@@ -58,6 +60,8 @@ private:
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
     const QString BALL_ICON = QString(":/characters/characters/ballIcon.png");
+    const QString STEWIE_ICON = QString(":/characters/characters/stewie25.png");
+
     const int BALLS_PER_TURN = 5;
 
     // FIX THIS
@@ -70,6 +74,7 @@ private:
     std::vector< std::shared_ptr<Character> > ballsMap_;
 
     QGraphicsScene* map_;
+    std::shared_ptr<Player> player_;
     std::vector<Pokemon> pokemons_;
     bool pause_;
 };

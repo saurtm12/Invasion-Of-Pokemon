@@ -2,14 +2,25 @@
 #define PLAYER_H
 #include "../Course/CourseLib/interfaces/iactor.hh"
 #include "../Course/CourseLib/core/location.hh"
+#include "character.hh"
 
-class player: public Interface::IActor
+namespace Model
+{
+
+class Player: public Interface::IActor, Character
 {
 public:
-  player();
-  ~player();
+  Player(QGraphicsPixmapItem* item, Interface::Location loc);
+  ~Player();
+
   Interface::Location giveLocation() const;
   void move(Interface::Location loc);
+
+  bool isRemoved() const;
+
+  void remove();
 };
+
+}
 
 #endif // PLAYER_H

@@ -1,5 +1,7 @@
 #include "city.h"
-namespace Model {
+
+namespace Model
+{
 
 City::City(QWidget *parent):
     map_(new QGraphicsScene(parent)), pause_(false)
@@ -28,6 +30,7 @@ void City::startGame()
     QImage backgroundImage = QImage(BACKGROUND);
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
+    addMainActor();
     generateBalls();
 }
 
@@ -59,6 +62,14 @@ void City::addActor(std::shared_ptr<IActor> newactor)
     std::shared_ptr<Character> actorGraphic = std::make_shared<Character>(actorPixmap, newactor->giveLocation());
     actorGraphic->setOffset(-10, -10);
     actorsMap_.insert({ newactor, actorGraphic });
+}
+
+void City::addMainActor()
+{
+    QGraphicsPixmapItem* mainPixmap = map_->addPixmap(QPixmap::fromImage(QImage(STEWIE_ICON)));
+    Location mainLoc;
+    mainLoc.setXY(200, 200);
+    player_ = std::make_shared<Player>(mainPixmap, mainLoc);
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)
@@ -98,10 +109,7 @@ bool City::findActor(std::shared_ptr<IActor> actor) const
 
 void City::actorMoved(std::shared_ptr<IActor> actor)
 {
-    std::string type = typeid(*actor).name();
-    if (type == "N10CourseSide5NysseE") {
-        actorsMap_.at(actor)->setCoord(actor->giveLocation());
-    }
+    actorsMap_.at(actor)->setCoord(actor->giveLocation());
 }
 
 std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const

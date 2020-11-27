@@ -1,21 +1,37 @@
 #include "player.h"
 
-player::player()
+namespace Model
+{
+
+Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
+    Character(item, loc)
 {
 
 }
 
-player::~player()
+Player::~Player()
 {
 
 }
 
-Interface::Location player::giveLocation() const
+Interface::Location Player::giveLocation() const
+{
+    return getLocation();
+}
+
+void Player::move(Interface::Location loc)
 {
 
 }
 
-void player::move(Interface::Location loc)
+bool Player::isRemoved() const
 {
+
+}
+
+void Player::remove()
+{
+
+}
 
 }

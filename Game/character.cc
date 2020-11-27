@@ -26,9 +26,20 @@ int Character::getY()
     return loc_.giveY();
 }
 
+Interface::Location Character::getLocation() const
+{
+    return loc_;
+}
+
 void Character::setCoord(Interface::Location loc)
 {
     loc_ = Utils::convertLocation(loc);
+    item_->setPos(loc_.giveX(), loc_.giveY());
+}
+
+void Character::setTrueCoord(Interface::Location trueLoc)
+{
+    loc_ = trueLoc;
     item_->setPos(loc_.giveX(), loc_.giveY());
 }
 
