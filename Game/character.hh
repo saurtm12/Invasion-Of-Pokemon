@@ -23,19 +23,20 @@ public:
     Interface::Location getLocation() const;
 
     void setCoord(Interface::Location loc);
+    void setCoord(int x, int y);
     void setTrueCoord(Interface::Location trueLoc);
     void setOffset(int offX, int offY);
     void setItem(QGraphicsPixmapItem* item);
-    void move(int horizontalMultiplier, int verticalMultiplier);
+    virtual void move(int horizontalMultiplier, int verticalMultiplier);
 protected:
     const int step = 1;
-private:
-    Interface::Location loc_;
-    QGraphicsPixmapItem* item_;
     bool isRemoved;
     const int OFFSET = 15;
     const int WITDH = 1095;
     const int HEIGHT = 592;
+private:
+    Interface::Location loc_;
+    QGraphicsPixmapItem* item_;
 };
 
 };

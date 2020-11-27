@@ -38,6 +38,12 @@ void Character::setCoord(Interface::Location loc)
     item_->setPos(loc_.giveX(), loc_.giveY());
 }
 
+void Character::setCoord(int x, int y)
+{
+    loc_.setXY(x, y);
+    item_->setPos(x, y);
+}
+
 void Character::setTrueCoord(Interface::Location trueLoc)
 {
     loc_ = trueLoc;
@@ -53,6 +59,7 @@ void Character::setItem(QGraphicsPixmapItem *item)
 {
     item_ = item;
 }
+
 
 void Character::move(int horizontalMultiplier, int verticalMultiplier)
 {

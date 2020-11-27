@@ -21,7 +21,9 @@ public:
   bool isRemoved() const ;
   void bonusFuel(int bonus);
   void addPokemon(Pokemon pokemon);
-
+  void move(int horizontalMultiplier, int verticalMultiplier);
+public slots:
+  void fuelChange(int fuel);
 private:
   const int MAX_FUEL = 5000;
   int fuel_;
