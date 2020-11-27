@@ -4,8 +4,7 @@ namespace Model
 {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)), pause_(false),
-    QObject(parent)
+    map_(new QGraphicsScene(parent)), pause_(false)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -23,7 +22,7 @@ void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 
 void City::setClock(QTime clock)
 {
-
+    clock_ = clock;
 }
 
 void City::startGame()
@@ -75,7 +74,7 @@ void City::addMainActor()
 
 void City::removeActor(std::shared_ptr<IActor> actor)
 {
-
+    actorsMap_.erase(actor);
 }
 
 void City::addBall()
@@ -107,7 +106,7 @@ void City::actorRemoved(std::shared_ptr<IActor> actor)
 
 bool City::findActor(std::shared_ptr<IActor> actor) const
 {
-
+    return actorsMap_.find(actor) != actorsMap_.end();
 }
 
 void City::actorMoved(std::shared_ptr<IActor> actor)

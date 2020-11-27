@@ -71,6 +71,8 @@ private:
     int WITDH = 1095;
     int HEIGHT = 592;
 
+    QTime clock_;
+
     std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
     std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
     std::vector< std::shared_ptr<Character> > ballsMap_;

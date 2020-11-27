@@ -12,20 +12,20 @@ namespace Model
 class Player: public Interface::IActor, Character
 {
 public:
-  Player(QGraphicsPixmapItem* item, Interface::Location loc);
-  ~Player();
+    Player(QGraphicsPixmapItem* item, Interface::Location loc);
+    ~Player();
 
-  Interface::Location giveLocation() const;
-  void remove();
-  void move(Interface::Location loc);
-  bool isRemoved() const ;
-  void bonusFuel(int bonus);
-  void addPokemon(Pokemon pokemon);
+    Interface::Location giveLocation() const;
+    void remove();
+    void move(Interface::Location loc);
+    bool isRemoved() const ;
+    void bonusFuel(int bonus);
+    void addPokemon(Pokemon pokemon);
 
 private:
-  const int MAX_FUEL = 5000;
-  int fuel_;
-  std::vector<Pokemon> bag_;
+    const int MAX_FUEL = 5000;
+    int fuel_;
+    std::vector<Pokemon> bag_;
 };
 
 }

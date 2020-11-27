@@ -4,8 +4,7 @@ namespace Model
 {
 
 Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
-    Character(item, loc)
-//    fuelBar_(bar)
+    Character(item, loc), fuel_(MAX_FUEL)
 {
 
 }
