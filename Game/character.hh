@@ -8,8 +8,9 @@
 
 namespace Model {
 
-const int WIDTH = 15;
-const int HEIGHT = 15;
+// ?????????????????
+//const int WIDTH = 15;
+//const int HEIGHT = 15;
 
 class Character
 {
@@ -25,12 +26,15 @@ public:
     void setTrueCoord(Interface::Location trueLoc);
     void setOffset(int offX, int offY);
     void setItem(QGraphicsPixmapItem* item);
-
-signals:
-
+    void move(int horizontalMultiplier, int verticalMultiplier);
+protected:
+    const int step = 1;
 private:
     Interface::Location loc_;
     QGraphicsPixmapItem* item_;
+    const int OFFSET = 15;
+    const int WITDH = 1095;
+    const int HEIGHT = 592;
 };
 
 };

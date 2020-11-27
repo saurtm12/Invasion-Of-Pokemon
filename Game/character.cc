@@ -53,4 +53,16 @@ void Character::setItem(QGraphicsPixmapItem *item)
     item_ = item;
 }
 
+void Character::move(int horizontalMultiplier, int verticalMultiplier)
+{
+    int x = getX() + horizontalMultiplier * step;
+    int y = getY() - verticalMultiplier * step;
+    if (x < OFFSET || x > WITDH || y < OFFSET || y > HEIGHT)
+    {
+        return;
+    }
+    loc_.setXY(x, y);
+    item_->setPos(x, y);
+}
+
 }

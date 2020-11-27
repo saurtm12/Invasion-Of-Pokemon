@@ -15,14 +15,13 @@ public:
 
   Interface::Location giveLocation() const;
   void move(Interface::Location loc);
-  void move(int horizontalMultiplier, int verticalMultipler);
+//  void move(int horizontalMultiplier, int verticalMultiplier);
 
   bool isRemoved() const;
 
   void remove();
 
 private:
-  const int STEP = 4;
 };
 
 }
