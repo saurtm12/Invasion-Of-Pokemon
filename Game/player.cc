@@ -4,8 +4,8 @@ namespace Model
 {
 
 Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
-    Character(item, loc),
-    fuel_(MAX_FUEL)
+    Character(item, loc)
+//    fuelBar_(bar)
 {
 
 }
@@ -38,7 +38,7 @@ void Player::remove()
 
 void Player::move(Interface::Location loc)
 {
-
+    setTrueCoord(loc);
 }
 
 }

@@ -28,12 +28,12 @@ public:
     void setItem(QGraphicsPixmapItem* item);
     void move(int horizontalMultiplier, int verticalMultiplier);
 protected:
-    const int step = 1;
+    const int STEP = 4;
 private:
     Interface::Location loc_;
     QGraphicsPixmapItem* item_;
     bool isRemoved;
-    const int OFFSET = 15;
+
     const int WITDH = 1095;
     const int HEIGHT = 592;
 };

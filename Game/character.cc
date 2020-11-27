@@ -56,9 +56,11 @@ void Character::setItem(QGraphicsPixmapItem *item)
 
 void Character::move(int horizontalMultiplier, int verticalMultiplier)
 {
-    int x = getX() + horizontalMultiplier * step;
-    int y = getY() - verticalMultiplier * step;
-    if (x < OFFSET || x > WITDH || y < OFFSET || y > HEIGHT)
+    int x = getX() + horizontalMultiplier * STEP;
+    int y = getY() + verticalMultiplier * STEP;
+    int offX = -item_->offset().x();
+    int offY = -item_->offset().y();
+    if (x < offX || x >= WITDH - offX || y < offY || y >= HEIGHT - offY)
     {
         return;
     }
