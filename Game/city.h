@@ -56,7 +56,8 @@ public:
 public slots:
     void keyPress(int command);
     void changeTime();
-
+signals:
+    void updateFuel(int fuel);
 private:
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");

@@ -35,6 +35,11 @@ void Player::moveDirection(int horizontalMultiplier, int verticalMultiplier)
     --fuel_;
 }
 
+int Player::getFuel() const
+{
+    return fuel_;
+}
+
 void Player::remove()
 {
 

@@ -22,7 +22,7 @@ public:
   void bonusFuel(int bonus);
   void addPokemon(Pokemon pokemon);
   void moveDirection(int horizontalMultiplier, int verticalMultiplier);
-
+  int getFuel() const;
 private:
     const int MAX_FUEL = 5000;
     int fuel_;

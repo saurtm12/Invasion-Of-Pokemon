@@ -139,21 +139,25 @@ void City::keyPress(int command)
     case Qt::Key_W:
         qDebug()<< "W pressed";
         player_->moveDirection(0, -1);
+//        emit updateFuel(player_->getFuel());
         break;
     case Qt::Key_S:
         qDebug()<< "S pressed";
         player_->moveDirection(0, 1);
+//        updateFuel(player_->getFuel());
         break;
     case Qt::Key_A:
         qDebug()<< "A pressed";
         player_->moveDirection(-1, 0);
+//        updateFuel(player_->getFuel());
         break;
     case Qt::Key_D:
         qDebug()<< "D pressed";
         player_->moveDirection(1, 0);
+//        updateFuel(player_->getFuel());
         break;
     case Qt::Key_Space:
-        ballsMap_.erase(ballsMap_.begin());
+//        ballsMap_.erase(ballsMap_.begin());
         qDebug()<< "Space pressed";
         break;
 
