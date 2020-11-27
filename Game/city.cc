@@ -70,6 +70,10 @@ void City::addMainActor()
     Location mainLoc;
     mainLoc.setXY(200, 200);
     player_ = std::make_shared<Player>(mainPixmap, mainLoc);
+//    QProgressBar* fuelBar = new QProgressBar();
+
+//    fuelBar->move(WITDH,HEIGHT);
+//    player_ = std::make_shared<Player>(mainPixmap, mainLoc, fuelBar);
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)
@@ -150,6 +154,7 @@ void City::keyPress(int command)
 //        player_->move(1, 0);
         break;
     case Qt::Key_Space:
+        ballsMap_.erase(ballsMap_.begin());
         qDebug()<< "Space pressed";
         break;
 

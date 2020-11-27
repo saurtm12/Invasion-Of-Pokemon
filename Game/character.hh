@@ -32,6 +32,7 @@ protected:
 private:
     Interface::Location loc_;
     QGraphicsPixmapItem* item_;
+    bool isRemoved;
     const int OFFSET = 15;
     const int WITDH = 1095;
     const int HEIGHT = 592;
