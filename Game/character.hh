@@ -29,9 +29,9 @@ public:
     void setItem(QGraphicsPixmapItem* item);
     virtual void move(int horizontalMultiplier, int verticalMultiplier);
 protected:
-    const int step = 1;
+    const int step = 4;
     bool isRemoved;
-    const int OFFSET = 15;
+
     const int WITDH = 1095;
     const int HEIGHT = 592;
 private:
