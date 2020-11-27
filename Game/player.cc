@@ -29,16 +29,10 @@ void Player::addPokemon(Pokemon pokemon)
     bag_.push_back(pokemon);
 }
 
-void Player::move(int horizontalMultiplier, int verticalMultiplier)
+void Player::moveDirection(int horizontalMultiplier, int verticalMultiplier)
 {
-    int x = getX() + horizontalMultiplier * getStep();
-    int y = getY() - verticalMultiplier * getStep();
-    if (x < 0 || x > WITDH || y < 0 || y > HEIGHT)
-    {
-        return;
-    }
-    Character::setCoord(x,y);
-    fuel_--;
+    Character::move(horizontalMultiplier, verticalMultiplier);
+    --fuel_;
 }
 
 void Player::remove()

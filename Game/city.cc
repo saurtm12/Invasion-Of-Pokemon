@@ -137,24 +137,20 @@ void City::keyPress(int command)
 
     switch (command) {
     case Qt::Key_W:
-        ballsMap_.at(0)->move(0, -1);
         qDebug()<< "W pressed";
-//        player_->move(0, -1);
+        player_->moveDirection(0, -1);
         break;
     case Qt::Key_S:
         qDebug()<< "S pressed";
-        ballsMap_.at(0)->move(0, 1);
-//        player_->move(0, 1);
+        player_->moveDirection(0, 1);
         break;
     case Qt::Key_A:
         qDebug()<< "A pressed";
-        ballsMap_.at(0)->move(-1, 0);
-//        player_->move(-1, 0);
+        player_->moveDirection(-1, 0);
         break;
     case Qt::Key_D:
-        ballsMap_.at(0)->move(1, 0);
         qDebug()<< "D pressed";
-//        player_->move(1, 0);
+        player_->moveDirection(1, 0);
         break;
     case Qt::Key_Space:
         ballsMap_.erase(ballsMap_.begin());

@@ -6,8 +6,7 @@
 namespace Model {
 
 Character::Character(QGraphicsPixmapItem* item, Interface::Location loc) :
-    item_(item),
-    step_(4)
+    item_(item), step_(4)
 {
     setCoord(loc);
 }
