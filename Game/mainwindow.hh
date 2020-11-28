@@ -38,11 +38,11 @@ public:
 signals:
   void gameStarted();
   void keyPressed(int key);
-
 private slots:
   void onStartButtonClicked();
   void onBallCollided(Pokemon pokemon);
   void openBag();
+  void updateFuelBar(int fuel);
 
 private:
   void keyPressEvent(QKeyEvent *event) override;

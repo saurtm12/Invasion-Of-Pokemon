@@ -69,7 +69,7 @@ void MainWindow::startGame()
     connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
     connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     connect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
-
+    connect(city_.get(), &City::updateFuel, this, &MainWindow::updateFuelBar);
     logic_->finalizeGameStart();
 }
 
@@ -88,6 +88,11 @@ void MainWindow::openBag()
 {
     QDialog* bagDialog = city_->getPlayerBag(this);
     bagDialog->exec();
+}
+
+void MainWindow::updateFuelBar(int fuel)
+{
+    fuelBar_->setValue(fuel);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
