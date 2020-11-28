@@ -65,6 +65,7 @@ public slots:
 signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);
+    void gameOver();
 private:
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
@@ -92,6 +93,8 @@ private:
 };
 
 const auto HANDLEFUNCT = &City::keyPress;
+const auto SIGNAL_UPDATE_FUEL = &City::updateFuel;
+const auto SIGNAL_GAME_OVER = &City::gameOver;
 }
 
 

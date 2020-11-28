@@ -28,7 +28,7 @@ public:
   QDialog* getBag(QWidget* parent = 0) const;
 
 private:
-    const int MAX_FUEL = 5000;
+    const int MAX_FUEL = 3000;
     int fuel_;
     std::vector<Pokemon> bag_;
 };

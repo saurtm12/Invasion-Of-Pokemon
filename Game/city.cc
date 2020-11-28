@@ -167,23 +167,39 @@ void City::keyPress(int command)
     switch (command) {
     case Qt::Key_W:
         player_->moveDirection(0, -1);
-//        emit updateFuel(player_->getFuel());
+        emit updateFuel(player_->getFuel());
+        if (player_->getFuel() == 0)
+        {
+            emit gameOver();
+        }
         handleCollision();
         break;
     case Qt::Key_S:
         player_->moveDirection(0, 1);
-//        updateFuel(player_->getFuel());
+        emit updateFuel(player_->getFuel());
         handleCollision();
+        if (player_->getFuel() == 0)
+        {
+            emit gameOver();
+        }
         break;
     case Qt::Key_A:
         player_->moveDirection(-1, 0);
-//        updateFuel(player_->getFuel());
+        emit updateFuel(player_->getFuel());
         handleCollision();
+        if (player_->getFuel() == 0)
+        {
+            emit gameOver();
+        }
         break;
     case Qt::Key_D:
         player_->moveDirection(1, 0);
-//        updateFuel(player_->getFuel());
+        emit updateFuel(player_->getFuel());
         handleCollision();
+        if (player_->getFuel() == 0)
+        {
+            emit gameOver();
+        }
         break;
     case Qt::Key_Space:
 //        ballsMap_.erase(ballsMap_.begin());

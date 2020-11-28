@@ -54,7 +54,7 @@ private:
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
-  const int MAXIMUM_FUEL = 5000;
+  const int MAXIMUM_FUEL = 3000;
   bool isStarted;
 };
 
