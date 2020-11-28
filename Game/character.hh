@@ -21,13 +21,14 @@ public:
     int getX();
     int getY();
     Interface::Location getLocation() const;
+    QGraphicsPixmapItem* getItem() const;
 
     void setCoord(Interface::Location loc);
     void setCoord(int x, int y);
     void setTrueCoord(Interface::Location trueLoc);
     void setOffset(int offX, int offY);
     void setItem(QGraphicsPixmapItem* item);
-    virtual void move(int horizontalMultiplier, int verticalMultiplier);
+    void move(int horizontalMultiplier, int verticalMultiplier);
     void giveStep(int step);
     int getStep() const;
 protected:

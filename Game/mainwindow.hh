@@ -39,6 +39,7 @@ signals:
   void keyPressed(int key);
 private slots:
   void onStartButtonClicked();
+  void onBallCollided(Pokemon pokemon);
 private:
   void keyPressEvent(QKeyEvent *event) override;
 

@@ -9,7 +9,7 @@
 namespace Model
 {
 
-class Player: public Interface::IActor, Character
+class Player: public Interface::IActor, public Character
 {
 public:
     Player(QGraphicsPixmapItem* item, Interface::Location loc);

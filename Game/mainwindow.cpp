@@ -58,6 +58,7 @@ void MainWindow::startGame()
 
     //connect keys
     connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
+    connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     fuelBar_ = new QProgressBar(this);
     fuelBar_->move(PADDING,600);
     fuelBar_->setMaximum(MAXIMUM_FUEL);
@@ -76,6 +77,12 @@ void MainWindow::startGame()
 void MainWindow::onStartButtonClicked()
 {
     startGame();
+}
+
+void MainWindow::onBallCollided(Pokemon pokemon)
+{
+    QDialog* dialog = pokemon.dialogInfo(this);
+    dialog->exec();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

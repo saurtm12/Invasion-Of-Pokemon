@@ -31,6 +31,11 @@ Interface::Location Character::getLocation() const
     return loc_;
 }
 
+QGraphicsPixmapItem* Character::getItem() const
+{
+    return item_;
+}
+
 void Character::setCoord(Interface::Location loc)
 {
     loc_ = Utils::convertLocation(loc);

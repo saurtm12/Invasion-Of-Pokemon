@@ -99,6 +99,16 @@ void City::generateBalls()
     }
 }
 
+Pokemon City::generatePokemon()
+{
+    // TODO: fix this random to not generate same thing
+    std::random_device rand_dev;
+    std::mt19937 generator(rand_dev());
+    std::uniform_int_distribution<int> distr(0, pokemons_.size());
+    int idx = distr(generator);
+    return pokemons_.at(idx);
+}
+
 void City::actorRemoved(std::shared_ptr<IActor> actor)
 {
 
@@ -118,12 +128,26 @@ std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
 {
     std::vector< std::shared_ptr<IActor> > result;
     for (auto actor: actorsMap_) {
-        if (actor.first->giveLocation().isClose(loc)) {
+        if (actor.first->giveLocation().isClose(loc, 5)) {
             result.push_back(actor.first);
         }
     }
 
     return result;
+}
+
+void City::handleCollision()
+{
+    for (auto it = ballsMap_.begin(); it != ballsMap_.end(); ++it) {
+        if (player_->getItem()->collidesWithItem((*it)->getItem())) {
+            Pokemon pokemon = generatePokemon();
+            player_->addPokemon(pokemon);
+            ballsMap_.erase(it);
+            addBall();
+            emit collideBall(pokemon);
+            return;
+        }
+    }
 }
 
 bool City::isGameOver() const
@@ -137,24 +161,24 @@ void City::keyPress(int command)
 
     switch (command) {
     case Qt::Key_W:
-        qDebug()<< "W pressed";
         player_->moveDirection(0, -1);
 //        emit updateFuel(player_->getFuel());
+        handleCollision();
         break;
     case Qt::Key_S:
-        qDebug()<< "S pressed";
         player_->moveDirection(0, 1);
 //        updateFuel(player_->getFuel());
+        handleCollision();
         break;
     case Qt::Key_A:
-        qDebug()<< "A pressed";
         player_->moveDirection(-1, 0);
 //        updateFuel(player_->getFuel());
+        handleCollision();
         break;
     case Qt::Key_D:
-        qDebug()<< "D pressed";
         player_->moveDirection(1, 0);
 //        updateFuel(player_->getFuel());
+        handleCollision();
         break;
     case Qt::Key_Space:
 //        ballsMap_.erase(ballsMap_.begin());

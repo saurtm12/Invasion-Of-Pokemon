@@ -28,8 +28,9 @@ using namespace CourseSide;
 
 namespace Model {
 
-class City : public Interface::ICity, public QObject
+class City :  public QObject, public Interface::ICity
 {
+    Q_OBJECT
 public:
     City(QWidget *parent = 0);
     virtual ~City();
@@ -45,19 +46,22 @@ public:
 
     void addBall();
     void generateBalls();
+    Pokemon generatePokemon();
 
     void actorRemoved(std::shared_ptr<IActor> actor);
     bool findActor(std::shared_ptr<IActor> actor) const;
     void actorMoved(std::shared_ptr<IActor> actor);
     std::vector<std::shared_ptr<IActor>> getNearbyActors(Location loc) const;
 
+    void handleCollision();
+
     bool isGameOver() const;
 
 public slots:
     void keyPress(int command);
-    void changeTime();
 signals:
     void updateFuel(int fuel);
+    void collideBall(Pokemon pokemon);
 private:
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");
