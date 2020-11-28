@@ -70,6 +70,7 @@ void MainWindow::startGame()
     connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     connect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
     connect(city_.get(), &City::updateFuel, this, &MainWindow::updateFuelBar);
+    connect(city_.get(), &City::gameOver, this, &MainWindow::onGameOver);
     logic_->finalizeGameStart();
 }
 
@@ -93,6 +94,19 @@ void MainWindow::openBag()
 void MainWindow::updateFuelBar(int fuel)
 {
     fuelBar_->setValue(fuel);
+}
+
+void MainWindow::onGameOver()
+{
+    // TODO: HANDLE THISSSSSSSSSSSS
+    disconnect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
+    disconnect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
+    disconnect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
+    disconnect(city_.get(), &City::updateFuel, this, &MainWindow::updateFuelBar);
+    disconnect(city_.get(), &City::gameOver, this, &MainWindow::onGameOver);
+    city_ = nullptr;
+    delete fuelBar_;
+    isStarted = false;
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

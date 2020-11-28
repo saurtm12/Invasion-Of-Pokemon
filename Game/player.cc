@@ -6,7 +6,7 @@ namespace Model
 Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
     Character(item, loc), fuel_(MAX_FUEL)
 {
-    giveStep(4);
+    giveStep(1);
 }
 
 Player::~Player()
@@ -31,8 +31,12 @@ void Player::addPokemon(Pokemon pokemon)
 
 void Player::moveDirection(int horizontalMultiplier, int verticalMultiplier)
 {
-    Character::move(horizontalMultiplier, verticalMultiplier);
-    --fuel_;
+    if (fuel_ > 0){
+        if (Character::move(horizontalMultiplier, verticalMultiplier))
+        {
+            fuel_ -= 1;
+        }
+    }
 }
 
 int Player::getFuel() const

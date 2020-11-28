@@ -28,7 +28,7 @@ public:
     void setTrueCoord(Interface::Location trueLoc);
     void setOffset(int offX, int offY);
     void setItem(QGraphicsPixmapItem* item);
-    void move(int horizontalMultiplier, int verticalMultiplier);
+    bool move(int horizontalMultiplier, int verticalMultiplier);
     void giveStep(int step);
     int getStep() const;
 protected:

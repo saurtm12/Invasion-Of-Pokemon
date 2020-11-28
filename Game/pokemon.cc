@@ -149,6 +149,11 @@ QImage Pokemon::getImage() const
     return img_;
 }
 
+int Pokemon::score() const
+{
+    return score_*BASE;
+}
+
 std::vector<Pokemon> readPokemonData(std::string resource)
 {
     QString path = QString::fromStdString(resource);

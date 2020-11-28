@@ -34,6 +34,7 @@ public:
   ~Pokemon();
   QDialog* dialogInfo(QWidget* parent=0) const;
   QImage getImage() const;
+  int score() const;
 private:
   int id_;
   QString category_;
@@ -47,7 +48,7 @@ private:
   int speed_;
   int total_;
 };
-
+const int BASE = 100;
 std::vector<Pokemon> readPokemonData(std::string resource);
 auto getIntensity(const int& value,const int& maxvalue);
 

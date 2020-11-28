@@ -43,7 +43,7 @@ private slots:
   void onBallCollided(Pokemon pokemon);
   void openBag();
   void updateFuelBar(int fuel);
-
+  void onGameOver();
 private:
   void keyPressEvent(QKeyEvent *event) override;
 
