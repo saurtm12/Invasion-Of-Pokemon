@@ -6,7 +6,6 @@ const qreal PADDING = 10;
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow),
-  logic_(new Logic(this)),
   isStarted(false)
 {
     // add first dialog
@@ -41,6 +40,8 @@ void MainWindow::startGame()
     {
         return;
     }
+    logic_ = new Logic(this);
+
     isStarted = true;
     // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
@@ -98,7 +99,8 @@ void MainWindow::updateFuelBar(int fuel)
 
 void MainWindow::onGameOver()
 {
-    // TODO: HANDLE THISSSSSSSSSSSS
+    delete logic_;
+    ui->gameView->setScene(nullptr);
     disconnect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
     disconnect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     disconnect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
