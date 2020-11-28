@@ -14,7 +14,8 @@ SOURCES += \
     main.cc \
     mainwindow.cpp \
     player.cc \
-    pokemon.cc
+    pokemon.cc \
+    statistics.cc
 
 win32:CONFIG(release, debug|release): LIBS += \
     -L$$OUT_PWD/../Course/CourseLib/release/ -lCourseLib
@@ -51,7 +52,8 @@ HEADERS += \
     dialog.hh \
     mainwindow.hh \
     player.h \
-    pokemon.h
+    pokemon.h \
+    statistics.hh
 
 RESOURCES += \
     images.qrc \
