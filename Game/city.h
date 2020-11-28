@@ -37,7 +37,9 @@ public:
     void setBackground(QImage &basicbackground, QImage &bigbackground);
     void setClock(QTime clock);
     void startGame();
+
     QGraphicsScene* getMap();
+    QDialog* getPlayerBag(QWidget* parent = 0) const;
 
     void addStop(std::shared_ptr<IStop> stop);
     void addActor(std::shared_ptr<IActor> newactor);
@@ -59,6 +61,7 @@ public:
 
 public slots:
     void keyPress(int command);
+
 signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);

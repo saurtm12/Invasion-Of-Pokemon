@@ -37,7 +37,7 @@
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="resumeBtn">
+   <widget class="QPushButton" name="bagBtn">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -47,20 +47,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Resume</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pauseBtn">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>360</y>
-      <width>106</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pause</string>
+     <string>Bag</string>
     </property>
    </widget>
   </widget>

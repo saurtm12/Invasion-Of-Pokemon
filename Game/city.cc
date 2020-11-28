@@ -38,6 +38,11 @@ QGraphicsScene* City::getMap() {
     return map_;
 }
 
+QDialog* City::getPlayerBag(QWidget* parent) const
+{
+    return player_->getBag();
+}
+
 void City::addStop(std::shared_ptr<IStop> stop)
 {
     QGraphicsPixmapItem* stopPixmap = map_->addPixmap(QPixmap::fromImage(QImage(BUS_STOP_ICON)));

@@ -33,6 +33,7 @@ public:
           QString path, int score, int hp, int attack, int defense, int speed, int total);
   ~Pokemon();
   QDialog* dialogInfo(QWidget* parent=0) const;
+  QImage getImage() const;
 private:
   int id_;
   QString category_;

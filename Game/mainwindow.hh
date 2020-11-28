@@ -34,12 +34,16 @@ public:
   explicit MainWindow(QWidget *parent = 0);
   ~MainWindow();
   void startGame();
+
 signals:
   void gameStarted();
   void keyPressed(int key);
+
 private slots:
   void onStartButtonClicked();
   void onBallCollided(Pokemon pokemon);
+  void openBag();
+
 private:
   void keyPressEvent(QKeyEvent *event) override;
 

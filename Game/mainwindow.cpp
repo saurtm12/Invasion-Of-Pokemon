@@ -15,21 +15,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // setup window
     ui->setupUi(this);
+    this->setWindowTitle("NYSEE");
     ui->gameView->setFixedSize(width_, height_);
     ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
 
     ui->startButton->move(width_+ PADDING, PADDING);
-    ui->resumeBtn->move(width_+ PADDING, 300);
-    ui->pauseBtn->move(width_+ PADDING, 380);
+    ui->bagBtn->move(width_+ PADDING, 300);
 
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
-//    connect(ui->resumeBtn, &QPushButton::clicked, logic_, &AdvancedLogic::resumeGame);
-//    connect(ui->pauseBtn, &QPushButton::clicked, logic_, &AdvancedLogic::pauseGame);
-
 
 }
 
@@ -45,7 +42,7 @@ void MainWindow::startGame()
         return;
     }
     isStarted = true;
-  // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
+    // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
     logic_->takeCity(city_);
     logic_->setTime(9, 20);
@@ -56,9 +53,6 @@ void MainWindow::startGame()
     ui->gameView->setSceneRect(0, 0, 1092, 590);
     ui->gameView->setScene(city_->getMap());
 
-    //connect keys
-    connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
-    connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     fuelBar_ = new QProgressBar(this);
     fuelBar_->move(PADDING,600);
     fuelBar_->setMaximum(MAXIMUM_FUEL);
@@ -70,6 +64,11 @@ void MainWindow::startGame()
     p.setColor(QPalette::Highlight, QColor(0,128,0));
     fuelBar_->setPalette(p);
     fuelBar_->show();
+
+    //connect keys
+    connect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
+    connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
+    connect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
 
     logic_->finalizeGameStart();
 }
@@ -83,6 +82,12 @@ void MainWindow::onBallCollided(Pokemon pokemon)
 {
     QDialog* dialog = pokemon.dialogInfo(this);
     dialog->exec();
+}
+
+void MainWindow::openBag()
+{
+    QDialog* bagDialog = city_->getPlayerBag(this);
+    bagDialog->exec();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

@@ -4,6 +4,7 @@
 #include "../Course/CourseLib/core/location.hh"
 #include "character.hh"
 #include "pokemon.h"
+#include <QGridLayout>
 #include <vector>
 
 namespace Model
@@ -22,7 +23,10 @@ public:
   void bonusFuel(int bonus);
   void addPokemon(Pokemon pokemon);
   void moveDirection(int horizontalMultiplier, int verticalMultiplier);
+
   int getFuel() const;
+  QDialog* getBag(QWidget* parent = 0) const;
+
 private:
     const int MAX_FUEL = 5000;
     int fuel_;
