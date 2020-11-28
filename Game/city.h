@@ -61,7 +61,7 @@ public:
 
 public slots:
     void keyPress(int command);
-
+    void onTimeIncreased();
 signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);
@@ -72,26 +72,31 @@ private:
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
     const QString BALL_ICON = QString(":/characters/characters/ballIcon.png");
     const QString STEWIE_ICON = QString(":/characters/characters/stewie25.png");
+    const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
 
     const int BALLS_PER_TURN = 5;
 
-    // FIX THIS
-    const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
     int WITDH = 1095;
     int HEIGHT = 592;
 
     QTime clock_;
-
+    QTimer timer_;
     std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
     std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
     std::vector< std::shared_ptr<Character> > ballsMap_;
 
     QGraphicsScene* map_;
     std::shared_ptr<Player> player_;
+    bool isInStop;
+    bool isInBus;
+    bool isLocked;
+
     std::vector<Pokemon> pokemons_;
     bool pause_;
-};
 
+    bool joinStop();
+};
+const int UPDATE_INTERVAL_MS = 100;
 const auto HANDLEFUNCT = &City::keyPress;
 const auto SIGNAL_UPDATE_FUEL = &City::updateFuel;
 const auto SIGNAL_GAME_OVER = &City::gameOver;

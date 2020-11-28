@@ -4,7 +4,10 @@ namespace Model
 {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)), pause_(false)
+    map_(new QGraphicsScene(parent)), pause_(false),
+    isInStop(false),
+    isLocked(false),
+    isInBus(false)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -28,6 +31,10 @@ void City::setClock(QTime clock)
 void City::startGame()
 {
     QImage backgroundImage = QImage(BACKGROUND);
+
+    connect(&timer_, &QTimer::timeout, this, &City::onTimeIncreased);
+    timer_.start(UPDATE_INTERVAL_MS);
+
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
     addMainActor();
@@ -107,6 +114,7 @@ void City::generateBalls()
 Pokemon City::generatePokemon()
 {
     // TODO: fix this random to not generate same thing
+    // TODO: I get an exception when generating a pokemon.
     std::random_device rand_dev;
     std::mt19937 generator(rand_dev());
     std::uniform_int_distribution<int> distr(0, pokemons_.size());
@@ -157,8 +165,7 @@ void City::handleCollision()
 
 bool City::isGameOver() const
 {
-    // TODO: implement game over criteria
-    return false;
+    return player_->getFuel() <= 0;
 }
 
 void City::keyPress(int command)
@@ -166,47 +173,80 @@ void City::keyPress(int command)
 
     switch (command) {
     case Qt::Key_W:
+        if (isLocked)
+        {
+            break;
+        }
         player_->moveDirection(0, -1);
         emit updateFuel(player_->getFuel());
-        if (player_->getFuel() == 0)
-        {
-            emit gameOver();
-        }
         handleCollision();
         break;
     case Qt::Key_S:
+        if (isLocked)
+        {
+            break;
+        }
         player_->moveDirection(0, 1);
         emit updateFuel(player_->getFuel());
         handleCollision();
-        if (player_->getFuel() == 0)
-        {
-            emit gameOver();
-        }
         break;
     case Qt::Key_A:
+        if (isLocked)
+        {
+            break;
+        }
         player_->moveDirection(-1, 0);
         emit updateFuel(player_->getFuel());
         handleCollision();
-        if (player_->getFuel() == 0)
-        {
-            emit gameOver();
-        }
         break;
     case Qt::Key_D:
+        if (isLocked)
+        {
+            break;
+        }
         player_->moveDirection(1, 0);
         emit updateFuel(player_->getFuel());
         handleCollision();
-        if (player_->getFuel() == 0)
-        {
-            emit gameOver();
-        }
         break;
     case Qt::Key_Space:
-//        ballsMap_.erase(ballsMap_.begin());
+        if (!isLocked){
+            isLocked = joinStop();
+        }
+        else{
+            isLocked = false;
+            isInStop = false;
+            qDebug() << "player leaves bus stop";
+        }
         qDebug()<< "Space pressed";
         break;
-
     }
+    if (isGameOver())
+    {
+        disconnect(&timer_,&QTimer::timeout, this, &City::onTimeIncreased);
+        timer_.stop();
+        emit gameOver();
+    }
+}
+
+void City::onTimeIncreased()
+{
+
+}
+
+bool City::joinStop()
+{
+    auto playerLoc = player_->getLocation();
+    qDebug()<< playerLoc.giveX() << playerLoc.giveY();
+    for (auto& stop: stopsMap_){
+        if (playerLoc.isClose(stop.second->getLocation(),20))
+        {
+            isInStop = true;
+            player_->setTrueCoord(stop.second->getLocation());
+            qDebug() << "player joins stop" <<stop.first->getName();
+            return true;
+        }
+    }
+    return false;
 }
 
 }
