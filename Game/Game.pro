@@ -57,4 +57,5 @@ HEADERS += \
 
 RESOURCES += \
     images.qrc \
+    introText.qrc \
     pokemon.qrc

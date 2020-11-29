@@ -1,0 +1,15 @@
+Hello Player!
+Tampere is invaded by number of mysterious pokemon. Your task is catch them all. You are a poor second-year student who only own a bike!. Luckily Tampere Bus is here to help you. The bus is free of charge for this situation. You are allowed to use a bike and free to go anywhere (assume your bike has wings) but not beyond the tampere city. If you ride this bike, you will lose some energy. The game is over when you are out of energy. Use Bus!
+The more mysterious Pokemon is, the more score you have. Your bag will contain all the pokemon are catched. Feel free to use them as your pet!
+Instruction:
+Use W to move up your player.
+Use S to move down your player.
+Use A to move left your player.
+Use D to move right your player.
+Use space to get to a bus stop. Remember you have to go near a stop!
+(Remember press start to start the game also, click your mouse in city area)
+Use space again when you are on the bus so the bus can throw you out!
+Have a great time playing this adventurous game.
+
+Creator: Duc Hong 292119.
+	Anh Vu 294381.

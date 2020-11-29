@@ -2,7 +2,9 @@
 #define DIALOG_HH
 
 #include <QDialog>
-
+#include <QString>
+#include <QFile>
+#include <QTextBlock>
 namespace Ui {
   class Dialog;
 }

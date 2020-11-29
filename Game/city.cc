@@ -225,6 +225,7 @@ void City::keyPress(int command)
         else {
             isInBus = false;
             isLocked = false;
+            qDebug() << "player leaves the bus";
         }
         break;
     }
