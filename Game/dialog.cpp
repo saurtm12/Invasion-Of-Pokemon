@@ -29,7 +29,6 @@ Dialog::~Dialog()
 
 void Dialog::onOpenSetting()
 {
-    qDebug()<< "open Setting";
     QDialog* settingDialog = new QDialog(this);
     settingDialog->setFixedSize(500,500);
 
@@ -40,6 +39,7 @@ void Dialog::onOpenSetting()
     startTime->setFont(font);
     QTimeEdit* timeEdit = new QTimeEdit(settingDialog);
     timeEdit->move(300,10);
+    timeEdit->setTime(QTime(9,0,0,0));
 
     QLabel* numerOfBall = new QLabel("Number of Pokemon Ball:", settingDialog);
     numerOfBall->move(10,50);
