@@ -7,7 +7,8 @@ City::City(QWidget *parent):
     map_(new QGraphicsScene(parent)), pause_(false),
     isInStop(false),
     isLocked(false),
-    isInBus(false)
+    isInBus(false),
+    stopNextStop(false)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -26,28 +27,6 @@ void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 void City::setClock(QTime clock)
 {
     clock_ = clock;
-    if (isInStop)
-    {
-        for (auto& bus : actorsMap_)
-        {
-            if (typeid(*(bus.first)).name() == Utils::NYSSE_TYPE)
-            {
-                if (bus.second->getLocation().isClose(player_->getLocation(),20))
-                {
-                    isInStop = false;
-                    isInBus = true;
-                    onBus_ = bus.second;
-                    return;
-                }
-            }
-        }
-    }
-    if (isInBus)
-    {
-        auto busLocation = onBus_->getLocation();
-        player_->setTrueCoord(busLocation);
-    }
-
 }
 
 void City::startGame()
@@ -58,6 +37,8 @@ void City::startGame()
     setBackground(backgroundImage,backgroundImage);
     addMainActor();
     generateBalls();
+    timer_.start(UPDATE_INTERVAL_MS);
+    connect(&timer_, &QTimer::timeout, this, &City::onTimeIncreased);
 }
 
 QGraphicsScene* City::getMap() {
@@ -230,20 +211,61 @@ void City::keyPress(int command)
         handleCollision();
         break;
     case Qt::Key_Space:
-        if (!isLocked){
+        if (!isLocked)
+        {
             isLocked = joinStop();
+            return;
         }
-        else{
+        if (!isInBus){
             isLocked = false;
             isInStop = false;
             qDebug() << "player leaves bus stop";
+            return;
         }
-        qDebug()<< "Space pressed";
+        else {
+            isInBus = false;
+            isLocked = false;
+        }
         break;
     }
     if (isGameOver())
     {
         emit gameOver();
+    }
+}
+
+void City::onTimeIncreased()
+{
+    if (isInStop)
+    {
+        for (auto& bus : actorsMap_)
+        {
+            if (typeid(*(bus.first)).name() == Utils::NYSSE_TYPE)
+            {
+                if (bus.second->getLocation().isClose(player_->getLocation()))
+                {
+                    isInStop = false;
+                    isInBus = true;
+                    onBus_ = bus.second;
+                    return;
+                }
+            }
+        }
+    }
+    if (isInBus)
+    {
+        auto busLocation = onBus_->getLocation();
+        auto x = busLocation.giveX();
+        auto y = busLocation.giveY();
+        if (x >= 0 && y >= 0 && x <= WITDH && y <= HEIGHT)
+        {
+            player_->setTrueCoord(busLocation);
+        }
+        else {
+            onBus_ = nullptr;
+            isInBus = false;
+            isLocked = false;
+        }
     }
 }
 
@@ -253,7 +275,7 @@ bool City::joinStop()
     auto playerLoc = player_->getLocation();
     qDebug()<< playerLoc.giveX() << playerLoc.giveY();
     for (auto& stop: stopsMap_){
-        if (playerLoc.isClose(stop.second->getLocation(),20))
+        if (playerLoc.isClose(stop.second->getLocation(),25))
         {
             isInStop = true;
             player_->setTrueCoord(stop.second->getLocation());

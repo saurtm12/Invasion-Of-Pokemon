@@ -61,6 +61,7 @@ public:
 
 public slots:
     void keyPress(int command);
+    void onTimeIncreased();
 signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);
@@ -80,6 +81,7 @@ private:
     int HEIGHT = 592;
 
     QTime clock_;
+    QTimer timer_;
     std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
     std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
     std::vector< std::shared_ptr<Character> > ballsMap_;
@@ -89,14 +91,16 @@ private:
     bool isInStop;
     bool isInBus;
     bool isLocked;
+    bool stopNextStop;
     std::shared_ptr<Character> onBus_;
-
     std::vector<Pokemon> pokemons_;
     bool pause_;
 
     bool joinStop();
 };
 const int UPDATE_INTERVAL_MS = 100;
+const int WIDTH = 1095;
+const int HEIGHT = 592;
 const auto HANDLEFUNCT = &City::keyPress;
 const auto SIGNAL_UPDATE_FUEL = &City::updateFuel;
 const auto SIGNAL_GAME_OVER = &City::gameOver;
