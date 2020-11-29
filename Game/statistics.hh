@@ -15,13 +15,16 @@ public:
     void nysseRemoved();
     void newNysse();
     void nysseLeft();
+    int addScores(int score = 20);
 
     int getNumberOfBuses() const;
     int getNumberOfPassengers() const;
+    int getScores() const;
 
 private:
     int passengers_;
     int buses_;
+    int scores_;
 };
 
 }

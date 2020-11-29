@@ -10,7 +10,7 @@
 #include "character.hh"
 #include "player.h"
 #include "Utils/helpers.hh"
-#include "./pokemon.h"
+#include "pokemon.h"
 
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -65,6 +65,7 @@ signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);
     void gameOver();
+    void actorChanged(std::shared_ptr<IActor> actor, int delta);
 private:
     const QString BACKGROUND = QString(":/offlinedata/offlinedata/kartta_iso_1095x592.png");
     const QString BUS_STOP_ICON = QString(":/characters/characters/busStop.png");

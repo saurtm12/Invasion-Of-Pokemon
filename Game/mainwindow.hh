@@ -4,8 +4,8 @@
 
 #include "../Course/CourseLib/core/location.hh"
 #include "../Course/CourseLib/core/logic.hh"
-#include "character.hh"
 #include "city.h"
+#include "statistics.hh"
 
 #include <QMainWindow>
 #include <QGraphicsScene>
@@ -43,6 +43,7 @@ private slots:
   void onBallCollided(Pokemon pokemon);
   void openBag();
   void updateFuelBar(int fuel);
+  void actorCountChanged(std::shared_ptr<IActor> actor, int delta);
   void onGameOver();
 private:
   void keyPressEvent(QKeyEvent *event) override;
@@ -51,6 +52,7 @@ private:
   Logic* logic_;
   std::shared_ptr<City> city_;
   QProgressBar* fuelBar_;
+  Stats::Statistics stats_;
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
