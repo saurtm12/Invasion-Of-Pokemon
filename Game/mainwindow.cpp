@@ -164,7 +164,6 @@ void MainWindow::onGameOver()
     confirm->move(40, 60);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
     displayResult->exec();
-
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

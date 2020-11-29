@@ -81,20 +81,20 @@ private:
 
     QTime clock_;
     QTimer timer_;
-    std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
-    std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
-    std::vector< std::shared_ptr<Character> > ballsMap_;
+    std::unordered_map<std::shared_ptr<IActor>, Character*> actorsMap_;
+    std::unordered_map<std::shared_ptr<IStop>, Character* > stopsMap_;
+    std::vector< Character* > ballsMap_;
 
     QGraphicsScene* map_;
-    std::shared_ptr<Player> player_;
+    Player* player_;
     bool isInStop;
     bool isInBus;
     bool isLocked;
     bool stopNextStop;
-    std::shared_ptr<Character> onBus_;
+    Character* onBus_;
     std::vector<Pokemon> pokemons_;
     bool pause_;
-    Utils::GameSetting  gameSetting_;
+    Utils::GameSetting gameSetting_;
     bool joinStop();
 };
 const int UPDATE_INTERVAL_MS = 100;

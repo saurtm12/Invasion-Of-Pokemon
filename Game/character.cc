@@ -14,7 +14,7 @@ Character::Character(const QPixmap& pixmap, Interface::Location loc) :
 
 Character::~Character()
 {
-    qDebug() << "here";
+
 }
 
 int Character::getX()
