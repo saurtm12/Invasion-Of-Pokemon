@@ -10,6 +10,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     // add first dialog
     Dialog *dialog = new Dialog(this);
+    connect(dialog, &Dialog::gameSettingChanged, [&](GameSetting gameSetting){
+        this->startHour_ = gameSetting.hour_;
+        this->startMin_ = gameSetting.min_;
+        this->numberOfBall_ = gameSetting.numberOfBall_;
+        this->maximum_fuel_ = gameSetting.fuel_;
+        this->speed_ = gameSetting.speed_;
+    });
     dialog->exec();
 
     // setup window

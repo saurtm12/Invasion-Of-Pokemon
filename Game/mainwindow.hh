@@ -57,6 +57,11 @@ private:
   int height_ = 592;
   int tick_ = 500;
   const int MAXIMUM_FUEL = 3000;
+  int startHour_;
+  int startMin_;
+  int numberOfBall_;
+  int maximum_fuel_;
+  int speed_;
   bool isStarted;
 };
 
