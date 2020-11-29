@@ -9,7 +9,7 @@ namespace Stats
 class Statistics : Interface::IStatistics
 {
 public:
-    Statistics();
+    Statistics(int passengers = 0, int buses = 0);
 
     void morePassengers(int num);
     void nysseRemoved();

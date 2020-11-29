@@ -5,7 +5,8 @@
 #include "../Course/CourseLib/actors/nysse.hh"
 #include "../Course/CourseLib/actors/passenger.hh"
 #include "../Course/CourseLib/actors/stop.hh"
-#include <QObject>
+#include <random>
+
 using namespace Interface;
 
 namespace Utils {
@@ -18,6 +19,7 @@ const std::string PASSENGER_TYPE = typeid(CourseSide::Passenger).name();
 const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 
 Location convertLocation(Location loc);
+int generateRandom(int lo, int hi);
 }
 
 #endif // HELPERS_HH

@@ -7,4 +7,12 @@ Location convertLocation(Location loc) {
     return loc;
 }
 
+int generateRandom(int lo, int hi)
+{
+    static std::random_device rd;
+    static std::mt19937 generator(rd());
+    std::uniform_int_distribution<int> distr(lo, hi - 1);
+    return distr(generator);
+}
+
 }
