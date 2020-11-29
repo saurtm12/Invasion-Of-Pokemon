@@ -6,6 +6,7 @@
 #include "../Course/CourseLib/core/logic.hh"
 #include "city.h"
 #include "statistics.hh"
+#include "Utils/helpers.hh"
 
 #include <QMainWindow>
 #include <QGraphicsScene>
@@ -56,12 +57,7 @@ private:
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
-  const int MAXIMUM_FUEL = 3000;
-  int startHour_;
-  int startMin_;
-  int numberOfBall_;
-  int maximum_fuel_;
-  int speed_;
+  Utils::GameSetting gameSetting_;
   bool isStarted;
 };
 

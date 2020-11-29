@@ -1,6 +1,7 @@
 #ifndef DIALOG_HH
 #define DIALOG_HH
 
+#include "Utils/helpers.hh"
 #include <QDialog>
 #include <QString>
 #include <QFile>
@@ -13,14 +14,6 @@
 namespace Ui {
   class Dialog;
 }
-struct GameSetting
-{
-    int hour_;
-    int min_;
-    int numberOfBall_;
-    int fuel_;
-    int speed_;
-};
 
 class Dialog : public QDialog
 {
@@ -30,7 +23,7 @@ public:
   explicit Dialog(QWidget *parent = nullptr);
   ~Dialog();
 signals:
-    void gameSettingChanged(GameSetting setting);
+    void gameSettingChanged(Utils::GameSetting setting);
 public slots:
   void onOpenSetting();
 private:

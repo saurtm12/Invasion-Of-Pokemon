@@ -11,6 +11,15 @@ using namespace Interface;
 
 namespace Utils {
 
+struct GameSetting
+{
+    int hour_;
+    int min_;
+    int numberOfBall_;
+    int fuel_;
+    int speed_;
+};
+
 const int X_OFFSET_MAP = 352;
 const int Y_OFFSET_MAP = 558;
 

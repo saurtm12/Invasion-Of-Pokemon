@@ -3,7 +3,7 @@
 namespace Model
 {
 
-City::City(QWidget *parent):
+City::City(Utils::GameSetting gameSetting, QWidget *parent):
     map_(new QGraphicsScene(parent)),
     isInStop(false),
     isInBus(false),

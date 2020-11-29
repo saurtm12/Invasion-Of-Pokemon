@@ -32,7 +32,7 @@ class City :  public QObject, public Interface::ICity
 {
     Q_OBJECT
 public:
-    City(QWidget *parent = 0);
+    City(Utils::GameSetting gameSetting, QWidget *parent = 0 );
     virtual ~City();
     void setBackground(QImage &basicbackground, QImage &bigbackground);
     void setClock(QTime clock);

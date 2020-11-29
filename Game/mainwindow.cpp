@@ -10,12 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     // add first dialog
     Dialog *dialog = new Dialog(this);
-    connect(dialog, &Dialog::gameSettingChanged, [&](GameSetting gameSetting){
-        this->startHour_ = gameSetting.hour_;
-        this->startMin_ = gameSetting.min_;
-        this->numberOfBall_ = gameSetting.numberOfBall_;
-        this->maximum_fuel_ = gameSetting.fuel_;
-        this->speed_ = gameSetting.speed_;
+    connect(dialog, &Dialog::gameSettingChanged, [&](Utils::GameSetting gameSetting){
+        this->gameSetting_ = gameSetting;
     });
     dialog->exec();
 
@@ -60,7 +56,7 @@ void MainWindow::startGame()
     logic_ = new Logic(this);
 
     // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
-    city_ = std::make_shared<City>(this);
+    city_ = std::make_shared<City>(gameSetting_, this);
     logic_->takeCity(city_);
     logic_->setTime(9, 20);
     logic_->fileConfig();
@@ -72,11 +68,11 @@ void MainWindow::startGame()
 
     fuelBar_ = new QProgressBar(this);
     fuelBar_->move(PADDING,600);
-    fuelBar_->setMaximum(MAXIMUM_FUEL);
+    fuelBar_->setMaximum(gameSetting_.fuel_);
     fuelBar_->setFixedHeight(20);
     fuelBar_->setFixedWidth(width_-PADDING);
     fuelBar_->setFormat("Fuel: %p%");
-    fuelBar_->setValue(MAXIMUM_FUEL);
+    fuelBar_->setValue(gameSetting_.fuel_);
     QPalette p = fuelBar_->palette();
     p.setColor(QPalette::Highlight, QColor(0,128,0));
     fuelBar_->setPalette(p);
