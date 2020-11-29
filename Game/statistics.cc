@@ -1,16 +1,40 @@
 #include "statistics.hh"
+#include "../Course/CourseLib/errors/initerror.hh"
+#include "../Course/CourseLib/errors/gameerror.hh"
 
 namespace Stats
 {
 
-Statistics::Statistics(): passengers_(0), buses_(0), scores_(0)
+Statistics::Statistics(int passenger, int buses):
+    passengers_(passenger), buses_(buses), scores_(0)
 {
+    try {
+        if (passengers_ < 0) {
+            throw Interface::InitError("Passengers count cannot be negative.");
+        }
+    } catch (Interface::InitError) {
+        passengers_ = 0;
+    }
 
+    try {
+        if (buses_ < 0) {
+            throw Interface::InitError("Buses count cannot be negative.");
+        }
+    } catch (Interface::InitError) {
+        buses_ = 0;
+    }
 }
 
 void Statistics::morePassengers(int num)
 {
-    passengers_ += num;
+    try {
+        if (passengers_ + num < 0) {
+            throw Interface::GameError("Passengers count reached negative after removed");
+        }
+        passengers_ += num;
+    }  catch (Interface::GameError) {
+
+    }
 }
 
 void Statistics::nysseRemoved()
