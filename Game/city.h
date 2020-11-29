@@ -75,7 +75,6 @@ private:
     const QString STEWIE_ICON = QString(":/characters/characters/stewie25.png");
     const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
 
-    const int BALLS_PER_TURN = 5;
 
     int WIDTH = 1095;
     int HEIGHT = 592;
@@ -95,7 +94,7 @@ private:
     std::shared_ptr<Character> onBus_;
     std::vector<Pokemon> pokemons_;
     bool pause_;
-
+    Utils::GameSetting  gameSetting_;
     bool joinStop();
 };
 const int UPDATE_INTERVAL_MS = 100;

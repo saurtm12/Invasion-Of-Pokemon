@@ -9,7 +9,8 @@ City::City(Utils::GameSetting gameSetting, QWidget *parent):
     isInBus(false),
     isLocked(false),
     stopNextStop(false),
-    pause_(false)
+    pause_(false),
+  gameSetting_(gameSetting)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -83,7 +84,7 @@ void City::addMainActor()
     QGraphicsPixmapItem* mainPixmap = map_->addPixmap(QPixmap::fromImage(QImage(STEWIE_ICON)));
     Location mainLoc;
     mainLoc.setXY(200, 200);
-    player_ = std::make_shared<Player>(mainPixmap, mainLoc);
+    player_ = std::make_shared<Player>(mainPixmap, mainLoc, gameSetting_.fuel_, gameSetting_.speed_);
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)
@@ -110,7 +111,7 @@ void City::addBall()
 void City::generateBalls()
 {
     ballsMap_.clear();
-    for (int i = 0; i < BALLS_PER_TURN; i++){
+    for (int i = 0; i < gameSetting_.numberOfBall_; i++){
         addBall();
     }
 }

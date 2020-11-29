@@ -13,7 +13,7 @@ namespace Model
 class Player: public Interface::IActor, public Character
 {
 public:
-    Player(QGraphicsPixmapItem* item, Interface::Location loc);
+    Player(QGraphicsPixmapItem* item, Interface::Location loc, int max_fuel, int speed);
     ~Player();
 
   Interface::Location giveLocation() const;
@@ -28,8 +28,9 @@ public:
   QDialog* getBag(QWidget* parent = 0) const;
 
 private:
-    const int MAX_FUEL = 3000;
+    int max_fuel_ = 3000;
     int fuel_;
+    int speed_;
     std::vector<Pokemon> bag_;
 };
 

@@ -3,10 +3,11 @@
 namespace Model
 {
 
-Player::Player(QGraphicsPixmapItem* item, Interface::Location loc):
-    Character(item, loc), fuel_(MAX_FUEL)
+Player::Player(QGraphicsPixmapItem* item, Interface::Location loc, int max_fuel, int speed ):
+    Character(item, loc), max_fuel_(max_fuel), speed_(speed)
 {
-    giveStep(1);
+    fuel_ = max_fuel_;
+    giveStep(speed);
 }
 
 Player::~Player()
@@ -34,7 +35,7 @@ void Player::moveDirection(int horizontalMultiplier, int verticalMultiplier)
     if (fuel_ > 0){
         if (Character::move(horizontalMultiplier, verticalMultiplier))
         {
-            fuel_ -= 1;
+            fuel_ -= speed_;
         }
     }
 }
