@@ -1,7 +1,7 @@
 #include "mainwindow.hh"
 #include "ui_mainwindow.h"
 
-const qreal PADDING = 10;
+const qreal PADDING = 85;
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -15,18 +15,28 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup window
     ui->setupUi(this);
     this->setWindowTitle("NYSEE");
+    this->setFixedSize(1368, 700);
     ui->gameView->setFixedSize(width_, height_);
-    ui->centralwidget->setFixedSize(width_ + ui->startButton->width() + PADDING, height_ + PADDING);
+    ui->centralwidget->setFixedSize(1368, 700);
 
     ui->startButton->move(width_+ PADDING, PADDING);
     ui->bagBtn->move(width_+ PADDING, 300);
+
+    ui->busLabel->move(width_ + 30, 152);
+    ui->passengerLabel->move(width_ + 30, 192);
+    ui->scoreLabel->move(width_ + 30, 232);
+    ui->busText->move(width_ + 175, 150);
+    ui->busText->setReadOnly(true);
+    ui->passengerText->move(width_ + 175, 190);
+    ui->passengerText->setReadOnly(true);
+    ui->scoreText->move(width_ + 175, 230);
+    ui->scoreText->setReadOnly(true);
 
 //    resize(minimumSizeHint());
 //    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
 
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
-
 }
 
 MainWindow::~MainWindow()
@@ -42,7 +52,6 @@ void MainWindow::startGame()
     }
     logic_ = new Logic(this);
 
-    isStarted = true;
     // GAME START FROM HERE --- NEED NEW FUNCTION gameStart
     city_ = std::make_shared<City>(this);
     logic_->takeCity(city_);
@@ -71,8 +80,16 @@ void MainWindow::startGame()
     connect(city_.get(), &City::collideBall, this, &MainWindow::onBallCollided);
     connect(ui->bagBtn, &QPushButton::clicked, this, &MainWindow::openBag);
     connect(city_.get(), &City::updateFuel, this, &MainWindow::updateFuelBar);
+    connect(city_.get(), &City::actorChanged, this, &MainWindow::actorCountChanged);
     connect(city_.get(), &City::gameOver, this, &MainWindow::onGameOver);
     logic_->finalizeGameStart();
+
+    int newBusCount = stats_.getNumberOfBuses();
+    ui->busText->setText(QString::number(newBusCount));
+    int newPassengerCount = stats_.getNumberOfPassengers();
+    ui->passengerText->setText(QString::number(newPassengerCount));
+
+    isStarted = true;
 }
 
 void MainWindow::onStartButtonClicked()
@@ -82,6 +99,8 @@ void MainWindow::onStartButtonClicked()
 
 void MainWindow::onBallCollided(Pokemon pokemon)
 {
+    int newScores = stats_.addScores();
+    ui->scoreText->setText(QString::number(newScores));
     QDialog* dialog = pokemon.dialogInfo(this);
     dialog->exec();
 }
@@ -95,6 +114,25 @@ void MainWindow::openBag()
 void MainWindow::updateFuelBar(int fuel)
 {
     fuelBar_->setValue(fuel);
+}
+
+void MainWindow::actorCountChanged(std::shared_ptr<IActor> actor, int delta)
+{
+    if (typeid(*actor).name() == Utils::NYSSE_TYPE) {
+        if (delta == 1) {
+            stats_.newNysse();
+        } else {
+            stats_.nysseRemoved();
+        }
+        if (!isStarted) return;
+        int newBusCount = stats_.getNumberOfBuses();
+        ui->busText->setText(QString::number(newBusCount));
+    } else if (typeid(*actor).name() == Utils::PASSENGER_TYPE) {
+        stats_.morePassengers(delta);
+        if (!isStarted) return;
+        int newPassengerCount = stats_.getNumberOfPassengers();
+        ui->passengerText->setText(QString::number(newPassengerCount));
+    }
 }
 
 void MainWindow::onGameOver()

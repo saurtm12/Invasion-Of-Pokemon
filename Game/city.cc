@@ -74,6 +74,7 @@ void City::addActor(std::shared_ptr<IActor> newactor)
     std::shared_ptr<Character> actorGraphic = std::make_shared<Character>(actorPixmap, newactor->giveLocation());
     actorGraphic->setOffset(-10, -10);
     actorsMap_.insert({ newactor, actorGraphic });
+    emit actorChanged(newactor, 1);
 }
 
 void City::addMainActor()
@@ -87,6 +88,7 @@ void City::addMainActor()
 void City::removeActor(std::shared_ptr<IActor> actor)
 {
     actorsMap_.erase(actor);
+    emit actorChanged(actor, -1);
 }
 
 void City::addBall()
