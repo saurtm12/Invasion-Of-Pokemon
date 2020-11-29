@@ -77,7 +77,7 @@ private:
 
     const int BALLS_PER_TURN = 5;
 
-    int WITDH = 1095;
+    int WIDTH = 1095;
     int HEIGHT = 592;
 
     QTime clock_;
@@ -99,8 +99,6 @@ private:
     bool joinStop();
 };
 const int UPDATE_INTERVAL_MS = 100;
-const int WIDTH = 1095;
-const int HEIGHT = 592;
 const auto HANDLEFUNCT = &City::keyPress;
 const auto SIGNAL_UPDATE_FUEL = &City::updateFuel;
 const auto SIGNAL_GAME_OVER = &City::gameOver;

@@ -4,11 +4,12 @@ namespace Model
 {
 
 City::City(QWidget *parent):
-    map_(new QGraphicsScene(parent)), pause_(false),
+    map_(new QGraphicsScene(parent)),
     isInStop(false),
-    isLocked(false),
     isInBus(false),
-    stopNextStop(false)
+    isLocked(false),
+    stopNextStop(false),
+    pause_(false)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
@@ -94,14 +95,15 @@ void City::removeActor(std::shared_ptr<IActor> actor)
 void City::addBall()
 {
     // give consistency for the larger map.
-    int x = rand() % WITDH - 352;
-    int y = 558 - rand() % HEIGHT;
+    int x = Utils::generateRandom(10, WIDTH - 10) - Utils::X_OFFSET_MAP;
+    int y = Utils::Y_OFFSET_MAP - Utils::generateRandom(10, HEIGHT - 10);
     Location newLoc;
     newLoc.setXY(x,y);
 
     QGraphicsPixmapItem* ballPixmap = map_->addPixmap(QPixmap::fromImage(QImage(BALL_ICON)));
-    std::shared_ptr<Character> newBall = std::make_shared<Character>(ballPixmap,  newLoc );
+    std::shared_ptr<Character> newBall = std::make_shared<Character>(ballPixmap, newLoc);
     newBall->setOffset(-10, -10);
+
     ballsMap_.push_back(newBall);
 }
 
@@ -115,13 +117,7 @@ void City::generateBalls()
 
 Pokemon City::generatePokemon()
 {
-    // TODO: fix this random to not generate same thing
-    // TODO: I get an exception when generating a pokemon.
-    std::random_device rand_dev;
-    std::mt19937 generator(rand_dev());
-    std::uniform_int_distribution<int> distr(0, pokemons_.size());
-    int idx = distr(generator);
-    return pokemons_.at(idx);
+    return pokemons_.at(Utils::generateRandom(0, pokemons_.size()));
 }
 
 void City::actorRemoved(std::shared_ptr<IActor> actor)
@@ -257,7 +253,7 @@ void City::onTimeIncreased()
         auto busLocation = onBus_->getLocation();
         auto x = busLocation.giveX();
         auto y = busLocation.giveY();
-        if (x >= 0 && y >= 0 && x <= WITDH && y <= HEIGHT)
+        if (x >= 0 && y >= 0 && x <= WIDTH && y <= HEIGHT)
         {
             player_->setTrueCoord(busLocation);
         }
@@ -279,7 +275,7 @@ bool City::joinStop()
         {
             isInStop = true;
             player_->setTrueCoord(stop.second->getLocation());
-            qDebug() << "player joins stop" <<stop.first->getName();
+            qDebug() << "player joins stop" << stop.first->getName();
             return true;
         }
     }
