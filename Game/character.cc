@@ -5,15 +5,16 @@
 
 namespace Model {
 
-Character::Character(QGraphicsPixmapItem* item, Interface::Location loc) :
-    item_(item), step_(4)
+Character::Character(const QPixmap& pixmap, Interface::Location loc) :
+    QGraphicsPixmapItem(pixmap), step_(4)
 {
     setCoord(loc);
+    setAcceptHoverEvents(true);
 }
 
 Character::~Character()
 {
-    delete item_;
+    qDebug() << "here";
 }
 
 int Character::getX()
@@ -31,53 +32,27 @@ Interface::Location Character::getLocation() const
     return loc_;
 }
 
-QGraphicsPixmapItem* Character::getItem() const
+int Character::getStep() const
 {
-    return item_;
+    return step_;
 }
 
 void Character::setCoord(Interface::Location loc)
 {
     loc_ = Utils::convertLocation(loc);
-    item_->setPos(loc_.giveX(), loc_.giveY());
+    setPos(loc_.giveX(), loc_.giveY());
 }
 
 void Character::setCoord(int x, int y)
 {
     loc_.setXY(x, y);
-    item_->setPos(x, y);
+    setPos(x, y);
 }
 
 void Character::setTrueCoord(Interface::Location trueLoc)
 {
     loc_ = trueLoc;
-    item_->setPos(loc_.giveX(), loc_.giveY());
-}
-
-void Character::setOffset(int offX, int offY)
-{
-    item_->setOffset(offX, offY);
-}
-
-void Character::setItem(QGraphicsPixmapItem *item)
-{
-    item_ = item;
-}
-
-
-bool Character::move(int horizontalMultiplier, int verticalMultiplier)
-{
-    int x = getX() + horizontalMultiplier * step_;
-    int y = getY() + verticalMultiplier * step_;
-    int offX = -item_->offset().x();
-    int offY = -item_->offset().y();
-    if (x < offX || x >= WITDH - offX || y < offY || y >= HEIGHT - offY)
-    {
-        return false;
-    }
-    loc_.setXY(x, y);
-    item_->setPos(x, y);
-    return true;
+    setPos(loc_.giveX(), loc_.giveY());
 }
 
 void Character::giveStep(int step)
@@ -85,9 +60,31 @@ void Character::giveStep(int step)
     step_ = step;
 }
 
-int Character::getStep() const
+bool Character::move(int horizontalMultiplier, int verticalMultiplier)
 {
-    return step_;
+    int x = getX() + horizontalMultiplier * step_;
+    int y = getY() + verticalMultiplier * step_;
+    int offX = -offset().x();
+    int offY = -offset().y();
+    if (x < offX || x >= WIDTH - offX || y < offY || y >= HEIGHT - offY)
+    {
+        return false;
+    }
+    loc_.setXY(x, y);
+    setPos(x, y);
+    return true;
+}
+
+void Character::hoverEnterEvent(QGraphicsSceneHoverEvent* event)
+{
+    qDebug() << "meow";
+    QGraphicsPixmapItem::hoverEnterEvent(event);
+}
+
+void Character::hoverLeaveEvent(QGraphicsSceneHoverEvent* event)
+{
+    qDebug() << "meow leave";
+    QGraphicsPixmapItem::hoverLeaveEvent(event);
 }
 
 }

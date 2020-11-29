@@ -3,8 +3,8 @@
 namespace Model
 {
 
-Player::Player(QGraphicsPixmapItem* item, Interface::Location loc, int max_fuel, int speed ):
-    Character(item, loc), max_fuel_(max_fuel), speed_(speed)
+Player::Player(const QPixmap& pixmap, Interface::Location loc, int max_fuel, int speed ):
+    Character(pixmap, loc), max_fuel_(max_fuel), speed_(speed)
 {
     fuel_ = max_fuel_;
     giveStep(speed);

@@ -38,9 +38,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->scoreText->move(width_ + 175, 230);
     ui->scoreText->setReadOnly(true);
 
-//    resize(minimumSizeHint());
-//    ui->gameView->fitInView(city->getMap()->sceneRect(), Qt::KeepAspectRatio);
-
     // connect events
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
 }

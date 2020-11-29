@@ -8,36 +8,31 @@
 
 namespace Model {
 
-// ?????????????????
-//const int WIDTH = 15;
-//const int HEIGHT = 15;
-
-class Character
+class Character : public QGraphicsPixmapItem
 {
 public:
-    Character(QGraphicsPixmapItem* item, Interface::Location loc);
+    Character(const QPixmap& pixmap, Interface::Location loc);
     ~Character();
 
     int getX();
     int getY();
     Interface::Location getLocation() const;
-    QGraphicsPixmapItem* getItem() const;
+    int getStep() const;
 
     void setCoord(Interface::Location loc);
     void setCoord(int x, int y);
     void setTrueCoord(Interface::Location trueLoc);
-    void setOffset(int offX, int offY);
-    void setItem(QGraphicsPixmapItem* item);
-    bool move(int horizontalMultiplier, int verticalMultiplier);
     void giveStep(int step);
-    int getStep() const;
+
+    bool move(int horizontalMultiplier, int verticalMultiplier);
 protected:
-    const int WITDH = 1095;
-    const int HEIGHT = 592;
+    void hoverEnterEvent(QGraphicsSceneHoverEvent* event);
+    void hoverLeaveEvent(QGraphicsSceneHoverEvent* event);
 private:
+    const int WIDTH = 1095;
+    const int HEIGHT = 592;
     int step_;
     Interface::Location loc_;
-    QGraphicsPixmapItem* item_;
 };
 
 };

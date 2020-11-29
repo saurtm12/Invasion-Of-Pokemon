@@ -13,7 +13,7 @@ namespace Model
 class Player: public Interface::IActor, public Character
 {
 public:
-    Player(QGraphicsPixmapItem* item, Interface::Location loc, int max_fuel, int speed);
+    Player(const QPixmap& pixmap, Interface::Location loc, int max_fuel, int speed);
     ~Player();
 
   Interface::Location giveLocation() const;

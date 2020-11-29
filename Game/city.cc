@@ -10,14 +10,27 @@ City::City(Utils::GameSetting gameSetting, QWidget *parent):
     isLocked(false),
     stopNextStop(false),
     pause_(false),
-  gameSetting_(gameSetting)
+    gameSetting_(gameSetting)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
 }
 
 City::~City()
 {
+    qDebug() <<  "here1";
+    for (auto elem: actorsMap_) {
+        map_->removeItem(elem.second.get());
+    }
+    qDebug() <<  "here2";
+    for (auto elem: stopsMap_) {
+        map_->removeItem(elem.second.get());
+    }
 
+    for (auto elem: ballsMap_) {
+        map_->removeItem(elem.get());
+    }
+
+    map_->removeItem(player_.get());
 }
 
 void City::setBackground(QImage &basicbackground, QImage &bigbackground)
@@ -54,8 +67,8 @@ QDialog* City::getPlayerBag(QWidget* parent) const
 
 void City::addStop(std::shared_ptr<IStop> stop)
 {
-    QGraphicsPixmapItem* stopPixmap = map_->addPixmap(QPixmap::fromImage(QImage(BUS_STOP_ICON)));
-    std::shared_ptr<Character> newStop = std::make_shared<Character>(stopPixmap, stop->getLocation());
+    std::shared_ptr<Character> newStop = std::make_shared<Character>(QPixmap::fromImage(QImage(BUS_STOP_ICON)), stop->getLocation());
+    map_->addItem(newStop.get());
     newStop->setOffset(-8, -24);
     stopsMap_.insert({ stop, newStop });
 }
@@ -72,8 +85,8 @@ void City::addActor(std::shared_ptr<IActor> newactor)
       imgPath = PASSENGER_ICON;
     }
 
-    QGraphicsPixmapItem* actorPixmap = map_->addPixmap(QPixmap::fromImage(QImage(imgPath)));
-    std::shared_ptr<Character> actorGraphic = std::make_shared<Character>(actorPixmap, newactor->giveLocation());
+    std::shared_ptr<Character> actorGraphic = std::make_shared<Character>(QPixmap::fromImage(QImage(imgPath)), newactor->giveLocation());
+    map_->addItem(actorGraphic.get());
     actorGraphic->setOffset(-10, -10);
     actorsMap_.insert({ newactor, actorGraphic });
     emit actorChanged(newactor, 1);
@@ -81,14 +94,16 @@ void City::addActor(std::shared_ptr<IActor> newactor)
 
 void City::addMainActor()
 {
-    QGraphicsPixmapItem* mainPixmap = map_->addPixmap(QPixmap::fromImage(QImage(STEWIE_ICON)));
     Location mainLoc;
     mainLoc.setXY(200, 200);
-    player_ = std::make_shared<Player>(mainPixmap, mainLoc, gameSetting_.fuel_, gameSetting_.speed_);
+    player_ = std::make_shared<Player>(QPixmap::fromImage(QImage(STEWIE_ICON)), mainLoc, gameSetting_.fuel_, gameSetting_.speed_);
+    player_->setOffset(-12, -8);
+    map_->addItem(player_.get());
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)
 {
+    map_->removeItem(actorsMap_.at(actor).get());
     actorsMap_.erase(actor);
     emit actorChanged(actor, -1);
 }
@@ -101,8 +116,8 @@ void City::addBall()
     Location newLoc;
     newLoc.setXY(x,y);
 
-    QGraphicsPixmapItem* ballPixmap = map_->addPixmap(QPixmap::fromImage(QImage(BALL_ICON)));
-    std::shared_ptr<Character> newBall = std::make_shared<Character>(ballPixmap, newLoc);
+    std::shared_ptr<Character> newBall = std::make_shared<Character>(QPixmap::fromImage(QImage(BALL_ICON)), newLoc);
+    map_->addItem(newBall.get());
     newBall->setOffset(-10, -10);
 
     ballsMap_.push_back(newBall);
@@ -151,9 +166,10 @@ std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
 void City::handleCollision()
 {
     for (auto it = ballsMap_.begin(); it != ballsMap_.end(); ++it) {
-        if (player_->getItem()->collidesWithItem((*it)->getItem())) {
+        if (player_->collidesWithItem(it->get())) {
             Pokemon pokemon = generatePokemon();
             player_->addPokemon(pokemon);
+            map_->removeItem(it->get());
             ballsMap_.erase(it);
             addBall();
             emit collideBall(pokemon);
