@@ -153,6 +153,21 @@ void MainWindow::onGameOver()
     city_ = nullptr;
     delete fuelBar_;
     isStarted = false;
+
+    QDialog* displayResult = new QDialog(this);
+    displayResult->setFixedSize(180, 100);
+    QLabel* text = new QLabel(displayResult);
+    QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
+    text->setText(content);
+    text->move(10,10);
+    QLabel* instruction = new QLabel(displayResult);
+    instruction->setText("Press start to restart");
+    instruction->move(10, 30);
+    QPushButton* confirm = new QPushButton("OK", displayResult);
+    confirm->move(40, 60);
+    connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
+    displayResult->exec();
+
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
