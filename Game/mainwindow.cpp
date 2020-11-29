@@ -8,12 +8,15 @@ MainWindow::MainWindow(QWidget *parent) :
   ui(new Ui::MainWindow),
   isStarted(false)
 {
+    gameSetting_ = {9, 0, 5, 3000, 1};
     // add first dialog
     Dialog *dialog = new Dialog(this);
     connect(dialog, &Dialog::gameSettingChanged, [&](Utils::GameSetting gameSetting){
         this->gameSetting_ = gameSetting;
     });
-    dialog->exec();
+    connect(dialog, &Dialog::rejected, [&](){ close();});
+    dialog->move(300,20);
+    dialog->show();
 
     // setup window
     ui->setupUi(this);
