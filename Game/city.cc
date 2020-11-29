@@ -26,14 +26,33 @@ void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 void City::setClock(QTime clock)
 {
     clock_ = clock;
+    if (isInStop)
+    {
+        for (auto& bus : actorsMap_)
+        {
+            if (typeid(*(bus.first)).name() == Utils::NYSSE_TYPE)
+            {
+                if (bus.second->getLocation().isClose(player_->getLocation(),20))
+                {
+                    isInStop = false;
+                    isInBus = true;
+                    onBus_ = bus.second;
+                    return;
+                }
+            }
+        }
+    }
+    if (isInBus)
+    {
+        auto busLocation = onBus_->getLocation();
+        player_->setTrueCoord(busLocation);
+    }
+
 }
 
 void City::startGame()
 {
     QImage backgroundImage = QImage(BACKGROUND);
-
-    connect(&timer_, &QTimer::timeout, this, &City::onTimeIncreased);
-    timer_.start(UPDATE_INTERVAL_MS);
 
     // Fix this line
     setBackground(backgroundImage,backgroundImage);
@@ -222,16 +241,10 @@ void City::keyPress(int command)
     }
     if (isGameOver())
     {
-        disconnect(&timer_,&QTimer::timeout, this, &City::onTimeIncreased);
-        timer_.stop();
         emit gameOver();
     }
 }
 
-void City::onTimeIncreased()
-{
-
-}
 
 bool City::joinStop()
 {

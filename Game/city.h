@@ -61,7 +61,6 @@ public:
 
 public slots:
     void keyPress(int command);
-    void onTimeIncreased();
 signals:
     void updateFuel(int fuel);
     void collideBall(Pokemon pokemon);
@@ -80,7 +79,6 @@ private:
     int HEIGHT = 592;
 
     QTime clock_;
-    QTimer timer_;
     std::unordered_map<std::shared_ptr<IActor>, std::shared_ptr<Character>> actorsMap_;
     std::unordered_map<std::shared_ptr<IStop>, std::shared_ptr<Character>> stopsMap_;
     std::vector< std::shared_ptr<Character> > ballsMap_;
@@ -90,6 +88,7 @@ private:
     bool isInStop;
     bool isInBus;
     bool isLocked;
+    std::shared_ptr<Character> onBus_;
 
     std::vector<Pokemon> pokemons_;
     bool pause_;
