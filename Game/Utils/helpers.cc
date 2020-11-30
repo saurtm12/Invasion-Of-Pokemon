@@ -15,4 +15,9 @@ int generateRandom(int lo, int hi)
     return distr(generator);
 }
 
+QString generateTooltipTextFromPassenger(int num, std::string actor)
+{
+    return QString::fromStdString(std::to_string(num) + " passengers in the " + actor);
+}
+
 }

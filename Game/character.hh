@@ -5,6 +5,7 @@
 #include <QGraphicsItem>
 #include <QImage>
 #include <QString>
+#include <QToolTip>
 
 /**
  * @file character.hh
@@ -48,6 +49,7 @@ public:
     void setCoord(Interface::Location loc);
     void setCoord(int x, int y);
     void setTrueCoord(Interface::Location trueLoc);
+    void setTooltipText(QString text);
     void giveStep(int step);
     bool move(int horizontalMultiplier, int verticalMultiplier);
 protected:
@@ -58,6 +60,7 @@ private:
     const int HEIGHT = 592;
     int step_;
     Interface::Location loc_;
+    QString tooltipText_;
 };
 
 };

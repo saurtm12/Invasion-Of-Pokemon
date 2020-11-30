@@ -49,7 +49,7 @@ QGraphicsScene* City::getMap() {
 
 QDialog* City::getPlayerBag(QWidget* parent) const
 {
-    return player_->getBag();
+    return player_->getBag(parent);
 }
 
 void City::addStop(std::shared_ptr<IStop> stop)
@@ -63,13 +63,17 @@ void City::addStop(std::shared_ptr<IStop> stop)
 void City::addActor(std::shared_ptr<IActor> newactor)
 {
     QString imgPath = BUS_ICON;
-    if (typeid(*newactor).name() == Utils::NYSSE_TYPE)
+    auto bus = std::dynamic_pointer_cast<Nysse>(newactor);
+    auto passenger = std::dynamic_pointer_cast<Passenger>(newactor);
+    if (bus)
     {
-      imgPath = BUS_ICON;
+        imgPath = BUS_ICON;
     }
-    if (typeid(*newactor).name() == Utils::PASSENGER_TYPE)
+    if (passenger)
     {
-      imgPath = PASSENGER_ICON;
+        imgPath = PASSENGER_ICON;
+        std::shared_ptr<IStop> stop = passenger->getStop();
+        stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
     }
 
     Character* actorGraphic = new Character(QPixmap::fromImage(QImage(imgPath)), newactor->giveLocation());
@@ -84,6 +88,7 @@ void City::addMainActor()
     Location mainLoc;
     mainLoc.setXY(200, 200);
     player_ = new Player(QPixmap::fromImage(QImage(STEWIE_ICON)), mainLoc, gameSetting_.fuel_, gameSetting_.speed_);
+    player_->setTooltipText("Your beautiful main character :)");
     player_->setOffset(-12, -8);
     map_->addItem(player_);
 }
@@ -104,6 +109,7 @@ void City::addBall()
     newLoc.setXY(x,y);
 
     Character* newBall = new Character(QPixmap::fromImage(QImage(BALL_ICON)), newLoc);
+    newBall->setTooltipText("Collect this ball for pokemon and scores");
     map_->addItem(newBall);
     newBall->setOffset(-10, -10);
 
@@ -135,7 +141,17 @@ bool City::findActor(std::shared_ptr<IActor> actor) const
 
 void City::actorMoved(std::shared_ptr<IActor> actor)
 {
+    auto passenger = std::dynamic_pointer_cast<Passenger>(actor);
     actorsMap_.at(actor)->setCoord(actor->giveLocation());
+    if (passenger) {
+        if (passenger->isInVehicle()) {
+            std::shared_ptr<IVehicle> bus = passenger->getVehicle();
+            actorsMap_.at(bus)->setTooltipText(Utils::generateTooltipTextFromPassenger(bus->getPassengers().size(), "bus"));
+        } else if (passenger->getStop()) {
+            std::shared_ptr<IStop> stop = passenger->getStop();
+            stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
+        }
+    }
 }
 
 std::vector<std::shared_ptr<IActor> > City::getNearbyActors(Location loc) const
@@ -157,6 +173,7 @@ void City::handleCollision()
             Pokemon pokemon = generatePokemon();
             player_->addPokemon(pokemon);
             map_->removeItem(*it);
+            delete *it;
             ballsMap_.erase(it);
             addBall();
             emit collideBall(pokemon);

@@ -29,6 +29,7 @@ const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 
 Location convertLocation(Location loc);
 int generateRandom(int lo, int hi);
+QString generateTooltipTextFromPassenger(int num, std::string actor);
 }
 
 #endif // HELPERS_HH
