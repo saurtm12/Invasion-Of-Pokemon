@@ -1,0 +1,28 @@
+Game-start:
+Player is greet with a brief backstory. In this dialog, the player can set some setting in game also.
+Start time is in format hour and minute. This is the real time that buses are proceed on the day. Remember that most buses will not run at night ( 00:00 - 5:00).
+Number of pokemon balls is how many pokemon balls should be generated on the map of tampere city. (max 100)
+Fuel is how much the energy of the player has. (max 10000)
+Speed is how fast the player can move in one press. (max 10)
+After this, player can press OK to save setting.
+After player press OK in the greeting dialog, they will get back to game play main window. If he presses Cancel or X symbol, the game is exited.
+
+In game play mainwindow, player presses start to play the game. The player should again click on the city map to use control key SPACE properly. The player is placed in the middle of the map. He will see buses are running, some pokemon balls are in somewhere, some moving, some not. He has to catch many ball as possible to get high score. The pokemon will be catch if the player move towards close to the pokemon. After catching a pokemon, there will be a dialog telling player that what kind of pokemon did he catched. The score then would be updated.
+
+When the player move by himself, the energy decreases
+The player can decide to use a bus to preserve his energy. If he get close enough to a bus stop, press SPACE to get to the stop. If there a bus going to this stop, the player would get on the bus. If he presses SPACE, he would leave the bus, even the bus is not stop at bus stops. The player would also leave the bus immediately when the bus go outside the map. When in the bus, if he doesnt leave the bus, he cant move.
+
+The number of passengers on the bus can be checked by hover the mouse on the buses.
+
+The player can anytime press bag button to view all his pokemons have been catched as well.
+
+The game is over when the player energy(fuel) is empty. There will be a dialogo tell the player the scores he has gained. 
+After he press OK to confirm, the game is ready to be restarted with start button again.
+
+Score of pokemons:
+The Pokemons have different levels, ranging from 1-5;
+The higher levels, the higher score he gains.
+A 1-star pokemon would only give 100 scores while a 5-star pokemon would give 500.
+
+
+
