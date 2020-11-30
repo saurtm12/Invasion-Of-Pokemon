@@ -6,7 +6,7 @@
 namespace Model {
 
 Character::Character(const QPixmap& pixmap, Interface::Location loc) :
-    QGraphicsPixmapItem(pixmap), step_(4), tooltipText_("")
+    QGraphicsPixmapItem(pixmap), step_(2), tooltipText_("")
 {
     setCoord(loc);
     setAcceptHoverEvents(true);

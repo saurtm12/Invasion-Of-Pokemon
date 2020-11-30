@@ -258,6 +258,10 @@ void City::keyPress(int command)
 
 void City::onTimeIncreased()
 {
+    for (auto& ball: ballsMap_)
+    {
+        ball->move(rand()%3-1, rand()%3-1);
+    }
     if (isInStop)
     {
         for (auto& bus : actorsMap_)
