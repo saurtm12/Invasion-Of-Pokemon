@@ -70,11 +70,17 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="busLabel">
     <property name="geometry">
      <rect>
-      <x>574</x>
+      <x>540</x>
       <y>120</y>
-      <width>101</width>
+      <width>131</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>Number of buses</string>
@@ -83,11 +89,17 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="passengerLabel">
     <property name="geometry">
      <rect>
-      <x>544</x>
+      <x>524</x>
       <y>160</y>
-      <width>131</width>
+      <width>151</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>Number of passengers</string>
@@ -113,11 +125,17 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="scoreLabel">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>580</x>
       <y>210</y>
-      <width>41</width>
+      <width>71</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string>Scores</string>
