@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <QTimeEdit>
 #include <QSpinBox>
+#include <QComboBox>
 #include <qdebug.h>
 namespace Ui {
   class Dialog;

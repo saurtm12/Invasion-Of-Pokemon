@@ -8,11 +8,11 @@ City::City(Utils::GameSetting gameSetting, QWidget *parent):
     isInStop(false),
     isInBus(false),
     isLocked(false),
-    stopNextStop(false),
     pause_(false),
     gameSetting_(gameSetting)
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
+
 }
 
 City::~City()
@@ -96,6 +96,15 @@ void City::addMainActor()
     player_->setTooltipText("Your beautiful main character :)");
     player_->setOffset(-12, -8);
     map_->addItem(player_);
+
+    if (gameSetting_.multiplayer_ == "Yes") {
+        Location mainLoc2;
+        mainLoc2.setXY(500, 200);
+        player2_ = new Player(QPixmap::fromImage(QImage(BRIAN_ICON)), mainLoc2, gameSetting_.fuel_, gameSetting_.speed_);
+        player2_->setTooltipText("Your second beautiful main character :)");
+        player2_->setOffset(-12, -8);
+        map_->addItem(player2_);
+    }
 }
 
 void City::removeActor(std::shared_ptr<IActor> actor)
@@ -187,6 +196,15 @@ void City::handleCollision()
             addBall();
             emit collideBall(pokemon);
             return;
+        } else if (gameSetting_.multiplayer_ == "Yes" && player2_->collidesWithItem(*it)) {
+            Pokemon pokemon = generatePokemon();
+            player2_->addPokemon(pokemon);
+            map_->removeItem(*it);
+            delete *it;
+            ballsMap_.erase(it);
+            addBall();
+            emit collideBall(pokemon);
+            return;
         }
     }
 }
@@ -198,7 +216,6 @@ bool City::isGameOver() const
 
 void City::keyPress(int command)
 {
-
     switch (command) {
     case Qt::Key_W:
         if (isLocked)
@@ -234,6 +251,26 @@ void City::keyPress(int command)
         }
         player_->moveDirection(1, 0);
         emit updateFuel(player_->getFuel());
+        handleCollision();
+        break;
+    case Qt::Key_I:
+        player2_->moveDirection(0, -1);
+        emit updateFuel(player2_->getFuel());
+        handleCollision();
+        break;
+    case Qt::Key_K:
+        player2_->moveDirection(0, 1);
+        emit updateFuel(player2_->getFuel());
+        handleCollision();
+        break;
+    case Qt::Key_J:
+        player2_->moveDirection(-1, 0);
+        emit updateFuel(player2_->getFuel());
+        handleCollision();
+        break;
+    case Qt::Key_L:
+        player2_->moveDirection(1, 0);
+        emit updateFuel(player2_->getFuel());
         handleCollision();
         break;
     case Qt::Key_Space:
@@ -307,7 +344,7 @@ void City::onTimeIncreased()
 bool City::joinStop()
 {
     auto playerLoc = player_->getLocation();
-    qDebug()<< playerLoc.giveX() << playerLoc.giveY();
+    qDebug() << playerLoc.giveX() << playerLoc.giveY();
     for (auto& stop: stopsMap_){
         if (playerLoc.isClose(stop.second->getLocation(),25))
         {

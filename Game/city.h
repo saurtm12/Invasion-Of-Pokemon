@@ -253,6 +253,7 @@ private:
     const QString BUS_ICON = QString(":/characters/characters/bus.png");
     const QString BALL_ICON = QString(":/characters/characters/ballIcon.png");
     const QString STEWIE_ICON = QString(":/characters/characters/stewie25.png");
+    const QString BRIAN_ICON = QString(":/characters/characters/brian25.png");
     const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
 
 
@@ -266,12 +267,15 @@ private:
     std::vector< Character* > ballsMap_;
 
     QGraphicsScene* map_;
+
     Player* player_;
     bool isInStop;
     bool isInBus;
     bool isLocked;
-    bool stopNextStop;
     Character* onBus_;
+
+    Player* player2_;
+
     std::vector<Pokemon> pokemons_;
     bool pause_;
     Utils::GameSetting gameSetting_;

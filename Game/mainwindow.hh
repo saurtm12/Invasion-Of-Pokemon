@@ -49,7 +49,7 @@ public:
   ~MainWindow();
     /**
    * @brief startGame
-   * @post : game is running
+   * @post : game is running. Exception guarantee: basics
    * @exception: game is once start if the memory is available, or throw std::bad_alloc.
    */
   void startGame();
@@ -65,7 +65,7 @@ private slots:
    * @brief SLOT onBallCollided - display the pokemon has been catched.
    * @param pokemon
    * @pre : the player is move to the pokemon ball position.
-   * @post exception guarantee: no throw
+   * @post exception guarantee: basics
    * @exception: if there is no memory available, this might throw exception std::bad_alloc.
    */
   void onBallCollided(Pokemon pokemon);
@@ -73,7 +73,7 @@ private slots:
   /**
    * @brief openBag to display pokemon
    * @pre -
-   * @post exception guarantee: no throw
+   * @post exception guarantee: basics
    * @exception: if there is no memory available, this might throw exception std::bad_alloc.
    */
   void openBag();
@@ -97,13 +97,20 @@ private slots:
   /**
    * @brief SLOT onGameOver - display final score.
    * @pre : game is over
-   * @post exception guarantee : no throw
+   * @post exception guarantee : basics
    * @exception: if there is no memory available, this might throw exception std::bad_alloc.
    */
   void onGameOver();
 
+  /**
+   * @brief SLOT openLeaderBoard - open top 10 leaderboard.
+   * @pre -
+   * @post exception guarantee : basics
+   * @exception: if there is no memory available, this might throw exception std::bad_alloc.
+   */
   void openLeaderboard();
 private:
+  // keyPressEvent override
   void keyPressEvent(QKeyEvent *event) override;
 
   Ui::MainWindow *ui;

@@ -27,6 +27,7 @@ struct GameSetting
     int numberOfBall_;
     int fuel_;
     int speed_;
+    QString multiplayer_;
 };
 
 const int X_OFFSET_MAP = 352;

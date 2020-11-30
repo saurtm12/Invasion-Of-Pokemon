@@ -6,5 +6,6 @@
         <file>characters/ballIcon.png</file>
         <file>characters/passengerIcon.png</file>
         <file>characters/stewie25.png</file>
+        <file>characters/brian25.png</file>
     </qresource>
 </RCC>

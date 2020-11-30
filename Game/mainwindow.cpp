@@ -194,9 +194,11 @@ void MainWindow::openLeaderboard()
         currentLine += space;
     }
 
-    QLabel* instruction = new QLabel(displayResult);
-    instruction->setText("Press start to restart");
-    instruction->move(10, currentLine);
+    if (!isStarted) {
+        QLabel* instruction = new QLabel(displayResult);
+        instruction->setText("Press start to restart");
+        instruction->move(10, currentLine);
+    }
     QPushButton* confirm = new QPushButton("OK", displayResult);
     confirm->move(40, currentLine + space);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);

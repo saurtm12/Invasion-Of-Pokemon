@@ -71,14 +71,25 @@ void Dialog::onOpenSetting()
     speedSpin->setMaximum(10);
     speedSpin->setValue(1);
 
+    QLabel* multiplayer = new QLabel("Mutliplayer:", settingDialog);
+    multiplayer->move(10,170);
+    font = fuel->font();
+    font.setPointSize(14);
+    multiplayer->setFont(font);
+    QComboBox* multiplayerDropdown = new QComboBox(settingDialog);
+    multiplayerDropdown->move(300,170);
+    multiplayerDropdown->addItem("Yes");
+    multiplayerDropdown->addItem("No");
+
     QPushButton* confirm = new QPushButton("OK", settingDialog);
-    confirm->move(10,180);
+    confirm->move(10,220);
     connect(confirm, &QPushButton::clicked, [=, &settingDialog](){
         emit gameSettingChanged({  timeEdit->time().hour(),
                                    timeEdit->time().minute(),
                                    noBallSpin->value(),
                                    fuelSpin->value(),
-                                   speedSpin->value()
+                                   speedSpin->value(),
+                                   multiplayerDropdown->currentText()
                                 });
     });
     connect(confirm, &QPushButton::clicked, settingDialog, &QDialog::accept);
