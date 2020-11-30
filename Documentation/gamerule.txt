@@ -9,7 +9,7 @@ After player press OK in the greeting dialog, they will get back to game play ma
 
 In game play mainwindow, player presses start to play the game. The player should again click on the city map to use control key SPACE properly. The player is placed in the middle of the map. He will see buses are running, some pokemon balls are in somewhere, some moving, some not. He has to catch many ball as possible to get high score. The pokemon will be catch if the player move towards close to the pokemon. After catching a pokemon, there will be a dialog telling player that what kind of pokemon did he catched. The score then would be updated. Every time he catches a Pokemon, another is respawned.
 
-When the player move by himself, the energy decreases
+When the player moves by himself, by pressing W-S-A-S to move to respective directions, the energy decreases as well when he moves.
 The player can decide to use a bus to preserve his energy. If he get close enough to a bus stop, press SPACE to get to the stop. If there a bus going to this stop, the player would get on the bus. If he presses SPACE, he would leave the bus, even the bus is not stop at bus stops. The player would also leave the bus immediately when the bus go outside the map. When in the bus, if he doesnt leave the bus, he cant move.
 
 The number of passengers on the bus can be checked by hover the mouse on the buses.
