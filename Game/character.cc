@@ -6,7 +6,7 @@
 namespace Model {
 
 Character::Character(const QPixmap& pixmap, Interface::Location loc) :
-    QGraphicsPixmapItem(pixmap), step_(4)
+    QGraphicsPixmapItem(pixmap), step_(4), tooltipText_("")
 {
     setCoord(loc);
     setAcceptHoverEvents(true);
@@ -55,6 +55,11 @@ void Character::setTrueCoord(Interface::Location trueLoc)
     setPos(loc_.giveX(), loc_.giveY());
 }
 
+void Character::setTooltipText(QString text)
+{
+    tooltipText_ = text;
+}
+
 void Character::giveStep(int step)
 {
     step_ = step;
@@ -75,13 +80,13 @@ bool Character::move(int horizontalMultiplier, int verticalMultiplier)
 
 void Character::hoverEnterEvent(QGraphicsSceneHoverEvent* event)
 {
-    qDebug() << "meow";
+    setToolTip(tooltipText_);
     QGraphicsPixmapItem::hoverEnterEvent(event);
 }
 
 void Character::hoverLeaveEvent(QGraphicsSceneHoverEvent* event)
 {
-    qDebug() << "meow leave";
+    QToolTip::hideText();
     QGraphicsPixmapItem::hoverLeaveEvent(event);
 }
 
