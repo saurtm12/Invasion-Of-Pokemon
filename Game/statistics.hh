@@ -10,6 +10,10 @@
 namespace Stats
 {
 
+/**
+ * @brief The Statistics class
+ * @inherits iStatistic.
+ */
 class Statistics : Interface::IStatistics
 {
 public:

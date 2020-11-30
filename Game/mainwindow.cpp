@@ -157,6 +157,7 @@ void MainWindow::onGameOver()
     isStarted = false;
 
     QDialog* displayResult = new QDialog(this);
+    displayResult->setWindowTitle("Game is over!");
     QLabel* text = new QLabel(displayResult);
     QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
     text->setText(content);

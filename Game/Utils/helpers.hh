@@ -17,6 +17,9 @@ namespace Utils {
 
 const std::string SCORE_FILE = "../../doesnt-matter/Game/Text/score.txt";
 
+/**
+ * @brief The GameSetting struct
+ */
 struct GameSetting
 {
     int hour_;

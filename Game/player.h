@@ -13,6 +13,11 @@
 namespace Model
 {
 
+/**
+ * @brief The Player class - define our main player
+ * @inherits Charactor
+ * @inherits IActor
+ */
 class Player: public Interface::IActor, public Character
 {
 public:

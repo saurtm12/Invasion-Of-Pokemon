@@ -16,6 +16,10 @@ namespace Model {
 const int WIDTH = 1095;
 const int HEIGHT = 592;
 
+/**
+ * @brief The Character class - defines items on the map
+ * @inherits GraphicsPixmapItem
+ */
 class Character : public QGraphicsPixmapItem
 {
 public:
