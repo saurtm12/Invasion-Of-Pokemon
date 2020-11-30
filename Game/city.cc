@@ -180,6 +180,7 @@ void City::keyPress(int command)
             break;
         }
         player_->moveDirection(0, -1);
+        qDebug() << "move up";
         emit updateFuel(player_->getFuel());
         handleCollision();
         break;
@@ -188,6 +189,7 @@ void City::keyPress(int command)
         {
             break;
         }
+        qDebug() << "move down";
         player_->moveDirection(0, 1);
         emit updateFuel(player_->getFuel());
         handleCollision();
@@ -197,6 +199,7 @@ void City::keyPress(int command)
         {
             break;
         }
+        qDebug() << "move left";
         player_->moveDirection(-1, 0);
         emit updateFuel(player_->getFuel());
         handleCollision();
@@ -206,6 +209,7 @@ void City::keyPress(int command)
         {
             break;
         }
+        qDebug() << "move right";
         player_->moveDirection(1, 0);
         emit updateFuel(player_->getFuel());
         handleCollision();

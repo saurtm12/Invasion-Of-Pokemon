@@ -12,7 +12,7 @@
  */
 namespace Model {
 // Mainwindow constants
-const int WITDH = 1095;
+const int WIDTH = 1095;
 const int HEIGHT = 592;
 
 class Character : public QGraphicsPixmapItem

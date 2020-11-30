@@ -64,9 +64,7 @@ bool Character::move(int horizontalMultiplier, int verticalMultiplier)
 {
     int x = getX() + horizontalMultiplier * step_;
     int y = getY() + verticalMultiplier * step_;
-    int offX = -offset().x();
-    int offY = -offset().y();
-    if (x < offX || x >= WIDTH - offX || y < offY || y >= HEIGHT - offY)
+    if (x < 0 || x >= WIDTH  || y < 0 || y >= HEIGHT)
     {
         return false;
     }

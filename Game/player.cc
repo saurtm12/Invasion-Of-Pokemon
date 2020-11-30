@@ -25,6 +25,11 @@ bool Player::isRemoved() const
 
 }
 
+void Player::bonusFuel(int bonus)
+{
+    fuel_ = std::min(fuel_+bonus, max_fuel_);
+}
+
 void Player::addPokemon(Pokemon pokemon)
 {
     bag_.push_back(pokemon);
@@ -32,7 +37,8 @@ void Player::addPokemon(Pokemon pokemon)
 
 void Player::moveDirection(int horizontalMultiplier, int verticalMultiplier)
 {
-    if (fuel_ > 0){
+    if (fuel_ > 0)
+    {
         if (Character::move(horizontalMultiplier, verticalMultiplier))
         {
             fuel_ -= speed_;
@@ -70,7 +76,6 @@ QDialog* Player::getBag(QWidget* parent) const
 
 void Player::remove()
 {
-
 
 }
 
