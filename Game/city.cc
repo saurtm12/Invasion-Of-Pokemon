@@ -93,9 +93,13 @@ void City::addMainActor()
 
 void City::removeActor(std::shared_ptr<IActor> actor)
 {
-    map_->removeItem(actorsMap_.at(actor));
-    actorsMap_.erase(actor);
-    emit actorChanged(actor, -1);
+    try {
+        map_->removeItem(actorsMap_.at(actor));
+        actorsMap_.erase(actor);
+        emit actorChanged(actor, -1);
+    } catch (const std::out_of_range& e) {
+        qDebug() << "Delete non exist actor";
+    }
 }
 
 void City::addBall()
@@ -129,7 +133,7 @@ Pokemon City::generatePokemon()
 
 void City::actorRemoved(std::shared_ptr<IActor> actor)
 {
-
+    actor->remove();
 }
 
 bool City::findActor(std::shared_ptr<IActor> actor) const
