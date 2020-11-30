@@ -145,7 +145,6 @@ void MainWindow::onGameOver()
     }
     Utils::writeScore(highScores);
 
-
     delete logic_;
     ui->gameView->setScene(nullptr);
     disconnect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
@@ -158,20 +157,32 @@ void MainWindow::onGameOver()
     isStarted = false;
 
     QDialog* displayResult = new QDialog(this);
-    displayResult->setFixedSize(180, 100);
     QLabel* text = new QLabel(displayResult);
     QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
     text->setText(content);
     text->move(10,10);
 
+    QLabel* highScoreText = new QLabel(displayResult);
+    highScoreText->setText("High Scores:");
+    highScoreText->move(10,30);
+    int space = 30;
+    int currentLine = 60;
+    for (auto score: highScores)
+    {
+        QLabel* scoreLabel = new QLabel(displayResult);
+        scoreLabel->setText(QString::number(score));
+        scoreLabel->move(10, currentLine);
+        currentLine += space;
+    }
+
     QLabel* instruction = new QLabel(displayResult);
     instruction->setText("Press start to restart");
-    instruction->move(10, 30);
+    instruction->move(10, currentLine);
     QPushButton* confirm = new QPushButton("OK", displayResult);
-    confirm->move(40, 60);
+    confirm->move(40, currentLine + space);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
 
-
+    displayResult->setFixedSize(180, currentLine + 2*space);
     displayResult->exec();
 }
 
