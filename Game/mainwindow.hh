@@ -18,6 +18,7 @@
 #include <map>
 #include <QString>
 #include <QProgressBar>
+#include <algorithm>
 
 using namespace CourseSide;
 using namespace Interface;
@@ -111,6 +112,7 @@ private:
   int width_ = 1095;
   int height_ = 592;
   int tick_ = 500;
+  const int LEADER_BOARD_SIZE = 10;
   Utils::GameSetting gameSetting_;
   bool isStarted;
 };

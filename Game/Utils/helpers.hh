@@ -6,10 +6,15 @@
 #include "../Course/CourseLib/actors/passenger.hh"
 #include "../Course/CourseLib/actors/stop.hh"
 #include <random>
-
+#include <fstream>
+#include <string>
+#include <vector>
+#include <qdebug.h>
 using namespace Interface;
 
 namespace Utils {
+
+const std::string SCORE_FILE = "./Text/score.txt";
 
 struct GameSetting
 {
@@ -30,6 +35,8 @@ const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 Location convertLocation(Location loc);
 int generateRandom(int lo, int hi);
 QString generateTooltipTextFromPassenger(int num, std::string actor);
+void writeScore(std::vector<int> highScores);
+std::vector<int> getHighScores();
 }
 
 #endif // HELPERS_HH

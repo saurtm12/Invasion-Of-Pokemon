@@ -136,6 +136,16 @@ void MainWindow::actorCountChanged(std::shared_ptr<IActor> actor, int delta)
 
 void MainWindow::onGameOver()
 {
+    auto highScores = Utils::getHighScores();
+    highScores.push_back(stats_.getScores());
+    std::sort(highScores.rbegin(), highScores.rend());
+    while (highScores.size() > 10)
+    {
+        highScores.pop_back();
+    }
+    Utils::writeScore(highScores);
+
+
     delete logic_;
     ui->gameView->setScene(nullptr);
     disconnect(this, &MainWindow::keyPressed, city_.get(), Model::HANDLEFUNCT);
@@ -160,6 +170,8 @@ void MainWindow::onGameOver()
     QPushButton* confirm = new QPushButton("OK", displayResult);
     confirm->move(40, 60);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
+
+
     displayResult->exec();
 }
 
