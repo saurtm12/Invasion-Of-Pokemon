@@ -1,0 +1,16 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="Interface::ICity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interface_1_1_i_city.html",tooltip="CityIF is an interface that every city in the game must fulfill. Kaupunki."];
+  Node24 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Model::City",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_city.html",tooltip="The City class @inherits QObject - to use signal - slot mechanism @inherits Icity - used courseSide l..."];
+  Node1 [label="QObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="CourseSide::Logic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_course_side_1_1_logic.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="StatisticsTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_statistics_test.html",tooltip=" "];
+}

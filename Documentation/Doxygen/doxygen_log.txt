@@ -1,0 +1,1252 @@
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for dia files...
+Searching for files to exclude
+Searching INPUT for files to process...
+Searching for files in directory /home/duc/temp prog3/doesnt-matter
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Course/CourseLib/offlinedata
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Documentation
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Game
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Game/characters
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Game/Pokemon
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Game/Text
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/Game/Utils
+Searching for files in directory /home/duc/temp prog3/doesnt-matter/UnitTest
+Reading and parsing tag files
+Parsing files
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/nysse.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/nysse.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/nysse.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/nysse.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/passenger.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/passenger.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/passenger.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/passenger.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/stop.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/stop.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/stop.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/actors/stop.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/location.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/location.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/location.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/location.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/logic.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/logic.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/logic.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/logic.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/creategame.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/creategame.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/doxygeninfo.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/doxygeninfo.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/gameerror.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/gameerror.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/gameerror.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/gameerror.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/initerror.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/initerror.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/initerror.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/errors/initerror.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simpleactoritem.cpp...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simpleactoritem.cpp...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simpleactoritem.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simpleactoritem.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simplemainwindow.cpp...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simplemainwindow.cpp...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simplemainwindow.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/graphics/simplemainwindow.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/iactor.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/iactor.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/icity.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/icity.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/ipassenger.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/ipassenger.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/istatistics.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/istatistics.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/istop.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/istop.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/ivehicle.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/interfaces/ivehicle.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/offlinereader.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/offlinereader.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/offlinereader.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/offlinereader.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Course/CourseLib/testi.txt...
+Parsing file /home/duc/temp prog3/doesnt-matter/Course/CourseLib/testi.txt...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Documentation/backstory.txt...
+Parsing file /home/duc/temp prog3/doesnt-matter/Documentation/backstory.txt...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Documentation/gamerule.txt...
+Parsing file /home/duc/temp prog3/doesnt-matter/Documentation/gamerule.txt...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/character.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/character.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/character.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/character.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/city.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/city.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/city.h...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/city.h...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/creategame.cpp...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/creategame.cpp...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/dialog.cpp...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/dialog.cpp...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/dialog.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/dialog.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/main.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/main.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/mainwindow.cpp...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/mainwindow.cpp...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/mainwindow.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/mainwindow.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/player.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/player.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/player.h...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/player.h...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/pokemon.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/pokemon.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/pokemon.h...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/pokemon.h...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/statistics.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/statistics.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/statistics.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/statistics.hh...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/Text/intro.txt...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/Text/intro.txt...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/Text/score.txt...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/Text/score.txt...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/Utils/helpers.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/Utils/helpers.cc...
+Preprocessing /home/duc/temp prog3/doesnt-matter/Game/Utils/helpers.hh...
+Parsing file /home/duc/temp prog3/doesnt-matter/Game/Utils/helpers.hh...
+Reading /home/duc/temp prog3/doesnt-matter/README.md...
+Preprocessing /home/duc/temp prog3/doesnt-matter/UnitTest/tst_statistics.cc...
+Parsing file /home/duc/temp prog3/doesnt-matter/UnitTest/tst_statistics.cc...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+/home/duc/temp prog3/doesnt-matter/Game/mainwindow.hh:27: warning: the name 'mainwindow.h' supplied as the argument in the \file statement is not an input file
+/home/duc/temp prog3/doesnt-matter/Game/pokemon.h:27: warning: the name 'pokemon.hh' supplied as the argument in the \file statement is not an input file
+Building class list...
+Computing nesting relations for classes...
+Associating documentation with classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Creating members for template instances...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Setting anonymous enum type...
+Computing dependencies between directories...
+Generating citations page...
+Counting members...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Correcting members for VHDL...
+Generating style sheet...
+Generating search indices...
+Generating example documentation...
+Generating file sources...
+Generating code for file Course/CourseLib/actors/nysse.hh...
+Generating code for file Course/CourseLib/actors/passenger.hh...
+Generating code for file Course/CourseLib/actors/stop.hh...
+Generating code for file Course/CourseLib/core/location.hh...
+Generating code for file Course/CourseLib/core/logic.hh...
+Generating code for file Course/CourseLib/creategame.hh...
+Generating code for file Course/CourseLib/doxygeninfo.hh...
+Generating code for file Course/CourseLib/errors/gameerror.hh...
+Generating code for file Course/CourseLib/errors/initerror.hh...
+Generating code for file Course/CourseLib/graphics/simpleactoritem.hh...
+Generating code for file Course/CourseLib/graphics/simplemainwindow.hh...
+Generating code for file Course/CourseLib/interfaces/iactor.hh...
+Generating code for file Course/CourseLib/interfaces/icity.hh...
+Generating code for file Course/CourseLib/interfaces/ipassenger.hh...
+Generating code for file Course/CourseLib/interfaces/istatistics.hh...
+Generating code for file Course/CourseLib/interfaces/istop.hh...
+Generating code for file Course/CourseLib/interfaces/ivehicle.hh...
+Generating code for file Course/CourseLib/offlinereader.hh...
+Generating code for file Game/character.hh...
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+Generating code for file Game/city.h...
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+Generating code for file Game/dialog.hh...
+Generating code for file Game/mainwindow.hh...
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+Generating code for file Game/player.h...
+Generating code for file Game/pokemon.h...
+Generating code for file Game/statistics.hh...
+Generating code for file Game/Utils/helpers.hh...
+Generating file documentation...
+Generating docs for file Course/CourseLib/actors/nysse.cc...
+Generating docs for file Course/CourseLib/actors/nysse.hh...
+Generating docs for file Course/CourseLib/actors/passenger.cc...
+Generating docs for file Course/CourseLib/actors/passenger.hh...
+Generating docs for file Course/CourseLib/actors/stop.cc...
+Generating docs for file Course/CourseLib/actors/stop.hh...
+Generating docs for file Course/CourseLib/core/location.cc...
+Generating docs for file Course/CourseLib/core/location.hh...
+Generating docs for file Course/CourseLib/core/logic.cc...
+Generating docs for file Course/CourseLib/core/logic.hh...
+Generating docs for file Course/CourseLib/creategame.hh...
+Generating docs for file Course/CourseLib/doxygeninfo.hh...
+Generating docs for file Course/CourseLib/errors/gameerror.cc...
+Generating docs for file Course/CourseLib/errors/gameerror.hh...
+Generating docs for file Course/CourseLib/errors/initerror.cc...
+Generating docs for file Course/CourseLib/errors/initerror.hh...
+Generating docs for file Course/CourseLib/graphics/simpleactoritem.cpp...
+Generating docs for file Course/CourseLib/graphics/simpleactoritem.hh...
+Generating docs for file Course/CourseLib/graphics/simplemainwindow.cpp...
+Generating docs for file Course/CourseLib/graphics/simplemainwindow.hh...
+Generating docs for file Course/CourseLib/interfaces/iactor.hh...
+Generating docs for file Course/CourseLib/interfaces/icity.hh...
+Generating docs for file Course/CourseLib/interfaces/ipassenger.hh...
+Generating docs for file Course/CourseLib/interfaces/istatistics.hh...
+Generating docs for file Course/CourseLib/interfaces/istop.hh...
+Generating docs for file Course/CourseLib/interfaces/ivehicle.hh...
+Generating docs for file Course/CourseLib/offlinereader.cc...
+Generating docs for file Course/CourseLib/offlinereader.hh...
+Generating docs for file Course/CourseLib/testi.txt...
+Generating docs for file Documentation/backstory.txt...
+Generating docs for file Documentation/gamerule.txt...
+Generating docs for file Game/character.cc...
+Generating docs for file Game/character.hh...
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+Generating docs for file Game/city.cc...
+Generating docs for file Game/city.h...
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+Generating docs for file Game/creategame.cpp...
+Generating docs for file Game/dialog.cpp...
+Generating docs for file Game/dialog.hh...
+Generating docs for file Game/main.cc...
+Generating docs for file Game/mainwindow.cpp...
+Generating docs for file Game/mainwindow.hh...
+Generating docs for file Game/player.cc...
+Generating docs for file Game/player.h...
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+Generating docs for file Game/pokemon.cc...
+Generating docs for file Game/pokemon.h...
+Generating docs for file Game/statistics.cc...
+Generating docs for file Game/statistics.hh...
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+Generating docs for file Game/Text/intro.txt...
+Generating docs for file Game/Text/score.txt...
+Generating docs for file Game/Utils/helpers.cc...
+Generating docs for file Game/Utils/helpers.hh...
+Generating docs for file README.md...
+Generating docs for file UnitTest/tst_statistics.cc...
+Generating page documentation...
+Generating docs for page md_README...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound Dialog...
+Generating docs for compound MainWindow...
+/home/duc/temp prog3/doesnt-matter/Game/mainwindow.hh:51: warning: expected whitespace after \exception command
+Generating docs for compound StatisticsTest...
+Generating namespace index...
+Generating docs for namespace CourseSide
+Generating docs for compound CourseSide::BusData...
+Generating docs for compound CourseSide::Logic...
+Generating docs for compound CourseSide::Nysse...
+Generating docs for compound CourseSide::OfflineData...
+Generating docs for compound CourseSide::OfflineReader...
+Generating docs for compound CourseSide::Passenger...
+Generating docs for compound CourseSide::Place...
+Generating docs for compound CourseSide::SimpleActorItem...
+Generating docs for compound CourseSide::SimpleMainWindow...
+Generating docs for compound CourseSide::Stop...
+Generating docs for namespace Interface
+Generating docs for compound Interface::GameError...
+Generating docs for compound Interface::IActor...
+Generating docs for compound Interface::ICity...
+Generating docs for compound Interface::InitError...
+Generating docs for compound Interface::IPassenger...
+Generating docs for compound Interface::IStatistics...
+Generating docs for compound Interface::IStop...
+Generating docs for compound Interface::IVehicle...
+Generating docs for compound Interface::Location...
+/home/duc/temp prog3/doesnt-matter/Course/CourseLib/core/location.hh:99: warning: The following parameter of Interface::Location::isClose(Location const &loc, int limit=10) const is not documented:
+  parameter 'limit'
+Generating docs for namespace Model
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+Generating docs for compound Model::Character...
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+Generating docs for compound Model::City...
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+Generating docs for compound Model::Player...
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+Generating docs for compound Model::Pokemon...
+Generating docs for namespace Stats
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+Generating docs for compound Stats::Statistics...
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+Generating docs for namespace Ui
+Generating docs for namespace Utils
+Generating docs for compound Utils::GameSetting...
+Generating graph info page...
+Generating directory documentation...
+Generating dependency graph for directory Course/CourseLib/actors
+Generating dependency graph for directory Course/CourseLib/core
+Generating dependency graph for directory Course
+Generating dependency graph for directory Course/CourseLib
+Generating dependency graph for directory Game
+Generating dependency graph for directory Course/CourseLib/graphics
+Generating dependency graph for directory Course/CourseLib/interfaces
+Generating dependency graph for directory UnitTest
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating annotated compound index...
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+Generating alphabetical compound index...
+Generating hierarchical class index...
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/statistics.hh:14: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/character.hh:20: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:17: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/player.h:18: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:37: warning: Found unknown command '\inherits'
+/home/duc/temp prog3/doesnt-matter/Game/city.h:38: warning: Found unknown command '\inherits'
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+writing tag file...
+Running plantuml with JAVA...
+Running dot...
+Generating dot graphs using 9 parallel threads...
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_0.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_0.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_c33286056d2acf479cd8641ef845fec1_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_c33286056d2acf479cd8641ef845fec1_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8cc__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_14.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_14.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8cpp__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_073dd5d248e348c36f44047f329142b1_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_073dd5d248e348c36f44047f329142b1_dep.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8cc__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istatistics_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istatistics_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_city__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_city__inherit__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_f0c2f1e2669e4839cf697743412b9102_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_f0c2f1e2669e4839cf697743412b9102_dep.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__dep__incl.png"'
+Running dot for graph 1/131
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8hh__dep__incl.png"'
+Running dot for graph 2/131
+Running dot for graph 3/131
+Running dot for graph 4/131
+Running dot for graph 5/131
+Running dot for graph 6/131
+Running dot for graph 7/131
+Running dot for graph 8/131
+Running dot for graph 9/131
+Running dot for graph 10/131
+Running dot for graph 11/131
+Running dot for graph 12/131
+Running dot for graph 13/131
+Running dot for graph 14/131
+Running dot for graph 15/131
+Running dot for graph 16/131
+sh: 1: dot: not foundRunning dot for graph 17/131
+
+Running dot for graph 18/131
+Running dot for graph 19/131
+Running dot for graph 20/131
+Running dot for graph 21/131
+Running dot for graph 22/131
+Running dot for graph 23/131
+Running dot for graph 24/131
+Running dot for graph 25/131
+Running dot for graph 26/131
+Running dot for graph 27/131
+Running dot for graph 28/131
+Running dot for graph 29/131
+Running dot for graph 30/131
+Running dot for graph 31/131
+Running dot for graph 32/131
+Running dot for graph 33/131
+Running dot for graph 34/131
+Running dot for graph 35/131
+Running dot for graph 36/131
+Running dot for graph 37/131
+Running dot for graph 38/131
+Running dot for graph 39/131
+Running dot for graph 40/131
+Running dot for graph 41/131
+Running dot for graph 42/131
+Running dot for graph 43/131
+Running dot for graph 44/131
+Running dot for graph 45/131
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_a9729cc3cf336159544460298e1486e7_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_a9729cc3cf336159544460298e1486e7_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8cc__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8cc__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_5a677f39e1b1e98afbb3471e974187bf_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_5a677f39e1b1e98afbb3471e974187bf_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8cc__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_7.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_7.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_6.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_6.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_statistics__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_statistics__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_9.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_9.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__inherit__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8cc__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not foundsh: 1: 
+dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_d52b4591e84c32d25458d8cd7834762a_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_d52b4591e84c32d25458d8cd7834762a_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_8.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_8.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_e6896a8a5f37dc8990fe861f004b1f70_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_e6896a8a5f37dc8990fe861f004b1f70_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_3.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_3.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_stop__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_stop__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_actor__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_actor__inherit__graph.png"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8cpp__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__dep__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_2.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_2.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_5.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_5.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/tst__statistics_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/tst__statistics_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_4.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_4.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8cpp__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_11.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_11.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/graph_legend.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/graph_legend.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/main_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/main_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__inherit__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_10.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_10.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8cc__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__inherit__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8cpp__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_13.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_13.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_1.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_1.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_31ecbf5764a97f048ee4b40f23fa60f9_dep.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_31ecbf5764a97f048ee4b40f23fa60f9_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8cc__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8cc__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__coll__graph.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__dep__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8cpp__incl.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_12.dot" -Tpng -o "/home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_12.png"'
+Running dot for graph 46/131
+Running dot for graph 47/131
+Running dot for graph 48/131
+Running dot for graph 49/131
+Running dot for graph 50/131
+Running dot for graph 51/131
+Running dot for graph 52/131
+Running dot for graph 53/131
+Running dot for graph 54/131
+Running dot for graph 55/131
+Running dot for graph 56/131
+Running dot for graph 57/131
+Running dot for graph 58/131
+Running dot for graph 59/131
+Running dot for graph 60/131
+Running dot for graph 61/131
+Running dot for graph 62/131
+Running dot for graph 63/131
+Running dot for graph 64/131
+Running dot for graph 65/131
+Running dot for graph 66/131
+Running dot for graph 67/131
+Running dot for graph 68/131
+Running dot for graph 69/131
+Running dot for graph 70/131
+Running dot for graph 71/131
+Running dot for graph 72/131
+Running dot for graph 73/131
+Running dot for graph 74/131
+Running dot for graph 75/131
+Running dot for graph 76/131
+Running dot for graph 77/131
+Running dot for graph 78/131
+Running dot for graph 79/131
+Running dot for graph 80/131
+Running dot for graph 81/131
+Running dot for graph 82/131
+Running dot for graph 83/131
+Running dot for graph 84/131
+Running dot for graph 85/131
+Running dot for graph 86/131
+Running dot for graph 87/131
+Running dot for graph 88/131
+Running dot for graph 89/131
+Running dot for graph 90/131
+Running dot for graph 91/131
+Running dot for graph 92/131
+Running dot for graph 93/131
+Running dot for graph 94/131
+Running dot for graph 95/131
+Running dot for graph 96/131
+Running dot for graph 97/131
+Running dot for graph 98/131
+Running dot for graph 99/131
+Running dot for graph 100/131
+Running dot for graph 101/131
+Running dot for graph 102/131
+Running dot for graph 103/131
+Running dot for graph 104/131
+Running dot for graph 105/131
+Running dot for graph 106/131
+Running dot for graph 107/131
+Running dot for graph 108/131
+Running dot for graph 109/131
+Running dot for graph 110/131
+Running dot for graph 111/131
+Running dot for graph 112/131
+Running dot for graph 113/131
+Running dot for graph 114/131
+Running dot for graph 115/131
+Running dot for graph 116/131
+Running dot for graph 117/131
+Running dot for graph 118/131
+Running dot for graph 119/131
+Running dot for graph 120/131
+Running dot for graph 121/131
+Running dot for graph 122/131
+Running dot for graph 123/131
+Running dot for graph 124/131
+Running dot for graph 125/131
+Running dot for graph 126/131
+Running dot for graph 127/131
+Running dot for graph 128/131
+Running dot for graph 129/131
+Running dot for graph 130/131
+Running dot for graph 131/131
+Patching output file 1/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 2/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/nysse_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 3/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 4/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/passenger_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 5/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 6/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/stop_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 7/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 8/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/location_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 9/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 10/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/logic_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 11/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 12/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 13/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/gameerror_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 14/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 15/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/initerror_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 16/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 17/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simpleactoritem_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 18/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 19/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/simplemainwindow_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 20/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/iactor_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 21/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/icity_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 22/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ipassenger_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 23/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istatistics_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 24/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/istop_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 25/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/ivehicle_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 26/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 27/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/offlinereader_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 28/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 29/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/character_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 30/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 31/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/city_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 32/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/creategame_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 33/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 34/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dialog_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 35/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/main_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 36/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 37/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/mainwindow_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 38/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 39/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/player_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 40/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 41/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/pokemon_8h__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 42/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 43/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/statistics_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 44/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 45/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/helpers_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 46/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/tst__statistics_8cc__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 47/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_dialog__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 48/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_main_window__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 49/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_statistics_test__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 50/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_logic__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 51/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_nysse__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 52/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_passenger__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 53/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_actor_item__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 54/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_simple_main_window__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 55/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_course_side_1_1_stop__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 56/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_game_error__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 57/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_actor__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 58/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_city__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 59/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_init_error__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 60/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_passenger__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 61/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_statistics__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 62/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_stop__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 63/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_interface_1_1_i_vehicle__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 64/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_character__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 65/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_city__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 66/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_model_1_1_player__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 67/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/class_stats_1_1_statistics__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 68/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_5a677f39e1b1e98afbb3471e974187bf_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 69/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_f0c2f1e2669e4839cf697743412b9102_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 70/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_e6896a8a5f37dc8990fe861f004b1f70_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 71/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_073dd5d248e348c36f44047f329142b1_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 72/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_c33286056d2acf479cd8641ef845fec1_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 73/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_d52b4591e84c32d25458d8cd7834762a_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 74/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_31ecbf5764a97f048ee4b40f23fa60f9_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 75/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/dir_a9729cc3cf336159544460298e1486e7_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 76/76
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_7.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_8.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_9.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_10.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_11.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_12.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_13.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/duc/temp prog3/doesnt-matter/Documentation/Doxygen/html/inherit_graph_14.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+lookup cache used 866/65536 hits=4677 misses=913
+finished...
+*** Doxygen has finished

@@ -1,0 +1,14 @@
+digraph "Game" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c33286056d2acf479cd8641ef845fec1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c33286056d2acf479cd8641ef845fec1.html"];
+    dir_c33286056d2acf479cd8641ef845fec1 [shape=plaintext label="Game"];
+    dir_20d2653406bb0a79301ebbab5c147b94 [shape=box label="Text" color="black" fillcolor="white" style="filled" URL="dir_20d2653406bb0a79301ebbab5c147b94.html"];
+    dir_04811c4941b9653693f84748e3c79bc0 [shape=box label="Utils" color="black" fillcolor="white" style="filled" URL="dir_04811c4941b9653693f84748e3c79bc0.html"];
+  }
+  dir_e6896a8a5f37dc8990fe861f004b1f70 [shape=box label="Course" fillcolor="white" style="filled" color="red" URL="dir_e6896a8a5f37dc8990fe861f004b1f70.html"];
+  dir_c33286056d2acf479cd8641ef845fec1->dir_e6896a8a5f37dc8990fe861f004b1f70 [headlabel="18", labeldistance=1.5 headhref="dir_000008_000000.html"];
+  dir_c33286056d2acf479cd8641ef845fec1->dir_04811c4941b9653693f84748e3c79bc0 [headlabel="4", labeldistance=1.5 headhref="dir_000008_000010.html"];
+}
