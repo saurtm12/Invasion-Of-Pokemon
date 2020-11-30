@@ -34,8 +34,6 @@ void City::setClock(QTime clock)
 void City::startGame()
 {
     QImage backgroundImage = QImage(BACKGROUND);
-
-    // Fix this line
     setBackground(backgroundImage,backgroundImage);
     addMainActor();
     generateBalls();
@@ -258,9 +256,12 @@ void City::keyPress(int command)
 
 void City::onTimeIncreased()
 {
-    for (auto& ball: ballsMap_)
+    for (auto iter = ballsMap_.begin(); iter < ballsMap_.end(); iter +=2)
     {
-        ball->move(rand()%3-1, rand()%3-1);
+        if (Utils::generateRandom(0,2) == 0)
+        {
+            (*iter)->move(Utils::generateRandom(0,3)-1, Utils::generateRandom(0,3)-1);
+        }
     }
     if (isInStop)
     {

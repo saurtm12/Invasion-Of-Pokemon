@@ -49,6 +49,7 @@ void Dialog::onOpenSetting()
     QSpinBox* noBallSpin = new QSpinBox(settingDialog);
     noBallSpin->move(300,50);
     noBallSpin->setValue(5);
+    noBallSpin->setMaximum(100);
 
     QLabel* fuel = new QLabel("Fuel:", settingDialog);
     fuel->move(10,90);

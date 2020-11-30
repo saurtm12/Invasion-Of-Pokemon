@@ -23,25 +23,95 @@
 #include <vector>
 #include <unordered_map>
 
+/**
+ * @file Define city class
+ */
+
 using namespace Interface;
 using namespace CourseSide;
 
 namespace Model {
 
+/**
+ * @brief The City class
+ * @inherits QObject - to use signal - slot mechanism
+ * @inherits Icity - used courseSide logic
+ */
 class City :  public QObject, public Interface::ICity
 {
     Q_OBJECT
 public:
+    /**
+     * @brief City constructor
+     * @param gameSetting - give game setting has been chosen.
+     * @param parent - QObject parent
+     * @post the object is not in removed state after constructor
+     */
     City(Utils::GameSetting gameSetting, QWidget *parent = 0 );
-    virtual ~City();
+
+    /**
+     * @brief City destructor
+     */
+    ~City();
+
+
+
+    /**
+     * @brief setBackground - override Icity function
+     * @param basicbackground - city background
+     * @param bigbackground - NOT USED
+     * @pre - city is initialized
+     * @post - exception guarantee : no throw
+     */
     void setBackground(QImage &basicbackground, QImage &bigbackground);
+
+    /**
+     * @brief setClock - override ICity function
+     * @param clock
+     * @pre time change within city minute
+     * @post - exception guarantee : no throw
+     */
     void setClock(QTime clock);
+
+    /**
+     * @brief startGame
+     * @pre - logic is initialized
+     * @post - exception guarantee : no throw
+     * @exception if memory is not available, this might leak out std::bad_alloc
+     */
     void startGame();
 
+    /**
+     * @brief getMap - get city map
+     * @return City map QGraphicScene
+     * @post - exception guarantee : no throw
+     */
     QGraphicsScene* getMap();
+
+    /**
+     * @brief getPlayerBag - display player's bag
+     * @param parent - QObject parent
+     * @return QDialog
+     * @pre - game is started
+     * @post - exception guarantee : no throw
+     * @exception if memory is not available, this might leak out std::bad_alloc
+     */
     QDialog* getPlayerBag(QWidget* parent = 0) const;
 
+    /**
+     * @brief addStop to city's map
+     * @param stop
+     * @pre -
+     * @post - exception guarantee: no throw
+     */
     void addStop(std::shared_ptr<IStop> stop);
+
+    /**
+     * @brief addActor
+     * @param newactor
+     * @pre -
+     * @post - exception guarantee: no throw.
+     */
     void addActor(std::shared_ptr<IActor> newactor);
     void addMainActor();
     void removeActor(std::shared_ptr<IActor> actor);
@@ -60,7 +130,19 @@ public:
     bool isGameOver() const;
 
 public slots:
+    /**
+     * @brief keyPress
+     * @param command
+     * @pre -
+     * @post exception guarantee : no throw.
+     */
     void keyPress(int command);
+
+    /**
+     * @brief onTimeIncreased - move the player if he is in the bus and pokemon ball
+     * @pre -
+     * @post exception guarantee : no throw.
+     */
     void onTimeIncreased();
 signals:
     void updateFuel(int fuel);
