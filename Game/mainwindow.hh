@@ -101,6 +101,8 @@ private slots:
    * @exception: if there is no memory available, this might throw exception std::bad_alloc.
    */
   void onGameOver();
+
+  void openLeaderboard();
 private:
   void keyPressEvent(QKeyEvent *event) override;
 

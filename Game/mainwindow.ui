@@ -158,6 +158,19 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="boardBtn">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>360</y>
+      <width>106</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Leaderboard</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

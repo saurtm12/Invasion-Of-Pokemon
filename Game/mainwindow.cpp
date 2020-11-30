@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->startButton->move(width_+ PADDING, PADDING);
     ui->bagBtn->move(width_+ PADDING, 300);
+    ui->boardBtn->move(width_ + PADDING, 400);
 
     ui->busLabel->move(width_ + 30, 152);
     ui->passengerLabel->move(width_ + 30, 192);
@@ -41,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // connect start game
     connect(ui->startButton, &QPushButton::clicked, [&](){startGame();});
+    connect(ui->boardBtn, &QPushButton::clicked, this, &MainWindow::openLeaderboard);
 }
 
 MainWindow::~MainWindow()
@@ -156,8 +158,21 @@ void MainWindow::onGameOver()
     delete fuelBar_;
     isStarted = false;
 
+    openLeaderboard();
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (isStarted) {
+        emit keyPressed( static_cast<int>(event->key()) );
+    }
+}
+
+void MainWindow::openLeaderboard()
+{
+    auto highScores = Utils::getHighScores();
     QDialog* displayResult = new QDialog(this);
-    displayResult->setWindowTitle("Game is over!");
+    displayResult->setWindowTitle("Gameover!");
     QLabel* text = new QLabel(displayResult);
     QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
     text->setText(content);
@@ -168,10 +183,13 @@ void MainWindow::onGameOver()
     highScoreText->move(10,30);
     int space = 30;
     int currentLine = 60;
-    for (auto score: highScores)
+    for (unsigned int i = 0; i < highScores.size(); ++i)
     {
         QLabel* scoreLabel = new QLabel(displayResult);
-        scoreLabel->setText(QString::number(score));
+        scoreLabel->setText(QString::number(i + 1) + ". " + QString::number(highScores[i]));
+        if (!isStarted && highScores[i] == stats_.getScores()) {
+            scoreLabel->setStyleSheet("font-weight: bold;");
+        }
         scoreLabel->move(10, currentLine);
         currentLine += space;
     }
@@ -183,13 +201,6 @@ void MainWindow::onGameOver()
     confirm->move(40, currentLine + space);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
 
-    displayResult->setFixedSize(180, currentLine + 2*space);
+    displayResult->setFixedSize(250, currentLine + 2*space);
     displayResult->exec();
-}
-
-void MainWindow::keyPressEvent(QKeyEvent *event)
-{
-    if (isStarted) {
-        emit keyPressed( static_cast<int>(event->key()) );
-    }
 }
