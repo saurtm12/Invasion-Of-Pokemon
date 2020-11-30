@@ -5,6 +5,7 @@
 #include "../Course/CourseLib/actors/nysse.hh"
 #include "../Course/CourseLib/actors/passenger.hh"
 #include "../Course/CourseLib/actors/stop.hh"
+#include "../Course/CourseLib/errors/initerror.hh"
 #include <random>
 #include <fstream>
 #include <string>
@@ -14,7 +15,7 @@ using namespace Interface;
 
 namespace Utils {
 
-const std::string SCORE_FILE = "./Text/score.txt";
+const std::string SCORE_FILE = "../../doesnt-matter/Game/Text/score.txt";
 
 struct GameSetting
 {

@@ -23,12 +23,17 @@ QString generateTooltipTextFromPassenger(int num, std::string actor)
 std::vector<int> getHighScores()
 {
     std::ifstream file;
-    file.open(SCORE_FILE);
-    if (!file)
-    {
-        qDebug() <<"File empty";
+    file.open(SCORE_FILE, std::ios::in);
+    try {
+        if (!file.is_open())
+        {
+            throw InitError("File not found");
+        }
+    }  catch (const InitError& e) {
+        qDebug() << e.what();
         return {};
     }
+
     int temp = 0;
     std::vector<int> highScores;
     while (file >> temp) {
@@ -41,12 +46,23 @@ std::vector<int> getHighScores()
 void writeScore(std::vector<int> highScores)
 {
     std::ofstream file;
-    file.open(SCORE_FILE, std::ofstream::out | std::ofstream::trunc );
+    file.open(SCORE_FILE, std::ofstream::out | std::ofstream::trunc);
+
+    try {
+        if (!file.is_open())
+        {
+            throw InitError("File not found");
+        }
+    }  catch (const InitError& e) {
+        qDebug() << e.what();
+        return;
+    }
+
     for (auto& score: highScores)
     {
-        qDebug() <<score;
         file << score << "\n";
     }
+
     file.close();
 }
 
