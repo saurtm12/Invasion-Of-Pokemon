@@ -7,6 +7,9 @@
 #include <QGridLayout>
 #include <vector>
 
+/**
+ * @file player.h : define Player class.
+ */
 namespace Model
 {
 

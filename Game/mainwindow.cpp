@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
   ui(new Ui::MainWindow),
   isStarted(false)
 {
+    //default game setting.
     gameSetting_ = {9, 0, 5, 3000, 1};
     // add first dialog
     Dialog *dialog = new Dialog(this);
@@ -38,8 +39,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->scoreText->move(width_ + 175, 230);
     ui->scoreText->setReadOnly(true);
 
-    // connect events
-    connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::onStartButtonClicked);
+    // connect start game
+    connect(ui->startButton, &QPushButton::clicked, [&](){startGame();});
 }
 
 MainWindow::~MainWindow()
@@ -91,14 +92,9 @@ void MainWindow::startGame()
     ui->busText->setText(QString::number(newBusCount));
     int newPassengerCount = stats_.getNumberOfPassengers();
     ui->passengerText->setText(QString::number(newPassengerCount));
-
     isStarted = true;
 }
 
-void MainWindow::onStartButtonClicked()
-{
-    startGame();
-}
 
 void MainWindow::onBallCollided(Pokemon pokemon)
 {
@@ -157,6 +153,7 @@ void MainWindow::onGameOver()
     QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
     text->setText(content);
     text->move(10,10);
+
     QLabel* instruction = new QLabel(displayResult);
     instruction->setText("Press start to restart");
     instruction->move(10, 30);
@@ -168,6 +165,7 @@ void MainWindow::onGameOver()
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
-  // LOOK BACK IF THE GAME NEED TO BE STARTED OR NOT.
-  emit keyPressed( static_cast<int>(event->key()));
+    if (isStarted) {
+        emit keyPressed( static_cast<int>(event->key()) );
+    }
 }
