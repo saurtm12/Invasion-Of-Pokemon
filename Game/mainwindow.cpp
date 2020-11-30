@@ -98,7 +98,7 @@ void MainWindow::startGame()
 
 void MainWindow::onBallCollided(Pokemon pokemon)
 {
-    int newScores = stats_.addScores();
+    int newScores = stats_.addScores(pokemon.score());
     ui->scoreText->setText(QString::number(newScores));
     QDialog* dialog = pokemon.dialogInfo(this);
     dialog->exec();

@@ -60,25 +60,32 @@ void City::addStop(std::shared_ptr<IStop> stop)
 
 void City::addActor(std::shared_ptr<IActor> newactor)
 {
-    QString imgPath = BUS_ICON;
-    auto bus = std::dynamic_pointer_cast<Nysse>(newactor);
-    auto passenger = std::dynamic_pointer_cast<Passenger>(newactor);
-    if (bus)
-    {
-        imgPath = BUS_ICON;
-    }
-    if (passenger)
-    {
-        imgPath = PASSENGER_ICON;
-        std::shared_ptr<IStop> stop = passenger->getStop();
-        stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
-    }
+    try {
+        if (actorsMap_.find(newactor) != actorsMap_.end()) {
+            throw GameError("Actor is already in the city");
+        }
+        QString imgPath = BUS_ICON;
+        auto bus = std::dynamic_pointer_cast<Nysse>(newactor);
+        auto passenger = std::dynamic_pointer_cast<Passenger>(newactor);
+        if (bus)
+        {
+            imgPath = BUS_ICON;
+        }
+        if (passenger)
+        {
+            imgPath = PASSENGER_ICON;
+            std::shared_ptr<IStop> stop = passenger->getStop();
+            stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
+        }
 
-    Character* actorGraphic = new Character(QPixmap::fromImage(QImage(imgPath)), newactor->giveLocation());
-    map_->addItem(actorGraphic);
-    actorGraphic->setOffset(-10, -10);
-    actorsMap_.insert({ newactor, actorGraphic });
-    emit actorChanged(newactor, 1);
+        Character* actorGraphic = new Character(QPixmap::fromImage(QImage(imgPath)), newactor->giveLocation());
+        map_->addItem(actorGraphic);
+        actorGraphic->setOffset(-10, -10);
+        actorsMap_.insert({ newactor, actorGraphic });
+        emit actorChanged(newactor, 1);
+    } catch (const GameError& e) {
+        qDebug() << e.giveMessage();
+    }
 }
 
 void City::addMainActor()
