@@ -212,7 +212,7 @@ void City::handleCollision()
 
 bool City::isGameOver() const
 {
-    return player_->getFuel() <= 0;
+    return getCurrentFuel() <= 0;
 }
 
 void City::keyPress(int command)

@@ -261,7 +261,7 @@ private:
      * @pre City is in gamestate.
      * @post Exception guarantee: nothrow.
      */
-    int getCurrentFuel();
+    int getCurrentFuel() const;
 
     int WIDTH = 1095;
     int HEIGHT = 592;
