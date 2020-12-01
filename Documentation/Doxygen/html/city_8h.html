@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Invasion of Pokemon: Game/city.h File Reference</title>
+<title>My Project: Game/city.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Invasion of Pokemon
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">city.h File Reference</div>  </div>
@@ -80,12 +79,12 @@ $(function() {
 <code>#include &quot;<a class="el" href="iactor_8hh_source.html">../Course/CourseLib/interfaces/iactor.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="initerror_8hh_source.html">../Course/CourseLib/errors/initerror.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="gameerror_8hh_source.html">../Course/CourseLib/errors/gameerror.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="stop_8hh_source.html">../Course/CourseLib/actors/stop.hh</a>&quot;</code><br />
+<code>#include &quot;../Course/CourseLib/actors/stop.hh&quot;</code><br />
 <code>#include &quot;<a class="el" href="location_8hh_source.html">../Course/CourseLib/core/location.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="character_8hh_source.html">character.hh</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="helpers_8hh_source.html">Utils/helpers.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="pokemon_8h_source.html">pokemon.h</a>&quot;</code><br />
+<code>#include &quot;Utils/helpers.hh&quot;</code><br />
+<code>#include &quot;pokemon.h&quot;</code><br />
 <code>#include &lt;QGraphicsScene&gt;</code><br />
 <code>#include &lt;QtWidgets&gt;</code><br />
 <code>#include &lt;QWidget&gt;</code><br />
@@ -99,11 +98,13 @@ $(function() {
 Include dependency graph for city.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="city_8h__incl.png" border="0" usemap="#_game_2city_8h" alt=""/></div>
+<!-- MAP 0 -->
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="city_8h__dep__incl.png" border="0" usemap="#_game_2city_8hdep" alt=""/></div>
+<!-- MAP 1 -->
 </div>
 </div>
 <p><a href="city_8h_source.html">Go to the source code of this file.</a></p>
@@ -114,20 +115,19 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_model_1_1_city.html" title="The City class @inherits QObject - to use signal - slot mechanism @inherits Icity - used courseSide l...">City</a> class @inherits QObject - to use signal - slot mechanism @inherits Icity - used courseSide logic.  <a href="class_model_1_1_city.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespace_model"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_model.html">Model</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af80c070a57ab6c89e64294a45893b6d3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_model.html#af80c070a57ab6c89e64294a45893b6d3">Model::UPDATE_INTERVAL_MS</a> = 100</td></tr>
+<tr class="memitem:af80c070a57ab6c89e64294a45893b6d3"><td class="memItemLeft" align="right" valign="top"><a id="af80c070a57ab6c89e64294a45893b6d3"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>Model::UPDATE_INTERVAL_MS</b> = 100</td></tr>
 <tr class="separator:af80c070a57ab6c89e64294a45893b6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45cf17e18b31ab89d52416d6da7b7d5e"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_model.html#a45cf17e18b31ab89d52416d6da7b7d5e">Model::HANDLEFUNCT</a> = &amp;City::keyPress</td></tr>
+<tr class="memitem:a45cf17e18b31ab89d52416d6da7b7d5e"><td class="memItemLeft" align="right" valign="top"><a id="a45cf17e18b31ab89d52416d6da7b7d5e"></a>
+const auto&#160;</td><td class="memItemRight" valign="bottom"><b>Model::HANDLEFUNCT</b> = &amp;City::keyPress</td></tr>
 <tr class="separator:a45cf17e18b31ab89d52416d6da7b7d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a185d58f266aa8c1bd7b76ecd8c8f8c7a"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_model.html#a185d58f266aa8c1bd7b76ecd8c8f8c7a">Model::SIGNAL_UPDATE_FUEL</a> = &amp;City::updateFuel</td></tr>
+<tr class="memitem:a185d58f266aa8c1bd7b76ecd8c8f8c7a"><td class="memItemLeft" align="right" valign="top"><a id="a185d58f266aa8c1bd7b76ecd8c8f8c7a"></a>
+const auto&#160;</td><td class="memItemRight" valign="bottom"><b>Model::SIGNAL_UPDATE_FUEL</b> = &amp;City::updateFuel</td></tr>
 <tr class="separator:a185d58f266aa8c1bd7b76ecd8c8f8c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02e668b7ac5e2ddae9951d39eccce97f"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_model.html#a02e668b7ac5e2ddae9951d39eccce97f">Model::SIGNAL_GAME_OVER</a> = &amp;City::gameOver</td></tr>
+<tr class="memitem:a02e668b7ac5e2ddae9951d39eccce97f"><td class="memItemLeft" align="right" valign="top"><a id="a02e668b7ac5e2ddae9951d39eccce97f"></a>
+const auto&#160;</td><td class="memItemRight" valign="bottom"><b>Model::SIGNAL_GAME_OVER</b> = &amp;City::gameOver</td></tr>
 <tr class="separator:a02e668b7ac5e2ddae9951d39eccce97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

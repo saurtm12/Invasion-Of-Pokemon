@@ -14,5 +14,4 @@ digraph "Course/CourseLib/actors" {
   dir_5a677f39e1b1e98afbb3471e974187bf->dir_31ecbf5764a97f048ee4b40f23fa60f9 [headlabel="7", labeldistance=1.5 headhref="dir_000002_000006.html"];
   dir_5a677f39e1b1e98afbb3471e974187bf->dir_f0c2f1e2669e4839cf697743412b9102 [headlabel="3", labeldistance=1.5 headhref="dir_000002_000003.html"];
   dir_f0c2f1e2669e4839cf697743412b9102->dir_31ecbf5764a97f048ee4b40f23fa60f9 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000006.html"];
-  dir_f0c2f1e2669e4839cf697743412b9102->dir_5a677f39e1b1e98afbb3471e974187bf [headlabel="2", labeldistance=1.5 headhref="dir_000003_000002.html"];
 }

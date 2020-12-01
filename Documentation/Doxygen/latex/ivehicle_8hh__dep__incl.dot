@@ -1,0 +1,41 @@
+digraph "Course/CourseLib/interfaces/ivehicle.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Course/CourseLib/interfaces\l/ivehicle.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Defines an interface that desribes operations of the vericle."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Course/CourseLib/actors\l/nysse.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nysse_8hh_source.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Course/CourseLib/core\l/logic.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8hh_source.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Game/mainwindow.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mainwindow_8hh_source.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Course/CourseLib/offlinereader.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$offlinereader_8hh_source.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Course/CourseLib/interfaces\l/ipassenger.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ipassenger_8hh.html",tooltip="Defines interface that represents the passengers operations."];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Course/CourseLib/actors\l/passenger.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$passenger_8hh_source.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Course/CourseLib/actors\l/stop.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stop_8hh_source.html",tooltip=" "];
+  Node8 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Game/city.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$city_8h.html",tooltip="Define city class."];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Course/CourseLib/interfaces\l/istop.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$istop_8hh.html",tooltip="Defines an interface that describes stops operations."];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Course/CourseLib/interfaces\l/icity.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$icity_8hh.html",tooltip="Defines an interface that reperesents the city's operations."];
+  Node11 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Course/CourseLib/creategame.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$creategame_8hh.html",tooltip="Defines a function that creates the city (Students implement it)."];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -21,7 +21,7 @@ digraph "Game/player.h"
   Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 [label="QToolTip",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="pokemon.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pokemon_8h.html",tooltip=" "];
+  Node9 [label="pokemon.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$pokemon_8h_source.html",tooltip=" "];
   Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

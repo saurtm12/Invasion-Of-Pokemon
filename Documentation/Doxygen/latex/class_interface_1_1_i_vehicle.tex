@@ -1,0 +1,165 @@
+\hypertarget{class_interface_1_1_i_vehicle}{}\doxysection{Interface\+::I\+Vehicle Class Reference}
+\label{class_interface_1_1_i_vehicle}\index{Interface::IVehicle@{Interface::IVehicle}}
+
+
+Vehicle\+IF is an interface that describes vehicles (nysse) in game.  
+
+
+
+
+{\ttfamily \#include $<$ivehicle.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::I\+Vehicle\+:
+% FIG 0
+
+
+Collaboration diagram for Interface\+::I\+Vehicle\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_i_vehicle_adc2e546caa8fa8385dcd01afc093ae50}{I\+Vehicle}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor (For documentation). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_adc2eb6b4f44dac8fa0fd095793be2d46}\label{class_interface_1_1_i_vehicle_adc2eb6b4f44dac8fa0fd095793be2d46}} 
+virtual \mbox{\hyperlink{class_interface_1_1_i_vehicle_adc2eb6b4f44dac8fa0fd095793be2d46}{$\sim$\+I\+Vehicle}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_interface}{Interface}} has default virtual destructor (base class needs to have a virtual destructor). \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_interface_1_1_i_vehicle_a1890412f8382e90528f82cda0370e63c}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Name returns the name of the vehicle(might not be unique). \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}} $>$ $>$ \mbox{\hyperlink{class_interface_1_1_i_vehicle_a6d1760eb022f3f029b4f4c1ec4046050}{get\+Passengers}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Passengers returns all passengers in the vehicle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_vehicle_acebe3af827dae4378527fcb7373c0f07}{add\+Passenger}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}} $>$ passenger)=0
+\begin{DoxyCompactList}\small\item\em add\+Passenger adds a new passenger to the vehicle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_vehicle_a48272ee2318718a22a29f8add05e9472}{remove\+Passenger}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}} $>$ passenger)=0
+\begin{DoxyCompactList}\small\item\em remove\+Passenger removes the passenger from the vehicle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vehicle\+IF is an interface that describes vehicles (nysse) in game. 
+
+Vehicle\+IF is inherited from Actor\+I\+F-\/interface. If class method doesn\textquotesingle{}t have exception guarantee of nothrow, method can leak out exception {\ttfamily std\+::bad\+\_\+alloc} (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_adc2e546caa8fa8385dcd01afc093ae50}\label{class_interface_1_1_i_vehicle_adc2e546caa8fa8385dcd01afc093ae50}} 
+\index{Interface::IVehicle@{Interface::IVehicle}!IVehicle@{IVehicle}}
+\index{IVehicle@{IVehicle}!Interface::IVehicle@{Interface::IVehicle}}
+\doxysubsubsection{\texorpdfstring{IVehicle()}{IVehicle()}}
+{\footnotesize\ttfamily Interface\+::\+I\+Vehicle\+::\+I\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor (For documentation). 
+
+\begin{DoxyPostcond}{Postcondition}
+vehicle has no passengers by default 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_acebe3af827dae4378527fcb7373c0f07}\label{class_interface_1_1_i_vehicle_acebe3af827dae4378527fcb7373c0f07}} 
+\index{Interface::IVehicle@{Interface::IVehicle}!addPassenger@{addPassenger}}
+\index{addPassenger@{addPassenger}!Interface::IVehicle@{Interface::IVehicle}}
+\doxysubsubsection{\texorpdfstring{addPassenger()}{addPassenger()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Vehicle\+::add\+Passenger (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}} $>$}]{passenger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add\+Passenger adds a new passenger to the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em passenger} & an passenger object to be added to the Vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily matkustaja.\+onko\+Kulkuneuvossa() == false}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Passenger is added into the vehicle. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_nysse_aec20e625acf9bcdb39cfe6377d106938}{Course\+Side\+::\+Nysse}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_a1890412f8382e90528f82cda0370e63c}\label{class_interface_1_1_i_vehicle_a1890412f8382e90528f82cda0370e63c}} 
+\index{Interface::IVehicle@{Interface::IVehicle}!getName@{getName}}
+\index{getName@{getName}!Interface::IVehicle@{Interface::IVehicle}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Interface\+::\+I\+Vehicle\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Name returns the name of the vehicle(might not be unique). 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+name of the vehicle 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_nysse_ad065188e37bde62eb1ce83ae34d4ba4f}{Course\+Side\+::\+Nysse}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_a6d1760eb022f3f029b4f4c1ec4046050}\label{class_interface_1_1_i_vehicle_a6d1760eb022f3f029b4f4c1ec4046050}} 
+\index{Interface::IVehicle@{Interface::IVehicle}!getPassengers@{getPassengers}}
+\index{getPassengers@{getPassengers}!Interface::IVehicle@{Interface::IVehicle}}
+\doxysubsubsection{\texorpdfstring{getPassengers()}{getPassengers()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}}$>$ $>$ Interface\+::\+I\+Vehicle\+::get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Passengers returns all passengers in the vehicle. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vector containing all passengers in the vehicle. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_nysse_a5eb5e22fd8cb45e4fe7db11c1ac1f4f4}{Course\+Side\+::\+Nysse}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_vehicle_a48272ee2318718a22a29f8add05e9472}\label{class_interface_1_1_i_vehicle_a48272ee2318718a22a29f8add05e9472}} 
+\index{Interface::IVehicle@{Interface::IVehicle}!removePassenger@{removePassenger}}
+\index{removePassenger@{removePassenger}!Interface::IVehicle@{Interface::IVehicle}}
+\doxysubsubsection{\texorpdfstring{removePassenger()}{removePassenger()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Vehicle\+::remove\+Passenger (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}} $>$}]{passenger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+remove\+Passenger removes the passenger from the vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em passenger} & Passenger to be removed from the vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Passenger is removed from the vehicle. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}} & Passenger is not in the vehicle. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_nysse_a0570a2c4aa8b8c84dd3239efe6fefc3d}{Course\+Side\+::\+Nysse}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/interfaces/\mbox{\hyperlink{ivehicle_8hh}{ivehicle.\+hh}}\end{DoxyCompactItemize}

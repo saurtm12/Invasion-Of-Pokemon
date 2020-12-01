@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Invasion of Pokemon: Game/Utils/helpers.hh Source File</title>
+<title>My Project: Game/Utils/helpers.hh Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Invasion of Pokemon
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 <div class="title">helpers.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="helpers_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HELPERS_HH</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HELPERS_HH</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HELPERS_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Course/CourseLib/core/location.hh&quot;</span></div>
@@ -84,58 +84,47 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;qdebug.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_interface.html">Interface</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_utils.html">Utils</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>Utils {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_utils.html#aa151b86adfead1d9e0d767c27e38bd80">   18</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespace_utils.html#aa151b86adfead1d9e0d767c27e38bd80">SCORE_FILE</a> = <span class="stringliteral">&quot;../../doesnt-matter/Game/Text/score.txt&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">const</span> std::string SCORE_FILE = <span class="stringliteral">&quot;../../doesnt-matter/Game/Text/score.txt&quot;</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_utils_1_1_game_setting.html">GameSetting</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html#a6804d6fe65da181286b387e637426a28">   22</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_utils_1_1_game_setting.html#a6804d6fe65da181286b387e637426a28">hour_</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html#a9e8b64328ed70c9d43ceabb7b7850717">   23</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_utils_1_1_game_setting.html#a9e8b64328ed70c9d43ceabb7b7850717">min_</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html#ad46b5981fdc4852dcb876ba72e6558b5">   24</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_utils_1_1_game_setting.html#ad46b5981fdc4852dcb876ba72e6558b5">numberOfBall_</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html#afb4d70e69ccc60fc4108c2298dea6488">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_utils_1_1_game_setting.html#afb4d70e69ccc60fc4108c2298dea6488">fuel_</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html#a6b76d5337557dccf572be1d324c7dd98">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_utils_1_1_game_setting.html#a6b76d5337557dccf572be1d324c7dd98">speed_</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespace_utils.html#a7780e9d5e0d6ca7f98744d07fabf89d0">   29</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespace_utils.html#a7780e9d5e0d6ca7f98744d07fabf89d0">X_OFFSET_MAP</a> = 352;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespace_utils.html#acffb6fba80b05e74ad3ebff195ae670e">   30</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespace_utils.html#acffb6fba80b05e74ad3ebff195ae670e">Y_OFFSET_MAP</a> = 558;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespace_utils.html#a16d1c2a7d7d2599b1dbfb1d7f5715783">   32</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespace_utils.html#a16d1c2a7d7d2599b1dbfb1d7f5715783">NYSSE_TYPE</a> = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a>).name();</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespace_utils.html#aa4845a6070794c59284938cb0a381a19">   33</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespace_utils.html#aa4845a6070794c59284938cb0a381a19">PASSENGER_TYPE</a> = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a>).name();</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespace_utils.html#a62b8fa0e1d2ad74a2724907389214d7a">   34</a></span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespace_utils.html#a62b8fa0e1d2ad74a2724907389214d7a">STOP_TYPE</a> = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_stop.html">CourseSide::Stop</a>).name();</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_utils_1_1_game_setting.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_utils_1_1_game_setting.html">GameSetting</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> hour_;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> min_;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> numberOfBall_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> fuel_;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> speed_;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QString multiplayer_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> X_OFFSET_MAP = 352;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> Y_OFFSET_MAP = 558;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="class_interface_1_1_location.html">Location</a> <a class="code" href="namespace_utils.html#acd5693455d9c0ba7a36b071e23d0d9bb">convertLocation</a>(<a class="code" href="class_interface_1_1_location.html">Location</a> loc);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespace_utils.html#a83839d91e0fa03f0f962a929df776f36">generateRandom</a>(<span class="keywordtype">int</span> lo, <span class="keywordtype">int</span> hi);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;QString <a class="code" href="namespace_utils.html#a62a73ee670d2d010b0aa7b507aba5e4c">generateTooltipTextFromPassenger</a>(<span class="keywordtype">int</span> num, std::string actor);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespace_utils.html#a40d6090d7c8c8e0acab8deadac520cba">writeScore</a>(std::vector&lt;int&gt; highScores);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;std::vector&lt;int&gt; <a class="code" href="namespace_utils.html#a68ec955b63fd5f6ef0f8fccd258871a3">getHighScores</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif // HELPERS_HH</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">const</span> std::string NYSSE_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a>).name();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">const</span> std::string PASSENGER_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a>).name();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">const</span> std::string STOP_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_stop.html">CourseSide::Stop</a>).name();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="class_interface_1_1_location.html">Location</a> convertLocation(<a class="code" href="class_interface_1_1_location.html">Location</a> loc);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> generateRandom(<span class="keywordtype">int</span> lo, <span class="keywordtype">int</span> hi);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;QString generateTooltipTextFromPassenger(<span class="keywordtype">int</span> num, std::string actor);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> writeScore(std::vector&lt;int&gt; highScores);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;std::vector&lt;int&gt; getHighScores();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // HELPERS_HH</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_utils_1_1_game_setting_html_a9e8b64328ed70c9d43ceabb7b7850717"><div class="ttname"><a href="struct_utils_1_1_game_setting.html#a9e8b64328ed70c9d43ceabb7b7850717">Utils::GameSetting::min_</a></div><div class="ttdeci">int min_</div><div class="ttdef"><b>Definition:</b> helpers.hh:23</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html_a6804d6fe65da181286b387e637426a28"><div class="ttname"><a href="struct_utils_1_1_game_setting.html#a6804d6fe65da181286b387e637426a28">Utils::GameSetting::hour_</a></div><div class="ttdeci">int hour_</div><div class="ttdef"><b>Definition:</b> helpers.hh:22</div></div>
 <div class="ttc" id="aclass_course_side_1_1_nysse_html"><div class="ttname"><a href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a></div><div class="ttdef"><b>Definition:</b> nysse.hh:20</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html_afb4d70e69ccc60fc4108c2298dea6488"><div class="ttname"><a href="struct_utils_1_1_game_setting.html#afb4d70e69ccc60fc4108c2298dea6488">Utils::GameSetting::fuel_</a></div><div class="ttdeci">int fuel_</div><div class="ttdef"><b>Definition:</b> helpers.hh:25</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html_ad46b5981fdc4852dcb876ba72e6558b5"><div class="ttname"><a href="struct_utils_1_1_game_setting.html#ad46b5981fdc4852dcb876ba72e6558b5">Utils::GameSetting::numberOfBall_</a></div><div class="ttdeci">int numberOfBall_</div><div class="ttdef"><b>Definition:</b> helpers.hh:24</div></div>
-<div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdef"><b>Definition:</b> helpers.cc:3</div></div>
-<div class="ttc" id="anamespace_utils_html_a83839d91e0fa03f0f962a929df776f36"><div class="ttname"><a href="namespace_utils.html#a83839d91e0fa03f0f962a929df776f36">Utils::generateRandom</a></div><div class="ttdeci">int generateRandom(int lo, int hi)</div><div class="ttdef"><b>Definition:</b> helpers.cc:10</div></div>
-<div class="ttc" id="anamespace_utils_html_aa151b86adfead1d9e0d767c27e38bd80"><div class="ttname"><a href="namespace_utils.html#aa151b86adfead1d9e0d767c27e38bd80">Utils::SCORE_FILE</a></div><div class="ttdeci">const std::string SCORE_FILE</div><div class="ttdef"><b>Definition:</b> helpers.hh:18</div></div>
 <div class="ttc" id="aclass_interface_1_1_location_html"><div class="ttname"><a href="class_interface_1_1_location.html">Interface::Location</a></div><div class="ttdoc">Location is a class, which has methods dealing with the location of the objects.</div><div class="ttdef"><b>Definition:</b> location.hh:20</div></div>
-<div class="ttc" id="anamespace_utils_html_a62b8fa0e1d2ad74a2724907389214d7a"><div class="ttname"><a href="namespace_utils.html#a62b8fa0e1d2ad74a2724907389214d7a">Utils::STOP_TYPE</a></div><div class="ttdeci">const std::string STOP_TYPE</div><div class="ttdef"><b>Definition:</b> helpers.hh:34</div></div>
-<div class="ttc" id="anamespace_utils_html_acd5693455d9c0ba7a36b071e23d0d9bb"><div class="ttname"><a href="namespace_utils.html#acd5693455d9c0ba7a36b071e23d0d9bb">Utils::convertLocation</a></div><div class="ttdeci">Location convertLocation(Location loc)</div><div class="ttdef"><b>Definition:</b> helpers.cc:5</div></div>
+<div class="ttc" id="aclass_interface_1_1_location_html_a2991a4110be44c0d5fa18178ace5d0fb"><div class="ttname"><a href="class_interface_1_1_location.html#a2991a4110be44c0d5fa18178ace5d0fb">Interface::Location::setXY</a></div><div class="ttdeci">void setXY(int x, int y)</div><div class="ttdoc">setXY moves the location to a new point.(In pixel grid)</div><div class="ttdef"><b>Definition:</b> location.cc:33</div></div>
 <div class="ttc" id="anamespace_interface_html"><div class="ttname"><a href="namespace_interface.html">Interface</a></div><div class="ttdoc">All of the interfaces defined by the course are found in Interface namespace.</div><div class="ttdef"><b>Definition:</b> location.cc:7</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html_a6b76d5337557dccf572be1d324c7dd98"><div class="ttname"><a href="struct_utils_1_1_game_setting.html#a6b76d5337557dccf572be1d324c7dd98">Utils::GameSetting::speed_</a></div><div class="ttdeci">int speed_</div><div class="ttdef"><b>Definition:</b> helpers.hh:26</div></div>
-<div class="ttc" id="anamespace_utils_html_aa4845a6070794c59284938cb0a381a19"><div class="ttname"><a href="namespace_utils.html#aa4845a6070794c59284938cb0a381a19">Utils::PASSENGER_TYPE</a></div><div class="ttdeci">const std::string PASSENGER_TYPE</div><div class="ttdef"><b>Definition:</b> helpers.hh:33</div></div>
+<div class="ttc" id="aclass_interface_1_1_init_error_html"><div class="ttname"><a href="class_interface_1_1_init_error.html">Interface::InitError</a></div><div class="ttdoc">Exception class that expresses errors during the initialization of the game.</div><div class="ttdef"><b>Definition:</b> initerror.hh:19</div></div>
+<div class="ttc" id="aclass_interface_1_1_location_html_ab03d95e6d68a774796b50fa7542b1b61"><div class="ttname"><a href="class_interface_1_1_location.html#ab03d95e6d68a774796b50fa7542b1b61">Interface::Location::giveY</a></div><div class="ttdeci">int giveY() const</div><div class="ttdoc">giveY returns the y-coordinate of the location in the pixel grid of the game ui.</div><div class="ttdef"><b>Definition:</b> location.cc:28</div></div>
 <div class="ttc" id="aclass_course_side_1_1_passenger_html"><div class="ttname"><a href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a></div><div class="ttdef"><b>Definition:</b> passenger.hh:16</div></div>
 <div class="ttc" id="aclass_course_side_1_1_stop_html"><div class="ttname"><a href="class_course_side_1_1_stop.html">CourseSide::Stop</a></div><div class="ttdef"><b>Definition:</b> stop.hh:16</div></div>
-<div class="ttc" id="anamespace_utils_html_a62a73ee670d2d010b0aa7b507aba5e4c"><div class="ttname"><a href="namespace_utils.html#a62a73ee670d2d010b0aa7b507aba5e4c">Utils::generateTooltipTextFromPassenger</a></div><div class="ttdeci">QString generateTooltipTextFromPassenger(int num, std::string actor)</div><div class="ttdef"><b>Definition:</b> helpers.cc:18</div></div>
-<div class="ttc" id="anamespace_utils_html_a68ec955b63fd5f6ef0f8fccd258871a3"><div class="ttname"><a href="namespace_utils.html#a68ec955b63fd5f6ef0f8fccd258871a3">Utils::getHighScores</a></div><div class="ttdeci">std::vector&lt; int &gt; getHighScores()</div><div class="ttdef"><b>Definition:</b> helpers.cc:23</div></div>
-<div class="ttc" id="anamespace_utils_html_a7780e9d5e0d6ca7f98744d07fabf89d0"><div class="ttname"><a href="namespace_utils.html#a7780e9d5e0d6ca7f98744d07fabf89d0">Utils::X_OFFSET_MAP</a></div><div class="ttdeci">const int X_OFFSET_MAP</div><div class="ttdef"><b>Definition:</b> helpers.hh:29</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html"><div class="ttname"><a href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a></div><div class="ttdef"><b>Definition:</b> helpers.hh:20</div></div>
-<div class="ttc" id="anamespace_utils_html_a16d1c2a7d7d2599b1dbfb1d7f5715783"><div class="ttname"><a href="namespace_utils.html#a16d1c2a7d7d2599b1dbfb1d7f5715783">Utils::NYSSE_TYPE</a></div><div class="ttdeci">const std::string NYSSE_TYPE</div><div class="ttdef"><b>Definition:</b> helpers.hh:32</div></div>
-<div class="ttc" id="anamespace_utils_html_a40d6090d7c8c8e0acab8deadac520cba"><div class="ttname"><a href="namespace_utils.html#a40d6090d7c8c8e0acab8deadac520cba">Utils::writeScore</a></div><div class="ttdeci">void writeScore(std::vector&lt; int &gt; highScores)</div><div class="ttdef"><b>Definition:</b> helpers.cc:46</div></div>
-<div class="ttc" id="anamespace_utils_html_acffb6fba80b05e74ad3ebff195ae670e"><div class="ttname"><a href="namespace_utils.html#acffb6fba80b05e74ad3ebff195ae670e">Utils::Y_OFFSET_MAP</a></div><div class="ttdeci">const int Y_OFFSET_MAP</div><div class="ttdef"><b>Definition:</b> helpers.hh:30</div></div>
+<div class="ttc" id="aclass_interface_1_1_init_error_html_a23d8bb7e725cfba0cec3ac9eaa82cac5"><div class="ttname"><a href="class_interface_1_1_init_error.html#a23d8bb7e725cfba0cec3ac9eaa82cac5">Interface::InitError::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Implements std::exception interface.</div><div class="ttdef"><b>Definition:</b> initerror.cc:23</div></div>
+<div class="ttc" id="aclass_interface_1_1_location_html_aca56c6f2a2a9ce5fbe76b9b3befc1003"><div class="ttname"><a href="class_interface_1_1_location.html#aca56c6f2a2a9ce5fbe76b9b3befc1003">Interface::Location::giveX</a></div><div class="ttdeci">int giveX() const</div><div class="ttdoc">giveX returns the x-coordinate of the location in the pixel grid of the game ui.</div><div class="ttdef"><b>Definition:</b> location.cc:23</div></div>
+<div class="ttc" id="astruct_utils_1_1_game_setting_html"><div class="ttname"><a href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a></div><div class="ttdoc">The GameSetting struct.</div><div class="ttdef"><b>Definition:</b> helpers.hh:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

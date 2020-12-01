@@ -1,0 +1,218 @@
+\hypertarget{class_course_side_1_1_passenger}{}\doxysection{Course\+Side\+::Passenger Class Reference}
+\label{class_course_side_1_1_passenger}\index{CourseSide::Passenger@{CourseSide::Passenger}}
+
+
+Inheritance diagram for Course\+Side\+::Passenger\+:
+% FIG 0
+
+
+Collaboration diagram for Course\+Side\+::Passenger\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_ad56775f1d24665b29e375f714812b8db}\label{class_course_side_1_1_passenger_ad56775f1d24665b29e375f714812b8db}} 
+{\bfseries Passenger} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{Interface\+::\+I\+Stop}} $>$ destination)
+\item 
+\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \mbox{\hyperlink{class_course_side_1_1_passenger_ade3c2fb1d7b5a31a6c19926c1f733362}{give\+Location}} () const
+\begin{DoxyCompactList}\small\item\em give\+Location returns the location of the actor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_side_1_1_passenger_ae1d2f7c7740103213c3a96531aa2f59b}{move}} (\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} loc)
+\begin{DoxyCompactList}\small\item\em move-\/method moves the actor to given location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_course_side_1_1_passenger_a303b52a8d8158f373a2efea2cfe0003d}{remove}} ()
+\begin{DoxyCompactList}\small\item\em remove marks the actor as removed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_course_side_1_1_passenger_a04b43acba265d9d063a8133e40760261}{is\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em is\+Removed tells if the actor is removed ingame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_course_side_1_1_passenger_a6ef7fe0540fd26f846492dd7bf913972}{is\+In\+Vehicle}} () const
+\begin{DoxyCompactList}\small\item\em is\+In\+Vehicle tells if passenger is in any vehicle currently. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_vehicle}{Interface\+::\+I\+Vehicle}} $>$ \mbox{\hyperlink{class_course_side_1_1_passenger_ae35132ae3b48f270e1be094f494209bb}{get\+Vehicle}} () const
+\begin{DoxyCompactList}\small\item\em get\+Vehicle returns the vehicle passenger is in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a12c364bdfe55450a39d486402094130e}\label{class_course_side_1_1_passenger_a12c364bdfe55450a39d486402094130e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{Interface\+::\+I\+Stop}} $>$ {\bfseries get\+Stop} () const
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a290629cf49a2e3b34b9ddf0bbae4ba9f}\label{class_course_side_1_1_passenger_a290629cf49a2e3b34b9ddf0bbae4ba9f}} 
+virtual bool {\bfseries want\+To\+Enter\+Nysse} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_course_side_1_1_nysse}{Nysse}} $>$ nysse) const
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a86068b1577229b24a2678179708a5313}\label{class_course_side_1_1_passenger_a86068b1577229b24a2678179708a5313}} 
+void {\bfseries enter\+Nysse} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_course_side_1_1_nysse}{Nysse}} $>$ nysse)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_acd7beaf9d1e429aa337d862a6bcca7c1}\label{class_course_side_1_1_passenger_acd7beaf9d1e429aa337d862a6bcca7c1}} 
+virtual bool {\bfseries want\+To\+Enter\+Vehicle} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_vehicle}{Interface\+::\+I\+Vehicle}} $>$ vehicle) const
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a43652cea3cc00a5e11f37b9c736f7956}\label{class_course_side_1_1_passenger_a43652cea3cc00a5e11f37b9c736f7956}} 
+void {\bfseries enter\+Vehicle} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_vehicle}{Interface\+::\+I\+Vehicle}} $>$ vehicle)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a1a131fd79dfe775028dcb6fdebfbcc6d}\label{class_course_side_1_1_passenger_a1a131fd79dfe775028dcb6fdebfbcc6d}} 
+virtual bool {\bfseries want\+To\+Enter\+Stop} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{Interface\+::\+I\+Stop}} $>$ stop) const
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a62705bd26c80ee468ebe1d4d6e15f991}\label{class_course_side_1_1_passenger_a62705bd26c80ee468ebe1d4d6e15f991}} 
+void {\bfseries enter\+Stop} (std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{Interface\+::\+I\+Stop}} $>$ stop)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a9786b1165ee673103d81a12062fe7a66}\label{class_course_side_1_1_passenger_a9786b1165ee673103d81a12062fe7a66}} 
+bool {\bfseries removed\+\_\+}
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_passenger_ae59e801bcbd3128bb65e0b8ee51b3103}\label{class_course_side_1_1_passenger_ae59e801bcbd3128bb65e0b8ee51b3103}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{Interface\+::\+I\+Stop}} $>$ {\bfseries destination\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_course_side_1_1_passenger_ae35132ae3b48f270e1be094f494209bb}\label{class_course_side_1_1_passenger_ae35132ae3b48f270e1be094f494209bb}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!getVehicle@{getVehicle}}
+\index{getVehicle@{getVehicle}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{getVehicle()}{getVehicle()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_vehicle}{Interface\+::\+I\+Vehicle}} $>$ Course\+Side\+::\+Passenger\+::get\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Vehicle returns the vehicle passenger is in. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vechicle where passenger is in. Empty pointer if passenger is not in any vehicle. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_passenger_a0496f381ea435eebf0516735204f7afc}{Interface\+::\+I\+Passenger}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_passenger_ade3c2fb1d7b5a31a6c19926c1f733362}\label{class_course_side_1_1_passenger_ade3c2fb1d7b5a31a6c19926c1f733362}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!giveLocation@{giveLocation}}
+\index{giveLocation@{giveLocation}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{giveLocation()}{giveLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} Course\+Side\+::\+Passenger\+::give\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+give\+Location returns the location of the actor. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Actors location. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Game\+Error} & -\/ actor wasn\textquotesingle{}t given a location. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_a34e63d2e3af592679d76654a8519eb38}{Interface\+::\+I\+Actor}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a6ef7fe0540fd26f846492dd7bf913972}\label{class_course_side_1_1_passenger_a6ef7fe0540fd26f846492dd7bf913972}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!isInVehicle@{isInVehicle}}
+\index{isInVehicle@{isInVehicle}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{isInVehicle()}{isInVehicle()}}
+{\footnotesize\ttfamily bool Course\+Side\+::\+Passenger\+::is\+In\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+is\+In\+Vehicle tells if passenger is in any vehicle currently. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Boolean, tells wether passenger is in any vehicle. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_passenger_a7c25d707bdc900ce4fa0a2be6854f8a3}{Interface\+::\+I\+Passenger}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a04b43acba265d9d063a8133e40760261}\label{class_course_side_1_1_passenger_a04b43acba265d9d063a8133e40760261}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!isRemoved@{isRemoved}}
+\index{isRemoved@{isRemoved}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{isRemoved()}{isRemoved()}}
+{\footnotesize\ttfamily bool Course\+Side\+::\+Passenger\+::is\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+is\+Removed tells if the actor is removed ingame. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if actor is removed ingame, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_ab107d9e18fc4a90755e55e5b5881c1d8}{Interface\+::\+I\+Actor}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_passenger_ae1d2f7c7740103213c3a96531aa2f59b}\label{class_course_side_1_1_passenger_ae1d2f7c7740103213c3a96531aa2f59b}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!move@{move}}
+\index{move@{move}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Course\+Side\+::\+Passenger\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+move-\/method moves the actor to given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & Actors new location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actors location is sij. Excaption guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Game\+Error} & Location is not possible. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_ab882fb01fe2d19676a6571d8d8f7e29a}{Interface\+::\+I\+Actor}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_passenger_a303b52a8d8158f373a2efea2cfe0003d}\label{class_course_side_1_1_passenger_a303b52a8d8158f373a2efea2cfe0003d}} 
+\index{CourseSide::Passenger@{CourseSide::Passenger}!remove@{remove}}
+\index{remove@{remove}!CourseSide::Passenger@{CourseSide::Passenger}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Course\+Side\+::\+Passenger\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+remove marks the actor as removed. 
+
+\begin{DoxyPrecond}{Precondition}
+Actor is not removed already. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is removed, after this \mbox{\hyperlink{class_course_side_1_1_passenger_a04b43acba265d9d063a8133e40760261}{is\+Removed()}} returns {\ttfamily true}. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_a0a640d8a1f30964d8eff287c928032c0}{Interface\+::\+I\+Actor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/actors/passenger.\+hh\item 
+Course/\+Course\+Lib/actors/passenger.\+cc\end{DoxyCompactItemize}

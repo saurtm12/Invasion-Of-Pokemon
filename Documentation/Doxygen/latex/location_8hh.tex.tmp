@@ -1,0 +1,24 @@
+\hypertarget{location_8hh}{}\doxysection{Course/\+Course\+Lib/core/location.hh File Reference}
+\label{location_8hh}\index{Course/CourseLib/core/location.hh@{Course/CourseLib/core/location.hh}}
+
+
+Defines a class that contains methods for handling location. (coordinates)  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_interface_1_1_location}{Location}} is a class, which has methods dealing with the location of the objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_interface}{Interface}}
+\begin{DoxyCompactList}\small\item\em All of the interfaces defined by the course are found in \mbox{\hyperlink{namespace_interface}{Interface}} namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a class that contains methods for handling location. (coordinates) 
+

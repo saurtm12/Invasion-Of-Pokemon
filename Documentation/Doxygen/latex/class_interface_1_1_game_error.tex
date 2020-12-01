@@ -1,0 +1,127 @@
+\hypertarget{class_interface_1_1_game_error}{}\doxysection{Interface\+::Game\+Error Class Reference}
+\label{class_interface_1_1_game_error}\index{Interface::GameError@{Interface::GameError}}
+
+
+Exception class that expresses errors ingame.  
+
+
+
+
+{\ttfamily \#include $<$gameerror.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::Game\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for Interface\+::Game\+Error\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_game_error_a235ebaf84da8b2c95a86c3db901db291}{Game\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interface_1_1_game_error_a7c8d7d0c854bc94361f17cda54ae3735}{Game\+Error}} (const Q\+String \&message)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_game_error_a405bb2771d007347dbab533125b676a4}\label{class_interface_1_1_game_error_a405bb2771d007347dbab533125b676a4}} 
+virtual \mbox{\hyperlink{class_interface_1_1_game_error_a405bb2771d007347dbab533125b676a4}{$\sim$\+Game\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_interface_1_1_game_error_af13a9b1111ba69820f277af8a454d516}{what}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Implements std\+::exception interface. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_interface_1_1_game_error_ae3c2efbc77d3c71a97a90ac50808c14d}{give\+Message}} () const
+\begin{DoxyCompactList}\small\item\em give\+Message gives a message that clarifies the cause of the exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception class that expresses errors ingame. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_game_error_a235ebaf84da8b2c95a86c3db901db291}\label{class_interface_1_1_game_error_a235ebaf84da8b2c95a86c3db901db291}} 
+\index{Interface::GameError@{Interface::GameError}!GameError@{GameError}}
+\index{GameError@{GameError}!Interface::GameError@{Interface::GameError}}
+\doxysubsubsection{\texorpdfstring{GameError()}{GameError()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interface\+::\+Game\+Error\+::\+Game\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Creates \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}} without message. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_game_error_a7c8d7d0c854bc94361f17cda54ae3735}\label{class_interface_1_1_game_error_a7c8d7d0c854bc94361f17cda54ae3735}} 
+\index{Interface::GameError@{Interface::GameError}!GameError@{GameError}}
+\index{GameError@{GameError}!Interface::GameError@{Interface::GameError}}
+\doxysubsubsection{\texorpdfstring{GameError()}{GameError()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interface\+::\+Game\+Error\+::\+Game\+Error (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message-\/} & a message that clarifies what the exception is. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Creates \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}} that contains the message. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_game_error_ae3c2efbc77d3c71a97a90ac50808c14d}\label{class_interface_1_1_game_error_ae3c2efbc77d3c71a97a90ac50808c14d}} 
+\index{Interface::GameError@{Interface::GameError}!giveMessage@{giveMessage}}
+\index{giveMessage@{giveMessage}!Interface::GameError@{Interface::GameError}}
+\doxysubsubsection{\texorpdfstring{giveMessage()}{giveMessage()}}
+{\footnotesize\ttfamily Q\+String Interface\+::\+Game\+Error\+::give\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+give\+Message gives a message that clarifies the cause of the exception. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Message given in the constructor or empty string. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_interface_1_1_game_error_af13a9b1111ba69820f277af8a454d516}\label{class_interface_1_1_game_error_af13a9b1111ba69820f277af8a454d516}} 
+\index{Interface::GameError@{Interface::GameError}!what@{what}}
+\index{what@{what}!Interface::GameError@{Interface::GameError}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char $\ast$ Interface\+::\+Game\+Error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements std\+::exception interface. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Name of the exception class. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/errors/\mbox{\hyperlink{gameerror_8hh}{gameerror.\+hh}}\item 
+Course/\+Course\+Lib/errors/gameerror.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{class_course_side_1_1_stop}{}\doxysection{Course\+Side\+::Stop Class Reference}
+\label{class_course_side_1_1_stop}\index{CourseSide::Stop@{CourseSide::Stop}}
+
+
+Inheritance diagram for Course\+Side\+::Stop\+:
+% FIG 0
+
+
+Collaboration diagram for Course\+Side\+::Stop\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_ad5ec7a4c895eb85aa589c8da3671b2ea}\label{class_course_side_1_1_stop_ad5ec7a4c895eb85aa589c8da3671b2ea}} 
+{\bfseries Stop} (const \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \&location, const Q\+String \&name, unsigned int id)
+\item 
+\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \mbox{\hyperlink{class_course_side_1_1_stop_a6bd1404ee0465418f16cfb91d9405ae2}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em get\+Location returns the location of the stop. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_course_side_1_1_stop_aad277642dd3cd9fdf7c1633dd96ccdcf}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em get\+Name returns the name of the stop. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_course_side_1_1_stop_a474c5d18e6b817b872d7561a54cfd61a}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em get\+Id returns the id of the stop (the stop number). \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{Interface\+::\+I\+Passenger}} $>$ $>$ \mbox{\hyperlink{class_course_side_1_1_stop_ab9bb7a51fc9579398405735256d9343a}{get\+Passengers}} () const
+\begin{DoxyCompactList}\small\item\em get\+Passengers returns all passangers in the stop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_abef8b082f5fc37381b58544b098b65a5}\label{class_course_side_1_1_stop_abef8b082f5fc37381b58544b098b65a5}} 
+void {\bfseries set\+Location} (const \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \&location)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_a48911eada43f2aaca9b535e3c77c0606}\label{class_course_side_1_1_stop_a48911eada43f2aaca9b535e3c77c0606}} 
+void {\bfseries set\+Name} (const Q\+String \&name)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_abe63cae2b44e8a472c6011aa01ecd23d}\label{class_course_side_1_1_stop_abe63cae2b44e8a472c6011aa01ecd23d}} 
+void {\bfseries set\+Id} (unsigned int id)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_aa3ab76103c8724e551c23e2da76aaff1}\label{class_course_side_1_1_stop_aa3ab76103c8724e551c23e2da76aaff1}} 
+void {\bfseries add\+Passenger} (const std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{Interface\+::\+I\+Passenger}} $>$ passenger)
+\item 
+\mbox{\Hypertarget{class_course_side_1_1_stop_a3fd43f5442d5971815a818af38d1e8c1}\label{class_course_side_1_1_stop_a3fd43f5442d5971815a818af38d1e8c1}} 
+void {\bfseries remove\+Passenger} (const std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{Interface\+::\+I\+Passenger}} $>$ passenger)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_course_side_1_1_stop_a474c5d18e6b817b872d7561a54cfd61a}\label{class_course_side_1_1_stop_a474c5d18e6b817b872d7561a54cfd61a}} 
+\index{CourseSide::Stop@{CourseSide::Stop}!getId@{getId}}
+\index{getId@{getId}!CourseSide::Stop@{CourseSide::Stop}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily unsigned int Course\+Side\+::\+Stop\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Id returns the id of the stop (the stop number). 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+stop number 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_stop_af97eeeec8f9027779b585704d9f2dff9}{Interface\+::\+I\+Stop}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_stop_a6bd1404ee0465418f16cfb91d9405ae2}\label{class_course_side_1_1_stop_a6bd1404ee0465418f16cfb91d9405ae2}} 
+\index{CourseSide::Stop@{CourseSide::Stop}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!CourseSide::Stop@{CourseSide::Stop}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} Course\+Side\+::\+Stop\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Location returns the location of the stop. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Stops location 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_stop_a318686def7724daf9821a39446fbe567}{Interface\+::\+I\+Stop}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_stop_aad277642dd3cd9fdf7c1633dd96ccdcf}\label{class_course_side_1_1_stop_aad277642dd3cd9fdf7c1633dd96ccdcf}} 
+\index{CourseSide::Stop@{CourseSide::Stop}!getName@{getName}}
+\index{getName@{getName}!CourseSide::Stop@{CourseSide::Stop}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily Q\+String Course\+Side\+::\+Stop\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Name returns the name of the stop. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Stops name 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_stop_addd3f38765d9efde157f3fe23dcde8ce}{Interface\+::\+I\+Stop}}.
+
+\mbox{\Hypertarget{class_course_side_1_1_stop_ab9bb7a51fc9579398405735256d9343a}\label{class_course_side_1_1_stop_ab9bb7a51fc9579398405735256d9343a}} 
+\index{CourseSide::Stop@{CourseSide::Stop}!getPassengers@{getPassengers}}
+\index{getPassengers@{getPassengers}!CourseSide::Stop@{CourseSide::Stop}}
+\doxysubsubsection{\texorpdfstring{getPassengers()}{getPassengers()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_passenger}{Interface\+::\+I\+Passenger}} $>$ $>$ Course\+Side\+::\+Stop\+::get\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Passengers returns all passangers in the stop. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vector that constains all passangers in the stop. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_stop_a798cdb15a43988b0d857dcb6ba8b9226}{Interface\+::\+I\+Stop}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/actors/stop.\+hh\item 
+Course/\+Course\+Lib/actors/stop.\+cc\end{DoxyCompactItemize}

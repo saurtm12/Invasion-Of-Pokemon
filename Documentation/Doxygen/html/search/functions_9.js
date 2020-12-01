@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['keypress_458',['keyPress',['../class_model_1_1_city.html#aed16c5162f7695a6304754702244101b',1,'Model::City']]],
-  ['keypressed_459',['keyPressed',['../class_main_window.html#a80e67152dc086882ba0c042bc9bd9705',1,'MainWindow']]]
+  ['location_240',['Location',['../class_interface_1_1_location.html#ad46bb78e1bc5de791d4e77c9f46453d4',1,'Interface::Location::Location()'],['../class_interface_1_1_location.html#ad6dc3ce985b33b20371a5e3fb60a241b',1,'Interface::Location::Location(int northcoord, int eastcoord)']]]
 ];

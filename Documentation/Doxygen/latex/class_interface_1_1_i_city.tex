@@ -1,0 +1,370 @@
+\hypertarget{class_interface_1_1_i_city}{}\doxysection{Interface\+::I\+City Class Reference}
+\label{class_interface_1_1_i_city}\index{Interface::ICity@{Interface::ICity}}
+
+
+City\+IF is an interface that every city in the game must fulfill. Kaupunki.  
+
+
+
+
+{\ttfamily \#include $<$icity.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::I\+City\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_i_city_a47a88111b03f29705f41e202e3857161}{I\+City}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor of the interface (For documentation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_i_city_ad0ca2b4701d01e5e3ce14a459be0a816}\label{class_interface_1_1_i_city_ad0ca2b4701d01e5e3ce14a459be0a816}} 
+virtual \mbox{\hyperlink{class_interface_1_1_i_city_ad0ca2b4701d01e5e3ce14a459be0a816}{$\sim$\+I\+City}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_interface}{Interface}} has default virtual destructor (base class needs to have a virtual destructor). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_a429a9dd7d9f16607e3c9ed2b554f0e1d}{set\+Background}} (Q\+Image \&basicbackground, Q\+Image \&bigbackground)=0
+\begin{DoxyCompactList}\small\item\em set\+Background sets the bitmap picture of the game area. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_a397cb96750b1e4534e12f1cd85c756ff}{set\+Clock}} (Q\+Time clock)=0
+\begin{DoxyCompactList}\small\item\em set\+Clock sets the time of the game clock. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_a347fe0662fcd162fa9f18a3be41c8b0b}{add\+Stop}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{I\+Stop}} $>$ stop)=0
+\begin{DoxyCompactList}\small\item\em add\+Stop adds a stop to the city. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_acd6ac71137fe0561c57acd958ce24309}{start\+Game}} ()=0
+\begin{DoxyCompactList}\small\item\em start\+Game shofts city from init state to the gamestate. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_a298c7ca730e83f4495b33a137714d7d8}{add\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ newactor)=0
+\begin{DoxyCompactList}\small\item\em add\+Actor adds a new actor to the city. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_a634b64858cbf5e52fdc60d7d59bb25a9}{remove\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)=0
+\begin{DoxyCompactList}\small\item\em remove\+Actor removes the actor from the city. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_afcca2544603e17c5141a569982812e25}{actor\+Removed}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)=0
+\begin{DoxyCompactList}\small\item\em actor\+Removed tells the city that actor is removed ingame. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_interface_1_1_i_city_a62bf5db4db4534d50e10b67b87ffd7fe}{find\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor) const =0
+\begin{DoxyCompactList}\small\item\em find\+Actor checks if the given actor is in the city. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_city_aaf47d22d3113e2f774d00453cb315d00}{actor\+Moved}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)=0
+\begin{DoxyCompactList}\small\item\em actor\+Moved is an operation that is used to tell wether certain actor has moved. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ $>$ \mbox{\hyperlink{class_interface_1_1_i_city_a40b338c8611a1d1febb36799af6ac730}{get\+Nearby\+Actors}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} loc) const =0
+\begin{DoxyCompactList}\small\item\em get\+Nearby\+Actors returns actors that are close to given position. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_interface_1_1_i_city_a70332db91296970d903393604b9e6b77}{is\+Game\+Over}} () const =0
+\begin{DoxyCompactList}\small\item\em is\+Game\+Over tells wether the game is overor not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+City\+IF is an interface that every city in the game must fulfill. Kaupunki. 
+
+If class method doesn\textquotesingle{}t have exception guarantee of nothrow, method can leak out exception {\ttfamily std\+::bad\+\_\+alloc} (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_city_a47a88111b03f29705f41e202e3857161}\label{class_interface_1_1_i_city_a47a88111b03f29705f41e202e3857161}} 
+\index{Interface::ICity@{Interface::ICity}!ICity@{ICity}}
+\index{ICity@{ICity}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{ICity()}{ICity()}}
+{\footnotesize\ttfamily Interface\+::\+I\+City\+::\+I\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor of the interface (For documentation) 
+
+\begin{DoxyPostcond}{Postcondition}
+City is at initialization state. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_city_aaf47d22d3113e2f774d00453cb315d00}\label{class_interface_1_1_i_city_aaf47d22d3113e2f774d00453cb315d00}} 
+\index{Interface::ICity@{Interface::ICity}!actorMoved@{actorMoved}}
+\index{actorMoved@{actorMoved}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{actorMoved()}{actorMoved()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::actor\+Moved (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+actor\+Moved is an operation that is used to tell wether certain actor has moved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that has moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in gamestate. Given actor is found in the city. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a8b31965c302e95986ede237305622594}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_afcca2544603e17c5141a569982812e25}\label{class_interface_1_1_i_city_afcca2544603e17c5141a569982812e25}} 
+\index{Interface::ICity@{Interface::ICity}!actorRemoved@{actorRemoved}}
+\index{actorRemoved@{actorRemoved}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{actorRemoved()}{actorRemoved()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::actor\+Removed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+actor\+Removed tells the city that actor is removed ingame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that is set removed ingame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in gamestate. Given actor is found in the city. Actor has {\ttfamily actor.\+is\+Removed() == true}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a1963dfaae5ec693ec5526519b185befd}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a298c7ca730e83f4495b33a137714d7d8}\label{class_interface_1_1_i_city_a298c7ca730e83f4495b33a137714d7d8}} 
+\index{Interface::ICity@{Interface::ICity}!addActor@{addActor}}
+\index{addActor@{addActor}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{addActor()}{addActor()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::add\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{newactor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add\+Actor adds a new actor to the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newactor} & actor to be added to the city that fulfills Actor\+IF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is added to the city. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}} & Actor is already in the city. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a1d10a31b6e74cc864f03ef42497303aa}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a347fe0662fcd162fa9f18a3be41c8b0b}\label{class_interface_1_1_i_city_a347fe0662fcd162fa9f18a3be41c8b0b}} 
+\index{Interface::ICity@{Interface::ICity}!addStop@{addStop}}
+\index{addStop@{addStop}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{addStop()}{addStop()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::add\+Stop (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{I\+Stop}} $>$}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add\+Stop adds a stop to the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop} & pointer to a stop object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in init state. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Stop is added to the city. Exception guarantee\+: basic 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_init_error}{Init\+Error}}} & Stops position is not valid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_ae033faf586953e7854c2edb5130d6535}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a62bf5db4db4534d50e10b67b87ffd7fe}\label{class_interface_1_1_i_city_a62bf5db4db4534d50e10b67b87ffd7fe}} 
+\index{Interface::ICity@{Interface::ICity}!findActor@{findActor}}
+\index{findActor@{findActor}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{findActor()}{findActor()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+I\+City\+::find\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+find\+Actor checks if the given actor is in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that that is looked for in the city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Boolean that tells wether the actor is in the city. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_ad13c66b8f4621746fbac2ddfcda2e6d6}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a40b338c8611a1d1febb36799af6ac730}\label{class_interface_1_1_i_city_a40b338c8611a1d1febb36799af6ac730}} 
+\index{Interface::ICity@{Interface::ICity}!getNearbyActors@{getNearbyActors}}
+\index{getNearbyActors@{getNearbyActors}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{getNearbyActors()}{getNearbyActors()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}}$>$ $>$ Interface\+::\+I\+City\+::get\+Nearby\+Actors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{loc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Nearby\+Actors returns actors that are close to given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & \mbox{\hyperlink{class_interface_1_1_location}{Location}} for getting the actors close to it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vector containing actors close to the location, that pass {\ttfamily get\+Location().is\+Close(loc) == true}. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a43bd53321c5863e5fbc681eeaead88aa}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a70332db91296970d903393604b9e6b77}\label{class_interface_1_1_i_city_a70332db91296970d903393604b9e6b77}} 
+\index{Interface::ICity@{Interface::ICity}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+I\+City\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+is\+Game\+Over tells wether the game is overor not. 
+
+\begin{DoxyPrecond}{Precondition}
+City is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if game is over, else ´false´ 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a634b64858cbf5e52fdc60d7d59bb25a9}\label{class_interface_1_1_i_city_a634b64858cbf5e52fdc60d7d59bb25a9}} 
+\index{Interface::ICity@{Interface::ICity}!removeActor@{removeActor}}
+\index{removeActor@{removeActor}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{removeActor()}{removeActor()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::remove\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+remove\+Actor removes the actor from the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is removed from the city. Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}} & Actor not found in the city \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a05e53c1d05034208def4084dc249222a}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a429a9dd7d9f16607e3c9ed2b554f0e1d}\label{class_interface_1_1_i_city_a429a9dd7d9f16607e3c9ed2b554f0e1d}} 
+\index{Interface::ICity@{Interface::ICity}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::set\+Background (\begin{DoxyParamCaption}\item[{Q\+Image \&}]{basicbackground,  }\item[{Q\+Image \&}]{bigbackground }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Background sets the bitmap picture of the game area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em basicbackground} & Normal sized picture used as the game area. Bottom left position of the picture in pixelcoordinates can be found out using the offset()-\/method. \\
+\hline
+{\em bigbackground} & Background of the game that is bigger than normal. Used only if doing Scrolling map-\/expansion. Bottom left position of the picture in pixelcoordinates can be found out using the offset()-\/method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+City is in init state. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Picture for the game area is set. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_init_error}{Init\+Error}}} & Setting the picture was unsuccesful or the picture was invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a9e1a9fe7ec6469138c00c30b4b5ba2a7}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_a397cb96750b1e4534e12f1cd85c756ff}\label{class_interface_1_1_i_city_a397cb96750b1e4534e12f1cd85c756ff}} 
+\index{Interface::ICity@{Interface::ICity}!setClock@{setClock}}
+\index{setClock@{setClock}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{setClock()}{setClock()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::set\+Clock (\begin{DoxyParamCaption}\item[{Q\+Time}]{clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Clock sets the time of the game clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clock} & Game clock time at the function call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily kello.\+is\+Valid() == true}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Time is set. Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a272e36865ee44a1d1d60c340e9f2f454}{Model\+::\+City}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_city_acd6ac71137fe0561c57acd958ce24309}\label{class_interface_1_1_i_city_acd6ac71137fe0561c57acd958ce24309}} 
+\index{Interface::ICity@{Interface::ICity}!startGame@{startGame}}
+\index{startGame@{startGame}!Interface::ICity@{Interface::ICity}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+City\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+start\+Game shofts city from init state to the gamestate. 
+
+\begin{DoxyPrecond}{Precondition}
+City is in init state. \mbox{\hyperlink{class_interface_1_1_i_city_a429a9dd7d9f16607e3c9ed2b554f0e1d}{set\+Background()}} and \mbox{\hyperlink{class_interface_1_1_i_city_a397cb96750b1e4534e12f1cd85c756ff}{set\+Clock()}} have been called. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+City is in gamestate. Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_city_a2f35ab582f2b0742cd13c3ed9b8ba6fa}{Model\+::\+City}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/interfaces/\mbox{\hyperlink{icity_8hh}{icity.\+hh}}\end{DoxyCompactItemize}

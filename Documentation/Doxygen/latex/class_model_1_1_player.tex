@@ -1,0 +1,238 @@
+\hypertarget{class_model_1_1_player}{}\doxysection{Model\+::Player Class Reference}
+\label{class_model_1_1_player}\index{Model::Player@{Model::Player}}
+
+
+The \mbox{\hyperlink{class_model_1_1_player}{Player}} class -\/ define our main player @inherits Charactor @inherits I\+Actor.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Inheritance diagram for Model\+::Player\+:
+% FIG 0
+
+
+Collaboration diagram for Model\+::Player\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_player_a92de512350788b2193c66837f32452a3}{Player}} (const Q\+Pixmap \&pixmap, \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} loc, int max\+\_\+fuel, int speed)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_player}{Player}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_1_1_player_ae0255930736b31ca3ec9115ece1a8744}\label{class_model_1_1_player_ae0255930736b31ca3ec9115ece1a8744}} 
+\mbox{\hyperlink{class_model_1_1_player_ae0255930736b31ca3ec9115ece1a8744}{$\sim$\+Player}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_player}{Player}} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \mbox{\hyperlink{class_model_1_1_player_a3c63809b972e3264b1068be9de6d373b}{give\+Location}} () const
+\begin{DoxyCompactList}\small\item\em give\+Location \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_1_1_player_a0505df6258aaba83a8682073e6d888d0}\label{class_model_1_1_player_a0505df6258aaba83a8682073e6d888d0}} 
+void \mbox{\hyperlink{class_model_1_1_player_a0505df6258aaba83a8682073e6d888d0}{remove}} ()
+\begin{DoxyCompactList}\small\item\em remove -\/ override virtual function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_player_adee86f3dd72de9e290248c284dcb4b12}{move}} (\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} loc)
+\begin{DoxyCompactList}\small\item\em move to the given location \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_1_1_player_a4afa1cef24e5ee1b4ad76024cf98b5c1}\label{class_model_1_1_player_a4afa1cef24e5ee1b4ad76024cf98b5c1}} 
+bool \mbox{\hyperlink{class_model_1_1_player_a4afa1cef24e5ee1b4ad76024cf98b5c1}{is\+Removed}} () const
+\begin{DoxyCompactList}\small\item\em is\+Removed -\/ override virtual function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_player_ac63bee9e541f4339327aa4e3d769283a}{bonus\+Fuel}} (int bonus)
+\begin{DoxyCompactList}\small\item\em \+: add current fuel to the bonus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_player_abd5a097c248565685c7dee4d61974a5e}{add\+Pokemon}} (\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} pokemon)
+\begin{DoxyCompactList}\small\item\em add\+Pokemon to bag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_player_abc93ae7810a5a346923078dffc5c6aaa}{move\+Direction}} (int horizontal\+Multiplier, int vertical\+Multiplier)
+\begin{DoxyCompactList}\small\item\em move\+Direction \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_1_1_player_a247e2079c9d09a9535d1227083a3e553}{get\+Fuel}} () const
+\begin{DoxyCompactList}\small\item\em get\+Fuel \end{DoxyCompactList}\item 
+Q\+Dialog $\ast$ \mbox{\hyperlink{class_model_1_1_player_aa4535f7a9209503699f3356551c1b3b2}{get\+Bag}} (Q\+Widget $\ast$parent=0) const
+\begin{DoxyCompactList}\small\item\em get\+Bag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_model_1_1_player}{Player}} class -\/ define our main player @inherits Charactor @inherits I\+Actor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_player_a92de512350788b2193c66837f32452a3}\label{class_model_1_1_player_a92de512350788b2193c66837f32452a3}} 
+\index{Model::Player@{Model::Player}!Player@{Player}}
+\index{Player@{Player}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Model\+::\+Player\+::\+Player (\begin{DoxyParamCaption}\item[{const Q\+Pixmap \&}]{pixmap,  }\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{loc,  }\item[{int}]{max\+\_\+fuel,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_model_1_1_player}{Player}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixmap} & \+: to be copied. \\
+\hline
+{\em loc} & \+: location to be set. \\
+\hline
+{\em max\+\_\+fuel} & \+: max\+\_\+fuel to be set \\
+\hline
+{\em speed} & \+: speed to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{class_model_1_1_player}{Player}} is not in removed state. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_player_abd5a097c248565685c7dee4d61974a5e}\label{class_model_1_1_player_abd5a097c248565685c7dee4d61974a5e}} 
+\index{Model::Player@{Model::Player}!addPokemon@{addPokemon}}
+\index{addPokemon@{addPokemon}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{addPokemon()}{addPokemon()}}
+{\footnotesize\ttfamily void Model\+::\+Player\+::add\+Pokemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}}}]{pokemon }\end{DoxyParamCaption})}
+
+
+
+add\+Pokemon to bag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pokemon} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\+: exception guarantee\+: no throw. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::vector\+::push\+\_\+back} & guarantee rollback property. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_model_1_1_player_ac63bee9e541f4339327aa4e3d769283a}\label{class_model_1_1_player_ac63bee9e541f4339327aa4e3d769283a}} 
+\index{Model::Player@{Model::Player}!bonusFuel@{bonusFuel}}
+\index{bonusFuel@{bonusFuel}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{bonusFuel()}{bonusFuel()}}
+{\footnotesize\ttfamily void Model\+::\+Player\+::bonus\+Fuel (\begin{DoxyParamCaption}\item[{int}]{bonus }\end{DoxyParamCaption})}
+
+
+
+\+: add current fuel to the bonus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bonus} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\+: exception guarantee\+: strong. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_player_aa4535f7a9209503699f3356551c1b3b2}\label{class_model_1_1_player_aa4535f7a9209503699f3356551c1b3b2}} 
+\index{Model::Player@{Model::Player}!getBag@{getBag}}
+\index{getBag@{getBag}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{getBag()}{getBag()}}
+{\footnotesize\ttfamily Q\+Dialog $\ast$ Model\+::\+Player\+::get\+Bag (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+get\+Bag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dialog contains all the catched pokemon. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_model_1_1_player_a247e2079c9d09a9535d1227083a3e553}\label{class_model_1_1_player_a247e2079c9d09a9535d1227083a3e553}} 
+\index{Model::Player@{Model::Player}!getFuel@{getFuel}}
+\index{getFuel@{getFuel}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{getFuel()}{getFuel()}}
+{\footnotesize\ttfamily int Model\+::\+Player\+::get\+Fuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Fuel 
+
+\begin{DoxyReturn}{Returns}
+current fuel 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+\+: exception guarantee \+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_player_a3c63809b972e3264b1068be9de6d373b}\label{class_model_1_1_player_a3c63809b972e3264b1068be9de6d373b}} 
+\index{Model::Player@{Model::Player}!giveLocation@{giveLocation}}
+\index{giveLocation@{giveLocation}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{giveLocation()}{giveLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} Model\+::\+Player\+::give\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+give\+Location 
+
+\begin{DoxyReturn}{Returns}
+location of this character in city map. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception \+: no throw. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_a34e63d2e3af592679d76654a8519eb38}{Interface\+::\+I\+Actor}}.
+
+\mbox{\Hypertarget{class_model_1_1_player_adee86f3dd72de9e290248c284dcb4b12}\label{class_model_1_1_player_adee86f3dd72de9e290248c284dcb4b12}} 
+\index{Model::Player@{Model::Player}!move@{move}}
+\index{move@{move}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Model\+::\+Player\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+move to the given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & \+: location to be moved to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\+: exception guarantee\+: no throw. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_actor_ab882fb01fe2d19676a6571d8d8f7e29a}{Interface\+::\+I\+Actor}}.
+
+\mbox{\Hypertarget{class_model_1_1_player_abc93ae7810a5a346923078dffc5c6aaa}\label{class_model_1_1_player_abc93ae7810a5a346923078dffc5c6aaa}} 
+\index{Model::Player@{Model::Player}!moveDirection@{moveDirection}}
+\index{moveDirection@{moveDirection}!Model::Player@{Model::Player}}
+\doxysubsubsection{\texorpdfstring{moveDirection()}{moveDirection()}}
+{\footnotesize\ttfamily void Model\+::\+Player\+::move\+Direction (\begin{DoxyParamCaption}\item[{int}]{horizontal\+Multiplier,  }\item[{int}]{vertical\+Multiplier }\end{DoxyParamCaption})}
+
+
+
+move\+Direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em horizontal\+Multiplier} & \\
+\hline
+{\em vertical\+Multiplier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+move up\+: (0, -\/1), move down (0, 1), move left (-\/1,0), move right (0,1) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception gurantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & the player move beyond the edge of the map, the location is not changed. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+Game/player.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+digraph "Interface::GameError::giveMessage"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Interface::GameError\l::giveMessage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="giveMessage gives a message that clarifies the cause of the exception."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Model::City::addActor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_city.html#a1d10a31b6e74cc864f03ef42497303aa",tooltip="addActor adds a new actor to the city."];
+}

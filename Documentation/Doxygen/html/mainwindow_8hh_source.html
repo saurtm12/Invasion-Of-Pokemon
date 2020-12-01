@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Invasion of Pokemon: Game/mainwindow.hh Source File</title>
+<title>My Project: Game/mainwindow.hh Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Invasion of Pokemon
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -69,15 +69,15 @@ $(function() {
 <div class="title">mainwindow.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="mainwindow_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_HH</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_HH</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAINWINDOW_HH</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="dialog_8hh.html">dialog.hh</a>&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Course/CourseLib/core/location.hh&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Course/CourseLib/core/logic.hh&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="city_8h.html">city.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="statistics_8hh.html">statistics.hh</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="helpers_8hh.html">Utils/helpers.hh</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Course/CourseLib/core/location.hh&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Course/CourseLib/core/logic.hh&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="city_8h.html">city.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="statistics_8hh.html">statistics.hh</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Utils/helpers.hh&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;dialog.hh&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QGraphicsScene&gt;</span></div>
@@ -91,11 +91,11 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_course_side.html">CourseSide</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span>CourseSide;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_interface.html">Interface</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_model.html">Model</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>Model;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>Ui {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
@@ -110,7 +110,7 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;signals:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> keyPressed(<span class="keywordtype">int</span> key);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> onBallCollided(<a class="code" href="class_model_1_1_pokemon.html">Pokemon</a> <a class="code" href="gamerule_8txt.html#a55131a76cfde2f63f3e5d5953e8227d7">pokemon</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> onBallCollided(<a class="code" href="class_model_1_1_pokemon.html">Pokemon</a> pokemon);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> openBag();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -119,38 +119,47 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> actorCountChanged(std::shared_ptr&lt;IActor&gt; actor, <span class="keywordtype">int</span> delta);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> onGameOver();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *event) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  Ui::MainWindow *ui;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="class_course_side_1_1_logic.html">Logic</a>* logic_;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::shared_ptr&lt;City&gt; city_;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  QProgressBar* fuelBar_;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="class_stats_1_1_statistics.html">Stats::Statistics</a> stats_;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> width_ = 1095;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">int</span> height_ = 592;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> tick_ = 500;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> LEADER_BOARD_SIZE = 10;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a> gameSetting_;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">bool</span> isStarted;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_HH</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordtype">void</span> openLeaderboard();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="comment">// keyPressEvent override</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  Ui::MainWindow *ui;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="class_course_side_1_1_logic.html">Logic</a>* logic_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  std::shared_ptr&lt;City&gt; city_;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  QProgressBar* fuelBar_;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="class_stats_1_1_statistics.html">Stats::Statistics</a> stats_;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">int</span> width_ = 1095;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">int</span> height_ = 592;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">int</span> tick_ = 500;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> LEADER_BOARD_SIZE = 10;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a> gameSetting_;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">bool</span> isStarted;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_HH</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="ahelpers_8hh_html"><div class="ttname"><a href="helpers_8hh.html">helpers.hh</a></div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_aeb88c55666ea55a06204e8242f953b86"><div class="ttname"><a href="class_stats_1_1_statistics.html#aeb88c55666ea55a06204e8242f953b86">Stats::Statistics::morePassengers</a></div><div class="ttdeci">void morePassengers(int num)</div><div class="ttdoc">some amount of passengers is added/removed</div><div class="ttdef"><b>Definition:</b> statistics.cc:30</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_a9f56105fc6a094cb8a1a3e178e2effea"><div class="ttname"><a href="class_stats_1_1_statistics.html#a9f56105fc6a094cb8a1a3e178e2effea">Stats::Statistics::getNumberOfPassengers</a></div><div class="ttdeci">int getNumberOfPassengers() const</div><div class="ttdoc">get total number of passengers</div><div class="ttdef"><b>Definition:</b> statistics.cc:68</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_afe98a720d79451aeb0da707b14b5228d"><div class="ttname"><a href="class_stats_1_1_statistics.html#afe98a720d79451aeb0da707b14b5228d">Stats::Statistics::addScores</a></div><div class="ttdeci">int addScores(int score=20)</div><div class="ttdoc">scores is added to player</div><div class="ttdef"><b>Definition:</b> statistics.cc:57</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_a40387c3caf6db2312e883ee822f157af"><div class="ttname"><a href="class_stats_1_1_statistics.html#a40387c3caf6db2312e883ee822f157af">Stats::Statistics::newNysse</a></div><div class="ttdeci">void newNysse()</div><div class="ttdoc">a Bus is introduced</div><div class="ttdef"><b>Definition:</b> statistics.cc:47</div></div>
 <div class="ttc" id="aclass_model_1_1_pokemon_html"><div class="ttname"><a href="class_model_1_1_pokemon.html">Model::Pokemon</a></div><div class="ttdoc">The Pokemon class.</div><div class="ttdef"><b>Definition:</b> pokemon.h:36</div></div>
-<div class="ttc" id="anamespace_model_html"><div class="ttname"><a href="namespace_model.html">Model</a></div><div class="ttdef"><b>Definition:</b> character.cc:6</div></div>
 <div class="ttc" id="anamespace_interface_html"><div class="ttname"><a href="namespace_interface.html">Interface</a></div><div class="ttdoc">All of the interfaces defined by the course are found in Interface namespace.</div><div class="ttdef"><b>Definition:</b> location.cc:7</div></div>
+<div class="ttc" id="aclass_dialog_html_aa40b69ca1c97bb0b9802bed5e807f5f4"><div class="ttname"><a href="class_dialog.html#aa40b69ca1c97bb0b9802bed5e807f5f4">Dialog::gameSettingChanged</a></div><div class="ttdeci">void gameSettingChanged(Utils::GameSetting setting)</div><div class="ttdoc">SIGNAL gameSettingChanged.</div></div>
 <div class="ttc" id="astatistics_8hh_html"><div class="ttname"><a href="statistics_8hh.html">statistics.hh</a></div><div class="ttdoc">Define Statistic class which is a storage for statistics of current game state.</div></div>
-<div class="ttc" id="aclass_stats_1_1_statistics_html"><div class="ttname"><a href="class_stats_1_1_statistics.html">Stats::Statistics</a></div><div class="ttdoc">The Statistics class @inherits iStatistic.</div><div class="ttdef"><b>Definition:</b> statistics.hh:17</div></div>
-<div class="ttc" id="adialog_8hh_html"><div class="ttname"><a href="dialog_8hh.html">dialog.hh</a></div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> simplemainwindow.hh:15</div></div>
+<div class="ttc" id="aclass_main_window_html_aa05813d353cccf400d3561cc309089af"><div class="ttname"><a href="class_main_window.html#aa05813d353cccf400d3561cc309089af">MainWindow::startGame</a></div><div class="ttdeci">void startGame()</div><div class="ttdoc">startGame</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:53</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html"><div class="ttname"><a href="class_stats_1_1_statistics.html">Stats::Statistics</a></div><div class="ttdoc">The Statistics class @inherits iStatistic.</div><div class="ttdef"><b>Definition:</b> statistics.hh:18</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_a35a1e7357cd197d42f4b824bee35db00"><div class="ttname"><a href="class_stats_1_1_statistics.html#a35a1e7357cd197d42f4b824bee35db00">Stats::Statistics::getScores</a></div><div class="ttdeci">int getScores() const</div><div class="ttdoc">get total number of scores</div><div class="ttdef"><b>Definition:</b> statistics.cc:73</div></div>
+<div class="ttc" id="aclass_dialog_html"><div class="ttname"><a href="class_dialog.html">Dialog</a></div><div class="ttdoc">The Dialog class - greeting dialog.</div><div class="ttdef"><b>Definition:</b> dialog.hh:21</div></div>
 <div class="ttc" id="acity_8h_html"><div class="ttname"><a href="city_8h.html">city.h</a></div><div class="ttdoc">Define city class.</div></div>
 <div class="ttc" id="aclass_course_side_1_1_logic_html"><div class="ttname"><a href="class_course_side_1_1_logic.html">CourseSide::Logic</a></div><div class="ttdef"><b>Definition:</b> logic.hh:21</div></div>
-<div class="ttc" id="astruct_utils_1_1_game_setting_html"><div class="ttname"><a href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a></div><div class="ttdef"><b>Definition:</b> helpers.hh:20</div></div>
-<div class="ttc" id="agamerule_8txt_html_a55131a76cfde2f63f3e5d5953e8227d7"><div class="ttname"><a href="gamerule_8txt.html#a55131a76cfde2f63f3e5d5953e8227d7">pokemon</a></div><div class="ttdeci">Game the player can set some setting in game also Start time is in format hour and minute This is the real time that buses are proceed on the day Remember that most buses will not run at player can press OK to save setting After player press OK in the greeting they will get back to game play main window If he presses Cancel or X the game is exited In game play player presses start to play the game The player should again click on the city map to use control key SPACE properly The player is placed in the middle of the map He will see buses are some pokemon balls are in some some not He has to catch many ball as possible to get high score The pokemon will be catch if the player move towards close to the pokemon After catching a pokemon</div><div class="ttdef"><b>Definition:</b> gamerule.txt:10</div></div>
+<div class="ttc" id="aclass_main_window_html_a8b244be8b7b7db1b08de2a2acb9409db"><div class="ttname"><a href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=0)</div><div class="ttdoc">MainWindow constructor.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:6</div></div>
+<div class="ttc" id="astruct_utils_1_1_game_setting_html"><div class="ttname"><a href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a></div><div class="ttdoc">The GameSetting struct.</div><div class="ttdef"><b>Definition:</b> helpers.hh:23</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_a81411c994e28ad0569a42c40e4c4b320"><div class="ttname"><a href="class_stats_1_1_statistics.html#a81411c994e28ad0569a42c40e4c4b320">Stats::Statistics::nysseRemoved</a></div><div class="ttdeci">void nysseRemoved()</div><div class="ttdoc">a Bus is removed forcefully (by external reasons)</div><div class="ttdef"><b>Definition:</b> statistics.cc:42</div></div>
 <div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">The MainWindow class.</div><div class="ttdef"><b>Definition:</b> mainwindow.hh:38</div></div>
-<div class="ttc" id="anamespace_course_side_html"><div class="ttname"><a href="namespace_course_side.html">CourseSide</a></div><div class="ttdef"><b>Definition:</b> nysse.cc:8</div></div>
+<div class="ttc" id="aclass_main_window_html_a80e67152dc086882ba0c042bc9bd9705"><div class="ttname"><a href="class_main_window.html#a80e67152dc086882ba0c042bc9bd9705">MainWindow::keyPressed</a></div><div class="ttdeci">void keyPressed(int key)</div><div class="ttdoc">SIGNAL keyPressed - emit key has been pressed by user.</div></div>
+<div class="ttc" id="aclass_stats_1_1_statistics_html_a8ccd9ba30b122af0eaa85b4ec2c55c9e"><div class="ttname"><a href="class_stats_1_1_statistics.html#a8ccd9ba30b122af0eaa85b4ec2c55c9e">Stats::Statistics::getNumberOfBuses</a></div><div class="ttdeci">int getNumberOfBuses() const</div><div class="ttdoc">get total number of buses</div><div class="ttdef"><b>Definition:</b> statistics.cc:63</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

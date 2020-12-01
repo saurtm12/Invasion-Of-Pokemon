@@ -1,0 +1,55 @@
+\hypertarget{city_8h}{}\doxysection{Game/city.h File Reference}
+\label{city_8h}\index{Game/city.h@{Game/city.h}}
+
+
+Define city class.  
+
+
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/interfaces/icity.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/interfaces/iactor.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/errors/initerror.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/errors/gameerror.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/actors/stop.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Course/\+Course\+Lib/core/location.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}character.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Utils/helpers.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pokemon.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Scene$>$}\newline
+{\ttfamily \#include $<$Qt\+Widgets$>$}\newline
+{\ttfamily \#include $<$Q\+Widget$>$}\newline
+{\ttfamily \#include $<$Q\+Time$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$Q\+String$>$}\newline
+{\ttfamily \#include $<$Q\+Graphics\+Pixmap\+Item$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Include dependency graph for city.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_model_1_1_city}{Model\+::\+City}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_model_1_1_city}{City}} class @inherits Q\+Object -\/ to use signal -\/ slot mechanism @inherits Icity -\/ used course\+Side logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{city_8h_af80c070a57ab6c89e64294a45893b6d3}\label{city_8h_af80c070a57ab6c89e64294a45893b6d3}} 
+const int {\bfseries Model\+::\+U\+P\+D\+A\+T\+E\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+MS} = 100
+\item 
+\mbox{\Hypertarget{city_8h_a45cf17e18b31ab89d52416d6da7b7d5e}\label{city_8h_a45cf17e18b31ab89d52416d6da7b7d5e}} 
+const auto {\bfseries Model\+::\+H\+A\+N\+D\+L\+E\+F\+U\+N\+CT} = \&City\+::key\+Press
+\item 
+\mbox{\Hypertarget{city_8h_a185d58f266aa8c1bd7b76ecd8c8f8c7a}\label{city_8h_a185d58f266aa8c1bd7b76ecd8c8f8c7a}} 
+const auto {\bfseries Model\+::\+S\+I\+G\+N\+A\+L\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+F\+U\+EL} = \&City\+::update\+Fuel
+\item 
+\mbox{\Hypertarget{city_8h_a02e668b7ac5e2ddae9951d39eccce97f}\label{city_8h_a02e668b7ac5e2ddae9951d39eccce97f}} 
+const auto {\bfseries Model\+::\+S\+I\+G\+N\+A\+L\+\_\+\+G\+A\+M\+E\+\_\+\+O\+V\+ER} = \&City\+::game\+Over
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define city class. 
+

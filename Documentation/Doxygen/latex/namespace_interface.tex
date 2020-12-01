@@ -1,0 +1,58 @@
+\hypertarget{namespace_interface}{}\doxysection{Interface Namespace Reference}
+\label{namespace_interface}\index{Interface@{Interface}}
+
+
+All of the interfaces defined by the course are found in \mbox{\hyperlink{namespace_interface}{Interface}} namespace.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}
+\begin{DoxyCompactList}\small\item\em Exception class that expresses errors ingame. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}}
+\begin{DoxyCompactList}\small\item\em Actor\+IF is an interface, which every single actor moving in the game implements. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_city}{I\+City}}
+\begin{DoxyCompactList}\small\item\em City\+IF is an interface that every city in the game must fulfill. Kaupunki. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_init_error}{Init\+Error}}
+\begin{DoxyCompactList}\small\item\em Exception class that expresses errors during the initialization of the game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_passenger}{I\+Passenger}}
+\begin{DoxyCompactList}\small\item\em Passenger\+IF is an interface which every passenger in game implements. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_statistics}{I\+Statistics}}
+\begin{DoxyCompactList}\small\item\em Statistics\+IF is an interface, which defines an object that manages scoring statistics. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_stop}{I\+Stop}}
+\begin{DoxyCompactList}\small\item\em Stop\+IF is an interface that stops fulfill. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_i_vehicle}{I\+Vehicle}}
+\begin{DoxyCompactList}\small\item\em Vehicle\+IF is an interface that describes vehicles (nysse) in game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_interface_1_1_location}{Location}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_interface_1_1_location}{Location}} is a class, which has methods dealing with the location of the objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_city}{I\+City}} $>$ \mbox{\hyperlink{namespace_interface_ad71f50d9ef208aaebba5b55f4e529145}{create\+Game}} ()
+\begin{DoxyCompactList}\small\item\em create\+Game creates the games city and return pointer to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+All of the interfaces defined by the course are found in \mbox{\hyperlink{namespace_interface}{Interface}} namespace. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_interface_ad71f50d9ef208aaebba5b55f4e529145}\label{namespace_interface_ad71f50d9ef208aaebba5b55f4e529145}} 
+\index{Interface@{Interface}!createGame@{createGame}}
+\index{createGame@{createGame}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{createGame()}{createGame()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_interface_1_1_i_city}{I\+City}}$>$ Interface\+::create\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create\+Game creates the games city and return pointer to it. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+pointer to the created city. (It is in initialization space) 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guaranteee\+: basic. 
+\end{DoxyPostcond}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['takecity_512',['takeCity',['../class_course_side_1_1_logic.html#a2fa811a6c5bc60135e18115636774a00',1,'CourseSide::Logic']]]
+  ['what_267',['what',['../class_interface_1_1_game_error.html#af13a9b1111ba69820f277af8a454d516',1,'Interface::GameError::what()'],['../class_interface_1_1_init_error.html#a23d8bb7e725cfba0cec3ac9eaa82cac5',1,'Interface::InitError::what()']]]
 ];

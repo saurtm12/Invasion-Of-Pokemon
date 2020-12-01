@@ -1,0 +1,145 @@
+\hypertarget{class_interface_1_1_i_statistics}{}\doxysection{Interface\+::I\+Statistics Class Reference}
+\label{class_interface_1_1_i_statistics}\index{Interface::IStatistics@{Interface::IStatistics}}
+
+
+Statistics\+IF is an interface, which defines an object that manages scoring statistics.  
+
+
+
+
+{\ttfamily \#include $<$istatistics.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::I\+Statistics\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_i_statistics_a6fd311df15bef69d4a640432587fdbe6}{I\+Statistics}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}}.(For documentation). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_a21917fcb22d156b8f49de56fbc4fb60e}\label{class_interface_1_1_i_statistics_a21917fcb22d156b8f49de56fbc4fb60e}} 
+virtual \mbox{\hyperlink{class_interface_1_1_i_statistics_a21917fcb22d156b8f49de56fbc4fb60e}{$\sim$\+I\+Statistics}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_interface}{Interface}} has default virtual destructor (base class needs to have a virtual destructor). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_statistics_a791cf77cd9fdb8f37e64832952225584}{more\+Passengers}} (int num)=0
+\begin{DoxyCompactList}\small\item\em more\+Passengers notifies, that more passangers are added to the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_statistics_ac1ef08da0ea42f4633ad86450449c56d}{nysse\+Removed}} ()=0
+\begin{DoxyCompactList}\small\item\em nysse\+Removed notifies, that the nysse is removed ingame. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_statistics_ac683e84583e624d355a77f255d465d3b}{new\+Nysse}} ()=0
+\begin{DoxyCompactList}\small\item\em new\+Nysse notifies, that a new nysse is added to the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_statistics_a728b82296c14bcdd68e8dd362bf23429}{nysse\+Left}} ()=0
+\begin{DoxyCompactList}\small\item\em nysse\+Left notifies, that a nysse has left the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Statistics\+IF is an interface, which defines an object that manages scoring statistics. 
+
+If class method doesn\textquotesingle{}t have exception guarantee of nothrow, method can leak out exception {\ttfamily std\+::bad\+\_\+alloc} (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_a6fd311df15bef69d4a640432587fdbe6}\label{class_interface_1_1_i_statistics_a6fd311df15bef69d4a640432587fdbe6}} 
+\index{Interface::IStatistics@{Interface::IStatistics}!IStatistics@{IStatistics}}
+\index{IStatistics@{IStatistics}!Interface::IStatistics@{Interface::IStatistics}}
+\doxysubsubsection{\texorpdfstring{IStatistics()}{IStatistics()}}
+{\footnotesize\ttfamily Interface\+::\+I\+Statistics\+::\+I\+Statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}}.(For documentation). 
+
+\begin{DoxyPostcond}{Postcondition}
+Scores are reset by default. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_a791cf77cd9fdb8f37e64832952225584}\label{class_interface_1_1_i_statistics_a791cf77cd9fdb8f37e64832952225584}} 
+\index{Interface::IStatistics@{Interface::IStatistics}!morePassengers@{morePassengers}}
+\index{morePassengers@{morePassengers}!Interface::IStatistics@{Interface::IStatistics}}
+\doxysubsubsection{\texorpdfstring{morePassengers()}{morePassengers()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Statistics\+::more\+Passengers (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+more\+Passengers notifies, that more passangers are added to the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & how many new passangers are added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+num $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_stats_1_1_statistics_aeb88c55666ea55a06204e8242f953b86}{Stats\+::\+Statistics}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_ac683e84583e624d355a77f255d465d3b}\label{class_interface_1_1_i_statistics_ac683e84583e624d355a77f255d465d3b}} 
+\index{Interface::IStatistics@{Interface::IStatistics}!newNysse@{newNysse}}
+\index{newNysse@{newNysse}!Interface::IStatistics@{Interface::IStatistics}}
+\doxysubsubsection{\texorpdfstring{newNysse()}{newNysse()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Statistics\+::new\+Nysse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+new\+Nysse notifies, that a new nysse is added to the game. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_stats_1_1_statistics_a40387c3caf6db2312e883ee822f157af}{Stats\+::\+Statistics}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_a728b82296c14bcdd68e8dd362bf23429}\label{class_interface_1_1_i_statistics_a728b82296c14bcdd68e8dd362bf23429}} 
+\index{Interface::IStatistics@{Interface::IStatistics}!nysseLeft@{nysseLeft}}
+\index{nysseLeft@{nysseLeft}!Interface::IStatistics@{Interface::IStatistics}}
+\doxysubsubsection{\texorpdfstring{nysseLeft()}{nysseLeft()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Statistics\+::nysse\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+nysse\+Left notifies, that a nysse has left the game. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_stats_1_1_statistics_a3211df22d757039fd86039cc28dda68d}{Stats\+::\+Statistics}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_statistics_ac1ef08da0ea42f4633ad86450449c56d}\label{class_interface_1_1_i_statistics_ac1ef08da0ea42f4633ad86450449c56d}} 
+\index{Interface::IStatistics@{Interface::IStatistics}!nysseRemoved@{nysseRemoved}}
+\index{nysseRemoved@{nysseRemoved}!Interface::IStatistics@{Interface::IStatistics}}
+\doxysubsubsection{\texorpdfstring{nysseRemoved()}{nysseRemoved()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Statistics\+::nysse\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+nysse\+Removed notifies, that the nysse is removed ingame. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_stats_1_1_statistics_a81411c994e28ad0569a42c40e4c4b320}{Stats\+::\+Statistics}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/interfaces/\mbox{\hyperlink{istatistics_8hh}{istatistics.\+hh}}\end{DoxyCompactItemize}

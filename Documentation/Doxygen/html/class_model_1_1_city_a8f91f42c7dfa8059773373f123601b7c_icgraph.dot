@@ -1,0 +1,10 @@
+digraph "Model::City::addMainActor"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Model::City::addMainActor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add new main player to city's map."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Model::City::startGame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_city.html#a2f35ab582f2b0742cd13c3ed9b8ba6fa",tooltip="startGame"];
+}

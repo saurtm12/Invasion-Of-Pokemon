@@ -24,4 +24,5 @@ No Doxyfile is provided with the project, but you may generate it using doxygen 
 You should create your own code inside your own namespace :)
 
 
-# You are allowed (and probably should) make changes to this file after you have started your project. :)
+## Project: The invasion of Pokemon
+Team : Nghia Duc Hong - Duy Anh Vu

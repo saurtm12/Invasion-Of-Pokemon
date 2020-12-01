@@ -1,0 +1,12 @@
+digraph "Model::Character::move"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Model::Character::move",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="move the item on the map with axis multipliers"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Model::Player::moveDirection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_player.html#abc93ae7810a5a346923078dffc5c6aaa",tooltip="moveDirection"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Model::City::keyPress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_model_1_1_city.html#aed16c5162f7695a6304754702244101b",tooltip="keyPress"];
+}

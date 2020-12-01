@@ -1,0 +1,106 @@
+\hypertarget{class_interface_1_1_i_passenger}{}\doxysection{Interface\+::I\+Passenger Class Reference}
+\label{class_interface_1_1_i_passenger}\index{Interface::IPassenger@{Interface::IPassenger}}
+
+
+Passenger\+IF is an interface which every passenger in game implements.  
+
+
+
+
+{\ttfamily \#include $<$ipassenger.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::I\+Passenger\+:
+% FIG 0
+
+
+Collaboration diagram for Interface\+::I\+Passenger\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_i_passenger_a801315be836f64347793187a80cc7b35}{I\+Passenger}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}}.(For documentation). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_i_passenger_a6940a052745137ec3e103b0abb3eed84}\label{class_interface_1_1_i_passenger_a6940a052745137ec3e103b0abb3eed84}} 
+virtual \mbox{\hyperlink{class_interface_1_1_i_passenger_a6940a052745137ec3e103b0abb3eed84}{$\sim$\+I\+Passenger}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_interface}{Interface}} has default virtual destructor (base class needs to have a virtual destructor). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_interface_1_1_i_passenger_a7c25d707bdc900ce4fa0a2be6854f8a3}{is\+In\+Vehicle}} () const =0
+\begin{DoxyCompactList}\small\item\em is\+In\+Vehicle tells if passenger is in any vehicle currently. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_vehicle}{I\+Vehicle}} $>$ \mbox{\hyperlink{class_interface_1_1_i_passenger_a0496f381ea435eebf0516735204f7afc}{get\+Vehicle}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Vehicle returns the vehicle passenger is in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Passenger\+IF is an interface which every passenger in game implements. 
+
+Passenger\+IF is inherited from Actor\+IF interface. If class method doesn\textquotesingle{}t have exception guarantee of nothrow, method can leak out exception {\ttfamily std\+::bad\+\_\+alloc} (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_passenger_a801315be836f64347793187a80cc7b35}\label{class_interface_1_1_i_passenger_a801315be836f64347793187a80cc7b35}} 
+\index{Interface::IPassenger@{Interface::IPassenger}!IPassenger@{IPassenger}}
+\index{IPassenger@{IPassenger}!Interface::IPassenger@{Interface::IPassenger}}
+\doxysubsubsection{\texorpdfstring{IPassenger()}{IPassenger()}}
+{\footnotesize\ttfamily Interface\+::\+I\+Passenger\+::\+I\+Passenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}}.(For documentation). 
+
+\begin{DoxyPostcond}{Postcondition}
+Passenger is not in any vehicle by default. Passengers destination is set. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_passenger_a0496f381ea435eebf0516735204f7afc}\label{class_interface_1_1_i_passenger_a0496f381ea435eebf0516735204f7afc}} 
+\index{Interface::IPassenger@{Interface::IPassenger}!getVehicle@{getVehicle}}
+\index{getVehicle@{getVehicle}!Interface::IPassenger@{Interface::IPassenger}}
+\doxysubsubsection{\texorpdfstring{getVehicle()}{getVehicle()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_interface_1_1_i_vehicle}{I\+Vehicle}}$>$ Interface\+::\+I\+Passenger\+::get\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Vehicle returns the vehicle passenger is in. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vechicle where passenger is in. Empty pointer if passenger is not in any vehicle. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_passenger_ae35132ae3b48f270e1be094f494209bb}{Course\+Side\+::\+Passenger}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_passenger_a7c25d707bdc900ce4fa0a2be6854f8a3}\label{class_interface_1_1_i_passenger_a7c25d707bdc900ce4fa0a2be6854f8a3}} 
+\index{Interface::IPassenger@{Interface::IPassenger}!isInVehicle@{isInVehicle}}
+\index{isInVehicle@{isInVehicle}!Interface::IPassenger@{Interface::IPassenger}}
+\doxysubsubsection{\texorpdfstring{isInVehicle()}{isInVehicle()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+I\+Passenger\+::is\+In\+Vehicle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+is\+In\+Vehicle tells if passenger is in any vehicle currently. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Boolean, tells wether passenger is in any vehicle. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_course_side_1_1_passenger_a6ef7fe0540fd26f846492dd7bf913972}{Course\+Side\+::\+Passenger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/interfaces/\mbox{\hyperlink{ipassenger_8hh}{ipassenger.\+hh}}\end{DoxyCompactItemize}

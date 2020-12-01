@@ -35,11 +35,11 @@ digraph "Game/city.h"
   Node15 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node15 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node16 [label="../Course/CourseLib\l/actors/stop.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stop_8hh.html",tooltip=" "];
+  Node16 [label="../Course/CourseLib\l/actors/stop.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stop_8hh_source.html",tooltip=" "];
   Node16 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node16 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="actors/passenger.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$passenger_8hh.html",tooltip=" "];
+  Node17 [label="actors/passenger.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$passenger_8hh_source.html",tooltip=" "];
   Node17 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node17 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node17 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -64,7 +64,7 @@ digraph "Game/city.h"
   Node22 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node22 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node22 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node23 [label="pokemon.h",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$pokemon_8h.html",tooltip=" "];
+  Node23 [label="pokemon.h",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$pokemon_8h_source.html",tooltip=" "];
   Node23 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node23 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node23 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -102,7 +102,7 @@ digraph "Game/city.h"
   Node40 [label="QGridLayout",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node22 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node41 [label="Utils/helpers.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$helpers_8hh.html",tooltip=" "];
+  Node41 [label="Utils/helpers.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$helpers_8hh_source.html",tooltip=" "];
   Node41 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node42 [label="../Course/CourseLib\l/core/location.hh",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node41 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

@@ -1,0 +1,122 @@
+\hypertarget{class_interface_1_1_init_error}{}\doxysection{Interface\+::Init\+Error Class Reference}
+\label{class_interface_1_1_init_error}\index{Interface::InitError@{Interface::InitError}}
+
+
+Exception class that expresses errors during the initialization of the game.  
+
+
+
+
+{\ttfamily \#include $<$initerror.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::Init\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for Interface\+::Init\+Error\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_init_error_a6e7c0c5fe8806a1beb7cf6e63cad1702}{Init\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interface_1_1_init_error_a4c3a6cb615a513129e2a07da873f2391}{Init\+Error}} (const Q\+String \&message)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_init_error_a9842ae35e907c900bf3fd7636128aa0d}\label{class_interface_1_1_init_error_a9842ae35e907c900bf3fd7636128aa0d}} 
+virtual \mbox{\hyperlink{class_interface_1_1_init_error_a9842ae35e907c900bf3fd7636128aa0d}{$\sim$\+Init\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_interface_1_1_init_error_a23d8bb7e725cfba0cec3ac9eaa82cac5}{what}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Implements std\+::exception interface. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_interface_1_1_init_error_a324c4a89356108b2863d4ace16a84ccb}{give\+Message}} () const
+\begin{DoxyCompactList}\small\item\em give\+Message gives a message that clarifies the cause of the exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception class that expresses errors during the initialization of the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_init_error_a6e7c0c5fe8806a1beb7cf6e63cad1702}\label{class_interface_1_1_init_error_a6e7c0c5fe8806a1beb7cf6e63cad1702}} 
+\index{Interface::InitError@{Interface::InitError}!InitError@{InitError}}
+\index{InitError@{InitError}!Interface::InitError@{Interface::InitError}}
+\doxysubsubsection{\texorpdfstring{InitError()}{InitError()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interface\+::\+Init\+Error\+::\+Init\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+Creates \mbox{\hyperlink{class_interface_1_1_init_error}{Init\+Error}} without a message. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_init_error_a4c3a6cb615a513129e2a07da873f2391}\label{class_interface_1_1_init_error_a4c3a6cb615a513129e2a07da873f2391}} 
+\index{Interface::InitError@{Interface::InitError}!InitError@{InitError}}
+\index{InitError@{InitError}!Interface::InitError@{Interface::InitError}}
+\doxysubsubsection{\texorpdfstring{InitError()}{InitError()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interface\+::\+Init\+Error\+::\+Init\+Error (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & a message that clarifies the error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Creates \mbox{\hyperlink{class_interface_1_1_init_error}{Init\+Error}} that constains the message. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_init_error_a324c4a89356108b2863d4ace16a84ccb}\label{class_interface_1_1_init_error_a324c4a89356108b2863d4ace16a84ccb}} 
+\index{Interface::InitError@{Interface::InitError}!giveMessage@{giveMessage}}
+\index{giveMessage@{giveMessage}!Interface::InitError@{Interface::InitError}}
+\doxysubsubsection{\texorpdfstring{giveMessage()}{giveMessage()}}
+{\footnotesize\ttfamily Q\+String Interface\+::\+Init\+Error\+::give\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+give\+Message gives a message that clarifies the cause of the exception. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Message given in the constructor or empty string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interface_1_1_init_error_a23d8bb7e725cfba0cec3ac9eaa82cac5}\label{class_interface_1_1_init_error_a23d8bb7e725cfba0cec3ac9eaa82cac5}} 
+\index{Interface::InitError@{Interface::InitError}!what@{what}}
+\index{what@{what}!Interface::InitError@{Interface::InitError}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char $\ast$ Interface\+::\+Init\+Error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements std\+::exception interface. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Name of the exception class. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/errors/\mbox{\hyperlink{initerror_8hh}{initerror.\+hh}}\item 
+Course/\+Course\+Lib/errors/initerror.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{class_dialog}{}\doxysection{Dialog Class Reference}
+\label{class_dialog}\index{Dialog@{Dialog}}
+
+
+The \mbox{\hyperlink{class_dialog}{Dialog}} class -\/ greeting dialog.  
+
+
+
+
+{\ttfamily \#include $<$dialog.\+hh$>$}
+
+
+
+Inheritance diagram for Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for Dialog\+:
+% FIG 1
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dialog_a05a4ca7d8f9099493b8597223b59c1e6}{on\+Open\+Setting}} ()
+\begin{DoxyCompactList}\small\item\em on\+Open\+Setting \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dialog_aa40b69ca1c97bb0b9802bed5e807f5f4}{game\+Setting\+Changed}} (\mbox{\hyperlink{struct_utils_1_1_game_setting}{Utils\+::\+Game\+Setting}} setting)
+\begin{DoxyCompactList}\small\item\em S\+I\+G\+N\+AL game\+Setting\+Changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dialog_ab30ac48588a82983f653f58d50a52ddc}{Dialog}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_dialog}{Dialog}} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_dialog}{Dialog}} class -\/ greeting dialog. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dialog_ab30ac48588a82983f653f58d50a52ddc}\label{class_dialog_ab30ac48588a82983f653f58d50a52ddc}} 
+\index{Dialog@{Dialog}!Dialog@{Dialog}}
+\index{Dialog@{Dialog}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{Dialog()}{Dialog()}}
+{\footnotesize\ttfamily Dialog\+::\+Dialog (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_dialog}{Dialog}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+the dialog is not in removed state. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dialog_aa40b69ca1c97bb0b9802bed5e807f5f4}\label{class_dialog_aa40b69ca1c97bb0b9802bed5e807f5f4}} 
+\index{Dialog@{Dialog}!gameSettingChanged@{gameSettingChanged}}
+\index{gameSettingChanged@{gameSettingChanged}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{gameSettingChanged}{gameSettingChanged}}
+{\footnotesize\ttfamily void Dialog\+::game\+Setting\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_utils_1_1_game_setting}{Utils\+::\+Game\+Setting}}}]{setting }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+S\+I\+G\+N\+AL game\+Setting\+Changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setting} & \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_dialog_a05a4ca7d8f9099493b8597223b59c1e6}\label{class_dialog_a05a4ca7d8f9099493b8597223b59c1e6}} 
+\index{Dialog@{Dialog}!onOpenSetting@{onOpenSetting}}
+\index{onOpenSetting@{onOpenSetting}!Dialog@{Dialog}}
+\doxysubsubsection{\texorpdfstring{onOpenSetting}{onOpenSetting}}
+{\footnotesize\ttfamily void Dialog\+::on\+Open\+Setting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+on\+Open\+Setting 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+no throw 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & memory is not available, the function might leak out std\+::bad\+\_\+alloc \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/dialog.\+hh\item 
+Game/dialog.\+cpp\end{DoxyCompactItemize}

@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['readfiles_482',['readFiles',['../class_course_side_1_1_offline_reader.html#a95ab469154bf7738c300744c09951333',1,'CourseSide::OfflineReader']]],
-  ['readofflinedata_483',['readOfflineData',['../class_course_side_1_1_logic.html#aaa8190f5c3deb59b40fcca7b718db865',1,'CourseSide::Logic']]],
-  ['readpokemondata_484',['readPokemonData',['../namespace_model.html#af53a92973e0c2b9da0677a388a59d534',1,'Model']]],
-  ['remove_485',['remove',['../class_course_side_1_1_nysse.html#a0449635b7cca375fce2e6f88be92d3ee',1,'CourseSide::Nysse::remove()'],['../class_course_side_1_1_passenger.html#a303b52a8d8158f373a2efea2cfe0003d',1,'CourseSide::Passenger::remove()'],['../class_interface_1_1_i_actor.html#a0a640d8a1f30964d8eff287c928032c0',1,'Interface::IActor::remove()'],['../class_model_1_1_player.html#a0505df6258aaba83a8682073e6d888d0',1,'Model::Player::remove()']]],
-  ['removeactor_486',['removeActor',['../class_interface_1_1_i_city.html#a634b64858cbf5e52fdc60d7d59bb25a9',1,'Interface::ICity::removeActor()'],['../class_model_1_1_city.html#a05e53c1d05034208def4084dc249222a',1,'Model::City::removeActor()']]],
-  ['removepassenger_487',['removePassenger',['../class_course_side_1_1_nysse.html#a0570a2c4aa8b8c84dd3239efe6fefc3d',1,'CourseSide::Nysse::removePassenger()'],['../class_course_side_1_1_stop.html#a3fd43f5442d5971815a818af38d1e8c1',1,'CourseSide::Stop::removePassenger()'],['../class_interface_1_1_i_vehicle.html#a48272ee2318718a22a29f8add05e9472',1,'Interface::IVehicle::removePassenger()']]]
+  ['score_256',['score',['../class_model_1_1_pokemon.html#a7542bcf5b1cafb9649bdfe5d338f8071',1,'Model::Pokemon']]],
+  ['setbackground_257',['setBackground',['../class_interface_1_1_i_city.html#a429a9dd7d9f16607e3c9ed2b554f0e1d',1,'Interface::ICity::setBackground()'],['../class_model_1_1_city.html#a9e1a9fe7ec6469138c00c30b4b5ba2a7',1,'Model::City::setBackground()']]],
+  ['setclock_258',['setClock',['../class_interface_1_1_i_city.html#a397cb96750b1e4534e12f1cd85c756ff',1,'Interface::ICity::setClock()'],['../class_model_1_1_city.html#a272e36865ee44a1d1d60c340e9f2f454',1,'Model::City::setClock()']]],
+  ['setcoord_259',['setCoord',['../class_model_1_1_character.html#a6a571b4f21c6a7e488eff6efcd252621',1,'Model::Character::setCoord(Interface::Location loc)'],['../class_model_1_1_character.html#a2245f894158a43cef6375b1c3cf22dfa',1,'Model::Character::setCoord(int x, int y)']]],
+  ['setnortheast_260',['setNorthEast',['../class_interface_1_1_location.html#ae137e3489b12adeae2ec5da5502bce86',1,'Interface::Location']]],
+  ['settooltiptext_261',['setTooltipText',['../class_model_1_1_character.html#a5702d1f3d7ba58037de4ee1b2cad3e88',1,'Model::Character']]],
+  ['settruecoord_262',['setTrueCoord',['../class_model_1_1_character.html#a8076dcef0064d5261d9837675f25555f',1,'Model::Character']]],
+  ['setxy_263',['setXY',['../class_interface_1_1_location.html#a2991a4110be44c0d5fa18178ace5d0fb',1,'Interface::Location']]],
+  ['startgame_264',['startGame',['../class_interface_1_1_i_city.html#acd6ac71137fe0561c57acd958ce24309',1,'Interface::ICity::startGame()'],['../class_model_1_1_city.html#a2f35ab582f2b0742cd13c3ed9b8ba6fa',1,'Model::City::startGame()'],['../class_main_window.html#aa05813d353cccf400d3561cc309089af',1,'MainWindow::startGame()']]],
+  ['statistics_265',['Statistics',['../class_stats_1_1_statistics.html#a5c730e2607485140241399b707bf38bc',1,'Stats::Statistics']]]
 ];

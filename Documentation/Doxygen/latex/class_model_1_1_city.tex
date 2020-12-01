@@ -1,0 +1,672 @@
+\hypertarget{class_model_1_1_city}{}\doxysection{Model\+::City Class Reference}
+\label{class_model_1_1_city}\index{Model::City@{Model::City}}
+
+
+The \mbox{\hyperlink{class_model_1_1_city}{City}} class @inherits Q\+Object -\/ to use signal -\/ slot mechanism @inherits Icity -\/ used course\+Side logic.  
+
+
+
+
+{\ttfamily \#include $<$city.\+h$>$}
+
+
+
+Inheritance diagram for Model\+::City\+:
+% FIG 0
+
+
+Collaboration diagram for Model\+::City\+:
+% FIG 1
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_1_1_city_aed16c5162f7695a6304754702244101b}{key\+Press}} (int command)
+\begin{DoxyCompactList}\small\item\em key\+Press \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_ac601533222fc08caf84d224e949366b9}{on\+Time\+Increased}} ()
+\begin{DoxyCompactList}\small\item\em on\+Time\+Increased -\/ move the player if he is in the bus and pokemon ball \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_1_1_city_a323b6c68c51cc3bdea23d57af6e000cb}{update\+Fuel}} (int fuel)
+\begin{DoxyCompactList}\small\item\em update\+Fuel is emitted when the fuel changes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a9043f409e409e74ed597373371f262cc}{collide\+Ball}} (\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} pokemon)
+\begin{DoxyCompactList}\small\item\em collide\+Ball is emitted when the player catches a pokemon ball \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a14ac67dd6fcf30a452567e5c0fb44aa7}{game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em game\+Over is emitted when \mbox{\hyperlink{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}{is\+Game\+Over()}} return true \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_af8b73edaf46bea2a23291bec54f3206a}{actor\+Changed}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor, int delta)
+\begin{DoxyCompactList}\small\item\em actor\+Changed is emitted when the actor counts changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_city_a6d54068fa98b4ce59f5ac32d62fac793}{City}} (\mbox{\hyperlink{struct_utils_1_1_game_setting}{Utils\+::\+Game\+Setting}} game\+Setting, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_city}{City}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_1_1_city_a15105acb126201b72744f9bf281a30c3}\label{class_model_1_1_city_a15105acb126201b72744f9bf281a30c3}} 
+\mbox{\hyperlink{class_model_1_1_city_a15105acb126201b72744f9bf281a30c3}{$\sim$\+City}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_city}{City}} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a9e1a9fe7ec6469138c00c30b4b5ba2a7}{set\+Background}} (Q\+Image \&basicbackground, Q\+Image \&bigbackground)
+\begin{DoxyCompactList}\small\item\em set\+Background sets the bitmap picture of the game area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a272e36865ee44a1d1d60c340e9f2f454}{set\+Clock}} (Q\+Time clock)
+\begin{DoxyCompactList}\small\item\em set\+Clock sets the time of the game clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a2f35ab582f2b0742cd13c3ed9b8ba6fa}{start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em start\+Game \end{DoxyCompactList}\item 
+Q\+Graphics\+Scene $\ast$ \mbox{\hyperlink{class_model_1_1_city_ad20b65d9caf3c6afc332a6edfe899d1a}{get\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Get city map scene. \end{DoxyCompactList}\item 
+Q\+Dialog $\ast$ \mbox{\hyperlink{class_model_1_1_city_ae15709af48b82a22a360f16bdf6b6cb1}{get\+Player\+Bag}} (Q\+Widget $\ast$parent=0) const
+\begin{DoxyCompactList}\small\item\em Generate a dialog to display player\textquotesingle{}s bag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_ae033faf586953e7854c2edb5130d6535}{add\+Stop}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{I\+Stop}} $>$ stop)
+\begin{DoxyCompactList}\small\item\em Add new stop to city\textquotesingle{}s map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a1d10a31b6e74cc864f03ef42497303aa}{add\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ newactor)
+\begin{DoxyCompactList}\small\item\em add\+Actor adds a new actor to the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a8f91f42c7dfa8059773373f123601b7c}{add\+Main\+Actor}} ()
+\begin{DoxyCompactList}\small\item\em Add new main player to city\textquotesingle{}s map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a05e53c1d05034208def4084dc249222a}{remove\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)
+\begin{DoxyCompactList}\small\item\em remove\+Actor removes the actor from the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_ae21a0b4682f5c1b74de58adefa2c2057}{add\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em Add new pokemon ball to city\textquotesingle{}s map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_adc1a36909ed348b5f286d8a035a31b8d}{generate\+Balls}} ()
+\begin{DoxyCompactList}\small\item\em Generate initial balls into city\textquotesingle{}s map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} \mbox{\hyperlink{class_model_1_1_city_aefc56cbc2988ae8c8e040a2cd126d319}{generate\+Pokemon}} ()
+\begin{DoxyCompactList}\small\item\em Generate random pokemon when player catches a ball. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a1963dfaae5ec693ec5526519b185befd}{actor\+Removed}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)
+\begin{DoxyCompactList}\small\item\em actor\+Removed tells the city that actor is removed ingame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_model_1_1_city_ad13c66b8f4621746fbac2ddfcda2e6d6}{find\+Actor}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor) const
+\begin{DoxyCompactList}\small\item\em find\+Actor checks if the given actor is in the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a8b31965c302e95986ede237305622594}{actor\+Moved}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ actor)
+\begin{DoxyCompactList}\small\item\em actor\+Moved is an operation that is used to tell wether certain actor has moved. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ $>$ \mbox{\hyperlink{class_model_1_1_city_a43bd53321c5863e5fbc681eeaead88aa}{get\+Nearby\+Actors}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} loc) const
+\begin{DoxyCompactList}\small\item\em get\+Nearby\+Actors returns actors that are close to given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_city_a938f1d2c7854b0659ebd089a740662d0}{handle\+Collision}} ()
+\begin{DoxyCompactList}\small\item\em Handle event when player catches a pokemon ball. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}{is\+Game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em is\+Game\+Over tells wether the game is overor not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_model_1_1_city}{City}} class @inherits Q\+Object -\/ to use signal -\/ slot mechanism @inherits Icity -\/ used course\+Side logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_city_a6d54068fa98b4ce59f5ac32d62fac793}\label{class_model_1_1_city_a6d54068fa98b4ce59f5ac32d62fac793}} 
+\index{Model::City@{Model::City}!City@{City}}
+\index{City@{City}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{City()}{City()}}
+{\footnotesize\ttfamily Model\+::\+City\+::\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_utils_1_1_game_setting}{Utils\+::\+Game\+Setting}}}]{game\+Setting,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_model_1_1_city}{City}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Setting} & -\/ give game setting has been chosen. \\
+\hline
+{\em parent} & -\/ parent widget \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+the object is not in removed state after constructor. Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_city_af8b73edaf46bea2a23291bec54f3206a}\label{class_model_1_1_city_af8b73edaf46bea2a23291bec54f3206a}} 
+\index{Model::City@{Model::City}!actorChanged@{actorChanged}}
+\index{actorChanged@{actorChanged}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{actorChanged}{actorChanged}}
+{\footnotesize\ttfamily void Model\+::\+City\+::actor\+Changed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor,  }\item[{int}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+actor\+Changed is emitted when the actor counts changed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & the actor that changes in amount \\
+\hline
+{\em delta} & amount of change \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_model_1_1_city_a8b31965c302e95986ede237305622594}\label{class_model_1_1_city_a8b31965c302e95986ede237305622594}} 
+\index{Model::City@{Model::City}!actorMoved@{actorMoved}}
+\index{actorMoved@{actorMoved}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{actorMoved()}{actorMoved()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::actor\+Moved (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+actor\+Moved is an operation that is used to tell wether certain actor has moved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that has moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. Given actor is found in the city. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_aaf47d22d3113e2f774d00453cb315d00}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a1963dfaae5ec693ec5526519b185befd}\label{class_model_1_1_city_a1963dfaae5ec693ec5526519b185befd}} 
+\index{Model::City@{Model::City}!actorRemoved@{actorRemoved}}
+\index{actorRemoved@{actorRemoved}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{actorRemoved()}{actorRemoved()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::actor\+Removed (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+actor\+Removed tells the city that actor is removed ingame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that is set removed ingame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. Given actor is found in the city. Actor has {\ttfamily actor.\+is\+Removed() == true}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_afcca2544603e17c5141a569982812e25}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a1d10a31b6e74cc864f03ef42497303aa}\label{class_model_1_1_city_a1d10a31b6e74cc864f03ef42497303aa}} 
+\index{Model::City@{Model::City}!addActor@{addActor}}
+\index{addActor@{addActor}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{addActor()}{addActor()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::add\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{newactor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+add\+Actor adds a new actor to the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newactor} & actor to be added to the city that fulfills Actor\+IF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is added to the city. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Game\+Error} & Actor is already in the city. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a298c7ca730e83f4495b33a137714d7d8}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_ae21a0b4682f5c1b74de58adefa2c2057}\label{class_model_1_1_city_ae21a0b4682f5c1b74de58adefa2c2057}} 
+\index{Model::City@{Model::City}!addBall@{addBall}}
+\index{addBall@{addBall}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{addBall()}{addBall()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::add\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add new pokemon ball to city\textquotesingle{}s map. 
+
+\begin{DoxyPrecond}{Precondition}
+map\textquotesingle{}s scene is init 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_model_1_1_city_a8f91f42c7dfa8059773373f123601b7c}\label{class_model_1_1_city_a8f91f42c7dfa8059773373f123601b7c}} 
+\index{Model::City@{Model::City}!addMainActor@{addMainActor}}
+\index{addMainActor@{addMainActor}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{addMainActor()}{addMainActor()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::add\+Main\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add new main player to city\textquotesingle{}s map. 
+
+\begin{DoxyPrecond}{Precondition}
+map\textquotesingle{}s scene is init 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_model_1_1_city_ae033faf586953e7854c2edb5130d6535}\label{class_model_1_1_city_ae033faf586953e7854c2edb5130d6535}} 
+\index{Model::City@{Model::City}!addStop@{addStop}}
+\index{addStop@{addStop}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{addStop()}{addStop()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::add\+Stop (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_stop}{I\+Stop}} $>$}]{stop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add new stop to city\textquotesingle{}s map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop} & pointer to to be added stop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+map\textquotesingle{}s scene is init 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a347fe0662fcd162fa9f18a3be41c8b0b}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a9043f409e409e74ed597373371f262cc}\label{class_model_1_1_city_a9043f409e409e74ed597373371f262cc}} 
+\index{Model::City@{Model::City}!collideBall@{collideBall}}
+\index{collideBall@{collideBall}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{collideBall}{collideBall}}
+{\footnotesize\ttfamily void Model\+::\+City\+::collide\+Ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}}}]{pokemon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+collide\+Ball is emitted when the player catches a pokemon ball 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pokemon} & the pokemon that player has caught \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_model_1_1_city_ad13c66b8f4621746fbac2ddfcda2e6d6}\label{class_model_1_1_city_ad13c66b8f4621746fbac2ddfcda2e6d6}} 
+\index{Model::City@{Model::City}!findActor@{findActor}}
+\index{findActor@{findActor}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{findActor()}{findActor()}}
+{\footnotesize\ttfamily bool Model\+::\+City\+::find\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+find\+Actor checks if the given actor is in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor that that is looked for in the city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Boolean that tells wether the actor is in the city. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a62bf5db4db4534d50e10b67b87ffd7fe}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a14ac67dd6fcf30a452567e5c0fb44aa7}\label{class_model_1_1_city_a14ac67dd6fcf30a452567e5c0fb44aa7}} 
+\index{Model::City@{Model::City}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily void Model\+::\+City\+::game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+game\+Over is emitted when \mbox{\hyperlink{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}{is\+Game\+Over()}} return true 
+
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_model_1_1_city_adc1a36909ed348b5f286d8a035a31b8d}\label{class_model_1_1_city_adc1a36909ed348b5f286d8a035a31b8d}} 
+\index{Model::City@{Model::City}!generateBalls@{generateBalls}}
+\index{generateBalls@{generateBalls}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{generateBalls()}{generateBalls()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::generate\+Balls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate initial balls into city\textquotesingle{}s map. 
+
+\begin{DoxyPrecond}{Precondition}
+game setting is set 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_model_1_1_city_aefc56cbc2988ae8c8e040a2cd126d319}\label{class_model_1_1_city_aefc56cbc2988ae8c8e040a2cd126d319}} 
+\index{Model::City@{Model::City}!generatePokemon@{generatePokemon}}
+\index{generatePokemon@{generatePokemon}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{generatePokemon()}{generatePokemon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} Model\+::\+City\+::generate\+Pokemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate random pokemon when player catches a ball. 
+
+\begin{DoxyPrecond}{Precondition}
+player\textquotesingle{}s item collides with a ball\textquotesingle{}s item 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: no throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_model_1_1_city_ad20b65d9caf3c6afc332a6edfe899d1a}\label{class_model_1_1_city_ad20b65d9caf3c6afc332a6edfe899d1a}} 
+\index{Model::City@{Model::City}!getMap@{getMap}}
+\index{getMap@{getMap}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{getMap()}{getMap()}}
+{\footnotesize\ttfamily Q\+Graphics\+Scene $\ast$ Model\+::\+City\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get city map scene. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_model_1_1_city}{City}} map Q\+Graphics\+Scene 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+map\textquotesingle{}s scene is init 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee \+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_city_a43bd53321c5863e5fbc681eeaead88aa}\label{class_model_1_1_city_a43bd53321c5863e5fbc681eeaead88aa}} 
+\index{Model::City@{Model::City}!getNearbyActors@{getNearbyActors}}
+\index{getNearbyActors@{getNearbyActors}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{getNearbyActors()}{getNearbyActors()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$ $>$ Model\+::\+City\+::get\+Nearby\+Actors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{loc }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get\+Nearby\+Actors returns actors that are close to given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & Location for getting the actors close to it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Vector containing actors close to the location, that pass {\ttfamily get\+Location().is\+Close(loc) == true}. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a40b338c8611a1d1febb36799af6ac730}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_ae15709af48b82a22a360f16bdf6b6cb1}\label{class_model_1_1_city_ae15709af48b82a22a360f16bdf6b6cb1}} 
+\index{Model::City@{Model::City}!getPlayerBag@{getPlayerBag}}
+\index{getPlayerBag@{getPlayerBag}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{getPlayerBag()}{getPlayerBag()}}
+{\footnotesize\ttfamily Q\+Dialog $\ast$ Model\+::\+City\+::get\+Player\+Bag (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Generate a dialog to display player\textquotesingle{}s bag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & parent widget \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\+Dialog showing player\textquotesingle{}s bag 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+-\/ game is started 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+-\/ exception guarantee \+: basic 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & memory is not available, this might leak out std\+::bad\+\_\+alloc \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_model_1_1_city_a938f1d2c7854b0659ebd089a740662d0}\label{class_model_1_1_city_a938f1d2c7854b0659ebd089a740662d0}} 
+\index{Model::City@{Model::City}!handleCollision@{handleCollision}}
+\index{handleCollision@{handleCollision}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::handle\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handle event when player catches a pokemon ball. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}\label{class_model_1_1_city_a750035a92e7c13ae9492cd832f9bee8d}} 
+\index{Model::City@{Model::City}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool Model\+::\+City\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+is\+Game\+Over tells wether the game is overor not. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if game is over, else ´false´ 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a70332db91296970d903393604b9e6b77}{Interface\+::\+I\+City}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_model_1_1_city_aed16c5162f7695a6304754702244101b}\label{class_model_1_1_city_aed16c5162f7695a6304754702244101b}} 
+\index{Model::City@{Model::City}!keyPress@{keyPress}}
+\index{keyPress@{keyPress}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{keyPress}{keyPress}}
+{\footnotesize\ttfamily void Model\+::\+City\+::key\+Press (\begin{DoxyParamCaption}\item[{int}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+key\+Press 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee \+: no throw. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_city_ac601533222fc08caf84d224e949366b9}\label{class_model_1_1_city_ac601533222fc08caf84d224e949366b9}} 
+\index{Model::City@{Model::City}!onTimeIncreased@{onTimeIncreased}}
+\index{onTimeIncreased@{onTimeIncreased}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{onTimeIncreased}{onTimeIncreased}}
+{\footnotesize\ttfamily void Model\+::\+City\+::on\+Time\+Increased (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+on\+Time\+Increased -\/ move the player if he is in the bus and pokemon ball 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee \+: no throw. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_city_a05e53c1d05034208def4084dc249222a}\label{class_model_1_1_city_a05e53c1d05034208def4084dc249222a}} 
+\index{Model::City@{Model::City}!removeActor@{removeActor}}
+\index{removeActor@{removeActor}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{removeActor()}{removeActor()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::remove\+Actor (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_interface_1_1_i_actor}{I\+Actor}} $>$}]{actor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+remove\+Actor removes the actor from the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & Actor to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is removed from the city. Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out-\/of-\/range} & -\/ The actor does not persist in city \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a634b64858cbf5e52fdc60d7d59bb25a9}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a9e1a9fe7ec6469138c00c30b4b5ba2a7}\label{class_model_1_1_city_a9e1a9fe7ec6469138c00c30b4b5ba2a7}} 
+\index{Model::City@{Model::City}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::set\+Background (\begin{DoxyParamCaption}\item[{Q\+Image \&}]{basicbackground,  }\item[{Q\+Image \&}]{bigbackground }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Background sets the bitmap picture of the game area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em basicbackground} & Normal sized picture used as the game area. Bottom left position of the picture in pixelcoordinates can be found out using the offset()-\/method. \\
+\hline
+{\em bigbackground} & Background of the game that is bigger than normal. Used only if doing Scrolling map-\/expansion. Bottom left position of the picture in pixelcoordinates can be found out using the offset()-\/method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in init state. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Picture for the game area is set. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Init\+Error} & Setting the picture was unsuccesful or the picture was invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a429a9dd7d9f16607e3c9ed2b554f0e1d}{Interface\+::\+I\+City}}.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{class_model_1_1_city_a272e36865ee44a1d1d60c340e9f2f454}\label{class_model_1_1_city_a272e36865ee44a1d1d60c340e9f2f454}} 
+\index{Model::City@{Model::City}!setClock@{setClock}}
+\index{setClock@{setClock}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{setClock()}{setClock()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::set\+Clock (\begin{DoxyParamCaption}\item[{Q\+Time}]{clock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Clock sets the time of the game clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clock} & Game clock time at the function call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily kello.\+is\+Valid() == true}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Time is set. Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_a397cb96750b1e4534e12f1cd85c756ff}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a2f35ab582f2b0742cd13c3ed9b8ba6fa}\label{class_model_1_1_city_a2f35ab582f2b0742cd13c3ed9b8ba6fa}} 
+\index{Model::City@{Model::City}!startGame@{startGame}}
+\index{startGame@{startGame}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Model\+::\+City\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+start\+Game 
+
+\begin{DoxyPrecond}{Precondition}
+logic is initialized 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee \+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & memory is not available, this might leak out std\+::bad\+\_\+alloc \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_city_acd6ac71137fe0561c57acd958ce24309}{Interface\+::\+I\+City}}.
+
+\mbox{\Hypertarget{class_model_1_1_city_a323b6c68c51cc3bdea23d57af6e000cb}\label{class_model_1_1_city_a323b6c68c51cc3bdea23d57af6e000cb}} 
+\index{Model::City@{Model::City}!updateFuel@{updateFuel}}
+\index{updateFuel@{updateFuel}!Model::City@{Model::City}}
+\doxysubsubsection{\texorpdfstring{updateFuel}{updateFuel}}
+{\footnotesize\ttfamily void Model\+::\+City\+::update\+Fuel (\begin{DoxyParamCaption}\item[{int}]{fuel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+update\+Fuel is emitted when the fuel changes 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{class_model_1_1_city}{City}} is in gamestate. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/\mbox{\hyperlink{city_8h}{city.\+h}}\item 
+Game/city.\+cc\end{DoxyCompactItemize}

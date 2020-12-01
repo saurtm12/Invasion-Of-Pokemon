@@ -9,6 +9,5 @@ digraph "Game" {
     dir_04811c4941b9653693f84748e3c79bc0 [shape=box label="Utils" color="black" fillcolor="white" style="filled" URL="dir_04811c4941b9653693f84748e3c79bc0.html"];
   }
   dir_e6896a8a5f37dc8990fe861f004b1f70 [shape=box label="Course" fillcolor="white" style="filled" color="red" URL="dir_e6896a8a5f37dc8990fe861f004b1f70.html"];
-  dir_c33286056d2acf479cd8641ef845fec1->dir_e6896a8a5f37dc8990fe861f004b1f70 [headlabel="18", labeldistance=1.5 headhref="dir_000008_000000.html"];
-  dir_c33286056d2acf479cd8641ef845fec1->dir_04811c4941b9653693f84748e3c79bc0 [headlabel="4", labeldistance=1.5 headhref="dir_000008_000010.html"];
+  dir_c33286056d2acf479cd8641ef845fec1->dir_e6896a8a5f37dc8990fe861f004b1f70 [headlabel="12", labeldistance=1.5 headhref="dir_000009_000000.html"];
 }

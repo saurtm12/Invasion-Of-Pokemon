@@ -1,0 +1,14 @@
+digraph "Game/character.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Game/character.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Define Character class which is a graphics of a moving actor on city map."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Game/city.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$city_8h.html",tooltip="Define city class."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Game/mainwindow.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mainwindow_8hh_source.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Game/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

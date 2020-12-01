@@ -1,0 +1,161 @@
+\hypertarget{class_interface_1_1_i_actor}{}\doxysection{Interface\+::I\+Actor Class Reference}
+\label{class_interface_1_1_i_actor}\index{Interface::IActor@{Interface::IActor}}
+
+
+Actor\+IF is an interface, which every single actor moving in the game implements.  
+
+
+
+
+{\ttfamily \#include $<$iactor.\+hh$>$}
+
+
+
+Inheritance diagram for Interface\+::I\+Actor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_i_actor_ac13a121e7cfc0030d0db81fc2f84fad7}{I\+Actor}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}} (For documentation). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_i_actor_af7c2d6370eba42b50b0aca35576a734d}\label{class_interface_1_1_i_actor_af7c2d6370eba42b50b0aca35576a734d}} 
+virtual \mbox{\hyperlink{class_interface_1_1_i_actor_af7c2d6370eba42b50b0aca35576a734d}{$\sim$\+I\+Actor}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_interface}{Interface}} has default virtual destructor (base class needs to have a virtual destructor). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_interface_1_1_location}{Location}} \mbox{\hyperlink{class_interface_1_1_i_actor_a34e63d2e3af592679d76654a8519eb38}{give\+Location}} () const =0
+\begin{DoxyCompactList}\small\item\em give\+Location returns the location of the actor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_actor_ab882fb01fe2d19676a6571d8d8f7e29a}{move}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} loc)=0
+\begin{DoxyCompactList}\small\item\em move-\/method moves the actor to given location. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_interface_1_1_i_actor_ab107d9e18fc4a90755e55e5b5881c1d8}{is\+Removed}} () const =0
+\begin{DoxyCompactList}\small\item\em is\+Removed tells if the actor is removed ingame. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_interface_1_1_i_actor_a0a640d8a1f30964d8eff287c928032c0}{remove}} ()=0
+\begin{DoxyCompactList}\small\item\em remove marks the actor as removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Actor\+IF is an interface, which every single actor moving in the game implements. 
+
+If class method doesn\textquotesingle{}t have exception guarantee of nothrow, method can leak out exception {\ttfamily std\+::bad\+\_\+alloc} (out of memory) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_actor_ac13a121e7cfc0030d0db81fc2f84fad7}\label{class_interface_1_1_i_actor_ac13a121e7cfc0030d0db81fc2f84fad7}} 
+\index{Interface::IActor@{Interface::IActor}!IActor@{IActor}}
+\index{IActor@{IActor}!Interface::IActor@{Interface::IActor}}
+\doxysubsubsection{\texorpdfstring{IActor()}{IActor()}}
+{\footnotesize\ttfamily Interface\+::\+I\+Actor\+::\+I\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for the \mbox{\hyperlink{namespace_interface}{Interface}} (For documentation). 
+
+\begin{DoxyPostcond}{Postcondition}
+Actor isn\textquotesingle{}t in removed-\/state by default. (Toimija ei alussa ole tuhottu-\/tilassa.) 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_i_actor_a34e63d2e3af592679d76654a8519eb38}\label{class_interface_1_1_i_actor_a34e63d2e3af592679d76654a8519eb38}} 
+\index{Interface::IActor@{Interface::IActor}!giveLocation@{giveLocation}}
+\index{giveLocation@{giveLocation}!Interface::IActor@{Interface::IActor}}
+\doxysubsubsection{\texorpdfstring{giveLocation()}{giveLocation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_interface_1_1_location}{Location}} Interface\+::\+I\+Actor\+::give\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+give\+Location returns the location of the actor. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Actors location. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}} & -\/ actor wasn\textquotesingle{}t given a location. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_player_a3c63809b972e3264b1068be9de6d373b}{Model\+::\+Player}}, \mbox{\hyperlink{class_course_side_1_1_nysse_ab73e25183bda29cbc252ce21894e4b26}{Course\+Side\+::\+Nysse}}, and \mbox{\hyperlink{class_course_side_1_1_passenger_ade3c2fb1d7b5a31a6c19926c1f733362}{Course\+Side\+::\+Passenger}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_actor_ab107d9e18fc4a90755e55e5b5881c1d8}\label{class_interface_1_1_i_actor_ab107d9e18fc4a90755e55e5b5881c1d8}} 
+\index{Interface::IActor@{Interface::IActor}!isRemoved@{isRemoved}}
+\index{isRemoved@{isRemoved}!Interface::IActor@{Interface::IActor}}
+\doxysubsubsection{\texorpdfstring{isRemoved()}{isRemoved()}}
+{\footnotesize\ttfamily virtual bool Interface\+::\+I\+Actor\+::is\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+is\+Removed tells if the actor is removed ingame. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if actor is removed ingame, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_player_a4afa1cef24e5ee1b4ad76024cf98b5c1}{Model\+::\+Player}}, \mbox{\hyperlink{class_course_side_1_1_nysse_af06060b0ed6bf668d6004da4a8e33f1a}{Course\+Side\+::\+Nysse}}, and \mbox{\hyperlink{class_course_side_1_1_passenger_a04b43acba265d9d063a8133e40760261}{Course\+Side\+::\+Passenger}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_actor_ab882fb01fe2d19676a6571d8d8f7e29a}\label{class_interface_1_1_i_actor_ab882fb01fe2d19676a6571d8d8f7e29a}} 
+\index{Interface::IActor@{Interface::IActor}!move@{move}}
+\index{move@{move}!Interface::IActor@{Interface::IActor}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Actor\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{loc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+move-\/method moves the actor to given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & Actors new location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actors location is sij. Excaption guarantee\+: strong. 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_interface_1_1_game_error}{Game\+Error}}} & \mbox{\hyperlink{class_interface_1_1_location}{Location}} is not possible. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_player_adee86f3dd72de9e290248c284dcb4b12}{Model\+::\+Player}}, \mbox{\hyperlink{class_course_side_1_1_nysse_ae332147d64310dd020fb9649f694fe46}{Course\+Side\+::\+Nysse}}, and \mbox{\hyperlink{class_course_side_1_1_passenger_ae1d2f7c7740103213c3a96531aa2f59b}{Course\+Side\+::\+Passenger}}.
+
+\mbox{\Hypertarget{class_interface_1_1_i_actor_a0a640d8a1f30964d8eff287c928032c0}\label{class_interface_1_1_i_actor_a0a640d8a1f30964d8eff287c928032c0}} 
+\index{Interface::IActor@{Interface::IActor}!remove@{remove}}
+\index{remove@{remove}!Interface::IActor@{Interface::IActor}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily virtual void Interface\+::\+I\+Actor\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+remove marks the actor as removed. 
+
+\begin{DoxyPrecond}{Precondition}
+Actor is not removed already. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Actor is removed, after this \mbox{\hyperlink{class_interface_1_1_i_actor_ab107d9e18fc4a90755e55e5b5881c1d8}{is\+Removed()}} returns {\ttfamily true}. Exception guarantee\+: basic. 
+\end{DoxyPostcond}
+
+
+Implemented in \mbox{\hyperlink{class_model_1_1_player_a0505df6258aaba83a8682073e6d888d0}{Model\+::\+Player}}, \mbox{\hyperlink{class_course_side_1_1_nysse_a0449635b7cca375fce2e6f88be92d3ee}{Course\+Side\+::\+Nysse}}, and \mbox{\hyperlink{class_course_side_1_1_passenger_a303b52a8d8158f373a2efea2cfe0003d}{Course\+Side\+::\+Passenger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/interfaces/\mbox{\hyperlink{iactor_8hh}{iactor.\+hh}}\end{DoxyCompactItemize}

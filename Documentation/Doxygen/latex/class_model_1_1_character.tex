@@ -1,0 +1,313 @@
+\hypertarget{class_model_1_1_character}{}\doxysection{Model\+::Character Class Reference}
+\label{class_model_1_1_character}\index{Model::Character@{Model::Character}}
+
+
+The \mbox{\hyperlink{class_model_1_1_character}{Character}} class -\/ defines items on the map @inherits Graphics\+Pixmap\+Item.  
+
+
+
+
+{\ttfamily \#include $<$character.\+hh$>$}
+
+
+
+Inheritance diagram for Model\+::Character\+:
+% FIG 0
+
+
+Collaboration diagram for Model\+::Character\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_character_a70ed7cbc0250478e05a69662e6672bac}{Character}} (const Q\+Pixmap \&pixmap, \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} loc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_character}{Character}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_1_1_character_a3a442396a652660c23e05947f85b628e}\label{class_model_1_1_character_a3a442396a652660c23e05947f85b628e}} 
+\mbox{\hyperlink{class_model_1_1_character_a3a442396a652660c23e05947f85b628e}{$\sim$\+Character}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_character}{Character}} destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_1_1_character_a2c691f07d162958503e130011886922b}{getX}} ()
+\begin{DoxyCompactList}\small\item\em getX \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_1_1_character_a83c0f85833b4c48b7793d970acb006d0}{getY}} ()
+\begin{DoxyCompactList}\small\item\em getY \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} \mbox{\hyperlink{class_model_1_1_character_a67a58fdbae3c382a57ef0d7c0147caed}{get\+Location}} () const
+\begin{DoxyCompactList}\small\item\em get current Location \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_1_1_character_aec6efb04469a4c78242dfd0d3349d6bb}{get\+Step}} () const
+\begin{DoxyCompactList}\small\item\em get step (or speed of the item) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_character_a6a571b4f21c6a7e488eff6efcd252621}{set\+Coord}} (\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} loc)
+\begin{DoxyCompactList}\small\item\em set location for item \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_character_a2245f894158a43cef6375b1c3cf22dfa}{set\+Coord}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em set location for item (this is overload method) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_character_a8076dcef0064d5261d9837675f25555f}{set\+True\+Coord}} (\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} true\+Loc)
+\begin{DoxyCompactList}\small\item\em set true(in big map) location for item \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_character_a5702d1f3d7ba58037de4ee1b2cad3e88}{set\+Tooltip\+Text}} (Q\+String text)
+\begin{DoxyCompactList}\small\item\em set tooltip text for use when hovering over the item \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_1_1_character_acc2d9ceaa6f5e55c743c915e31d020d0}{give\+Step}} (int step)
+\begin{DoxyCompactList}\small\item\em set step/speed for the item when moving on map \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_model_1_1_character_a3e2170617c4eb463826a7362158ef650}{move}} (int horizontal\+Multiplier, int vertical\+Multiplier)
+\begin{DoxyCompactList}\small\item\em move the item on the map with axis multipliers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_1_1_character_a2b1260fb6474ab13e76bd06daa6d535c}\label{class_model_1_1_character_a2b1260fb6474ab13e76bd06daa6d535c}} 
+void {\bfseries hover\+Enter\+Event} (Q\+Graphics\+Scene\+Hover\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_model_1_1_character_a1c7ac27dc7695c8907a2201c2a72ed2c}\label{class_model_1_1_character_a1c7ac27dc7695c8907a2201c2a72ed2c}} 
+void {\bfseries hover\+Leave\+Event} (Q\+Graphics\+Scene\+Hover\+Event $\ast$event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_model_1_1_character}{Character}} class -\/ defines items on the map @inherits Graphics\+Pixmap\+Item. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_character_a70ed7cbc0250478e05a69662e6672bac}\label{class_model_1_1_character_a70ed7cbc0250478e05a69662e6672bac}} 
+\index{Model::Character@{Model::Character}!Character@{Character}}
+\index{Character@{Character}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily Model\+::\+Character\+::\+Character (\begin{DoxyParamCaption}\item[{const Q\+Pixmap \&}]{pixmap,  }\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{loc }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_model_1_1_character}{Character}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixmap} & pixmap to a image for the graphic item \\
+\hline
+{\em loc} & initial location to be moved to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_character_a67a58fdbae3c382a57ef0d7c0147caed}\label{class_model_1_1_character_a67a58fdbae3c382a57ef0d7c0147caed}} 
+\index{Model::Character@{Model::Character}!getLocation@{getLocation}}
+\index{getLocation@{getLocation}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{getLocation()}{getLocation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}} Model\+::\+Character\+::get\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get current Location 
+
+\begin{DoxyReturn}{Returns}
+location in city map 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_model_1_1_character_aec6efb04469a4c78242dfd0d3349d6bb}\label{class_model_1_1_character_aec6efb04469a4c78242dfd0d3349d6bb}} 
+\index{Model::Character@{Model::Character}!getStep@{getStep}}
+\index{getStep@{getStep}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{getStep()}{getStep()}}
+{\footnotesize\ttfamily int Model\+::\+Character\+::get\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get step (or speed of the item) 
+
+\begin{DoxyReturn}{Returns}
+speed of the item 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+Setting is set before the game start 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_character_a2c691f07d162958503e130011886922b}\label{class_model_1_1_character_a2c691f07d162958503e130011886922b}} 
+\index{Model::Character@{Model::Character}!getX@{getX}}
+\index{getX@{getX}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Model\+::\+Character\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getX 
+
+\begin{DoxyReturn}{Returns}
+X location in city map. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_model_1_1_character_a83c0f85833b4c48b7793d970acb006d0}\label{class_model_1_1_character_a83c0f85833b4c48b7793d970acb006d0}} 
+\index{Model::Character@{Model::Character}!getY@{getY}}
+\index{getY@{getY}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Model\+::\+Character\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getY 
+
+\begin{DoxyReturn}{Returns}
+Y location in city map 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_model_1_1_character_acc2d9ceaa6f5e55c743c915e31d020d0}\label{class_model_1_1_character_acc2d9ceaa6f5e55c743c915e31d020d0}} 
+\index{Model::Character@{Model::Character}!giveStep@{giveStep}}
+\index{giveStep@{giveStep}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{giveStep()}{giveStep()}}
+{\footnotesize\ttfamily void Model\+::\+Character\+::give\+Step (\begin{DoxyParamCaption}\item[{int}]{step }\end{DoxyParamCaption})}
+
+
+
+set step/speed for the item when moving on map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em step} & step to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+game setting should be set before init the class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_model_1_1_character_a3e2170617c4eb463826a7362158ef650}\label{class_model_1_1_character_a3e2170617c4eb463826a7362158ef650}} 
+\index{Model::Character@{Model::Character}!move@{move}}
+\index{move@{move}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily bool Model\+::\+Character\+::move (\begin{DoxyParamCaption}\item[{int}]{horizontal\+Multiplier,  }\item[{int}]{vertical\+Multiplier }\end{DoxyParamCaption})}
+
+
+
+move the item on the map with axis multipliers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em horizontal\+Multiplier} & multiplier for item\textquotesingle{}s step on horizontal direction \\
+\hline
+{\em vertical\+Multiplier} & multiplier for item\textquotesingle{}s step on vertical direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+item\textquotesingle{}s step should be set in advanced 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_model_1_1_character_a2245f894158a43cef6375b1c3cf22dfa}\label{class_model_1_1_character_a2245f894158a43cef6375b1c3cf22dfa}} 
+\index{Model::Character@{Model::Character}!setCoord@{setCoord}}
+\index{setCoord@{setCoord}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{setCoord()}{setCoord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Model\+::\+Character\+::set\+Coord (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+set location for item (this is overload method) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coord \\
+\hline
+{\em y} & vertical coord \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x and y are coord in small map 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_character_a6a571b4f21c6a7e488eff6efcd252621}\label{class_model_1_1_character_a6a571b4f21c6a7e488eff6efcd252621}} 
+\index{Model::Character@{Model::Character}!setCoord@{setCoord}}
+\index{setCoord@{setCoord}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{setCoord()}{setCoord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Model\+::\+Character\+::set\+Coord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{loc }\end{DoxyParamCaption})}
+
+
+
+set location for item 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & location to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+provided location must be location for small map (500x500). This method would convert to big map 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_model_1_1_character_a5702d1f3d7ba58037de4ee1b2cad3e88}\label{class_model_1_1_character_a5702d1f3d7ba58037de4ee1b2cad3e88}} 
+\index{Model::Character@{Model::Character}!setTooltipText@{setTooltipText}}
+\index{setTooltipText@{setTooltipText}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{setTooltipText()}{setTooltipText()}}
+{\footnotesize\ttfamily void Model\+::\+Character\+::set\+Tooltip\+Text (\begin{DoxyParamCaption}\item[{Q\+String}]{text }\end{DoxyParamCaption})}
+
+
+
+set tooltip text for use when hovering over the item 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the text will be shown, can be in form of rich text. Empty text will not show tooltip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_model_1_1_character_a8076dcef0064d5261d9837675f25555f}\label{class_model_1_1_character_a8076dcef0064d5261d9837675f25555f}} 
+\index{Model::Character@{Model::Character}!setTrueCoord@{setTrueCoord}}
+\index{setTrueCoord@{setTrueCoord}!Model::Character@{Model::Character}}
+\doxysubsubsection{\texorpdfstring{setTrueCoord()}{setTrueCoord()}}
+{\footnotesize\ttfamily void Model\+::\+Character\+::set\+True\+Coord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Interface\+::\+Location}}}]{true\+Loc }\end{DoxyParamCaption})}
+
+
+
+set true(in big map) location for item 
+
+
+\begin{DoxyParams}{Parameters}
+{\em true\+Loc} & location to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+provided location must be location for big map (1095x592) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: No throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/\mbox{\hyperlink{character_8hh}{character.\+hh}}\item 
+Game/character.\+cc\end{DoxyCompactItemize}

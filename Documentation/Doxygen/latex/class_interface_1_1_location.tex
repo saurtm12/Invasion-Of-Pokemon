@@ -1,0 +1,329 @@
+\hypertarget{class_interface_1_1_location}{}\doxysection{Interface\+::Location Class Reference}
+\label{class_interface_1_1_location}\index{Interface::Location@{Interface::Location}}
+
+
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is a class, which has methods dealing with the location of the objects.  
+
+
+
+
+{\ttfamily \#include $<$location.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_1_1_location_ad46bb78e1bc5de791d4e77c9f46453d4}{Location}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interface_1_1_location_ad6dc3ce985b33b20371a5e3fb60a241b}{Location}} (int northcoord, int eastcoord)
+\begin{DoxyCompactList}\small\item\em Constructor that defines a location in certain map coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_interface_1_1_location_aca56c6f2a2a9ce5fbe76b9b3befc1003}{giveX}} () const
+\begin{DoxyCompactList}\small\item\em giveX returns the x-\/coordinate of the location in the pixel grid of the game ui. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_interface_1_1_location_ab03d95e6d68a774796b50fa7542b1b61}{giveY}} () const
+\begin{DoxyCompactList}\small\item\em giveY returns the y-\/coordinate of the location in the pixel grid of the game ui. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interface_1_1_location_a2991a4110be44c0d5fa18178ace5d0fb}{set\+XY}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em set\+XY moves the location to a new point.(In pixel grid) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_interface_1_1_location_af17690bb42890e10529389a6bdce6991}{give\+Northern\+Coord}} () const
+\begin{DoxyCompactList}\small\item\em give\+Northern\+Coord returns the location of the northern coordinate from map grid. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_interface_1_1_location_ad3f5fd16f14aae62f2dd20f5fde1804d}{give\+Eastern\+Coord}} () const
+\begin{DoxyCompactList}\small\item\em give\+Eastern\+Coord returns the location of the eastern coordinate from map grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interface_1_1_location_ae137e3489b12adeae2ec5da5502bce86}{set\+North\+East}} (int northcoord, int eastcoord)
+\begin{DoxyCompactList}\small\item\em set\+North\+East moves the location to a new coordinate in map grid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interface_1_1_location_a6020fd3d0beadae34282fe2af9b3e69a}{is\+Close}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} const \&loc, int limit=10) const
+\begin{DoxyCompactList}\small\item\em is\+Close tells if given location is close to this location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_interface_1_1_location_a9bb8e240fc35b0c67d86aa24c430cc4b}{print\+Both}} ()
+\begin{DoxyCompactList}\small\item\em print\+Both prints (for debugging purposes) both map and pixel coordinates of the location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_1_1_location_ac60566c2c0321c9d443a9346110b2a25}\label{class_interface_1_1_location_ac60566c2c0321c9d443a9346110b2a25}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_interface_1_1_location}{Location}} \&location)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_interface_1_1_location_aa173757cc60962ecdeef28581afa5878}{calc\+Distance}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} a, \mbox{\hyperlink{class_interface_1_1_location}{Location}} b)
+\begin{DoxyCompactList}\small\item\em calc\+Distance calculates the distance between two locations in map grid. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_interface_1_1_location}{Location}} \mbox{\hyperlink{class_interface_1_1_location_a1bd79f247bb7783c57ece45c6065c537}{calc\+Between}} (\mbox{\hyperlink{class_interface_1_1_location}{Location}} a, \mbox{\hyperlink{class_interface_1_1_location}{Location}} b, double distance)
+\begin{DoxyCompactList}\small\item\em calc\+Between calculates wanted position between two locations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is a class, which has methods dealing with the location of the objects. 
+
+The class provides transformation from map coordinates to pixel coordinates and back, calculation of the distnce and the possibility of generating points between two coordinates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interface_1_1_location_ad46bb78e1bc5de791d4e77c9f46453d4}\label{class_interface_1_1_location_ad46bb78e1bc5de791d4e77c9f46453d4}} 
+\index{Interface::Location@{Interface::Location}!Location@{Location}}
+\index{Location@{Location}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{Location()}{Location()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interface\+::\+Location\+::\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is set to north=6700000, east=3500000. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_interface_1_1_location_ad6dc3ce985b33b20371a5e3fb60a241b}\label{class_interface_1_1_location_ad6dc3ce985b33b20371a5e3fb60a241b}} 
+\index{Interface::Location@{Interface::Location}!Location@{Location}}
+\index{Location@{Location}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{Location()}{Location()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interface\+::\+Location\+::\+Location (\begin{DoxyParamCaption}\item[{int}]{northcoord,  }\item[{int}]{eastcoord }\end{DoxyParamCaption})}
+
+
+
+Constructor that defines a location in certain map coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em northcoord} & northern coordinate of the location \\
+\hline
+{\em eastcoord} & eastern coordinate of the location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is given. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_1_1_location_a1bd79f247bb7783c57ece45c6065c537}\label{class_interface_1_1_location_a1bd79f247bb7783c57ece45c6065c537}} 
+\index{Interface::Location@{Interface::Location}!calcBetween@{calcBetween}}
+\index{calcBetween@{calcBetween}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{calcBetween()}{calcBetween()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interface_1_1_location}{Location}} Interface\+::\+Location\+::calc\+Between (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{a,  }\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{b,  }\item[{double}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+calc\+Between calculates wanted position between two locations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first location \\
+\hline
+{\em b} & second location \\
+\hline
+{\em distance} & ratio where point between a and b is. 0.\+0=at a, 1.\+0=at b, 0.\+5=in the middle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} of the ration between a and b 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_location_aa173757cc60962ecdeef28581afa5878}\label{class_interface_1_1_location_aa173757cc60962ecdeef28581afa5878}} 
+\index{Interface::Location@{Interface::Location}!calcDistance@{calcDistance}}
+\index{calcDistance@{calcDistance}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{calcDistance()}{calcDistance()}}
+{\footnotesize\ttfamily double Interface\+::\+Location\+::calc\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{a,  }\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+calc\+Distance calculates the distance between two locations in map grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first location \\
+\hline
+{\em b} & second location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+distance between two locations 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_location_ad3f5fd16f14aae62f2dd20f5fde1804d}\label{class_interface_1_1_location_ad3f5fd16f14aae62f2dd20f5fde1804d}} 
+\index{Interface::Location@{Interface::Location}!giveEasternCoord@{giveEasternCoord}}
+\index{giveEasternCoord@{giveEasternCoord}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{giveEasternCoord()}{giveEasternCoord()}}
+{\footnotesize\ttfamily double Interface\+::\+Location\+::give\+Eastern\+Coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+give\+Eastern\+Coord returns the location of the eastern coordinate from map grid. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Eastern coordinate 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_interface_1_1_location_af17690bb42890e10529389a6bdce6991}\label{class_interface_1_1_location_af17690bb42890e10529389a6bdce6991}} 
+\index{Interface::Location@{Interface::Location}!giveNorthernCoord@{giveNorthernCoord}}
+\index{giveNorthernCoord@{giveNorthernCoord}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{giveNorthernCoord()}{giveNorthernCoord()}}
+{\footnotesize\ttfamily double Interface\+::\+Location\+::give\+Northern\+Coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+give\+Northern\+Coord returns the location of the northern coordinate from map grid. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Northern coordinate 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_interface_1_1_location_aca56c6f2a2a9ce5fbe76b9b3befc1003}\label{class_interface_1_1_location_aca56c6f2a2a9ce5fbe76b9b3befc1003}} 
+\index{Interface::Location@{Interface::Location}!giveX@{giveX}}
+\index{giveX@{giveX}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{giveX()}{giveX()}}
+{\footnotesize\ttfamily int Interface\+::\+Location\+::giveX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+giveX returns the x-\/coordinate of the location in the pixel grid of the game ui. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+X-\/pixel coordinate. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_interface_1_1_location_ab03d95e6d68a774796b50fa7542b1b61}\label{class_interface_1_1_location_ab03d95e6d68a774796b50fa7542b1b61}} 
+\index{Interface::Location@{Interface::Location}!giveY@{giveY}}
+\index{giveY@{giveY}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{giveY()}{giveY()}}
+{\footnotesize\ttfamily int Interface\+::\+Location\+::giveY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+giveY returns the y-\/coordinate of the location in the pixel grid of the game ui. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Y-\/pixel coordinate. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_interface_1_1_location_a6020fd3d0beadae34282fe2af9b3e69a}\label{class_interface_1_1_location_a6020fd3d0beadae34282fe2af9b3e69a}} 
+\index{Interface::Location@{Interface::Location}!isClose@{isClose}}
+\index{isClose@{isClose}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{isClose()}{isClose()}}
+{\footnotesize\ttfamily bool Interface\+::\+Location\+::is\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface_1_1_location}{Location}} const \&}]{loc,  }\item[{int}]{limit = {\ttfamily 10} }\end{DoxyParamCaption}) const}
+
+
+
+is\+Close tells if given location is close to this location. 
+
+Returns true if in function call {\ttfamily s1.\+is\+Close(s2)} positions {\ttfamily s1} and {\ttfamily s2} are close enough to affect each other in game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & location which closeness ic checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Boolean which tells wether loc is close to this location. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: nothrow. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_location_a9bb8e240fc35b0c67d86aa24c430cc4b}\label{class_interface_1_1_location_a9bb8e240fc35b0c67d86aa24c430cc4b}} 
+\index{Interface::Location@{Interface::Location}!printBoth@{printBoth}}
+\index{printBoth@{printBoth}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{printBoth()}{printBoth()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::print\+Both (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print\+Both prints (for debugging purposes) both map and pixel coordinates of the location. 
+
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Prints coordinates. Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_interface_1_1_location_ae137e3489b12adeae2ec5da5502bce86}\label{class_interface_1_1_location_ae137e3489b12adeae2ec5da5502bce86}} 
+\index{Interface::Location@{Interface::Location}!setNorthEast@{setNorthEast}}
+\index{setNorthEast@{setNorthEast}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{setNorthEast()}{setNorthEast()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::set\+North\+East (\begin{DoxyParamCaption}\item[{int}]{northcoord,  }\item[{int}]{eastcoord }\end{DoxyParamCaption})}
+
+
+
+set\+North\+East moves the location to a new coordinate in map grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em northcoord} & northern coordinate of the new location \\
+\hline
+{\em eastcoord} & eastern coordinate of the new location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is updated. Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_interface_1_1_location_a2991a4110be44c0d5fa18178ace5d0fb}\label{class_interface_1_1_location_a2991a4110be44c0d5fa18178ace5d0fb}} 
+\index{Interface::Location@{Interface::Location}!setXY@{setXY}}
+\index{setXY@{setXY}!Interface::Location@{Interface::Location}}
+\doxysubsubsection{\texorpdfstring{setXY()}{setXY()}}
+{\footnotesize\ttfamily void Interface\+::\+Location\+::set\+XY (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+set\+XY moves the location to a new point.(In pixel grid) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/pixel coordinate of the new location \\
+\hline
+{\em y} & y-\/pixel coordinate of the new location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{class_interface_1_1_location}{Location}} is updated. Exception guarantee\+: strong. 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Course/\+Course\+Lib/core/\mbox{\hyperlink{location_8hh}{location.\+hh}}\item 
+Course/\+Course\+Lib/core/location.\+cc\end{DoxyCompactItemize}

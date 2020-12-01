@@ -1,0 +1,213 @@
+\hypertarget{class_stats_1_1_statistics}{}\doxysection{Stats\+::Statistics Class Reference}
+\label{class_stats_1_1_statistics}\index{Stats::Statistics@{Stats::Statistics}}
+
+
+The \mbox{\hyperlink{class_stats_1_1_statistics}{Statistics}} class @inherits i\+Statistic.  
+
+
+
+
+{\ttfamily \#include $<$statistics.\+hh$>$}
+
+
+
+Inheritance diagram for Stats\+::Statistics\+:
+% FIG 0
+
+
+Collaboration diagram for Stats\+::Statistics\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_1_1_statistics_a5c730e2607485140241399b707bf38bc}{Statistics}} (int passengers=0, int buses=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_stats_1_1_statistics}{Statistics}} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_1_1_statistics_aeb88c55666ea55a06204e8242f953b86}{more\+Passengers}} (int num)
+\begin{DoxyCompactList}\small\item\em some amount of passengers is added/removed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_1_1_statistics_a81411c994e28ad0569a42c40e4c4b320}{nysse\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em a Bus is removed forcefully (by external reasons) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_1_1_statistics_a40387c3caf6db2312e883ee822f157af}{new\+Nysse}} ()
+\begin{DoxyCompactList}\small\item\em a Bus is introduced \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_1_1_statistics_a3211df22d757039fd86039cc28dda68d}{nysse\+Left}} ()
+\begin{DoxyCompactList}\small\item\em a Bus is removed by wrong addition (by internal reasons) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_1_1_statistics_afe98a720d79451aeb0da707b14b5228d}{add\+Scores}} (int score=20)
+\begin{DoxyCompactList}\small\item\em scores is added to player \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_1_1_statistics_a8ccd9ba30b122af0eaa85b4ec2c55c9e}{get\+Number\+Of\+Buses}} () const
+\begin{DoxyCompactList}\small\item\em get total number of buses \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_1_1_statistics_a9f56105fc6a094cb8a1a3e178e2effea}{get\+Number\+Of\+Passengers}} () const
+\begin{DoxyCompactList}\small\item\em get total number of passengers \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stats_1_1_statistics_a35a1e7357cd197d42f4b824bee35db00}{get\+Scores}} () const
+\begin{DoxyCompactList}\small\item\em get total number of scores \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_stats_1_1_statistics}{Statistics}} class @inherits i\+Statistic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stats_1_1_statistics_a5c730e2607485140241399b707bf38bc}\label{class_stats_1_1_statistics_a5c730e2607485140241399b707bf38bc}} 
+\index{Stats::Statistics@{Stats::Statistics}!Statistics@{Statistics}}
+\index{Statistics@{Statistics}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{Statistics()}{Statistics()}}
+{\footnotesize\ttfamily Stats\+::\+Statistics\+::\+Statistics (\begin{DoxyParamCaption}\item[{int}]{passengers = {\ttfamily 0},  }\item[{int}]{buses = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_stats_1_1_statistics}{Statistics}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em passengers} & number of passenger initially \\
+\hline
+{\em buses} & number of buses initially \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Init\+Error} & -\/ initial passengers or buses is negative \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stats_1_1_statistics_afe98a720d79451aeb0da707b14b5228d}\label{class_stats_1_1_statistics_afe98a720d79451aeb0da707b14b5228d}} 
+\index{Stats::Statistics@{Stats::Statistics}!addScores@{addScores}}
+\index{addScores@{addScores}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{addScores()}{addScores()}}
+{\footnotesize\ttfamily int Stats\+::\+Statistics\+::add\+Scores (\begin{DoxyParamCaption}\item[{int}]{score = {\ttfamily 20} }\end{DoxyParamCaption})}
+
+
+
+scores is added to player 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_stats_1_1_statistics_a8ccd9ba30b122af0eaa85b4ec2c55c9e}\label{class_stats_1_1_statistics_a8ccd9ba30b122af0eaa85b4ec2c55c9e}} 
+\index{Stats::Statistics@{Stats::Statistics}!getNumberOfBuses@{getNumberOfBuses}}
+\index{getNumberOfBuses@{getNumberOfBuses}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{getNumberOfBuses()}{getNumberOfBuses()}}
+{\footnotesize\ttfamily int Stats\+::\+Statistics\+::get\+Number\+Of\+Buses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get total number of buses 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_stats_1_1_statistics_a9f56105fc6a094cb8a1a3e178e2effea}\label{class_stats_1_1_statistics_a9f56105fc6a094cb8a1a3e178e2effea}} 
+\index{Stats::Statistics@{Stats::Statistics}!getNumberOfPassengers@{getNumberOfPassengers}}
+\index{getNumberOfPassengers@{getNumberOfPassengers}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{getNumberOfPassengers()}{getNumberOfPassengers()}}
+{\footnotesize\ttfamily int Stats\+::\+Statistics\+::get\+Number\+Of\+Passengers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get total number of passengers 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_stats_1_1_statistics_a35a1e7357cd197d42f4b824bee35db00}\label{class_stats_1_1_statistics_a35a1e7357cd197d42f4b824bee35db00}} 
+\index{Stats::Statistics@{Stats::Statistics}!getScores@{getScores}}
+\index{getScores@{getScores}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{getScores()}{getScores()}}
+{\footnotesize\ttfamily int Stats\+::\+Statistics\+::get\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get total number of scores 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_stats_1_1_statistics_aeb88c55666ea55a06204e8242f953b86}\label{class_stats_1_1_statistics_aeb88c55666ea55a06204e8242f953b86}} 
+\index{Stats::Statistics@{Stats::Statistics}!morePassengers@{morePassengers}}
+\index{morePassengers@{morePassengers}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{morePassengers()}{morePassengers()}}
+{\footnotesize\ttfamily void Stats\+::\+Statistics\+::more\+Passengers (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+some amount of passengers is added/removed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & number of passengers to be added or removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: strong 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Game\+Error} & -\/ Remove amount more than currently exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_statistics_a791cf77cd9fdb8f37e64832952225584}{Interface\+::\+I\+Statistics}}.
+
+\mbox{\Hypertarget{class_stats_1_1_statistics_a40387c3caf6db2312e883ee822f157af}\label{class_stats_1_1_statistics_a40387c3caf6db2312e883ee822f157af}} 
+\index{Stats::Statistics@{Stats::Statistics}!newNysse@{newNysse}}
+\index{newNysse@{newNysse}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{newNysse()}{newNysse()}}
+{\footnotesize\ttfamily void Stats\+::\+Statistics\+::new\+Nysse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+a Bus is introduced 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_statistics_ac683e84583e624d355a77f255d465d3b}{Interface\+::\+I\+Statistics}}.
+
+\mbox{\Hypertarget{class_stats_1_1_statistics_a3211df22d757039fd86039cc28dda68d}\label{class_stats_1_1_statistics_a3211df22d757039fd86039cc28dda68d}} 
+\index{Stats::Statistics@{Stats::Statistics}!nysseLeft@{nysseLeft}}
+\index{nysseLeft@{nysseLeft}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{nysseLeft()}{nysseLeft()}}
+{\footnotesize\ttfamily void Stats\+::\+Statistics\+::nysse\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+a Bus is removed by wrong addition (by internal reasons) 
+
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_statistics_a728b82296c14bcdd68e8dd362bf23429}{Interface\+::\+I\+Statistics}}.
+
+\mbox{\Hypertarget{class_stats_1_1_statistics_a81411c994e28ad0569a42c40e4c4b320}\label{class_stats_1_1_statistics_a81411c994e28ad0569a42c40e4c4b320}} 
+\index{Stats::Statistics@{Stats::Statistics}!nysseRemoved@{nysseRemoved}}
+\index{nysseRemoved@{nysseRemoved}!Stats::Statistics@{Stats::Statistics}}
+\doxysubsubsection{\texorpdfstring{nysseRemoved()}{nysseRemoved()}}
+{\footnotesize\ttfamily void Stats\+::\+Statistics\+::nysse\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+a Bus is removed forcefully (by external reasons) 
+
+\begin{DoxyPrecond}{Precondition}
+There must be buses running in traffic 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+
+
+Implements \mbox{\hyperlink{class_interface_1_1_i_statistics_ac1ef08da0ea42f4633ad86450449c56d}{Interface\+::\+I\+Statistics}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/\mbox{\hyperlink{statistics_8hh}{statistics.\+hh}}\item 
+Game/statistics.\+cc\end{DoxyCompactItemize}

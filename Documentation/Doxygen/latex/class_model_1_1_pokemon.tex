@@ -1,0 +1,150 @@
+\hypertarget{class_model_1_1_pokemon}{}\doxysection{Model\+::Pokemon Class Reference}
+\label{class_model_1_1_pokemon}\index{Model::Pokemon@{Model::Pokemon}}
+
+
+The \mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} class.  
+
+
+
+
+{\ttfamily \#include $<$pokemon.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_1_1_pokemon_a5fbcc36ee2a7d0a1dff84bff472ad2b4}{Pokemon}} (int id, Q\+String category, Q\+String name, Q\+String description, Q\+String path, int \mbox{\hyperlink{class_model_1_1_pokemon_a7542bcf5b1cafb9649bdfe5d338f8071}{score}}, int hp, int attack, int defense, int speed, int total)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_1_1_pokemon_a37484d2c42f628bf8f5a46144bfc7149}{$\sim$\+Pokemon}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} destructor -\/ do nothing. \end{DoxyCompactList}\item 
+Q\+Dialog $\ast$ \mbox{\hyperlink{class_model_1_1_pokemon_a2ae7a493495d019cc5a16388523cc8ae}{dialog\+Info}} (Q\+Widget $\ast$parent=0) const
+\begin{DoxyCompactList}\small\item\em dialog\+Info \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{class_model_1_1_pokemon_a068a71d1ed8bd6bc333ff113cf7758fe}{get\+Image}} () const
+\begin{DoxyCompactList}\small\item\em get\+Image \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_model_1_1_pokemon_a7542bcf5b1cafb9649bdfe5d338f8071}{score}} () const
+\begin{DoxyCompactList}\small\item\em score \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_model_1_1_pokemon_a5fbcc36ee2a7d0a1dff84bff472ad2b4}\label{class_model_1_1_pokemon_a5fbcc36ee2a7d0a1dff84bff472ad2b4}} 
+\index{Model::Pokemon@{Model::Pokemon}!Pokemon@{Pokemon}}
+\index{Pokemon@{Pokemon}!Model::Pokemon@{Model::Pokemon}}
+\doxysubsubsection{\texorpdfstring{Pokemon()}{Pokemon()}}
+{\footnotesize\ttfamily Model\+::\+Pokemon\+::\+Pokemon (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Q\+String}]{category,  }\item[{Q\+String}]{name,  }\item[{Q\+String}]{description,  }\item[{Q\+String}]{path,  }\item[{int}]{score,  }\item[{int}]{hp,  }\item[{int}]{attack,  }\item[{int}]{defense,  }\item[{int}]{speed,  }\item[{int}]{total }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em category} & \\
+\hline
+{\em name} & \\
+\hline
+{\em description} & \\
+\hline
+{\em path} & \\
+\hline
+{\em score} & \\
+\hline
+{\em hp} & \\
+\hline
+{\em attack} & \\
+\hline
+{\em defense} & \\
+\hline
+{\em speed} & \\
+\hline
+{\em total} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+pokemon is not in removed state by default. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_pokemon_a37484d2c42f628bf8f5a46144bfc7149}\label{class_model_1_1_pokemon_a37484d2c42f628bf8f5a46144bfc7149}} 
+\index{Model::Pokemon@{Model::Pokemon}!````~Pokemon@{$\sim$Pokemon}}
+\index{````~Pokemon@{$\sim$Pokemon}!Model::Pokemon@{Model::Pokemon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pokemon()}{~Pokemon()}}
+{\footnotesize\ttfamily Model\+::\+Pokemon\+::$\sim$\+Pokemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_model_1_1_pokemon}{Pokemon}} destructor -\/ do nothing. 
+
+\begin{DoxyPostcond}{Postcondition}
+the pokemon is successfully destructed. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_1_1_pokemon_a2ae7a493495d019cc5a16388523cc8ae}\label{class_model_1_1_pokemon_a2ae7a493495d019cc5a16388523cc8ae}} 
+\index{Model::Pokemon@{Model::Pokemon}!dialogInfo@{dialogInfo}}
+\index{dialogInfo@{dialogInfo}!Model::Pokemon@{Model::Pokemon}}
+\doxysubsubsection{\texorpdfstring{dialogInfo()}{dialogInfo()}}
+{\footnotesize\ttfamily Q\+Dialog $\ast$ Model\+::\+Pokemon\+::dialog\+Info (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+dialog\+Info 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an info graphical dialog which contains all the information about this pokemon. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Exception guarantee\+: no throw 
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em the} & program might throw std\+::bad\+\_\+alloc when out of memory. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_model_1_1_pokemon_a068a71d1ed8bd6bc333ff113cf7758fe}\label{class_model_1_1_pokemon_a068a71d1ed8bd6bc333ff113cf7758fe}} 
+\index{Model::Pokemon@{Model::Pokemon}!getImage@{getImage}}
+\index{getImage@{getImage}!Model::Pokemon@{Model::Pokemon}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily Q\+Image Model\+::\+Pokemon\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Image 
+
+\begin{DoxyReturn}{Returns}
+image of this pokemon. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_model_1_1_pokemon_a7542bcf5b1cafb9649bdfe5d338f8071}\label{class_model_1_1_pokemon_a7542bcf5b1cafb9649bdfe5d338f8071}} 
+\index{Model::Pokemon@{Model::Pokemon}!score@{score}}
+\index{score@{score}!Model::Pokemon@{Model::Pokemon}}
+\doxysubsubsection{\texorpdfstring{score()}{score()}}
+{\footnotesize\ttfamily int Model\+::\+Pokemon\+::score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+score 
+
+\begin{DoxyReturn}{Returns}
+the score for this pokemon 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+exception guarantee\+: no throw 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/pokemon.\+h\item 
+Game/pokemon.\+cc\end{DoxyCompactItemize}

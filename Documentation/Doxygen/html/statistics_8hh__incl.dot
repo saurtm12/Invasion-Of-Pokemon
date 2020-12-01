@@ -6,4 +6,6 @@ digraph "Game/statistics.hh"
   Node1 [label="Game/statistics.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Define Statistic class which is a storage for statistics of current game state."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="../Course/CourseLib\l/interfaces/istatistics.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$istatistics_8hh.html",tooltip="Defines an interface for scoring statistics."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="QDebug",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

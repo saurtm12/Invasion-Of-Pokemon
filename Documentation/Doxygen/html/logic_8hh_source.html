@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Invasion of Pokemon: Course/CourseLib/core/logic.hh Source File</title>
+<title>My Project: Course/CourseLib/core/logic.hh Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Invasion of Pokemon
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -69,12 +69,12 @@ $(function() {
 <div class="title">logic.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="logic_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LOGIC_HH</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LOGIC_HH</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOGIC_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="passenger_8hh.html">actors/passenger.hh</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="nysse_8hh.html">actors/nysse.hh</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="offlinereader_8hh.html">offlinereader.hh</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;actors/passenger.hh&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;actors/nysse.hh&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;offlinereader.hh&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="icity_8hh.html">interfaces/icity.hh</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
@@ -82,35 +82,35 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_course_side.html">CourseSide</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>CourseSide</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// default files</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespace_course_side.html#a08121e5c8bad2a7bcab828d0f88b9106">   18</a></span>&#160;<span class="keyword">const</span> QString <a class="code" href="namespace_course_side.html#a08121e5c8bad2a7bcab828d0f88b9106">DEFAULT_STOPS_FILE</a> = <span class="stringliteral">&quot;:/offlinedata/offlinedata/full_stations_kkj3.json&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespace_course_side.html#a136a6fc8ee3a865b7df4abb888025956">   19</a></span>&#160;<span class="keyword">const</span> QString <a class="code" href="namespace_course_side.html#a136a6fc8ee3a865b7df4abb888025956">DEFAULT_BUSES_FILE</a> = <span class="stringliteral">&quot;:/offlinedata/offlinedata/final_bus_liteN.json&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">const</span> QString DEFAULT_STOPS_FILE = <span class="stringliteral">&quot;:/offlinedata/offlinedata/full_stations_kkj3.json&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">const</span> QString DEFAULT_BUSES_FILE = <span class="stringliteral">&quot;:/offlinedata/offlinedata/final_bus_liteN.json&quot;</span>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_course_side_1_1_logic.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_course_side_1_1_logic.html">Logic</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_course_side_1_1_logic.html#a51808c3d4e27295b44a0dbc7c4ad03de">Logic</a>(QObject *parent = 0);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_course_side_1_1_logic.html">Logic</a>(QObject *parent = 0);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_course_side_1_1_logic.html#aaa8190f5c3deb59b40fcca7b718db865">readOfflineData</a>(<span class="keyword">const</span> QString&amp; buses, <span class="keyword">const</span> QString&amp; stops);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> readOfflineData(<span class="keyword">const</span> QString&amp; buses, <span class="keyword">const</span> QString&amp; stops);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#aaf9eb4875f2f9dfa0bd53c3dc11b7677">finalizeGameStart</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> finalizeGameStart();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a0ad56bd09c3dbe242221cf4c09e8dee2">fileConfig</a>(QString stops = <a class="code" href="namespace_course_side.html#a08121e5c8bad2a7bcab828d0f88b9106">DEFAULT_STOPS_FILE</a>, QString buses = <a class="code" href="namespace_course_side.html#a136a6fc8ee3a865b7df4abb888025956">DEFAULT_BUSES_FILE</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> fileConfig(QString stops = DEFAULT_STOPS_FILE, QString buses = DEFAULT_BUSES_FILE);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a2d04a203574c2752852a979567157acb">setTime</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> hr, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> min);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> setTime(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> hr, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> min);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_course_side_1_1_logic.html#a2fa811a6c5bc60135e18115636774a00">takeCity</a>(std::shared_ptr&lt;Interface::ICity&gt; <a class="code" href="backstory_8txt.html#a61756b8d640e50f20941ae765ea750bb">city</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> takeCity(std::shared_ptr&lt;Interface::ICity&gt; city);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#ab9094d67a55e9f56721345890821463a">advance</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a4817108c919bd888b849375a9f8e92dd">configChanged</a>(QTime time, <span class="keywordtype">bool</span> debug);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a2c4feec4eb04717a5df80fa64e4a19cf">increaseTime</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a57502fae5dda5a61866bda61f9001657">addNewBuses</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_course_side_1_1_logic.html#a9218c04edaaa52d0ccfc547bcf5bfa19">addNewPassengers</a>(std::shared_ptr&lt;Stop&gt; <a class="code" href="gamerule_8txt.html#a3401de56c819205a50dd8aa0d574003c">stop</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> no);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> advance();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> configChanged(QTime time, <span class="keywordtype">bool</span> debug);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> increaseTime();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> addNewBuses();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> addNewPassengers(std::shared_ptr&lt;Stop&gt; stop, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> no);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// ratio between game time and real time</span></div>
@@ -149,7 +149,7 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Calculates stop times based on departure times and time spent at stop (Laskee pysäkkiajat lähtöajan ja pysäkille kuluvan ajan perusteella)</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::map&lt;QTime, std::weak_ptr&lt;Stop&gt;&gt; calculateStopTimes(std::map&lt;QTime, std::shared_ptr&lt;Stop&gt;&gt;&amp; stops, QTime&amp; departure_time);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> createBus(std::shared_ptr&lt;BusData&gt; <a class="code" href="gamerule_8txt.html#aae7b149b4b54ff11ffb18833f537c347">bus</a>, QTime departure_time);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> createBus(std::shared_ptr&lt;BusData&gt; bus, QTime departure_time);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> busSID_;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
@@ -158,28 +158,9 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // LOGIC_HH</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_course_side_1_1_logic_html_aaf9eb4875f2f9dfa0bd53c3dc11b7677"><div class="ttname"><a href="class_course_side_1_1_logic.html#aaf9eb4875f2f9dfa0bd53c3dc11b7677">CourseSide::Logic::finalizeGameStart</a></div><div class="ttdeci">void finalizeGameStart()</div><div class="ttdef"><b>Definition:</b> logic.cc:31</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a0ad56bd09c3dbe242221cf4c09e8dee2"><div class="ttname"><a href="class_course_side_1_1_logic.html#a0ad56bd09c3dbe242221cf4c09e8dee2">CourseSide::Logic::fileConfig</a></div><div class="ttdeci">void fileConfig(QString stops=DEFAULT_STOPS_FILE, QString buses=DEFAULT_BUSES_FILE)</div><div class="ttdef"><b>Definition:</b> logic.cc:204</div></div>
-<div class="ttc" id="anamespace_course_side_html_a136a6fc8ee3a865b7df4abb888025956"><div class="ttname"><a href="namespace_course_side.html#a136a6fc8ee3a865b7df4abb888025956">CourseSide::DEFAULT_BUSES_FILE</a></div><div class="ttdeci">const QString DEFAULT_BUSES_FILE</div><div class="ttdef"><b>Definition:</b> logic.hh:19</div></div>
-<div class="ttc" id="aofflinereader_8hh_html"><div class="ttname"><a href="offlinereader_8hh.html">offlinereader.hh</a></div></div>
-<div class="ttc" id="anamespace_course_side_html_a08121e5c8bad2a7bcab828d0f88b9106"><div class="ttname"><a href="namespace_course_side.html#a08121e5c8bad2a7bcab828d0f88b9106">CourseSide::DEFAULT_STOPS_FILE</a></div><div class="ttdeci">const QString DEFAULT_STOPS_FILE</div><div class="ttdef"><b>Definition:</b> logic.hh:18</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a9218c04edaaa52d0ccfc547bcf5bfa19"><div class="ttname"><a href="class_course_side_1_1_logic.html#a9218c04edaaa52d0ccfc547bcf5bfa19">CourseSide::Logic::addNewPassengers</a></div><div class="ttdeci">void addNewPassengers(std::shared_ptr&lt; Stop &gt; stop, unsigned int no)</div><div class="ttdef"><b>Definition:</b> logic.cc:391</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_aaa8190f5c3deb59b40fcca7b718db865"><div class="ttname"><a href="class_course_side_1_1_logic.html#aaa8190f5c3deb59b40fcca7b718db865">CourseSide::Logic::readOfflineData</a></div><div class="ttdeci">bool readOfflineData(const QString &amp;buses, const QString &amp;stops)</div><div class="ttdef"><b>Definition:</b> logic.cc:21</div></div>
-<div class="ttc" id="abackstory_8txt_html_a61756b8d640e50f20941ae765ea750bb"><div class="ttname"><a href="backstory_8txt.html#a61756b8d640e50f20941ae765ea750bb">city</a></div><div class="ttdeci">In the first summer in a second year student want to discover the second biggest city in he only owns a bike That means he would only be able to go somewhere in short distance and slow Tampere has developed its bus system fast and omnipresent As the situation that mysterious creatures are affecting the city</div><div class="ttdef"><b>Definition:</b> backstory.txt:4</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a4817108c919bd888b849375a9f8e92dd"><div class="ttname"><a href="class_course_side_1_1_logic.html#a4817108c919bd888b849375a9f8e92dd">CourseSide::Logic::configChanged</a></div><div class="ttdeci">void configChanged(QTime time, bool debug)</div><div class="ttdef"><b>Definition:</b> logic.cc:218</div></div>
-<div class="ttc" id="anysse_8hh_html"><div class="ttname"><a href="nysse_8hh.html">nysse.hh</a></div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a51808c3d4e27295b44a0dbc7c4ad03de"><div class="ttname"><a href="class_course_side_1_1_logic.html#a51808c3d4e27295b44a0dbc7c4ad03de">CourseSide::Logic::Logic</a></div><div class="ttdeci">Logic(QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> logic.cc:12</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a57502fae5dda5a61866bda61f9001657"><div class="ttname"><a href="class_course_side_1_1_logic.html#a57502fae5dda5a61866bda61f9001657">CourseSide::Logic::addNewBuses</a></div><div class="ttdeci">void addNewBuses()</div><div class="ttdef"><b>Definition:</b> logic.cc:302</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_ab9094d67a55e9f56721345890821463a"><div class="ttname"><a href="class_course_side_1_1_logic.html#ab9094d67a55e9f56721345890821463a">CourseSide::Logic::advance</a></div><div class="ttdeci">void advance()</div><div class="ttdef"><b>Definition:</b> logic.cc:52</div></div>
-<div class="ttc" id="apassenger_8hh_html"><div class="ttname"><a href="passenger_8hh.html">passenger.hh</a></div></div>
-<div class="ttc" id="agamerule_8txt_html_a3401de56c819205a50dd8aa0d574003c"><div class="ttname"><a href="gamerule_8txt.html#a3401de56c819205a50dd8aa0d574003c">stop</a></div><div class="ttdeci">Game the player can set some setting in game also Start time is in format hour and minute This is the real time that buses are proceed on the day Remember that most buses will not run at player can press OK to save setting After player press OK in the greeting they will get back to game play main window If he presses Cancel or X the game is exited In game play player presses start to play the game The player should again click on the city map to use control key SPACE properly The player is placed in the middle of the map He will see buses are some pokemon balls are in some some not He has to catch many ball as possible to get high score The pokemon will be catch if the player move towards close to the pokemon After catching a there will be a dialog telling player that what kind of pokemon did he catched The score then would be updated Every time he catches a another is respawned When the player moves by by pressing W S A S to move to respective the energy decreases as well when he moves The player can decide to use a bus to preserve his energy If he get close enough to a bus stop</div><div class="ttdef"><b>Definition:</b> gamerule.txt:13</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a2c4feec4eb04717a5df80fa64e4a19cf"><div class="ttname"><a href="class_course_side_1_1_logic.html#a2c4feec4eb04717a5df80fa64e4a19cf">CourseSide::Logic::increaseTime</a></div><div class="ttdeci">void increaseTime()</div><div class="ttdef"><b>Definition:</b> logic.cc:228</div></div>
+<div class="ttc" id="aclass_interface_1_1_location_html"><div class="ttname"><a href="class_interface_1_1_location.html">Interface::Location</a></div><div class="ttdoc">Location is a class, which has methods dealing with the location of the objects.</div><div class="ttdef"><b>Definition:</b> location.hh:20</div></div>
 <div class="ttc" id="aicity_8hh_html"><div class="ttname"><a href="icity_8hh.html">icity.hh</a></div><div class="ttdoc">Defines an interface that reperesents the city's operations.</div></div>
-<div class="ttc" id="agamerule_8txt_html_aae7b149b4b54ff11ffb18833f537c347"><div class="ttname"><a href="gamerule_8txt.html#aae7b149b4b54ff11ffb18833f537c347">bus</a></div><div class="ttdeci">Game the player can set some setting in game also Start time is in format hour and minute This is the real time that buses are proceed on the day Remember that most buses will not run at player can press OK to save setting After player press OK in the greeting they will get back to game play main window If he presses Cancel or X the game is exited In game play player presses start to play the game The player should again click on the city map to use control key SPACE properly The player is placed in the middle of the map He will see buses are some pokemon balls are in some some not He has to catch many ball as possible to get high score The pokemon will be catch if the player move towards close to the pokemon After catching a there will be a dialog telling player that what kind of pokemon did he catched The score then would be updated Every time he catches a another is respawned When the player moves by by pressing W S A S to move to respective the energy decreases as well when he moves The player can decide to use a bus to preserve his energy If he get close enough to a bus press SPACE to get to the stop If there a bus going to this the player would get on the bus If he presses he would leave the bus</div><div class="ttdef"><b>Definition:</b> gamerule.txt:13</div></div>
 <div class="ttc" id="aclass_course_side_1_1_logic_html"><div class="ttname"><a href="class_course_side_1_1_logic.html">CourseSide::Logic</a></div><div class="ttdef"><b>Definition:</b> logic.hh:21</div></div>
-<div class="ttc" id="anamespace_course_side_html"><div class="ttname"><a href="namespace_course_side.html">CourseSide</a></div><div class="ttdef"><b>Definition:</b> nysse.cc:8</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a2fa811a6c5bc60135e18115636774a00"><div class="ttname"><a href="class_course_side_1_1_logic.html#a2fa811a6c5bc60135e18115636774a00">CourseSide::Logic::takeCity</a></div><div class="ttdeci">bool takeCity(std::shared_ptr&lt; Interface::ICity &gt; city)</div><div class="ttdef"><b>Definition:</b> logic.cc:408</div></div>
-<div class="ttc" id="aclass_course_side_1_1_logic_html_a2d04a203574c2752852a979567157acb"><div class="ttname"><a href="class_course_side_1_1_logic.html#a2d04a203574c2752852a979567157acb">CourseSide::Logic::setTime</a></div><div class="ttdeci">void setTime(unsigned short hr, unsigned short min)</div><div class="ttdef"><b>Definition:</b> logic.cc:47</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
