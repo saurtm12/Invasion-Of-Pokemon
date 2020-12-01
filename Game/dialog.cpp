@@ -31,7 +31,7 @@ void Dialog::onOpenSetting()
 {
     QDialog* settingDialog = new QDialog(this);
     settingDialog->setFixedSize(500,500);
-
+    settingDialog->setWindowTitle("Setting");
     QLabel* startTime = new QLabel("Start time:", settingDialog);
     startTime->move(10,10);
     auto font = startTime->font();
