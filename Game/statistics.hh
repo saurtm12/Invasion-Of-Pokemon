@@ -2,6 +2,7 @@
 #define STATISTICS_HH
 
 #include "../Course/CourseLib/interfaces/istatistics.hh"
+#include <QDebug>
 
 /**
  * @file statistics.hh

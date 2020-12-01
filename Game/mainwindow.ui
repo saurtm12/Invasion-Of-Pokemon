@@ -70,9 +70,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="busLabel">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>530</x>
       <y>120</y>
-      <width>131</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
@@ -89,9 +89,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="passengerLabel">
     <property name="geometry">
      <rect>
-      <x>524</x>
+      <x>514</x>
       <y>160</y>
-      <width>151</width>
+      <width>161</width>
       <height>20</height>
      </rect>
     </property>
@@ -125,9 +125,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="scoreLabel">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>550</x>
       <y>210</y>
-      <width>71</width>
+      <width>101</width>
       <height>20</height>
      </rect>
     </property>

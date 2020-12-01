@@ -60,7 +60,7 @@ QDialog* Player::getBag(QWidget* parent) const
 {
     QDialog* bagDialog = new QDialog(parent);
     bagDialog->setWindowTitle("BAG");
-    bagDialog->setFixedSize(750, 530);
+    bagDialog->setFixedSize(400, 530);
 
     QScrollArea* area = new QScrollArea(bagDialog);
     area->setFixedSize(360, 500);

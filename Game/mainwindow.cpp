@@ -177,7 +177,11 @@ void MainWindow::openLeaderboard()
 {
     auto highScores = Utils::getHighScores();
     QDialog* displayResult = new QDialog(this);
-    displayResult->setWindowTitle("Gameover!");
+    if (!isStarted) {
+        displayResult->setWindowTitle("Gameover!");
+    } else {
+        displayResult->setWindowTitle("Leaderboard");
+    }
     QLabel* text = new QLabel(displayResult);
     QString content = QString("Your Score is: ") + QString::number(stats_.getScores());
     text->setText(content);
@@ -205,7 +209,7 @@ void MainWindow::openLeaderboard()
         instruction->move(10, currentLine);
     }
     QPushButton* confirm = new QPushButton("OK", displayResult);
-    confirm->move(40, currentLine + space);
+    confirm->move(80, currentLine + space);
     connect(confirm, &QPushButton::clicked, displayResult, &QDialog::accept);
 
     displayResult->setFixedSize(250, currentLine + 2*space);
