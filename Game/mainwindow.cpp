@@ -71,11 +71,16 @@ void MainWindow::startGame()
 
     fuelBar_ = new QProgressBar(this);
     fuelBar_->move(PADDING,600);
-    fuelBar_->setMaximum(gameSetting_.fuel_);
     fuelBar_->setFixedHeight(20);
     fuelBar_->setFixedWidth(width_-PADDING);
     fuelBar_->setFormat("Fuel: %p%");
-    fuelBar_->setValue(gameSetting_.fuel_);
+    if (gameSetting_.multiplayer_ == "Yes") {
+        fuelBar_->setMaximum(2 * gameSetting_.fuel_);
+        fuelBar_->setValue(2 * gameSetting_.fuel_);
+    } else {
+        fuelBar_->setMaximum(gameSetting_.fuel_);
+        fuelBar_->setValue(gameSetting_.fuel_);
+    }
     QPalette p = fuelBar_->palette();
     p.setColor(QPalette::Highlight, QColor(0,128,0));
     fuelBar_->setPalette(p);
@@ -114,6 +119,7 @@ void MainWindow::openBag()
 
 void MainWindow::updateFuelBar(int fuel)
 {
+    qDebug() << fuel;
     fuelBar_->setValue(fuel);
 }
 
