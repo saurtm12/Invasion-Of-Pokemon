@@ -263,6 +263,14 @@ private:
      */
     int getCurrentFuel() const;
 
+    /**
+     * @brief joinStop
+     * @return true if the player join a stop successfully, else false
+     * @pre -
+     * @post exception guarantee: no throw
+     */
+    bool joinStop();
+
     int WIDTH = 1095;
     int HEIGHT = 592;
 
@@ -286,7 +294,7 @@ private:
     bool pause_;
     Utils::GameSetting gameSetting_;
     bool multiplayer_;
-    bool joinStop();
+
 };
 const int UPDATE_INTERVAL_MS = 100;
 const auto HANDLEFUNCT = &City::keyPress;

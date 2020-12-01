@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Game/Utils/helpers.hh Source File</title>
+<title>The invasion of Pokemon: Game/Utils/helpers.hh Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The invasion of Pokemon
    </div>
   </td>
  </tr>
@@ -101,29 +101,33 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> X_OFFSET_MAP = 352;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> Y_OFFSET_MAP = 558;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">const</span> std::string NYSSE_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a>).name();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">const</span> std::string PASSENGER_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a>).name();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">const</span> std::string STOP_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_stop.html">CourseSide::Stop</a>).name();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="class_interface_1_1_location.html">Location</a> convertLocation(<a class="code" href="class_interface_1_1_location.html">Location</a> loc);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> generateRandom(<span class="keywordtype">int</span> lo, <span class="keywordtype">int</span> hi);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;QString generateTooltipTextFromPassenger(<span class="keywordtype">int</span> num, std::string actor);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> writeScore(std::vector&lt;int&gt; highScores);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;std::vector&lt;int&gt; getHighScores();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // HELPERS_HH</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> WIDTH_WITH_OFFSET = 1105;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> HEIGHT_WITH_OFFSET = 602;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">const</span> std::string NYSSE_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a>).name();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">const</span> std::string PASSENGER_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a>).name();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">const</span> std::string STOP_TYPE = <span class="keyword">typeid</span>(<a class="code" href="class_course_side_1_1_stop.html">CourseSide::Stop</a>).name();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="class_interface_1_1_location.html">Location</a> convertLocation(<a class="code" href="class_interface_1_1_location.html">Location</a> loc);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> generateRandom(<span class="keywordtype">int</span> lo, <span class="keywordtype">int</span> hi);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;QString generateTooltipTextFromPassenger(<span class="keywordtype">int</span> num, std::string actor);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> writeScore(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; highScores);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;std::vector&lt;int&gt; getHighScores();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">bool</span> needUpdate(<span class="keyword">const</span> <a class="code" href="class_interface_1_1_location.html">Location</a>&amp; prev, <span class="keyword">const</span> <a class="code" href="class_interface_1_1_location.html">Location</a>&amp; cur);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // HELPERS_HH</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_course_side_1_1_nysse_html"><div class="ttname"><a href="class_course_side_1_1_nysse.html">CourseSide::Nysse</a></div><div class="ttdef"><b>Definition:</b> nysse.hh:20</div></div>
 <div class="ttc" id="aclass_interface_1_1_location_html"><div class="ttname"><a href="class_interface_1_1_location.html">Interface::Location</a></div><div class="ttdoc">Location is a class, which has methods dealing with the location of the objects.</div><div class="ttdef"><b>Definition:</b> location.hh:20</div></div>
-<div class="ttc" id="aclass_interface_1_1_location_html_a2991a4110be44c0d5fa18178ace5d0fb"><div class="ttname"><a href="class_interface_1_1_location.html#a2991a4110be44c0d5fa18178ace5d0fb">Interface::Location::setXY</a></div><div class="ttdeci">void setXY(int x, int y)</div><div class="ttdoc">setXY moves the location to a new point.(In pixel grid)</div><div class="ttdef"><b>Definition:</b> location.cc:33</div></div>
 <div class="ttc" id="anamespace_interface_html"><div class="ttname"><a href="namespace_interface.html">Interface</a></div><div class="ttdoc">All of the interfaces defined by the course are found in Interface namespace.</div><div class="ttdef"><b>Definition:</b> location.cc:7</div></div>
-<div class="ttc" id="aclass_interface_1_1_init_error_html"><div class="ttname"><a href="class_interface_1_1_init_error.html">Interface::InitError</a></div><div class="ttdoc">Exception class that expresses errors during the initialization of the game.</div><div class="ttdef"><b>Definition:</b> initerror.hh:19</div></div>
-<div class="ttc" id="aclass_interface_1_1_location_html_ab03d95e6d68a774796b50fa7542b1b61"><div class="ttname"><a href="class_interface_1_1_location.html#ab03d95e6d68a774796b50fa7542b1b61">Interface::Location::giveY</a></div><div class="ttdeci">int giveY() const</div><div class="ttdoc">giveY returns the y-coordinate of the location in the pixel grid of the game ui.</div><div class="ttdef"><b>Definition:</b> location.cc:28</div></div>
 <div class="ttc" id="aclass_course_side_1_1_passenger_html"><div class="ttname"><a href="class_course_side_1_1_passenger.html">CourseSide::Passenger</a></div><div class="ttdef"><b>Definition:</b> passenger.hh:16</div></div>
 <div class="ttc" id="aclass_course_side_1_1_stop_html"><div class="ttname"><a href="class_course_side_1_1_stop.html">CourseSide::Stop</a></div><div class="ttdef"><b>Definition:</b> stop.hh:16</div></div>
-<div class="ttc" id="aclass_interface_1_1_init_error_html_a23d8bb7e725cfba0cec3ac9eaa82cac5"><div class="ttname"><a href="class_interface_1_1_init_error.html#a23d8bb7e725cfba0cec3ac9eaa82cac5">Interface::InitError::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Implements std::exception interface.</div><div class="ttdef"><b>Definition:</b> initerror.cc:23</div></div>
-<div class="ttc" id="aclass_interface_1_1_location_html_aca56c6f2a2a9ce5fbe76b9b3befc1003"><div class="ttname"><a href="class_interface_1_1_location.html#aca56c6f2a2a9ce5fbe76b9b3befc1003">Interface::Location::giveX</a></div><div class="ttdeci">int giveX() const</div><div class="ttdoc">giveX returns the x-coordinate of the location in the pixel grid of the game ui.</div><div class="ttdef"><b>Definition:</b> location.cc:23</div></div>
 <div class="ttc" id="astruct_utils_1_1_game_setting_html"><div class="ttname"><a href="struct_utils_1_1_game_setting.html">Utils::GameSetting</a></div><div class="ttdoc">The GameSetting struct.</div><div class="ttdef"><b>Definition:</b> helpers.hh:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

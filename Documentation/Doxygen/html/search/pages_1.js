@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['programming_203_20exercise_20project_20template_281',['Programming 3 Exercise project template',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['project_3a_20the_20invasion_20of_20pokemon_281',['Project: The invasion of Pokemon',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

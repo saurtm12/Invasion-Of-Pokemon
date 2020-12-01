@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['programming_203_20exercise_20project_20template_94',['Programming 3 Exercise project template',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['project_3a_20the_20invasion_20of_20pokemon_94',['Project: The invasion of Pokemon',['../md__r_e_a_d_m_e.html',1,'']]],
   ['passenger_95',['Passenger',['../class_course_side_1_1_passenger.html',1,'CourseSide']]],
   ['place_96',['Place',['../struct_course_side_1_1_place.html',1,'CourseSide']]],
   ['player_97',['Player',['../class_model_1_1_player.html',1,'Model::Player'],['../class_model_1_1_player.html#a92de512350788b2193c66837f32452a3',1,'Model::Player::Player()']]],
