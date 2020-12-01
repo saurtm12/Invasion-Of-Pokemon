@@ -33,10 +33,20 @@ struct GameSetting
 const int X_OFFSET_MAP = 352;
 const int Y_OFFSET_MAP = 558;
 
+const int WIDTH_WITH_OFFSET = 1105;
+const int HEIGHT_WITH_OFFSET = 602;
+
 const std::string NYSSE_TYPE = typeid(CourseSide::Nysse).name();
 const std::string PASSENGER_TYPE = typeid(CourseSide::Passenger).name();
 const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 
+/**
+ * @brief convert location of small map to big map and transform the origin position
+ * @param loc location needed to be converted
+ * @return Location in big map, origin at top left corner
+ * @pre -
+ * @post New location suits big map and the coordinate is located at top left corner, to the right and downward. Exception guarantee : no throw
+ */
 Location convertLocation(Location loc);
 
 /**
@@ -65,7 +75,7 @@ QString generateTooltipTextFromPassenger(int num, std::string actor);
  * @pre -
  * @post exception guarantee: no throw.
  */
-void writeScore(std::vector<int> highScores);
+void writeScore(const std::vector<int>& highScores);
 
 /**
  * @brief getHighScores
@@ -74,6 +84,16 @@ void writeScore(std::vector<int> highScores);
  * @post exception guarantee : no throw
  */
 std::vector<int> getHighScores();
+
+/**
+ * @brief decide if the graphics item needs to be updated
+ * @param prev previous location of the graphic item
+ * @param cur current location of the actor.
+ * @return true if the graphic item of actor needs to be updated
+ * @pre Actor is in the city map
+ * @post Exception guarantee: no throw.
+ */
+bool needUpdate(const Location& prev, const Location& cur);
 }
 
 #endif // HELPERS_HH

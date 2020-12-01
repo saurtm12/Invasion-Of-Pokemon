@@ -43,7 +43,7 @@ std::vector<int> getHighScores()
     return highScores;
 }
 
-void writeScore(std::vector<int> highScores)
+void writeScore(const std::vector<int>& highScores)
 {
     std::ofstream file;
     file.open(SCORE_FILE, std::ofstream::out | std::ofstream::trunc);
@@ -64,6 +64,18 @@ void writeScore(std::vector<int> highScores)
     }
 
     file.close();
+}
+
+bool needUpdate(const Location& prev, const Location& cur)
+{
+    int prevX = prev.giveX();
+    int prevY = prev.giveY();
+    int curX = cur.giveX();
+    int curY = cur.giveY();
+    return !(
+        (prevX < -10 || prevX >= WIDTH_WITH_OFFSET || prevY < -10 || prevY >= HEIGHT_WITH_OFFSET) &&
+        (curX < -10 || curX >= WIDTH_WITH_OFFSET || curY < -10 || curY >= HEIGHT_WITH_OFFSET)
+    );
 }
 
 }

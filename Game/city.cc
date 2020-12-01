@@ -161,14 +161,18 @@ bool City::findActor(std::shared_ptr<IActor> actor) const
 void City::actorMoved(std::shared_ptr<IActor> actor)
 {
     auto passenger = std::dynamic_pointer_cast<Passenger>(actor);
-    actorsMap_.at(actor)->setCoord(actor->giveLocation());
-    if (passenger) {
-        if (passenger->isInVehicle()) {
-            std::shared_ptr<IVehicle> bus = passenger->getVehicle();
-            actorsMap_.at(bus)->setTooltipText(Utils::generateTooltipTextFromPassenger(bus->getPassengers().size(), "bus"));
-        } else if (passenger->getStop()) {
-            std::shared_ptr<IStop> stop = passenger->getStop();
-            stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
+    if (Utils::needUpdate(actorsMap_.at(actor)->getLocation(), Utils::convertLocation(actor->giveLocation()))) {
+        actorsMap_.at(actor)->setCoord(actor->giveLocation());
+
+        // set tooltip text
+        if (passenger) {
+            if (passenger->isInVehicle()) {
+                std::shared_ptr<IVehicle> bus = passenger->getVehicle();
+                actorsMap_.at(bus)->setTooltipText(Utils::generateTooltipTextFromPassenger(bus->getPassengers().size(), "bus"));
+            } else if (passenger->getStop()) {
+                std::shared_ptr<IStop> stop = passenger->getStop();
+                stopsMap_.at(stop)->setTooltipText(Utils::generateTooltipTextFromPassenger(stop->getPassengers().size(), "stop"));
+            }
         }
     }
 }
