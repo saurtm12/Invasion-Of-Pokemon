@@ -32,9 +32,10 @@ void Player::bonusFuel(int bonus)
 
 void Player::addPokemon(Pokemon pokemon)
 {
-    if (pokemon.score() >= 400)
+    int rareIndex = 400;
+    if (pokemon.score() >= rareIndex)
     {
-        fuel_ = std::min(max_fuel_, fuel_*11/10);
+        fuel_ = std::min(max_fuel_, fuel_ + max_fuel_/10);
     }
     bag_.push_back(pokemon);
 }

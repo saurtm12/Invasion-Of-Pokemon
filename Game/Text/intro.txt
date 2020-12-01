@@ -7,7 +7,7 @@ Use S to move down your player.
 Use A to move left your player.
 Use D to move right your player.
 Use space to get to a bus stop. Remember you have to go near a stop!
-(Remember press start to start the game also, click your mouse in city area)
+(Remember press start to start the game also, click your mouse in city area - ie. set focus to the map, if else the space command cant be emit to the city (this is Qt features))
 Use space again when you are on the bus so the bus can throw you out!
 Have a great time playing this adventurous game.
 
