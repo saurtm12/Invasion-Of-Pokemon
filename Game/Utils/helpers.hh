@@ -38,9 +38,41 @@ const std::string PASSENGER_TYPE = typeid(CourseSide::Passenger).name();
 const std::string STOP_TYPE = typeid(CourseSide::Stop).name();
 
 Location convertLocation(Location loc);
+
+/**
+ * @brief generateRandom
+ * @param lo
+ * @param hi
+ * @return a random int between lo and hi
+ * @pre -
+ * @post exception guarantee: no throw.
+ */
 int generateRandom(int lo, int hi);
+
+/**
+ * @brief generateTooltipTextFromPassenger
+ * @param num
+ * @param actor
+ * @return a QString notify how many people at a stop/in a bus
+ * @pre -
+ * @post exception guarantee: No throw
+ */
 QString generateTooltipTextFromPassenger(int num, std::string actor);
+
+/**
+ * @brief writeScore: write high scores to the file
+ * @param highScores: vector contain highscore
+ * @pre -
+ * @post exception guarantee: no throw.
+ */
 void writeScore(std::vector<int> highScores);
+
+/**
+ * @brief getHighScores
+ * @return vector of high score
+ * @pre -
+ * @post exception guarantee : no throw
+ */
 std::vector<int> getHighScores();
 }
 
