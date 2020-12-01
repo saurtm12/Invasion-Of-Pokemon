@@ -5,14 +5,16 @@ namespace Model
 
 City::City(Utils::GameSetting gameSetting, QWidget *parent):
     map_(new QGraphicsScene(parent)),
+    player_(nullptr),
     isInStop(false),
     isInBus(false),
     isLocked(false),
+    player2_(nullptr),
     pause_(false),
-    gameSetting_(gameSetting)
+    gameSetting_(gameSetting),
+    multiplayer_(gameSetting.multiplayer_ == "Yes")
 {
     pokemons_ = readPokemonData(":/pokemonImg/Pokemon/");
-
 }
 
 City::~City()
@@ -97,7 +99,7 @@ void City::addMainActor()
     player_->setOffset(-12, -8);
     map_->addItem(player_);
 
-    if (gameSetting_.multiplayer_ == "Yes") {
+    if (multiplayer_) {
         Location mainLoc2;
         mainLoc2.setXY(500, 200);
         player2_ = new Player(QPixmap::fromImage(QImage(BRIAN_ICON)), mainLoc2, gameSetting_.fuel_, gameSetting_.speed_);
@@ -196,7 +198,7 @@ void City::handleCollision()
             addBall();
             emit collideBall(pokemon);
             return;
-        } else if (gameSetting_.multiplayer_ == "Yes" && player2_->collidesWithItem(*it)) {
+        } else if (multiplayer_ && player2_->collidesWithItem(*it)) {
             Pokemon pokemon = generatePokemon();
             player2_->addPokemon(pokemon);
             map_->removeItem(*it);
@@ -223,7 +225,7 @@ void City::keyPress(int command)
             break;
         }
         player_->moveDirection(0, -1);
-        emit updateFuel(player_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_S:
@@ -232,7 +234,7 @@ void City::keyPress(int command)
             break;
         }
         player_->moveDirection(0, 1);
-        emit updateFuel(player_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_A:
@@ -241,7 +243,7 @@ void City::keyPress(int command)
             break;
         }
         player_->moveDirection(-1, 0);
-        emit updateFuel(player_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_D:
@@ -250,27 +252,39 @@ void City::keyPress(int command)
             break;
         }
         player_->moveDirection(1, 0);
-        emit updateFuel(player_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_I:
+        if (!multiplayer_) {
+            break;
+        }
         player2_->moveDirection(0, -1);
-        emit updateFuel(player2_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_K:
+        if (!multiplayer_) {
+            break;
+        }
         player2_->moveDirection(0, 1);
-        emit updateFuel(player2_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_J:
+        if (!multiplayer_) {
+            break;
+        }
         player2_->moveDirection(-1, 0);
-        emit updateFuel(player2_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_L:
+        if (!multiplayer_) {
+            break;
+        }
         player2_->moveDirection(1, 0);
-        emit updateFuel(player2_->getFuel());
+        emit updateFuel(getCurrentFuel());
         handleCollision();
         break;
     case Qt::Key_Space:
@@ -355,6 +369,14 @@ bool City::joinStop()
         }
     }
     return false;
+}
+
+int City::getCurrentFuel()
+{
+    if (!multiplayer_) {
+        return player_->getFuel();
+    }
+    return player_->getFuel() + player2_->getFuel();
 }
 
 }

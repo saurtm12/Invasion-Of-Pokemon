@@ -256,6 +256,12 @@ private:
     const QString BRIAN_ICON = QString(":/characters/characters/brian25.png");
     const QString PASSENGER_ICON = QString(":/characters/characters/passengerIcon.png");
 
+    /**
+     * @brief get current fuel. If multiplayer mode is activated, the fuel will be total fuel of two players
+     * @pre City is in gamestate.
+     * @post Exception guarantee: nothrow.
+     */
+    int getCurrentFuel();
 
     int WIDTH = 1095;
     int HEIGHT = 592;
@@ -279,6 +285,7 @@ private:
     std::vector<Pokemon> pokemons_;
     bool pause_;
     Utils::GameSetting gameSetting_;
+    bool multiplayer_;
     bool joinStop();
 };
 const int UPDATE_INTERVAL_MS = 100;
