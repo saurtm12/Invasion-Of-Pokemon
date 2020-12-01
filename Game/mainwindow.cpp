@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
   isStarted(false)
 {
     //default game setting.
-    gameSetting_ = {9, 0, 5, 3000, 1};
+    gameSetting_ = {9, 0, 5, 3000, 1, "No"};
     // add first dialog
     Dialog *dialog = new Dialog(this);
     connect(dialog, &Dialog::gameSettingChanged, [&](Utils::GameSetting gameSetting){

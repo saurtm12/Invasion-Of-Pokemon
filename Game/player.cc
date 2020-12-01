@@ -22,7 +22,7 @@ Interface::Location Player::giveLocation() const
 
 bool Player::isRemoved() const
 {
-
+    return false;
 }
 
 void Player::bonusFuel(int bonus)
