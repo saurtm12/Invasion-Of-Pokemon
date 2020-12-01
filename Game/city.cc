@@ -369,7 +369,7 @@ bool City::joinStop()
     return false;
 }
 
-int City::getCurrentFuel()
+int City::getCurrentFuel() const
 {
     if (!multiplayer_) {
         return player_->getFuel();
