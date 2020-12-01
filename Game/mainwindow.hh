@@ -1,12 +1,12 @@
 ﻿#ifndef MAINWINDOW_HH
 #define MAINWINDOW_HH
-#include <dialog.hh>
 
 #include "../Course/CourseLib/core/location.hh"
 #include "../Course/CourseLib/core/logic.hh"
 #include "city.h"
 #include "statistics.hh"
 #include "Utils/helpers.hh"
+#include "dialog.hh"
 
 #include <QMainWindow>
 #include <QGraphicsScene>

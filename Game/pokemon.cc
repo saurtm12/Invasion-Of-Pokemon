@@ -177,7 +177,6 @@ std::vector<Pokemon> readPokemonData(std::string resource)
     QJsonObject jsonObject = document.object();
     QJsonArray jsonArray = document.array();
 
-    qDebug() << pokemonFile;
     std::vector <Pokemon> pokemons;
     pokemons.reserve(jsonArray.size());
 

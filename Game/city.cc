@@ -24,7 +24,6 @@ City::~City()
 
 void City::setBackground(QImage &basicbackground, QImage &bigbackground)
 {
-    //TODO: need to implement this
     map_->setBackgroundBrush(basicbackground);
 }
 
@@ -358,7 +357,6 @@ void City::onTimeIncreased()
 bool City::joinStop()
 {
     auto playerLoc = player_->getLocation();
-    qDebug() << playerLoc.giveX() << playerLoc.giveY();
     for (auto& stop: stopsMap_){
         if (playerLoc.isClose(stop.second->getLocation(),25))
         {

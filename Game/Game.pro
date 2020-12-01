@@ -9,7 +9,6 @@ SOURCES += \
     Utils/helpers.cc \
     character.cc \
     city.cc \
-    creategame.cpp \
     dialog.cpp \
     main.cc \
     mainwindow.cpp \

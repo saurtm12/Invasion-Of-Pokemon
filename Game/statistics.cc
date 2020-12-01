@@ -12,7 +12,7 @@ Statistics::Statistics(int passenger, int buses):
         if (passengers_ < 0) {
             throw Interface::InitError("Passengers count cannot be negative.");
         }
-    } catch (Interface::InitError) {
+    } catch (const Interface::InitError& e) {
         passengers_ = 0;
     }
 
@@ -20,7 +20,7 @@ Statistics::Statistics(int passenger, int buses):
         if (buses_ < 0) {
             throw Interface::InitError("Buses count cannot be negative.");
         }
-    } catch (Interface::InitError) {
+    } catch (const Interface::InitError& e) {
         buses_ = 0;
     }
 }
@@ -32,8 +32,8 @@ void Statistics::morePassengers(int num)
             throw Interface::GameError("Passengers count reached negative after removed");
         }
         passengers_ += num;
-    }  catch (Interface::GameError) {
-
+    }  catch (const Interface::InitError& e) {
+        // don't do anything
     }
 }
 

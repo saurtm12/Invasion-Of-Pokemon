@@ -119,7 +119,6 @@ void MainWindow::openBag()
 
 void MainWindow::updateFuelBar(int fuel)
 {
-    qDebug() << fuel;
     fuelBar_->setValue(fuel);
 }
 
